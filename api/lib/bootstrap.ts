@@ -18,20 +18,24 @@ export async function bootstrapDatabase(): Promise<{ ok: boolean; steps: string[
   const dir = join(process.cwd(), "db", "migrations");
   const files = readdirSync(dir).filter((f) => f.endsWith(".sql")).sort();
   for (const f of files) {
+    console.log(`[bootstrap] migration ${f} démarre`);
     const sqlText = readFileSync(join(dir, f), "utf8");
     const statements = sqlText
       .split("--> statement-breakpoint")
       .map((x) => x.trim())
       .filter(Boolean);
+    let i = 0;
     for (const st of statements) {
+      i++;
       try {
         await (db as any).execute(st);
       } catch (e: any) {
-        // idempotent : ignore "already exists"
-        if (!/already exists|duplicate/i.test(String(e?.message))) throw e;
+        const msg = String(e?.message ?? e);
+        console.error(`[bootstrap] ${f} statement ${i} ERREUR:`, msg);
+        if (!/already exists|duplicate|relation .* existe/i.test(msg)) throw e;
       }
     }
-    steps.push(`migration ${f}`);
+    steps.push(`migration ${f} (${i} statements)`);
   }
 
   // ── 2. Seed : compte admin ─────────────────────────────────────────────────
