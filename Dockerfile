@@ -21,6 +21,7 @@ ENV NODE_ENV=production
 # et le bundle. drizzle-kit/tsx servent à l'ensure-db en arrière-plan.
 COPY --from=build /app/dist ./dist
 COPY --from=build /app/db ./db
+COPY --from=build /app/api ./api
 COPY --from=build /app/drizzle.config.ts ./
 COPY --from=build /app/package.json /app/package-lock.json ./
 COPY --from=build /app/node_modules ./node_modules
