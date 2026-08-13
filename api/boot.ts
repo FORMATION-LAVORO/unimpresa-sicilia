@@ -20,6 +20,20 @@ app.use("/api/trpc/*", async (c) => {
     createContext,
   });
 });
+// Initialisation de la base (schéma + données par défaut) — protégé par JWT_SECRET
+app.post("/api/bootstrap", async (c) => {
+  const auth = c.req.header("x-bootstrap-key") ?? "";
+  const secret = process.env.JWT_SECRET ?? "";
+  if (!secret || auth !== secret) return c.json({ error: "Forbidden" }, 403);
+  try {
+    const { bootstrapDatabase } = await import("./lib/bootstrap");
+    const result = await bootstrapDatabase();
+    return c.json(result);
+  } catch (e: any) {
+    return c.json({ ok: false, error: String(e?.message ?? e) }, 500);
+  }
+});
+
 app.all("/api/*", (c) => c.json({ error: "Not Found" }, 404));
 
 export default app;
@@ -34,7 +48,10 @@ if (env.isProduction) {
     console.log(`Server running on http://localhost:${port}/`);
   });
 
-  // Synchronise le schéma + seed en arrière-plan (non bloquant, jamais fatal)
-  const { ensureDatabaseInBackground } = await import("./lib/ensure");
-  ensureDatabaseInBackground();
+  // Bootstrap automatique : schéma + données par défaut en arrière-plan
+  // (idempotent, jamais fatal). Remplace l'ancien ensure basé sur npx/tsx.
+  import("./lib/bootstrap")
+    .then(({ bootstrapDatabase }) => bootstrapDatabase())
+    .then((r) => console.log("[bootstrap]", JSON.stringify(r.steps)))
+    .catch((e) => console.error("[bootstrap]", e?.message ?? e));
 }
