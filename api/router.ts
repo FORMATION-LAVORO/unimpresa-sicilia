@@ -1,1 +1,11 @@
-aW1wb3J0IHsgY3JlYXRlUm91dGVyLCBwdWJsaWNRdWVyeSB9IGZyb20gIi4vbWlkZGxld2FyZSI7CmltcG9ydCB7IHNpdGVSb3V0ZXIgfSBmcm9tICIuL3NpdGUtcm91dGVyIjsKaW1wb3J0IHsgYWRtaW5Sb3V0ZXIgfSBmcm9tICIuL2FkbWluLXJvdXRlciI7CgpleHBvcnQgY29uc3QgYXBwUm91dGVyID0gY3JlYXRlUm91dGVyKHsKICBwaW5nOiBwdWJsaWNRdWVyeS5xdWVyeSgoKSA9PiAoeyBvazogdHJ1ZSwgdHM6IERhdGUubm93KCkgfSkpLAogIHNpdGU6IHNpdGVSb3V0ZXIsCiAgYWRtaW46IGFkbWluUm91dGVyLAp9KTsKCmV4cG9ydCB0eXBlIEFwcFJvdXRlciA9IHR5cGVvZiBhcHBSb3V0ZXI7Cg==
+import { createRouter, publicQuery } from "./middleware";
+import { siteRouter } from "./site-router";
+import { adminRouter } from "./admin-router";
+
+export const appRouter = createRouter({
+  ping: publicQuery.query(() => ({ ok: true, ts: Date.now() })),
+  site: siteRouter,
+  admin: adminRouter,
+});
+
+export type AppRouter = typeof appRouter;

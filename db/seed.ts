@@ -1,1 +1,195 @@
-aW1wb3J0IGJjcnlwdCBmcm9tICJiY3J5cHRqcyI7CmltcG9ydCB7IGVxIGFzIGVxMiB9IGZyb20gImRyaXp6bGUtb3JtIjsKaW1wb3J0IHsgZ2V0RGIgfSBmcm9tICIuLi9hcGkvcXVlcmllcy9jb25uZWN0aW9uIjsKaW1wb3J0IHsKICBjeWNsZXMsCiAgZmlsaWVyZXMsCiAgdGFyaWZzLAogIGV0YXBlcywKICBwYXJhbWV0cmVzLAogIGFkbWlucywKfSBmcm9tICIuL3NjaGVtYSI7CgovKioKICogU2VlZCA6IHZhbGV1cnMgcGFyIGTDqWZhdXQgaXNzdWVzIGRlcyBjYXB0dXJlcyBkdSBzaXRlLgogKiBOJ8OpY3Jhc2UgcmllbiDigJQgbidpbnPDqHJlIHF1ZSBkYW5zIGxlcyB0YWJsZXMgdmlkZXMuCiAqLwphc3luYyBmdW5jdGlvbiBzZWVkKCkgewogIGNvbnN0IGRiID0gZ2V0RGIoKTsKICBjb25zb2xlLmxvZygiU2VlZGluZyBkYXRhYmFzZS4uLiIpOwoKICAvLyDilIDilIDilIAgQ3ljbGUgcGFyIGTDqWZhdXQg4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSACiAgY29uc3QgZXhpc3RpbmdDeWNsZXMgPSBhd2FpdCBkYi5zZWxlY3QoKS5mcm9tKGN5Y2xlcyk7CiAgbGV0IGN5Y2xlSWQ6IG51bWJlciB8IG51bGwgPSBudWxsOwogIGlmIChleGlzdGluZ0N5Y2xlcy5sZW5ndGggPT09IDApIHsKICAgIGNvbnN0IHIgPSBhd2FpdCBkYi5pbnNlcnQoY3ljbGVzKS52YWx1ZXMoewogICAgICBub206ICJDeWNsZSAyMDI2IiwKICAgICAgZGF0ZURlYnV0OiAiMDEvMDkvMjAyNiIsCiAgICAgIGRhdGVGaW46ICIzMC8xMS8yMDI2IiwKICAgICAgc2Vzc2lvbkxhYmVsOiAiRHUgMDEvMDkgYXUgMzAvMTEvMjAyNiAoMyBtb2lzKSIsCiAgICAgIGR1cmVlSGV1cmVzOiAiMTIwIiwKICAgICAgbmJQYXJ0aWNpcGFudHM6IDUwMCwKICAgICAgbGlldTogIkNlbnRyZSBQcmluY2lwYWwg4oCUIEltbWV1YmxlIElTRUcsIEZhY3VsdMOpIGRlIERyb2l0LCBEYWthciIsCiAgICAgIHZpbGxlOiAiRGFrYXIiLAogICAgICBwYXlzOiAiU8OpbsOpZ2FsIiwKICAgICAgYWN0aWY6IHRydWUsCiAgICB9KS5yZXR1cm5pbmcoeyBpZDogY3ljbGVzLmlkIH0pOwogICAgY3ljbGVJZCA9IE51bWJlcihyWzBdLmlkKTsKICAgIGNvbnNvbGUubG9nKCJDeWNsZSAyMDI2IGNyw6nDqS4iKTsKICB9IGVsc2UgewogICAgY3ljbGVJZCA9IE51bWJlcihleGlzdGluZ0N5Y2xlc1swXS5pZCk7CiAgfQoKICAvLyDilIDilIDilIAgRmlsacOocmVzIOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgAogIGlmICgoYXdhaXQgZGIuc2VsZWN0KCkuZnJvbShmaWxpZXJlcykpLmxlbmd0aCA9PT0gMCkgewogICAgYXdhaXQgZGIuaW5zZXJ0KGZpbGllcmVzKS52YWx1ZXMoWwogICAgICB7CiAgICAgICAgY3ljbGVJZCwgdGl0cmU6ICJBZ3JvYWxpbWVudGFpcmUiLAogICAgICAgIGRlc2NyaXB0aW9uOiAiT3V2cmllciBhZ3JpY29sZSwgdHJhY3RvcmlzdGUsIGJvdWxhbmdlciwgYm91Y2hlciwgb3DDqXJhdGV1ciBmcm9tYWdlci4gRm9ybWV6LXZvdXMgYXV4IG3DqXRpZXJzIGRlIGxhIHRlcnJlIGV0IGRlIGwnYWxpbWVudGF0aW9uIGVuIEl0YWxpZS4iLAogICAgICAgIGR1cmVlSGV1cmVzOiAiMTIwaCIsIG5iTWV0aWVyczogOCwgaWNvbmU6ICLwn4y+IiwgYmFkZ2U6ICIiLCBvcmRyZTogMSwgYWN0aWY6IHRydWUsCiAgICAgIH0sCiAgICAgIHsKICAgICAgICBjeWNsZUlkLCB0aXRyZTogIkLDonRpbWVudCAvIENvbnN0cnVjdGlvbiIsCiAgICAgICAgZGVzY3JpcHRpb246ICJNYcOnb24sIGZlcnJhaWxsZXVyLCBjb2ZmcmV1ciwgw6lsZWN0cmljaWVuLCBwbG9tYmllciwgcGVpbnRyZS4gTGVzIG3DqXRpZXJzIGR1IEJUUCBzb250IHRyw6hzIGRlbWFuZMOpcyBlbiBJdGFsaWUuIiwKICAgICAgICBkdXJlZUhldXJlczogIjEyMGgiLCBuYk1ldGllcnM6IDksIGljb25lOiAi8J+Pl++4jyIsIGJhZGdlOiAiRm9ybWF0aW9uIGVuIGNvdXJzIiwgb3JkcmU6IDIsIGFjdGlmOiB0cnVlLAogICAgICB9LAogICAgICB7CiAgICAgICAgY3ljbGVJZCwgdGl0cmU6ICJSZXN0YXVyYXRpb24iLAogICAgICAgIGRlc2NyaXB0aW9uOiAiUGl6emFpb2xvLCBjdWlzaW5pZXIsIHNlcnZldXIsIGJhcm1hbiwgcMOidGlzc2llciwgcsOpY2VwdGlvbm5pc3RlLiBMZSB0b3VyaXNtZSBpdGFsaWVuIHJlY3J1dGUgdG91dCBhdSBsb25nIGRlIGwnYW5uw6llLiIsCiAgICAgICAgZHVyZWVIZXVyZXM6ICIxMjBoIiwgbmJNZXRpZXJzOiA3LCBpY29uZTogIvCfjZUiLCBiYWRnZTogIiIsIG9yZHJlOiAzLCBhY3RpZjogdHJ1ZSwKICAgICAgfSwKICAgICAgewogICAgICAgIGN5Y2xlSWQsIHRpdHJlOiAiTG9naXN0aXF1ZSAvIFRyYW5zcG9ydCIsCiAgICAgICAgZGVzY3JpcHRpb246ICJDaGF1ZmZldXIgcG9pZHMgbG91cmQsIGNhcmlzdGUsIG1hZ2FzaW5pZXIsIG1hbnV0ZW50aW9ubmFpcmUuIExhIGxvZ2lzdGlxdWUgZXN0IHVuIHBpbGllciBkZSBsJ8OpY29ub21pZSBpdGFsaWVubmUuIiwKICAgICAgICBkdXJlZUhldXJlczogIjEyMGgiLCBuYk1ldGllcnM6IDQsIGljb25lOiAi8J+amyIsIGJhZGdlOiAiIiwgb3JkcmU6IDQsIGFjdGlmOiB0cnVlLAogICAgICB9LAogICAgICB7CiAgICAgICAgY3ljbGVJZCwgdGl0cmU6ICJNw6l0YWxsdXJnaWUiLAogICAgICAgIGRlc2NyaXB0aW9uOiAiU291ZGV1ciwgdG91cm5ldXIsIG3DqWNhbmljaWVuLCBjaGF1ZHJvbm5pZXIsIHRlY2huaWNpZW4gbWFpbnRlbmFuY2UuIEwnaW5kdXN0cmllIG3DqWNhbmlxdWUgaXRhbGllbm5lIGVzdCByw6lwdXTDqWUgbW9uZGlhbGUuIiwKICAgICAgICBkdXJlZUhldXJlczogIjEyMGgiLCBuYk1ldGllcnM6IDYsIGljb25lOiAi4pqZ77iPIiwgYmFkZ2U6ICIiLCBvcmRyZTogNSwgYWN0aWY6IHRydWUsCiAgICAgIH0sCiAgICAgIHsKICAgICAgICBjeWNsZUlkLCB0aXRyZTogIkF1dHJlcyBzZWN0ZXVycyBtb3llbnMiLAogICAgICAgIGRlc2NyaXB0aW9uOiAiRW1wbG95w6kgZGUgcmF5b24sIGNhaXNzaWVyLCBhaWRlIGZhbWlsaWFsZSwgYXV4aWxpYWlyZSBkZSB2aWUuIERlcyBvcHBvcnR1bml0w6lzIHZhcmnDqWVzIHNlbG9uIHZvdHJlIHByb2ZpbC4iLAogICAgICAgIGR1cmVlSGV1cmVzOiAiMTIwaCIsIG5iTWV0aWVyczogNSwgaWNvbmU6ICLwn5uSIiwgYmFkZ2U6ICIiLCBvcmRyZTogNiwgYWN0aWY6IHRydWUsCiAgICAgIH0sCiAgICBdKTsKICAgIGNvbnNvbGUubG9nKCI2IGZpbGnDqHJlcyBjcsOpw6llcy4iKTsKICB9CgogIC8vIOKUgOKUgOKUgCBUYXJpZnMg4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSACiAgaWYgKChhd2FpdCBkYi5zZWxlY3QoKS5mcm9tKHRhcmlmcykpLmxlbmd0aCA9PT0gMCkgewogICAgYXdhaXQgZGIuaW5zZXJ0KHRhcmlmcykudmFsdWVzKFsKICAgICAgeyBjeWNsZUlkLCBsYWJlbDogIkluc2NyaXB0aW9uIiwgbW9udGFudENoaWZmcmVzOiAiMjIwIDAwMCIsIG1vbnRhbnRMZXR0cmVzOiAiMjIwIDAwMCBGQ0ZBIiwgZGVzY3JpcHRpb246ICJGcmFpcyBkJ2luc2NyaXB0aW9uIiwgZXN0VG90YWw6IGZhbHNlLCBvcmRyZTogMSB9LAogICAgICB7IGN5Y2xlSWQsIGxhYmVsOiAiUmVsaXF1YXQgc3VyIGZvcm1hdGlvbiIsIG1vbnRhbnRDaGlmZnJlczogIjM0MCAwMDAiLCBtb250YW50TGV0dHJlczogIjM0MCAwMDAgRkNGQSIsIGRlc2NyaXB0aW9uOiAiU29sZGUgZmluYWwgYXByw6hzIG9idGVudGlvbiBkdSBOdWxsYSBPc3RhIiwgZXN0VG90YWw6IGZhbHNlLCBvcmRyZTogMiB9LAogICAgICB7IGN5Y2xlSWQsIGxhYmVsOiAiVG90YWwiLCBtb250YW50Q2hpZmZyZXM6ICI1NjAgMDAwIiwgbW9udGFudExldHRyZXM6ICI1NjAgMDAwIEZDRkEiLCBkZXNjcmlwdGlvbjogIkNvw7t0IHRvdGFsIGR1IHByb2dyYW1tZSIsIGVzdFRvdGFsOiB0cnVlLCBvcmRyZTogMyB9LAogICAgXSk7CiAgICBjb25zb2xlLmxvZygiMyBsaWduZXMgZGUgdGFyaWZzIGNyw6nDqWVzLiIpOwogIH0KCiAgLy8g4pSA4pSA4pSAIMOJdGFwZXMgZHUgZMOpcm91bGVtZW50IOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgAogIGlmICgoYXdhaXQgZGIuc2VsZWN0KCkuZnJvbShldGFwZXMpKS5sZW5ndGggPT09IDApIHsKICAgIGF3YWl0IGRiLmluc2VydChldGFwZXMpLnZhbHVlcyhbCiAgICAgIHsgY3ljbGVJZCwgbnVtZXJvOiAiMDEiLCBpY29uZTogIvCfk50iLCB0aXRyZTogIkluc2NyaXB0aW9uIiwgZGVzY3JpcHRpb246ICJEw6lww7R0IGR1IGRvc3NpZXIgZXQgcGFpZW1lbnQgZGVzIGZyYWlzIGQnaW5zY3JpcHRpb24gZGUgMjIwIDAwMCBGQ0ZBIHBvdXIgcsOpc2VydmVyIHZvdHJlIHBsYWNlLiIsIG9yZHJlOiAxIH0sCiAgICAgIHsgY3ljbGVJZCwgbnVtZXJvOiAiMDIiLCBpY29uZTogIvCfk5YiLCB0aXRyZTogIkZvcm1hdGlvbiIsIGRlc2NyaXB0aW9uOiAiMTIwIGhldXJlcyBkZSBjb3VycyB0aMOpb3JpcXVlcyBldCBwcmF0aXF1ZXMgZHUgMDEvMDkgYXUgMzAvMTEvMjAyNi4gTGFuZ3VlIGl0YWxpZW5uZSwgc8OpY3VyaXTDqSBhdSB0cmF2YWlsIGV0IMOpZHVjYXRpb24gY2l2aWxlLiIsIG9yZHJlOiAyIH0sCiAgICAgIHsgY3ljbGVJZCwgbnVtZXJvOiAiMDMiLCBpY29uZTogIuKchSIsIHRpdHJlOiAiVmFsaWRhdGlvbiIsIGRlc2NyaXB0aW9uOiAiw4l2YWx1YXRpb25zIGV0IHRlc3RzIGRlcyBjb21ww6l0ZW5jZXMuIFZhbGlkYXRpb24gYXByw6hzIHBhaWVtZW50IGNvbXBsZXQgZGUgNTYwIDAwMCBGQ0ZBLiIsIG9yZHJlOiAzIH0sCiAgICAgIHsgY3ljbGVJZCwgbnVtZXJvOiAiMDQiLCBpY29uZTogIvCfk5wiLCB0aXRyZTogIkF0dGVzdGF0aW9uIiwgZGVzY3JpcHRpb246ICJEw6lsaXZyYW5jZSBkZSBsJ2F0dGVzdGF0aW9uIGRlIHZhbGlkYXRpb24gZXQgYWNjb21wYWduZW1lbnQgdmVycyBsJ29idGVudGlvbiBkdSBOdWxsYSBPc3RhIHBvdXIgbCdJdGFsaWUuIiwgb3JkcmU6IDQgfSwKICAgIF0pOwogICAgY29uc29sZS5sb2coIjQgw6l0YXBlcyBjcsOpw6llcy4iKTsKICB9CgogIC8vIOKUgOKUgOKUgCBQYXJhbcOodHJlcyBnbG9iYXV4IOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgAogIGlmICgoYXdhaXQgZGIuc2VsZWN0KCkuZnJvbShwYXJhbWV0cmVzKSkubGVuZ3RoID09PSAwKSB7CiAgICBhd2FpdCBkYi5pbnNlcnQocGFyYW1ldHJlcykudmFsdWVzKFsKICAgICAgeyBjbGU6ICJvcmdfbmFtZSIsIHZhbGV1cjogIlVOSU1QUkVTQSBTaWNpbGlhIiB9LAogICAgICB7IGNsZTogImhlcm9fc3VidGl0bGUiLCB2YWxldXI6ICJGb3JtYXRpb24gY2VydGlmaWFudGUgcG91ciBhcHByZW5hbnRzIHPDqW7DqWdhbGFpcyIgfSwKICAgICAgeyBjbGU6ICJoZXJvX2Rlc2NyaXB0aW9uIiwgdmFsZXVyOiAiUHLDqXBhcmV6IHZvdHJlIGluc2VydGlvbiBwcm9mZXNzaW9ubmVsbGUgZW4gSXRhbGllIGdyw6JjZSDDoCB1biBwcm9ncmFtbWUgY2VydGlmaWFudCBkZSAxMjAgaGV1cmVzLCDDoCBEYWthci4iIH0sCiAgICAgIHsgY2xlOiAiY3RhX2luc2NyaXB0aW9uIiwgdmFsZXVyOiAi8J+OkyBKZSB2ZXV4IG0naW5zY3JpcmUiIH0sCiAgICAgIHsgY2xlOiAiY3RhX3JkdiIsIHZhbGV1cjogIvCfk4UgUHJlbmRyZSByZW5kZXotdm91cyIgfSwKICAgICAgeyBjbGU6ICJjdGFfbWV0aWVycyIsIHZhbGV1cjogIvCfk4sgRMOpY291dnJpciBsZXMgbcOpdGllcnMiIH0sCiAgICAgIHsgY2xlOiAiY3RhX2ZpbmFsIiwgdmFsZXVyOiAi8J+OkyBDb21tZW5jZXIgbW9uIGluc2NyaXB0aW9uIiB9LAogICAgICB7IGNsZTogImJhZGdlX2NlcnRpZmllZSIsIHZhbGV1cjogIkNlcnRpZmnDqWUiIH0sCiAgICAgIHsgY2xlOiAiYmFkZ2VfY2VydGlmaWVlX2xhYmVsIiwgdmFsZXVyOiAiRm9ybWF0aW9uIiB9LAogICAgICB7IGNsZTogImR1cmVlX2xhYmVsIiwgdmFsZXVyOiAiRGUgY291cnMiIH0sCiAgICAgIHsgY2xlOiAicGFydGljaXBhbnRzX2xhYmVsIiwgdmFsZXVyOiAiUGFydGljaXBhbnRzIiB9LAogICAgICB7IGNsZTogInZpbGxlX2xhYmVsIiwgdmFsZXVyOiAiU8OpbsOpZ2FsIiB9LAogICAgICB7IGNsZTogInNlY3Rpb25fZmlsaWVyZXNfdGl0cmUiLCB2YWxldXI6ICJOb3MgZmlsacOocmVzIGRlIGZvcm1hdGlvbiIgfSwKICAgICAgeyBjbGU6ICJzZWN0aW9uX2ZpbGllcmVzX3NvdXN0aXRyZSIsIHZhbGV1cjogIkNob2lzaXNzZXogbGUgbcOpdGllciBxdWkgdm91cyBjb3JyZXNwb25kIHBhcm1pIG5vcyBzZWN0ZXVycyBwb3J0ZXVycyBlbiBJdGFsaWUuIiB9LAogICAgICB7IGNsZTogInNlY3Rpb25fcHJvZ3JhbW1lX3RpdHJlIiwgdmFsZXVyOiAiRMOpcm91bGVtZW50IGR1IHByb2dyYW1tZSIgfSwKICAgICAgeyBjbGU6ICJzZWN0aW9uX3Rhcmlmc190aXRyZSIsIHZhbGV1cjogIlRhcmlmcyBkdSBwcm9ncmFtbWUiIH0sCiAgICAgIHsgY2xlOiAidGFyaWZzX2NvbF9kZXNjcmlwdGlvbiIsIHZhbGV1cjogIkRFU0NSSVBUSU9OIiB9LAogICAgICB7IGNsZTogInRhcmlmc19jb2xfbW9udGFudCIsIHZhbGV1cjogIk1PTlRBTlQiIH0sCiAgICAgIHsgY2xlOiAiaW5mb190aXRyZSIsIHZhbGV1cjogIvCfkqEgVmFsaWRhdGlvbiBhcHLDqHMgcGFpZW1lbnQgY29tcGxldCIgfSwKICAgICAgeyBjbGU6ICJpbmZvX3RleHRlIiwgdmFsZXVyOiAiTCdhdHRlc3RhdGlvbiBkZSB2YWxpZGF0aW9uIGVzdCBkw6lsaXZyw6llIGFwcsOocyBzZXVsZW1lbnQgbGUgcGFpZW1lbnQgY29tcGxldCBkZSBsJ2luc2NyaXB0aW9uICgyMjAgMDAwIEZDRkEpIGV0IGR1IHJlbGlxdWF0IGRlICgzNDAgMDAwIEZDRkEpIHBvdXIgdW4gdG90YWwgZGUgNTYwIDAwMCBGQ0ZBLiIgfSwKICAgICAgeyBjbGU6ICJkZXZpc2UiLCB2YWxldXI6ICJGQ0ZBIiB9LAogICAgICB7IGNsZTogImNvdWxldXJfZm9uZCIsIHZhbGV1cjogIiMwZjFmMmUiIH0sCiAgICAgIHsgY2xlOiAiY291bGV1cl9wcmluY2lwYWxlIiwgdmFsZXVyOiAiIzFhMmE0YSIgfSwKICAgICAgeyBjbGU6ICJjb3VsZXVyX2FjY2VudCIsIHZhbGV1cjogIiNjOWEyMjciIH0sCiAgICAgIHsgY2xlOiAibG9nb191cmwiLCB2YWxldXI6ICIiIH0sCiAgICAgIHsgY2xlOiAiYWRyZXNzZV9jZW50cmUiLCB2YWxldXI6ICJDZW50cmUgUHJpbmNpcGFsIOKAlCBJbW1ldWJsZSBJU0VHLCBGYWN1bHTDqSBkZSBEcm9pdCwgRGFrYXIsIFPDqW7DqWdhbCIgfSwKICAgICAgeyBjbGU6ICJjb250YWN0X2VtYWlsIiwgdmFsZXVyOiAiY29udGFjdEB1bmltcHJlc2Etc2ljaWxpYS5jb20iIH0sCiAgICAgIHsgY2xlOiAiY29udGFjdF90ZWxlcGhvbmUiLCB2YWxldXI6ICIrMjIxIDMzIDAwMCAwMCAwMCIgfSwKICAgICAgeyBjbGU6ICJjb250YWN0X3doYXRzYXBwIiwgdmFsZXVyOiAiKzIyMSA3NyAwMDAgMDAgMDAiIH0sCiAgICAgIHsgY2xlOiAiZm9vdGVyX3RleHRlIiwgdmFsZXVyOiAiUHJvZ3JhbW1lIGRlIGZvcm1hdGlvbiBjZXJ0aWZpYW50IHBvdXIgbCdpbnNlcnRpb24gcHJvZmVzc2lvbm5lbGxlIGVuIEl0YWxpZS4iIH0sCiAgICBdKTsKICAgIGNvbnNvbGUubG9nKCJQYXJhbcOodHJlcyBnbG9iYXV4IGNyw6nDqXMuIik7CiAgfQoKICAvLyDilIDilIDilIAgQ29tcHRlIFN1cGVyIEFkbWluIHBhciBkw6lmYXV0IOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgAogIGlmICgoYXdhaXQgZGIuc2VsZWN0KCkuZnJvbShhZG1pbnMpKS5sZW5ndGggPT09IDApIHsKICAgIGF3YWl0IGRiLmluc2VydChhZG1pbnMpLnZhbHVlcyh7CiAgICAgIHVzZXJuYW1lOiAiYWRtaW4iLAogICAgICBwYXNzd29yZEhhc2g6IGF3YWl0IGJjcnlwdC5oYXNoKCJhZG1pbjEyMyIsIDEwKSwKICAgICAgcm9sZTogInN1cGVyYWRtaW4iLAogICAgfSk7CiAgICBjb25zb2xlLmxvZygiQ29tcHRlIGFkbWluIGNyw6nDqSAoYWRtaW4gLyBhZG1pbjEyMykuIik7CiAgfQoKICAvLyDilIDilIDilIAgTcOpdGllcnMgZMOpdGFpbGzDqXMgcGFyIGZpbGnDqHJlIOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgAogIGNvbnN0IHsgZmlsaWVyZXM6IGZpbFRhYmxlLCBwYXJ0ZW5haXJlcywgYXZhbnRhZ2VzIH0gPSBhd2FpdCBpbXBvcnQoIi4vc2NoZW1hIik7CiAgY29uc3QgTUVUSUVSUzogUmVjb3JkPHN0cmluZywgc3RyaW5nW10+ID0gewogICAgIkFncm9hbGltZW50YWlyZSI6IFsiT3V2cmllciBhZ3JpY29sZSBtYXJhw65jaGVyIiwgIk91dnJpZXIgYWdyaWNvbGUgc2VycmVzIGV0IGN1bHR1cmVzIHNvdXMgYWJyaSIsICJUcmFjdG9yaXN0ZSAvIENvbmR1Y3RldXIgZCdlbmdpbnMgYWdyaWNvbGVzIiwgIk91dnJpZXIgw6lsZXZhZ2UgYm92aW5zL3ZvbGFpbGxlcy9wb3JjcyIsICJPdXZyaWVyIHBpc2NpY3VsdHVyZSIsICJCb3VsYW5nZXIiLCAiQm91Y2hlciIsICJPcMOpcmF0ZXVyIGZyb21hZ2VyIl0sCiAgICAiQsOidGltZW50IC8gQ29uc3RydWN0aW9uIjogWyJNYcOnb24iLCAiRmVycmFpbGxldXIiLCAiQ29mZnJldXIvQmFuY2hldXIiLCAiUG9zZXVyIGRlIGNhcnJlbGFnZSBldCBkYWxsYWdlIiwgIlBsw6J0cmllci9QbGFxdWlzdGUiLCAiw4lsZWN0cmljaWVuIGLDonRpbWVudCIsICJQbG9tYmllci9JbnN0YWxsYXRldXIgc2FuaXRhaXJlIiwgIlBlaW50cmUgZW4gYsOidGltZW50IiwgIk1hbsWTdXZyZSBzcMOpY2lhbGlzw6kiXSwKICAgICJSZXN0YXVyYXRpb24iOiBbIlBpenphaW9sbyIsICJDdWlzaW5pZXIiLCAiU2VydmV1ci9TZXJ2ZXVzZSBkZSBzYWxsZSIsICJCYXJtYW4iLCAiUMOidGlzc2llciIsICJFbXBsb3nDqSBob3VzZWtlZXBpbmcvaMO0dGVsIiwgIlLDqWNlcHRpb25uaXN0ZSJdLAogICAgIkxvZ2lzdGlxdWUgLyBUcmFuc3BvcnQiOiBbIkNoYXVmZmV1ciBwb2lkcyBsb3VyZCBDUUMiLCAiQ2FyaXN0ZS9NYW51dGVudGlvbm5haXJlIGNoYXJpb3Qgw6lsw6l2YXRldXIiLCAiTWFnYXNpbmllci9QcsOpcGFyYXRldXIgZGUgY29tbWFuZGVzIiwgIk1hbnV0ZW50aW9ubmFpcmUvRmFjY2hpbmFnZ2lvIl0sCiAgICAiTcOpdGFsbHVyZ2llIjogWyJTb3VkZXVyIiwgIlRvdXJuZXVyL0ZyYWlzZXVyIiwgIk3DqWNhbmljaWVuIGF1dG8vaW5kdXN0cmllbCIsICJNb250ZXVyLWFzc2VtYmxldXIgbcOpY2FuaXF1ZSIsICJDaGF1ZHJvbm5pZXIiLCAiVGVjaG5pY2llbiBtYWludGVuYW5jZSBpbmR1c3RyaWVsbGUiXSwKICAgICJBdXRyZXMgc2VjdGV1cnMgbW95ZW5zIjogWyJFbXBsb3nDqSBkZSByYXlvbi9TY2FmZmFsaXN0ZSIsICJDYWlzc2llciIsICJBaWRlIGZhbWlsaWFsZS9CYWRhbnRlIiwgIkF1eGlsaWFpcmUgZGUgdmllIiwgIkF1dHJlcyJdLAogIH07CiAgY29uc3QgZmlsUm93cyA9IGF3YWl0IGRiLnNlbGVjdCgpLmZyb20oZmlsVGFibGUpOwogIGZvciAoY29uc3QgZiBvZiBmaWxSb3dzKSB7CiAgICBpZiAoKCFmLm1ldGllcnMgfHwgZi5tZXRpZXJzID09PSAiIikgJiYgTUVUSUVSU1tmLnRpdHJlXSkgewogICAgICBhd2FpdCBkYi51cGRhdGUoZmlsVGFibGUpLnNldCh7IG1ldGllcnM6IEpTT04uc3RyaW5naWZ5KE1FVElFUlNbZi50aXRyZV0pIH0pLndoZXJlKGVxMihmaWxUYWJsZS5pZCwgZi5pZCkpOwogICAgfQogIH0KCiAgLy8g4pSA4pSA4pSAIFBhcnRlbmFpcmVzIOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgAogIGlmICgoYXdhaXQgZGIuc2VsZWN0KCkuZnJvbShwYXJ0ZW5haXJlcykpLmxlbmd0aCA9PT0gMCkgewogICAgYXdhaXQgZGIuaW5zZXJ0KHBhcnRlbmFpcmVzKS52YWx1ZXMoWwogICAgICB7IG5vbTogIlVOSU1QUkVTQSBTaWNpbGlhIiwgZGVzY3JpcHRpb246ICJPcmdhbmlzYXRpb24gcGF0cm9uYWxlIDogUHJvbW90aW9uIGRlcyBFbnRyZXByaXNlcyBldCBkw6l2ZWxvcHBlbWVudCDDqWNvbm9taXF1ZSBkdSB0ZXJyaXRvaXJlIHNpY2lsaWVuLiIsIGxvZ286ICIiLCBvcmRyZTogMSwgYWN0aWY6IHRydWUgfSwKICAgICAgeyBub206ICJTLkUuRi5PLlIuIiwgZGVzY3JpcHRpb246ICJTZXJ2aXppIGRpIEZvcm1hemlvbmUgT3JpZW50YW1lbnRvIGUgUmljZXJjYSDigJQgU29jacOpdMOpIGQnRW5zZWlnbmVtZW50LCBkJ09yaWVudGF0aW9uIGV0IGRlIFJlY2hlcmNoZS4iLCBsb2dvOiAiIiwgb3JkcmU6IDIsIGFjdGlmOiB0cnVlIH0sCiAgICAgIHsgbm9tOiAiQ1JJU0FGIiwgZGVzY3JpcHRpb246ICJGb3JtYXRpb24gc8OpY3VyaXTDqSBhdSB0cmF2YWlsIHNlbG9uIGxlcyBub3JtZXMgaXRhbGllbm5lcy4gQ2VudHJlIGRlIFJlY2hlcmNoZSBldCBkJ0lubm92YXRpb24gcG91ciBsZSBEw6l2ZWxvcHBlbWVudCBlbiBBZnJpcXVlLiIsIGxvZ286ICIiLCBvcmRyZTogMywgYWN0aWY6IHRydWUgfSwKICAgICAgeyBub206ICJDUElBIDIgQ2F0YW5pYSIsIGRlc2NyaXB0aW9uOiAiQ2VudHJlIFByb3ZpbmNpYWwgcG91ciBsJ8OJZHVjYXRpb24gZGVzIEFkdWx0ZXMg4oCUIE1pbmlzdMOocmUgaXRhbGllbiBkZSBsJ0luc3RydWN0aW9uIGV0IGR1IE3DqXJpdGUuIiwgbG9nbzogIiIsIG9yZHJlOiA0LCBhY3RpZjogdHJ1ZSB9LAogICAgXSk7CiAgICBjb25zb2xlLmxvZygiUGFydGVuYWlyZXMgY3LDqcOpcy4iKTsKICB9CgogIC8vIOKUgOKUgOKUgCBBdmFudGFnZXMg4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSACiAgaWYgKChhd2FpdCBkYi5zZWxlY3QoKS5mcm9tKGF2YW50YWdlcykpLmxlbmd0aCA9PT0gMCkgewogICAgYXdhaXQgZGIuaW5zZXJ0KGF2YW50YWdlcykudmFsdWVzKFsKICAgICAgeyBpY29uZTogIuKchSIsIHRpdHJlOiAiRm9ybWF0aW9uIGNlcnRpZmnDqWUgZXQgcmVjb25udWUiLCBkZXNjcmlwdGlvbjogIk5vdHJlIHByb2dyYW1tZSBlc3QgcmVjb25udSBwYXIgbGVzIGluc3RpdHV0aW9ucyBpdGFsaWVubmVzIGV0IHPDqW7DqWdhbGFpc2VzIHBvdXIgc2EgcXVhbGl0w6kgZXQgc2EgY29uZm9ybWl0w6kuIiwgb3JkcmU6IDEsIGFjdGlmOiB0cnVlIH0sCiAgICAgIHsgaWNvbmU6ICLwn5Go4oCN8J+PqyIsIHRpdHJlOiAiSW50ZXJ2ZW5hbnRzIHF1YWxpZmnDqXMgZXQgZXhww6lyaW1lbnTDqXMiLCBkZXNjcmlwdGlvbjogIkRlcyBmb3JtYXRldXJzIGV4cGVydHMgZGFucyBsZXVycyBkb21haW5lcyBhdmVjIHVuZSBleHDDqXJpZW5jZSBpbnRlcm5hdGlvbmFsZS4iLCBvcmRyZTogMiwgYWN0aWY6IHRydWUgfSwKICAgICAgeyBpY29uZTogIvCfk4siLCB0aXRyZTogIkNvbnRlbnUgY29uZm9ybWUgYXV4IG5vcm1lcyBpdGFsaWVubmVzIiwgZGVzY3JpcHRpb246ICJQcm9ncmFtbWUgYWxpZ27DqSBzdXIgbGVzIGV4aWdlbmNlcyBkdSBEw6ljcmV0IEZsdXNzaSBldCBkdSBtYXJjaMOpIGR1IHRyYXZhaWwgaXRhbGllbi4iLCBvcmRyZTogMywgYWN0aWY6IHRydWUgfSwKICAgICAgeyBpY29uZTogIvCfpJ0iLCB0aXRyZTogIkFjY29tcGFnbmVtZW50IHBlcnNvbm5hbGlzw6kiLCBkZXNjcmlwdGlvbjogIlN1aXZpIGluZGl2aWR1ZWwgdG91dCBhdSBsb25nIGRlIHZvdHJlIHBhcmNvdXJzIGV0IGFwcsOocyBsYSBmb3JtYXRpb24uIiwgb3JkcmU6IDQsIGFjdGlmOiB0cnVlIH0sCiAgICAgIHsgaWNvbmU6ICLwn5K8IiwgdGl0cmU6ICJPcHBvcnR1bml0w6lzIHLDqWVsbGVzIGQnZW1wbG9pIGVuIEl0YWxpZSIsIGRlc2NyaXB0aW9uOiAiUGFydGVuYXJpYXRzIGF2ZWMgZGVzIGVtcGxveWV1cnMgaXRhbGllbnMgcG91ciBmYWNpbGl0ZXIgdm90cmUgaW5zZXJ0aW9uIHByb2Zlc3Npb25uZWxsZS4iLCBvcmRyZTogNSwgYWN0aWY6IHRydWUgfSwKICAgIF0pOwogICAgY29uc29sZS5sb2coIkF2YW50YWdlcyBjcsOpw6lzLiIpOwogIH0KCiAgY29uc29sZS5sb2coIlNlZWQgdGVybWluw6kuIik7CiAgcHJvY2Vzcy5leGl0KDApOwp9CgpzZWVkKCkuY2F0Y2goKGVycikgPT4gewogIGNvbnNvbGUuZXJyb3IoZXJyKTsKICBwcm9jZXNzLmV4aXQoMSk7Cn0pOwo=
+import bcrypt from "bcryptjs";
+import { eq as eq2 } from "drizzle-orm";
+import { getDb } from "../api/queries/connection";
+import {
+  cycles,
+  filieres,
+  tarifs,
+  etapes,
+  parametres,
+  admins,
+} from "./schema";
+
+/**
+ * Seed : valeurs par défaut issues des captures du site.
+ * N'écrase rien — n'insère que dans les tables vides.
+ */
+async function seed() {
+  const db = getDb();
+  console.log("Seeding database...");
+
+  // ─── Cycle par défaut ────────────────────────────────────────────────────
+  const existingCycles = await db.select().from(cycles);
+  let cycleId: number | null = null;
+  if (existingCycles.length === 0) {
+    const r = await db.insert(cycles).values({
+      nom: "Cycle 2026",
+      dateDebut: "01/09/2026",
+      dateFin: "30/11/2026",
+      sessionLabel: "Du 01/09 au 30/11/2026 (3 mois)",
+      dureeHeures: "120",
+      nbParticipants: 500,
+      lieu: "Centre Principal — Immeuble ISEG, Faculté de Droit, Dakar",
+      ville: "Dakar",
+      pays: "Sénégal",
+      actif: true,
+    }).returning({ id: cycles.id });
+    cycleId = Number(r[0].id);
+    console.log("Cycle 2026 créé.");
+  } else {
+    cycleId = Number(existingCycles[0].id);
+  }
+
+  // ─── Filières ────────────────────────────────────────────────────────────
+  if ((await db.select().from(filieres)).length === 0) {
+    await db.insert(filieres).values([
+      {
+        cycleId, titre: "Agroalimentaire",
+        description: "Ouvrier agricole, tractoriste, boulanger, boucher, opérateur fromager. Formez-vous aux métiers de la terre et de l'alimentation en Italie.",
+        dureeHeures: "120h", nbMetiers: 8, icone: "🌾", badge: "", ordre: 1, actif: true,
+      },
+      {
+        cycleId, titre: "Bâtiment / Construction",
+        description: "Maçon, ferrailleur, coffreur, électricien, plombier, peintre. Les métiers du BTP sont très demandés en Italie.",
+        dureeHeures: "120h", nbMetiers: 9, icone: "🏗️", badge: "Formation en cours", ordre: 2, actif: true,
+      },
+      {
+        cycleId, titre: "Restauration",
+        description: "Pizzaiolo, cuisinier, serveur, barman, pâtissier, réceptionniste. Le tourisme italien recrute tout au long de l'année.",
+        dureeHeures: "120h", nbMetiers: 7, icone: "🍕", badge: "", ordre: 3, actif: true,
+      },
+      {
+        cycleId, titre: "Logistique / Transport",
+        description: "Chauffeur poids lourd, cariste, magasinier, manutentionnaire. La logistique est un pilier de l'économie italienne.",
+        dureeHeures: "120h", nbMetiers: 4, icone: "🚛", badge: "", ordre: 4, actif: true,
+      },
+      {
+        cycleId, titre: "Métallurgie",
+        description: "Soudeur, tourneur, mécanicien, chaudronnier, technicien maintenance. L'industrie mécanique italienne est réputée mondiale.",
+        dureeHeures: "120h", nbMetiers: 6, icone: "⚙️", badge: "", ordre: 5, actif: true,
+      },
+      {
+        cycleId, titre: "Autres secteurs moyens",
+        description: "Employé de rayon, caissier, aide familiale, auxiliaire de vie. Des opportunités variées selon votre profil.",
+        dureeHeures: "120h", nbMetiers: 5, icone: "🛒", badge: "", ordre: 6, actif: true,
+      },
+    ]);
+    console.log("6 filières créées.");
+  }
+
+  // ─── Tarifs ──────────────────────────────────────────────────────────────
+  if ((await db.select().from(tarifs)).length === 0) {
+    await db.insert(tarifs).values([
+      { cycleId, label: "Inscription", montantChiffres: "220 000", montantLettres: "220 000 FCFA", description: "Frais d'inscription", estTotal: false, ordre: 1 },
+      { cycleId, label: "Reliquat sur formation", montantChiffres: "340 000", montantLettres: "340 000 FCFA", description: "Solde final après obtention du Nulla Osta", estTotal: false, ordre: 2 },
+      { cycleId, label: "Total", montantChiffres: "560 000", montantLettres: "560 000 FCFA", description: "Coût total du programme", estTotal: true, ordre: 3 },
+    ]);
+    console.log("3 lignes de tarifs créées.");
+  }
+
+  // ─── Étapes du déroulement ───────────────────────────────────────────────
+  if ((await db.select().from(etapes)).length === 0) {
+    await db.insert(etapes).values([
+      { cycleId, numero: "01", icone: "📝", titre: "Inscription", description: "Dépôt du dossier et paiement des frais d'inscription de 220 000 FCFA pour réserver votre place.", ordre: 1 },
+      { cycleId, numero: "02", icone: "📖", titre: "Formation", description: "120 heures de cours théoriques et pratiques du 01/09 au 30/11/2026. Langue italienne, sécurité au travail et éducation civile.", ordre: 2 },
+      { cycleId, numero: "03", icone: "✅", titre: "Validation", description: "Évaluations et tests des compétences. Validation après paiement complet de 560 000 FCFA.", ordre: 3 },
+      { cycleId, numero: "04", icone: "📜", titre: "Attestation", description: "Délivrance de l'attestation de validation et accompagnement vers l'obtention du Nulla Osta pour l'Italie.", ordre: 4 },
+    ]);
+    console.log("4 étapes créées.");
+  }
+
+  // ─── Paramètres globaux ──────────────────────────────────────────────────
+  if ((await db.select().from(parametres)).length === 0) {
+    await db.insert(parametres).values([
+      { cle: "org_name", valeur: "UNIMPRESA Sicilia" },
+      { cle: "hero_subtitle", valeur: "Formation certifiante pour apprenants sénégalais" },
+      { cle: "hero_description", valeur: "Préparez votre insertion professionnelle en Italie grâce à un programme certifiant de 120 heures, à Dakar." },
+      { cle: "cta_inscription", valeur: "🎓 Je veux m'inscrire" },
+      { cle: "cta_rdv", valeur: "📅 Prendre rendez-vous" },
+      { cle: "cta_metiers", valeur: "📋 Découvrir les métiers" },
+      { cle: "cta_final", valeur: "🎓 Commencer mon inscription" },
+      { cle: "badge_certifiee", valeur: "Certifiée" },
+      { cle: "badge_certifiee_label", valeur: "Formation" },
+      { cle: "duree_label", valeur: "De cours" },
+      { cle: "participants_label", valeur: "Participants" },
+      { cle: "ville_label", valeur: "Sénégal" },
+      { cle: "section_filieres_titre", valeur: "Nos filières de formation" },
+      { cle: "section_filieres_soustitre", valeur: "Choisissez le métier qui vous correspond parmi nos secteurs porteurs en Italie." },
+      { cle: "section_programme_titre", valeur: "Déroulement du programme" },
+      { cle: "section_tarifs_titre", valeur: "Tarifs du programme" },
+      { cle: "tarifs_col_description", valeur: "DESCRIPTION" },
+      { cle: "tarifs_col_montant", valeur: "MONTANT" },
+      { cle: "info_titre", valeur: "💡 Validation après paiement complet" },
+      { cle: "info_texte", valeur: "L'attestation de validation est délivrée après seulement le paiement complet de l'inscription (220 000 FCFA) et du reliquat de (340 000 FCFA) pour un total de 560 000 FCFA." },
+      { cle: "devise", valeur: "FCFA" },
+      { cle: "couleur_fond", valeur: "#0f1f2e" },
+      { cle: "couleur_principale", valeur: "#1a2a4a" },
+      { cle: "couleur_accent", valeur: "#c9a227" },
+      { cle: "logo_url", valeur: "" },
+      { cle: "adresse_centre", valeur: "Centre Principal — Immeuble ISEG, Faculté de Droit, Dakar, Sénégal" },
+      { cle: "contact_email", valeur: "contact@unimpresa-sicilia.com" },
+      { cle: "contact_telephone", valeur: "+221 33 000 00 00" },
+      { cle: "contact_whatsapp", valeur: "+221 77 000 00 00" },
+      { cle: "footer_texte", valeur: "Programme de formation certifiant pour l'insertion professionnelle en Italie." },
+    ]);
+    console.log("Paramètres globaux créés.");
+  }
+
+  // ─── Compte Super Admin par défaut ───────────────────────────────────────
+  if ((await db.select().from(admins)).length === 0) {
+    await db.insert(admins).values({
+      username: "admin",
+      passwordHash: await bcrypt.hash("admin123", 10),
+      role: "superadmin",
+    });
+    console.log("Compte admin créé (admin / admin123).");
+  }
+
+  // ─── Métiers détaillés par filière ───────────────────────────────────────
+  const { filieres: filTable, partenaires, avantages } = await import("./schema");
+  const METIERS: Record<string, string[]> = {
+    "Agroalimentaire": ["Ouvrier agricole maraîcher", "Ouvrier agricole serres et cultures sous abri", "Tractoriste / Conducteur d'engins agricoles", "Ouvrier élevage bovins/volailles/porcs", "Ouvrier pisciculture", "Boulanger", "Boucher", "Opérateur fromager"],
+    "Bâtiment / Construction": ["Maçon", "Ferrailleur", "Coffreur/Bancheur", "Poseur de carrelage et dallage", "Plâtrier/Plaquiste", "Électricien bâtiment", "Plombier/Installateur sanitaire", "Peintre en bâtiment", "Manœuvre spécialisé"],
+    "Restauration": ["Pizzaiolo", "Cuisinier", "Serveur/Serveuse de salle", "Barman", "Pâtissier", "Employé housekeeping/hôtel", "Réceptionniste"],
+    "Logistique / Transport": ["Chauffeur poids lourd CQC", "Cariste/Manutentionnaire chariot élévateur", "Magasinier/Préparateur de commandes", "Manutentionnaire/Facchinaggio"],
+    "Métallurgie": ["Soudeur", "Tourneur/Fraiseur", "Mécanicien auto/industriel", "Monteur-assembleur mécanique", "Chaudronnier", "Technicien maintenance industrielle"],
+    "Autres secteurs moyens": ["Employé de rayon/Scaffaliste", "Caissier", "Aide familiale/Badante", "Auxiliaire de vie", "Autres"],
+  };
+  const filRows = await db.select().from(filTable);
+  for (const f of filRows) {
+    if ((!f.metiers || f.metiers === "") && METIERS[f.titre]) {
+      await db.update(filTable).set({ metiers: JSON.stringify(METIERS[f.titre]) }).where(eq2(filTable.id, f.id));
+    }
+  }
+
+  // ─── Partenaires ─────────────────────────────────────────────────────────
+  if ((await db.select().from(partenaires)).length === 0) {
+    await db.insert(partenaires).values([
+      { nom: "UNIMPRESA Sicilia", description: "Organisation patronale : Promotion des Entreprises et développement économique du territoire sicilien.", logo: "", ordre: 1, actif: true },
+      { nom: "S.E.F.O.R.", description: "Servizi di Formazione Orientamento e Ricerca — Société d'Enseignement, d'Orientation et de Recherche.", logo: "", ordre: 2, actif: true },
+      { nom: "CRISAF", description: "Formation sécurité au travail selon les normes italiennes. Centre de Recherche et d'Innovation pour le Développement en Afrique.", logo: "", ordre: 3, actif: true },
+      { nom: "CPIA 2 Catania", description: "Centre Provincial pour l'Éducation des Adultes — Ministère italien de l'Instruction et du Mérite.", logo: "", ordre: 4, actif: true },
+    ]);
+    console.log("Partenaires créés.");
+  }
+
+  // ─── Avantages ───────────────────────────────────────────────────────────
+  if ((await db.select().from(avantages)).length === 0) {
+    await db.insert(avantages).values([
+      { icone: "✅", titre: "Formation certifiée et reconnue", description: "Notre programme est reconnu par les institutions italiennes et sénégalaises pour sa qualité et sa conformité.", ordre: 1, actif: true },
+      { icone: "👨‍🏫", titre: "Intervenants qualifiés et expérimentés", description: "Des formateurs experts dans leurs domaines avec une expérience internationale.", ordre: 2, actif: true },
+      { icone: "📋", titre: "Contenu conforme aux normes italiennes", description: "Programme aligné sur les exigences du Décret Flussi et du marché du travail italien.", ordre: 3, actif: true },
+      { icone: "🤝", titre: "Accompagnement personnalisé", description: "Suivi individuel tout au long de votre parcours et après la formation.", ordre: 4, actif: true },
+      { icone: "💼", titre: "Opportunités réelles d'emploi en Italie", description: "Partenariats avec des employeurs italiens pour faciliter votre insertion professionnelle.", ordre: 5, actif: true },
+    ]);
+    console.log("Avantages créés.");
+  }
+
+  console.log("Seed terminé.");
+  process.exit(0);
+}
+
+seed().catch((err) => {
+  console.error(err);
+  process.exit(1);
+});

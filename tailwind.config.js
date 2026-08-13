@@ -1,1 +1,84 @@
-LyoqIEB0eXBlIHtpbXBvcnQoJ3RhaWx3aW5kY3NzJykuQ29uZmlnfSAqLwptb2R1bGUuZXhwb3J0cyA9IHsKICBkYXJrTW9kZTogWyJjbGFzcyJdLAogIGNvbnRlbnQ6IFsnLi9pbmRleC5odG1sJywgJy4vc3JjLyoqLyoue2pzLHRzLGpzeCx0c3h9J10sCiAgdGhlbWU6IHsKICAgIGV4dGVuZDogewogICAgICBjb2xvcnM6IHsKICAgICAgICBib3JkZXI6ICJoc2wodmFyKC0tYm9yZGVyKSkiLAogICAgICAgIGlucHV0OiAiaHNsKHZhcigtLWlucHV0KSkiLAogICAgICAgIHJpbmc6ICJoc2wodmFyKC0tcmluZykpIiwKICAgICAgICBiYWNrZ3JvdW5kOiAiaHNsKHZhcigtLWJhY2tncm91bmQpKSIsCiAgICAgICAgZm9yZWdyb3VuZDogImhzbCh2YXIoLS1mb3JlZ3JvdW5kKSkiLAogICAgICAgIHByaW1hcnk6IHsKICAgICAgICAgIERFRkFVTFQ6ICJoc2wodmFyKC0tcHJpbWFyeSkpIiwKICAgICAgICAgIGZvcmVncm91bmQ6ICJoc2wodmFyKC0tcHJpbWFyeS1mb3JlZ3JvdW5kKSkiLAogICAgICAgIH0sCiAgICAgICAgc2Vjb25kYXJ5OiB7CiAgICAgICAgICBERUZBVUxUOiAiaHNsKHZhcigtLXNlY29uZGFyeSkpIiwKICAgICAgICAgIGZvcmVncm91bmQ6ICJoc2wodmFyKC0tc2Vjb25kYXJ5LWZvcmVncm91bmQpKSIsCiAgICAgICAgfSwKICAgICAgICBkZXN0cnVjdGl2ZTogewogICAgICAgICAgREVGQVVMVDogImhzbCh2YXIoLS1kZXN0cnVjdGl2ZSkgLyA8YWxwaGEtdmFsdWU+KSIsCiAgICAgICAgICBmb3JlZ3JvdW5kOiAiaHNsKHZhcigtLWRlc3RydWN0aXZlLWZvcmVncm91bmQpIC8gPGFscGhhLXZhbHVlPikiLAogICAgICAgIH0sCiAgICAgICAgbXV0ZWQ6IHsKICAgICAgICAgIERFRkFVTFQ6ICJoc2wodmFyKC0tbXV0ZWQpKSIsCiAgICAgICAgICBmb3JlZ3JvdW5kOiAiaHNsKHZhcigtLW11dGVkLWZvcmVncm91bmQpKSIsCiAgICAgICAgfSwKICAgICAgICBhY2NlbnQ6IHsKICAgICAgICAgIERFRkFVTFQ6ICJoc2wodmFyKC0tYWNjZW50KSkiLAogICAgICAgICAgZm9yZWdyb3VuZDogImhzbCh2YXIoLS1hY2NlbnQtZm9yZWdyb3VuZCkpIiwKICAgICAgICB9LAogICAgICAgIHBvcG92ZXI6IHsKICAgICAgICAgIERFRkFVTFQ6ICJoc2wodmFyKC0tcG9wb3ZlcikpIiwKICAgICAgICAgIGZvcmVncm91bmQ6ICJoc2wodmFyKC0tcG9wb3Zlci1mb3JlZ3JvdW5kKSkiLAogICAgICAgIH0sCiAgICAgICAgY2FyZDogewogICAgICAgICAgREVGQVVMVDogImhzbCh2YXIoLS1jYXJkKSkiLAogICAgICAgICAgZm9yZWdyb3VuZDogImhzbCh2YXIoLS1jYXJkLWZvcmVncm91bmQpKSIsCiAgICAgICAgfSwKICAgICAgICBzaWRlYmFyOiB7CiAgICAgICAgICBERUZBVUxUOiAiaHNsKHZhcigtLXNpZGViYXItYmFja2dyb3VuZCkpIiwKICAgICAgICAgIGZvcmVncm91bmQ6ICJoc2wodmFyKC0tc2lkZWJhci1mb3JlZ3JvdW5kKSkiLAogICAgICAgICAgcHJpbWFyeTogImhzbCh2YXIoLS1zaWRlYmFyLXByaW1hcnkpKSIsCiAgICAgICAgICAicHJpbWFyeS1mb3JlZ3JvdW5kIjogImhzbCh2YXIoLS1zaWRlYmFyLXByaW1hcnktZm9yZWdyb3VuZCkpIiwKICAgICAgICAgIGFjY2VudDogImhzbCh2YXIoLS1zaWRlYmFyLWFjY2VudCkpIiwKICAgICAgICAgICJhY2NlbnQtZm9yZWdyb3VuZCI6ICJoc2wodmFyKC0tc2lkZWJhci1hY2NlbnQtZm9yZWdyb3VuZCkpIiwKICAgICAgICAgIGJvcmRlcjogImhzbCh2YXIoLS1zaWRlYmFyLWJvcmRlcikpIiwKICAgICAgICAgIHJpbmc6ICJoc2wodmFyKC0tc2lkZWJhci1yaW5nKSkiLAogICAgICAgIH0sCiAgICAgIH0sCiAgICAgIGJvcmRlclJhZGl1czogewogICAgICAgIHhsOiAiY2FsYyh2YXIoLS1yYWRpdXMpICsgNHB4KSIsCiAgICAgICAgbGc6ICJ2YXIoLS1yYWRpdXMpIiwKICAgICAgICBtZDogImNhbGModmFyKC0tcmFkaXVzKSAtIDJweCkiLAogICAgICAgIHNtOiAiY2FsYyh2YXIoLS1yYWRpdXMpIC0gNHB4KSIsCiAgICAgICAgeHM6ICJjYWxjKHZhcigtLXJhZGl1cykgLSA2cHgpIiwKICAgICAgfSwKICAgICAgYm94U2hhZG93OiB7CiAgICAgICAgeHM6ICIwIDFweCAycHggMCByZ2IoMCAwIDAgLyAwLjA1KSIsCiAgICAgIH0sCiAgICAgIGtleWZyYW1lczogewogICAgICAgICJhY2NvcmRpb24tZG93biI6IHsKICAgICAgICAgIGZyb206IHsgaGVpZ2h0OiAiMCIgfSwKICAgICAgICAgIHRvOiB7IGhlaWdodDogInZhcigtLXJhZGl4LWFjY29yZGlvbi1jb250ZW50LWhlaWdodCkiIH0sCiAgICAgICAgfSwKICAgICAgICAiYWNjb3JkaW9uLXVwIjogewogICAgICAgICAgZnJvbTogeyBoZWlnaHQ6ICJ2YXIoLS1yYWRpeC1hY2NvcmRpb24tY29udGVudC1oZWlnaHQpIiB9LAogICAgICAgICAgdG86IHsgaGVpZ2h0OiAiMCIgfSwKICAgICAgICB9LAogICAgICAgICJjYXJldC1ibGluayI6IHsKICAgICAgICAgICIwJSw3MCUsMTAwJSI6IHsgb3BhY2l0eTogIjEiIH0sCiAgICAgICAgICAiMjAlLDUwJSI6IHsgb3BhY2l0eTogIjAiIH0sCiAgICAgICAgfSwKICAgICAgfSwKICAgICAgYW5pbWF0aW9uOiB7CiAgICAgICAgImFjY29yZGlvbi1kb3duIjogImFjY29yZGlvbi1kb3duIDAuMnMgZWFzZS1vdXQiLAogICAgICAgICJhY2NvcmRpb24tdXAiOiAiYWNjb3JkaW9uLXVwIDAuMnMgZWFzZS1vdXQiLAogICAgICAgICJjYXJldC1ibGluayI6ICJjYXJldC1ibGluayAxLjI1cyBlYXNlLW91dCBpbmZpbml0ZSIsCiAgICAgIH0sCiAgICB9LAogIH0sCiAgcGx1Z2luczogW3JlcXVpcmUoInRhaWx3aW5kY3NzLWFuaW1hdGUiKV0sCn0=
+/** @type {import('tailwindcss').Config} */
+module.exports = {
+  darkMode: ["class"],
+  content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
+  theme: {
+    extend: {
+      colors: {
+        border: "hsl(var(--border))",
+        input: "hsl(var(--input))",
+        ring: "hsl(var(--ring))",
+        background: "hsl(var(--background))",
+        foreground: "hsl(var(--foreground))",
+        primary: {
+          DEFAULT: "hsl(var(--primary))",
+          foreground: "hsl(var(--primary-foreground))",
+        },
+        secondary: {
+          DEFAULT: "hsl(var(--secondary))",
+          foreground: "hsl(var(--secondary-foreground))",
+        },
+        destructive: {
+          DEFAULT: "hsl(var(--destructive) / <alpha-value>)",
+          foreground: "hsl(var(--destructive-foreground) / <alpha-value>)",
+        },
+        muted: {
+          DEFAULT: "hsl(var(--muted))",
+          foreground: "hsl(var(--muted-foreground))",
+        },
+        accent: {
+          DEFAULT: "hsl(var(--accent))",
+          foreground: "hsl(var(--accent-foreground))",
+        },
+        popover: {
+          DEFAULT: "hsl(var(--popover))",
+          foreground: "hsl(var(--popover-foreground))",
+        },
+        card: {
+          DEFAULT: "hsl(var(--card))",
+          foreground: "hsl(var(--card-foreground))",
+        },
+        sidebar: {
+          DEFAULT: "hsl(var(--sidebar-background))",
+          foreground: "hsl(var(--sidebar-foreground))",
+          primary: "hsl(var(--sidebar-primary))",
+          "primary-foreground": "hsl(var(--sidebar-primary-foreground))",
+          accent: "hsl(var(--sidebar-accent))",
+          "accent-foreground": "hsl(var(--sidebar-accent-foreground))",
+          border: "hsl(var(--sidebar-border))",
+          ring: "hsl(var(--sidebar-ring))",
+        },
+      },
+      borderRadius: {
+        xl: "calc(var(--radius) + 4px)",
+        lg: "var(--radius)",
+        md: "calc(var(--radius) - 2px)",
+        sm: "calc(var(--radius) - 4px)",
+        xs: "calc(var(--radius) - 6px)",
+      },
+      boxShadow: {
+        xs: "0 1px 2px 0 rgb(0 0 0 / 0.05)",
+      },
+      keyframes: {
+        "accordion-down": {
+          from: { height: "0" },
+          to: { height: "var(--radix-accordion-content-height)" },
+        },
+        "accordion-up": {
+          from: { height: "var(--radix-accordion-content-height)" },
+          to: { height: "0" },
+        },
+        "caret-blink": {
+          "0%,70%,100%": { opacity: "1" },
+          "20%,50%": { opacity: "0" },
+        },
+      },
+      animation: {
+        "accordion-down": "accordion-down 0.2s ease-out",
+        "accordion-up": "accordion-up 0.2s ease-out",
+        "caret-blink": "caret-blink 1.25s ease-out infinite",
+      },
+    },
+  },
+  plugins: [require("tailwindcss-animate")],
+}

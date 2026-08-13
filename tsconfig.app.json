@@ -1,1 +1,45 @@
-ewogICJjb21waWxlck9wdGlvbnMiOiB7CiAgICAidHNCdWlsZEluZm9GaWxlIjogIi4vbm9kZV9tb2R1bGVzLy50bXAvdHNjb25maWcuYXBwLnRzYnVpbGRpbmZvIiwKICAgICJ0YXJnZXQiOiAiRVMyMDIyIiwKICAgICJ1c2VEZWZpbmVGb3JDbGFzc0ZpZWxkcyI6IHRydWUsCiAgICAibGliIjogWwogICAgICAiRVMyMDIyIiwKICAgICAgIkRPTSIsCiAgICAgICJET00uSXRlcmFibGUiCiAgICBdLAogICAgIm1vZHVsZSI6ICJFU05leHQiLAogICAgInR5cGVzIjogWwogICAgICAidml0ZS9jbGllbnQiLAogICAgICAibm9kZSIKICAgIF0sCiAgICAic2tpcExpYkNoZWNrIjogdHJ1ZSwKICAgICJiYXNlVXJsIjogIi4iLAogICAgInBhdGhzIjogewogICAgICAiQC8qIjogWwogICAgICAgICIuL3NyYy8qIgogICAgICBdLAogICAgICAiQGNvbnRyYWN0cy8qIjogWwogICAgICAgICIuL2NvbnRyYWN0cy8qIgogICAgICBdLAogICAgICAiQGRiLyoiOiBbCiAgICAgICAgIi4vZGIvKiIKICAgICAgXQogICAgfSwKICAgICJtb2R1bGVSZXNvbHV0aW9uIjogImJ1bmRsZXIiLAogICAgImFsbG93SW1wb3J0aW5nVHNFeHRlbnNpb25zIjogdHJ1ZSwKICAgICJ2ZXJiYXRpbU1vZHVsZVN5bnRheCI6IHRydWUsCiAgICAibW9kdWxlRGV0ZWN0aW9uIjogImZvcmNlIiwKICAgICJub0VtaXQiOiB0cnVlLAogICAgImpzeCI6ICJyZWFjdC1qc3giLAogICAgInN0cmljdCI6IHRydWUsCiAgICAibm9VbnVzZWRMb2NhbHMiOiB0cnVlLAogICAgIm5vVW51c2VkUGFyYW1ldGVycyI6IHRydWUsCiAgICAiZXJhc2FibGVTeW50YXhPbmx5IjogdHJ1ZSwKICAgICJub0ZhbGx0aHJvdWdoQ2FzZXNJblN3aXRjaCI6IHRydWUsCiAgICAibm9VbmNoZWNrZWRTaWRlRWZmZWN0SW1wb3J0cyI6IHRydWUKICB9LAogICJpbmNsdWRlIjogWwogICAgInNyYyIKICBdCn0K
+{
+  "compilerOptions": {
+    "tsBuildInfoFile": "./node_modules/.tmp/tsconfig.app.tsbuildinfo",
+    "target": "ES2022",
+    "useDefineForClassFields": true,
+    "lib": [
+      "ES2022",
+      "DOM",
+      "DOM.Iterable"
+    ],
+    "module": "ESNext",
+    "types": [
+      "vite/client",
+      "node"
+    ],
+    "skipLibCheck": true,
+    "baseUrl": ".",
+    "paths": {
+      "@/*": [
+        "./src/*"
+      ],
+      "@contracts/*": [
+        "./contracts/*"
+      ],
+      "@db/*": [
+        "./db/*"
+      ]
+    },
+    "moduleResolution": "bundler",
+    "allowImportingTsExtensions": true,
+    "verbatimModuleSyntax": true,
+    "moduleDetection": "force",
+    "noEmit": true,
+    "jsx": "react-jsx",
+    "strict": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "erasableSyntaxOnly": true,
+    "noFallthroughCasesInSwitch": true,
+    "noUncheckedSideEffectImports": true
+  },
+  "include": [
+    "src"
+  ]
+}

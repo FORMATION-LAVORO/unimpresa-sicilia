@@ -1,1 +1,13 @@
-ewogICJ2ZXJzaW9uIjogIjciLAogICJkaWFsZWN0IjogInBvc3RncmVzcWwiLAogICJlbnRyaWVzIjogWwogICAgewogICAgICAiaWR4IjogMCwKICAgICAgInZlcnNpb24iOiAiNyIsCiAgICAgICJ3aGVuIjogMTc4NjU3NTQ2MDMwNSwKICAgICAgInRhZyI6ICIwMDAwX2N1ZGRseV9raWxsZXJfc2hyaWtlIiwKICAgICAgImJyZWFrcG9pbnRzIjogdHJ1ZQogICAgfQogIF0KfQ==
+{
+  "version": "7",
+  "dialect": "postgresql",
+  "entries": [
+    {
+      "idx": 0,
+      "version": "7",
+      "when": 1786575460305,
+      "tag": "0000_cuddly_killer_shrike",
+      "breakpoints": true
+    }
+  ]
+}

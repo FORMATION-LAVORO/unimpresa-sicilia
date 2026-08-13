@@ -1,1 +1,29 @@
-aW1wb3J0IGRldlNlcnZlciBmcm9tICJAaG9uby92aXRlLWRldi1zZXJ2ZXIiCmltcG9ydCBwYXRoIGZyb20gInBhdGgiCmNvbnN0IF9fZGlybmFtZSA9IGltcG9ydC5tZXRhLmRpcm5hbWUKaW1wb3J0IHJlYWN0IGZyb20gIkB2aXRlanMvcGx1Z2luLXJlYWN0IgppbXBvcnQgeyBkZWZpbmVDb25maWcgfSBmcm9tICJ2aXRlIgppbXBvcnQgeyBpbnNwZWN0QXR0ciB9IGZyb20gJ2tpbWktcGx1Z2luLWluc3BlY3QtcmVhY3QnCgovLyBodHRwczovL3ZpdGUuZGV2L2NvbmZpZy8KZXhwb3J0IGRlZmF1bHQgZGVmaW5lQ29uZmlnKHsKICBwbHVnaW5zOiBbCiAgICBkZXZTZXJ2ZXIoeyBlbnRyeTogImFwaS9ib290LnRzIiwgZXhjbHVkZTogWy9eXC8oPyFhcGlcLykuKiQvXSB9KSwKICAgIGluc3BlY3RBdHRyKCksIHJlYWN0KCldLAogIHNlcnZlcjogewogICAgcG9ydDogMzAwMCwKICB9LAogIHJlc29sdmU6IHsKICAgIGFsaWFzOiB7CiAgICAgICJAIjogcGF0aC5yZXNvbHZlKF9fZGlybmFtZSwgIi4vc3JjIiksCiAgICAgICJAY29udHJhY3RzIjogcGF0aC5yZXNvbHZlKF9fZGlybmFtZSwgIi4vY29udHJhY3RzIiksCiAgICAgICJAZGIiOiBwYXRoLnJlc29sdmUoX19kaXJuYW1lLCAiLi9kYiIpLAogICAgICAiZGIiOiBwYXRoLnJlc29sdmUoX19kaXJuYW1lLCAiLi9kYiIpLAogICAgfSwKICB9LAogIGVudkRpcjogcGF0aC5yZXNvbHZlKF9fZGlybmFtZSksCiAgYnVpbGQ6IHsKICAgIG91dERpcjogcGF0aC5yZXNvbHZlKF9fZGlybmFtZSwgImRpc3QvcHVibGljIiksCiAgICBlbXB0eU91dERpcjogdHJ1ZSwKICB9LAp9KTsK
+import devServer from "@hono/vite-dev-server"
+import path from "path"
+const __dirname = import.meta.dirname
+import react from "@vitejs/plugin-react"
+import { defineConfig } from "vite"
+import { inspectAttr } from 'kimi-plugin-inspect-react'
+
+// https://vite.dev/config/
+export default defineConfig({
+  plugins: [
+    devServer({ entry: "api/boot.ts", exclude: [/^\/(?!api\/).*$/] }),
+    inspectAttr(), react()],
+  server: {
+    port: 3000,
+  },
+  resolve: {
+    alias: {
+      "@": path.resolve(__dirname, "./src"),
+      "@contracts": path.resolve(__dirname, "./contracts"),
+      "@db": path.resolve(__dirname, "./db"),
+      "db": path.resolve(__dirname, "./db"),
+    },
+  },
+  envDir: path.resolve(__dirname),
+  build: {
+    outDir: path.resolve(__dirname, "dist/public"),
+    emptyOutDir: true,
+  },
+});

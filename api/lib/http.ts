@@ -1,1 +1,77 @@
-aW50ZXJmYWNlIFJlcXVlc3RDb25maWcgZXh0ZW5kcyBSZXF1ZXN0SW5pdCB7CiAgYmFzZVVybD86IHN0cmluZzsKICBwYXJhbXM/OiBSZWNvcmQ8c3RyaW5nLCBzdHJpbmcgfCBudW1iZXI+OwogIHRpbWVvdXQ/OiBudW1iZXI7Cn0KCmV4cG9ydCBjbGFzcyBIdHRwQ2xpZW50IHsKICBwcml2YXRlIGJhc2VVcmw6IHN0cmluZzsKICBwcml2YXRlIGRlZmF1bHRIZWFkZXJzOiBSZWNvcmQ8c3RyaW5nLCBzdHJpbmc+OwoKICBjb25zdHJ1Y3RvcihiYXNlVVJMOiBzdHJpbmcsIG9wdHM/OiB7IGhlYWRlcnM/OiBSZWNvcmQ8c3RyaW5nLCBzdHJpbmc+IH0pIHsKICAgIHRoaXMuYmFzZVVybCA9IGJhc2VVUkw7CiAgICB0aGlzLmRlZmF1bHRIZWFkZXJzID0gewogICAgICAiQ29udGVudC1UeXBlIjogImFwcGxpY2F0aW9uL2pzb24iLAogICAgICAuLi5vcHRzPy5oZWFkZXJzLAogICAgfTsKICB9CgogIGFzeW5jIHJlcXVlc3Q8VD4oZW5kcG9pbnQ6IHN0cmluZywgY29uZmlnOiBSZXF1ZXN0Q29uZmlnID0ge30pOiBQcm9taXNlPFQ+IHsKICAgIGNvbnN0IHsKICAgICAgbWV0aG9kID0gIkdFVCIsCiAgICAgIHBhcmFtcywKICAgICAgYm9keSwKICAgICAgaGVhZGVycywKICAgICAgdGltZW91dCA9IDMwMDAwLAogICAgICAuLi5yZXN0CiAgICB9ID0gY29uZmlnOwoKICAgIGNvbnN0IHVybCA9IG5ldyBVUkwoYCR7dGhpcy5iYXNlVXJsfSR7ZW5kcG9pbnR9YCk7CiAgICBpZiAocGFyYW1zKSB7CiAgICAgIE9iamVjdC5lbnRyaWVzKHBhcmFtcykuZm9yRWFjaCgoW2tleSwgdmFsdWVdKSA9PgogICAgICAgIHVybC5zZWFyY2hQYXJhbXMuYXBwZW5kKGtleSwgdmFsdWUudG9TdHJpbmcoKSksCiAgICAgICk7CiAgICB9CgogICAgY29uc3QgY29udHJvbGxlciA9IG5ldyBBYm9ydENvbnRyb2xsZXIoKTsKICAgIGNvbnN0IHRpbWVvdXRJZCA9IHNldFRpbWVvdXQoKCkgPT4gY29udHJvbGxlci5hYm9ydCgpLCB0aW1lb3V0KTsKCiAgICB0cnkgewogICAgICBjb25zdCByZXNwb25zZSA9IGF3YWl0IGZldGNoKHVybC50b1N0cmluZygpLCB7CiAgICAgICAgLi4ucmVzdCwKICAgICAgICBtZXRob2QsCiAgICAgICAgaGVhZGVyczogeyAuLi50aGlzLmRlZmF1bHRIZWFkZXJzLCAuLi5oZWFkZXJzIH0sCiAgICAgICAgYm9keTogYm9keSA/IEpTT04uc3RyaW5naWZ5KGJvZHkpIDogdW5kZWZpbmVkLAogICAgICAgIHNpZ25hbDogY29udHJvbGxlci5zaWduYWwsCiAgICAgIH0pOwoKICAgICAgY2xlYXJUaW1lb3V0KHRpbWVvdXRJZCk7CgogICAgICBpZiAoIXJlc3BvbnNlLm9rKSB7CiAgICAgICAgY29uc3QgZXJyb3JEYXRhID0gKGF3YWl0IHJlc3BvbnNlCiAgICAgICAgICAuanNvbigpCiAgICAgICAgICAuY2F0Y2goKCkgPT4gKHt9KSkpIGFzIFJlY29yZDxzdHJpbmcsIHN0cmluZz47CiAgICAgICAgdGhyb3cgbmV3IEVycm9yKGVycm9yRGF0YS5tZXNzYWdlIHx8IGBIVFRQIEVycm9yOiAke3Jlc3BvbnNlLnN0YXR1c31gKTsKICAgICAgfQoKICAgICAgcmV0dXJuIChhd2FpdCByZXNwb25zZS5qc29uKCkpIGFzIFQ7CiAgICB9IGNhdGNoIChlcnJvcjogYW55KSB7CiAgICAgIGlmIChlcnJvci5uYW1lID09PSAiQWJvcnRFcnJvciIpIHsKICAgICAgICB0aHJvdyBuZXcgRXJyb3IoIlJlcXVlc3QgdGltZW91dCIpOwogICAgICB9CiAgICAgIHRocm93IGVycm9yOwogICAgfQogIH0KCiAgZ2V0PFQ+KAogICAgdXJsOiBzdHJpbmcsCiAgICBwYXJhbXM/OiBSZXF1ZXN0Q29uZmlnWyJwYXJhbXMiXSwKICAgIGNvbmZpZz86IFJlcXVlc3RDb25maWcsCiAgKSB7CiAgICByZXR1cm4gdGhpcy5yZXF1ZXN0PFQ+KHVybCwgeyAuLi5jb25maWcsIG1ldGhvZDogIkdFVCIsIHBhcmFtcyB9KTsKICB9CgogIHBvc3Q8VD4odXJsOiBzdHJpbmcsIGJvZHk/OiBhbnksIGNvbmZpZz86IFJlcXVlc3RDb25maWcpIHsKICAgIHJldHVybiB0aGlzLnJlcXVlc3Q8VD4odXJsLCB7IC4uLmNvbmZpZywgbWV0aG9kOiAiUE9TVCIsIGJvZHkgfSk7CiAgfQp9Cg==
+interface RequestConfig extends RequestInit {
+  baseUrl?: string;
+  params?: Record<string, string | number>;
+  timeout?: number;
+}
+
+export class HttpClient {
+  private baseUrl: string;
+  private defaultHeaders: Record<string, string>;
+
+  constructor(baseURL: string, opts?: { headers?: Record<string, string> }) {
+    this.baseUrl = baseURL;
+    this.defaultHeaders = {
+      "Content-Type": "application/json",
+      ...opts?.headers,
+    };
+  }
+
+  async request<T>(endpoint: string, config: RequestConfig = {}): Promise<T> {
+    const {
+      method = "GET",
+      params,
+      body,
+      headers,
+      timeout = 30000,
+      ...rest
+    } = config;
+
+    const url = new URL(`${this.baseUrl}${endpoint}`);
+    if (params) {
+      Object.entries(params).forEach(([key, value]) =>
+        url.searchParams.append(key, value.toString()),
+      );
+    }
+
+    const controller = new AbortController();
+    const timeoutId = setTimeout(() => controller.abort(), timeout);
+
+    try {
+      const response = await fetch(url.toString(), {
+        ...rest,
+        method,
+        headers: { ...this.defaultHeaders, ...headers },
+        body: body ? JSON.stringify(body) : undefined,
+        signal: controller.signal,
+      });
+
+      clearTimeout(timeoutId);
+
+      if (!response.ok) {
+        const errorData = (await response
+          .json()
+          .catch(() => ({}))) as Record<string, string>;
+        throw new Error(errorData.message || `HTTP Error: ${response.status}`);
+      }
+
+      return (await response.json()) as T;
+    } catch (error: any) {
+      if (error.name === "AbortError") {
+        throw new Error("Request timeout");
+      }
+      throw error;
+    }
+  }
+
+  get<T>(
+    url: string,
+    params?: RequestConfig["params"],
+    config?: RequestConfig,
+  ) {
+    return this.request<T>(url, { ...config, method: "GET", params });
+  }
+
+  post<T>(url: string, body?: any, config?: RequestConfig) {
+    return this.request<T>(url, { ...config, method: "POST", body });
+  }
+}

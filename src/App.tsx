@@ -1,1 +1,29 @@
-aW1wb3J0IHsgUm91dGVzLCBSb3V0ZSwgTmF2aWdhdGUgfSBmcm9tICdyZWFjdC1yb3V0ZXInCmltcG9ydCBIb21lIGZyb20gJy4vcGFnZXMvSG9tZScKaW1wb3J0IEluc2NyaXB0aW9uIGZyb20gJy4vcGFnZXMvSW5zY3JpcHRpb24nCmltcG9ydCBSZW5kZXpWb3VzIGZyb20gJy4vcGFnZXMvUmVuZGV6Vm91cycKaW1wb3J0IEFkbWluTG9naW4gZnJvbSAnLi9wYWdlcy9hZG1pbi9Mb2dpbicKaW1wb3J0IEFkbWluRGFzaGJvYXJkIGZyb20gJy4vcGFnZXMvYWRtaW4vRGFzaGJvYXJkJwoKZXhwb3J0IGRlZmF1bHQgZnVuY3Rpb24gQXBwKCkgewogIHJldHVybiAoCiAgICA8Um91dGVzPgogICAgICA8Um91dGUgcGF0aD0iLyIgZWxlbWVudD17PEhvbWUgLz59IC8+CiAgICAgIDxSb3V0ZSBwYXRoPSIvaW5zY3JpcHRpb24iIGVsZW1lbnQ9ezxJbnNjcmlwdGlvbiAvPn0gLz4KICAgICAgPFJvdXRlIHBhdGg9Ii9yZW5kZXp2b3VzIiBlbGVtZW50PXs8UmVuZGV6Vm91cyAvPn0gLz4KICAgICAgPFJvdXRlIHBhdGg9Ii9hZG1pbi9sb2dpbiIgZWxlbWVudD17PEFkbWluTG9naW4gLz59IC8+CiAgICAgIDxSb3V0ZSBwYXRoPSIvYWRtaW4iIGVsZW1lbnQ9ezxOYXZpZ2F0ZSB0bz0iL2FkbWluL2Rhc2hib2FyZCIgcmVwbGFjZSAvPn0gLz4KICAgICAgPFJvdXRlIHBhdGg9Ii9hZG1pbi9kYXNoYm9hcmQiIGVsZW1lbnQ9ezxBZG1pbkRhc2hib2FyZCAvPn0gLz4KICAgICAgPFJvdXRlIHBhdGg9Ii9hZG1pbi9jeWNsZXMiIGVsZW1lbnQ9ezxBZG1pbkRhc2hib2FyZCAvPn0gLz4KICAgICAgPFJvdXRlIHBhdGg9Ii9hZG1pbi9maWxpZXJlcyIgZWxlbWVudD17PEFkbWluRGFzaGJvYXJkIC8+fSAvPgogICAgICA8Um91dGUgcGF0aD0iL2FkbWluL3RhcmlmcyIgZWxlbWVudD17PEFkbWluRGFzaGJvYXJkIC8+fSAvPgogICAgICA8Um91dGUgcGF0aD0iL2FkbWluL2V0YXBlcyIgZWxlbWVudD17PEFkbWluRGFzaGJvYXJkIC8+fSAvPgogICAgICA8Um91dGUgcGF0aD0iL2FkbWluL2luc2NyaXB0aW9ucyIgZWxlbWVudD17PEFkbWluRGFzaGJvYXJkIC8+fSAvPgogICAgICA8Um91dGUgcGF0aD0iL2FkbWluL3BhcnRlbmFpcmVzIiBlbGVtZW50PXs8QWRtaW5EYXNoYm9hcmQgLz59IC8+CiAgICAgIDxSb3V0ZSBwYXRoPSIvYWRtaW4vYXZhbnRhZ2VzIiBlbGVtZW50PXs8QWRtaW5EYXNoYm9hcmQgLz59IC8+CiAgICAgIDxSb3V0ZSBwYXRoPSIvYWRtaW4vcmVuZGV6dm91cyIgZWxlbWVudD17PEFkbWluRGFzaGJvYXJkIC8+fSAvPgogICAgICA8Um91dGUgcGF0aD0iL2FkbWluL3BhcmFtZXRyZXMiIGVsZW1lbnQ9ezxBZG1pbkRhc2hib2FyZCAvPn0gLz4KICAgICAgPFJvdXRlIHBhdGg9IioiIGVsZW1lbnQ9ezxOYXZpZ2F0ZSB0bz0iLyIgcmVwbGFjZSAvPn0gLz4KICAgIDwvUm91dGVzPgogICkKfQo=
+import { Routes, Route, Navigate } from 'react-router'
+import Home from './pages/Home'
+import Inscription from './pages/Inscription'
+import RendezVous from './pages/RendezVous'
+import AdminLogin from './pages/admin/Login'
+import AdminDashboard from './pages/admin/Dashboard'
+
+export default function App() {
+  return (
+    <Routes>
+      <Route path="/" element={<Home />} />
+      <Route path="/inscription" element={<Inscription />} />
+      <Route path="/rendezvous" element={<RendezVous />} />
+      <Route path="/admin/login" element={<AdminLogin />} />
+      <Route path="/admin" element={<Navigate to="/admin/dashboard" replace />} />
+      <Route path="/admin/dashboard" element={<AdminDashboard />} />
+      <Route path="/admin/cycles" element={<AdminDashboard />} />
+      <Route path="/admin/filieres" element={<AdminDashboard />} />
+      <Route path="/admin/tarifs" element={<AdminDashboard />} />
+      <Route path="/admin/etapes" element={<AdminDashboard />} />
+      <Route path="/admin/inscriptions" element={<AdminDashboard />} />
+      <Route path="/admin/partenaires" element={<AdminDashboard />} />
+      <Route path="/admin/avantages" element={<AdminDashboard />} />
+      <Route path="/admin/rendezvous" element={<AdminDashboard />} />
+      <Route path="/admin/parametres" element={<AdminDashboard />} />
+      <Route path="*" element={<Navigate to="/" replace />} />
+    </Routes>
+  )
+}

@@ -1,1 +1,62 @@
-aW1wb3J0IHsgdXNlU3RhdGUgfSBmcm9tICJyZWFjdCI7CmltcG9ydCB7IHVzZU5hdmlnYXRlLCBMaW5rIH0gZnJvbSAicmVhY3Qtcm91dGVyIjsKaW1wb3J0IHsgdHJwYyB9IGZyb20gIkAvcHJvdmlkZXJzL3RycGMiOwppbXBvcnQgeyBzZXRBZG1pblNlc3Npb24gfSBmcm9tICJAL2xpYi9hZG1pbkF1dGgiOwoKZXhwb3J0IGRlZmF1bHQgZnVuY3Rpb24gQWRtaW5Mb2dpbigpIHsKICBjb25zdCBuYXZpZ2F0ZSA9IHVzZU5hdmlnYXRlKCk7CiAgY29uc3QgbG9naW4gPSB0cnBjLmFkbWluLmxvZ2luLnVzZU11dGF0aW9uKCk7CiAgY29uc3QgW3VzZXJuYW1lLCBzZXRVc2VybmFtZV0gPSB1c2VTdGF0ZSgiIik7CiAgY29uc3QgW3Bhc3N3b3JkLCBzZXRQYXNzd29yZF0gPSB1c2VTdGF0ZSgiIik7CiAgY29uc3QgW2Vycm9yLCBzZXRFcnJvcl0gPSB1c2VTdGF0ZSgiIik7CgogIGNvbnN0IHN1Ym1pdCA9IGFzeW5jIChlOiBSZWFjdC5Gb3JtRXZlbnQpID0+IHsKICAgIGUucHJldmVudERlZmF1bHQoKTsKICAgIHNldEVycm9yKCIiKTsKICAgIHRyeSB7CiAgICAgIGNvbnN0IHJlcyA9IGF3YWl0IGxvZ2luLm11dGF0ZUFzeW5jKHsgdXNlcm5hbWUsIHBhc3N3b3JkIH0pOwogICAgICBzZXRBZG1pblNlc3Npb24ocmVzLnRva2VuLCByZXMudXNlcm5hbWUpOwogICAgICBuYXZpZ2F0ZSgiL2FkbWluL2Rhc2hib2FyZCIpOwogICAgfSBjYXRjaCAoZXJyOiBhbnkpIHsKICAgICAgc2V0RXJyb3IoZXJyPy5tZXNzYWdlID8/ICJDb25uZXhpb24gaW1wb3NzaWJsZS4iKTsKICAgIH0KICB9OwoKICBjb25zdCBpbnB1dCA9CiAgICAidy1mdWxsIHB4LTQgcHktMyByb3VuZGVkLXhsIGJvcmRlciBib3JkZXItc2xhdGUtMzAwIGZvY3VzOm91dGxpbmUtbm9uZSBmb2N1czpyaW5nLTIgZm9jdXM6cmluZy1bI2M5YTIyN10gYmctd2hpdGUiOwoKICByZXR1cm4gKAogICAgPGRpdiBjbGFzc05hbWU9Im1pbi1oLXNjcmVlbiBmbGV4IGl0ZW1zLWNlbnRlciBqdXN0aWZ5LWNlbnRlciBweC00IGJnLVsjMGYxZjJlXSI+CiAgICAgIDxkaXYgY2xhc3NOYW1lPSJ3LWZ1bGwgbWF4LXctc20iPgogICAgICAgIDxkaXYgY2xhc3NOYW1lPSJiZy13aGl0ZSByb3VuZGVkLTJ4bCBzaGFkb3cteGwgcC04Ij4KICAgICAgICAgIDxkaXYgY2xhc3NOYW1lPSJ0ZXh0LWNlbnRlciI+CiAgICAgICAgICAgIDxzcGFuIGNsYXNzTmFtZT0iaW5saW5lLWZsZXggdy0xNCBoLTE0IHJvdW5kZWQtZnVsbCBpdGVtcy1jZW50ZXIganVzdGlmeS1jZW50ZXIgdGV4dC0yeGwgYmctWyMxYTJhNGFdIj7wn5SQPC9zcGFuPgogICAgICAgICAgICA8aDEgY2xhc3NOYW1lPSJtdC0zIHRleHQtMnhsIGZvbnQtZXh0cmFib2xkIHRleHQtWyMxYTJhNGFdIj5TdXBlciBBZG1pbjwvaDE+CiAgICAgICAgICAgIDxwIGNsYXNzTmFtZT0ibXQtMSB0ZXh0LXNtIHRleHQtc2xhdGUtNTAwIj5VTklNUFJFU0EgU2ljaWxpYSDigJQgUGFubmVhdSBkJ2FkbWluaXN0cmF0aW9uPC9wPgogICAgICAgICAgPC9kaXY+CiAgICAgICAgICA8Zm9ybSBvblN1Ym1pdD17c3VibWl0fSBjbGFzc05hbWU9Im10LTYgc3BhY2UteS00Ij4KICAgICAgICAgICAgPGRpdj4KICAgICAgICAgICAgICA8bGFiZWwgY2xhc3NOYW1lPSJibG9jayB0ZXh0LXNtIGZvbnQtc2VtaWJvbGQgdGV4dC1zbGF0ZS03MDAgbWItMSI+Tm9tIGQndXRpbGlzYXRldXI8L2xhYmVsPgogICAgICAgICAgICAgIDxpbnB1dCByZXF1aXJlZCBjbGFzc05hbWU9e2lucHV0fSB2YWx1ZT17dXNlcm5hbWV9IG9uQ2hhbmdlPXsoZSkgPT4gc2V0VXNlcm5hbWUoZS50YXJnZXQudmFsdWUpfSBhdXRvQ29tcGxldGU9InVzZXJuYW1lIiAvPgogICAgICAgICAgICA8L2Rpdj4KICAgICAgICAgICAgPGRpdj4KICAgICAgICAgICAgICA8bGFiZWwgY2xhc3NOYW1lPSJibG9jayB0ZXh0LXNtIGZvbnQtc2VtaWJvbGQgdGV4dC1zbGF0ZS03MDAgbWItMSI+TW90IGRlIHBhc3NlPC9sYWJlbD4KICAgICAgICAgICAgICA8aW5wdXQgcmVxdWlyZWQgdHlwZT0icGFzc3dvcmQiIGNsYXNzTmFtZT17aW5wdXR9IHZhbHVlPXtwYXNzd29yZH0gb25DaGFuZ2U9eyhlKSA9PiBzZXRQYXNzd29yZChlLnRhcmdldC52YWx1ZSl9IGF1dG9Db21wbGV0ZT0iY3VycmVudC1wYXNzd29yZCIgLz4KICAgICAgICAgICAgPC9kaXY+CiAgICAgICAgICAgIHtlcnJvciAmJiA8cCBjbGFzc05hbWU9InRleHQtc20gZm9udC1zZW1pYm9sZCB0ZXh0LXJlZC02MDAgYmctcmVkLTUwIHJvdW5kZWQtbGcgcHgtNCBweS0yLjUiPntlcnJvcn08L3A+fQogICAgICAgICAgICA8YnV0dG9uCiAgICAgICAgICAgICAgdHlwZT0ic3VibWl0IgogICAgICAgICAgICAgIGRpc2FibGVkPXtsb2dpbi5pc1BlbmRpbmd9CiAgICAgICAgICAgICAgY2xhc3NOYW1lPSJ3LWZ1bGwgcHktMy41IHJvdW5kZWQteGwgZm9udC1ib2xkIHRleHQtWyMwZjFmMmVdIGJnLVsjYzlhMjI3XSBob3ZlcjpicmlnaHRuZXNzLTExMCB0cmFuc2l0aW9uIGRpc2FibGVkOm9wYWNpdHktNjAiCiAgICAgICAgICAgID4KICAgICAgICAgICAgICB7bG9naW4uaXNQZW5kaW5nID8gIkNvbm5leGlvbuKApiIgOiAiU2UgY29ubmVjdGVyIn0KICAgICAgICAgICAgPC9idXR0b24+CiAgICAgICAgICA8L2Zvcm0+CiAgICAgICAgPC9kaXY+CiAgICAgICAgPHAgY2xhc3NOYW1lPSJtdC00IHRleHQtY2VudGVyIj4KICAgICAgICAgIDxMaW5rIHRvPSIvIiBjbGFzc05hbWU9InRleHQtd2hpdGUvNTAgaG92ZXI6dGV4dC13aGl0ZSB0ZXh0LXNtIj7ihpAgUmV0b3VyIGF1IHNpdGUgcHVibGljPC9MaW5rPgogICAgICAgIDwvcD4KICAgICAgPC9kaXY+CiAgICA8L2Rpdj4KICApOwp9Cg==
+import { useState } from "react";
+import { useNavigate, Link } from "react-router";
+import { trpc } from "@/providers/trpc";
+import { setAdminSession } from "@/lib/adminAuth";
+
+export default function AdminLogin() {
+  const navigate = useNavigate();
+  const login = trpc.admin.login.useMutation();
+  const [username, setUsername] = useState("");
+  const [password, setPassword] = useState("");
+  const [error, setError] = useState("");
+
+  const submit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setError("");
+    try {
+      const res = await login.mutateAsync({ username, password });
+      setAdminSession(res.token, res.username);
+      navigate("/admin/dashboard");
+    } catch (err: any) {
+      setError(err?.message ?? "Connexion impossible.");
+    }
+  };
+
+  const input =
+    "w-full px-4 py-3 rounded-xl border border-slate-300 focus:outline-none focus:ring-2 focus:ring-[#c9a227] bg-white";
+
+  return (
+    <div className="min-h-screen flex items-center justify-center px-4 bg-[#0f1f2e]">
+      <div className="w-full max-w-sm">
+        <div className="bg-white rounded-2xl shadow-xl p-8">
+          <div className="text-center">
+            <span className="inline-flex w-14 h-14 rounded-full items-center justify-center text-2xl bg-[#1a2a4a]">🔐</span>
+            <h1 className="mt-3 text-2xl font-extrabold text-[#1a2a4a]">Super Admin</h1>
+            <p className="mt-1 text-sm text-slate-500">UNIMPRESA Sicilia — Panneau d'administration</p>
+          </div>
+          <form onSubmit={submit} className="mt-6 space-y-4">
+            <div>
+              <label className="block text-sm font-semibold text-slate-700 mb-1">Nom d'utilisateur</label>
+              <input required className={input} value={username} onChange={(e) => setUsername(e.target.value)} autoComplete="username" />
+            </div>
+            <div>
+              <label className="block text-sm font-semibold text-slate-700 mb-1">Mot de passe</label>
+              <input required type="password" className={input} value={password} onChange={(e) => setPassword(e.target.value)} autoComplete="current-password" />
+            </div>
+            {error && <p className="text-sm font-semibold text-red-600 bg-red-50 rounded-lg px-4 py-2.5">{error}</p>}
+            <button
+              type="submit"
+              disabled={login.isPending}
+              className="w-full py-3.5 rounded-xl font-bold text-[#0f1f2e] bg-[#c9a227] hover:brightness-110 transition disabled:opacity-60"
+            >
+              {login.isPending ? "Connexion…" : "Se connecter"}
+            </button>
+          </form>
+        </div>
+        <p className="mt-4 text-center">
+          <Link to="/" className="text-white/50 hover:text-white text-sm">← Retour au site public</Link>
+        </p>
+      </div>
+    </div>
+  );
+}

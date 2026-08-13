@@ -1,1 +1,6 @@
-ewogICJ2ZXJzaW9uIjogMSwKICAiZmVhdHVyZXMiOiBbImRiIl0sCiAgImFwcF9pZCI6ICIxOWZmNmY4Ny00YzMyLTgzMTgtODAwMC0wMDAwZjJiZmE4NjUiLAogICJpbml0aWFsaXplZF9hdCI6ICIyMDI2LTA4LTEyVDE3OjE1OjMyWiIKfQo=
+{
+  "version": 1,
+  "features": ["db"],
+  "app_id": "19ff6f87-4c32-8318-8000-0000f2bfa865",
+  "initialized_at": "2026-08-12T17:15:32Z"
+}

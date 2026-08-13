@@ -1,1 +1,108 @@
-aW1wb3J0IHsgdXNlU3RhdGUgfSBmcm9tICJyZWFjdCI7CmltcG9ydCB7IHRycGMgfSBmcm9tICJAL3Byb3ZpZGVycy90cnBjIjsKaW1wb3J0IHsgdXNlQWRtaW4sIEZpZWxkLCBCdG4sIFRhYmxlLCBUb2dnbGUsIGlucHV0Q2xzIH0gZnJvbSAiLi4vdWkiOwoKY29uc3QgZW1wdHkgPSB7CiAgY3ljbGVJZDogbnVsbCBhcyBudW1iZXIgfCBudWxsLCB0aXRyZTogIiIsIGRlc2NyaXB0aW9uOiAiIiwKICBkdXJlZUhldXJlczogIjEyMGgiLCBuYk1ldGllcnM6IDEsIGljb25lOiAi8J+TmiIsIGJhZGdlOiAiIiwgbWV0aWVyczogIiIsIG9yZHJlOiAwLCBhY3RpZjogdHJ1ZSwKfTsKdHlwZSBGb3JtID0gdHlwZW9mIGVtcHR5OwoKZXhwb3J0IGRlZmF1bHQgZnVuY3Rpb24gRmlsaWVyZXNTZWN0aW9uKCkgewogIGNvbnN0IHsgdG9rZW4sIHJlZnJlc2ggfSA9IHVzZUFkbWluKCk7CiAgY29uc3QgeyBkYXRhOiBmaWxpZXJlcyB9ID0gdHJwYy5hZG1pbi5saXN0RmlsaWVyZXMudXNlUXVlcnkoeyB0b2tlbiB9KTsKICBjb25zdCB7IGRhdGE6IGN5Y2xlcyB9ID0gdHJwYy5hZG1pbi5saXN0Q3ljbGVzLnVzZVF1ZXJ5KHsgdG9rZW4gfSk7CiAgY29uc3QgY3JlYXRlID0gdHJwYy5hZG1pbi5jcmVhdGVGaWxpZXJlLnVzZU11dGF0aW9uKHsgb25TdWNjZXNzOiByZWZyZXNoIH0pOwogIGNvbnN0IHVwZGF0ZSA9IHRycGMuYWRtaW4udXBkYXRlRmlsaWVyZS51c2VNdXRhdGlvbih7IG9uU3VjY2VzczogcmVmcmVzaCB9KTsKICBjb25zdCBkZWwgPSB0cnBjLmFkbWluLmRlbGV0ZUZpbGllcmUudXNlTXV0YXRpb24oeyBvblN1Y2Nlc3M6IHJlZnJlc2ggfSk7CgogIGNvbnN0IFtmb3JtLCBzZXRGb3JtXSA9IHVzZVN0YXRlPEZvcm0+KGVtcHR5KTsKICBjb25zdCBbZWRpdElkLCBzZXRFZGl0SWRdID0gdXNlU3RhdGU8bnVtYmVyIHwgbnVsbD4obnVsbCk7CiAgY29uc3QgW3Nob3dGb3JtLCBzZXRTaG93Rm9ybV0gPSB1c2VTdGF0ZShmYWxzZSk7CiAgY29uc3Qgc2V0ID0gKGs6IGtleW9mIEZvcm0sIHY6IGFueSkgPT4gc2V0Rm9ybSgoZikgPT4gKHsgLi4uZiwgW2tdOiB2IH0pKTsKCiAgY29uc3Qgc3VibWl0ID0gYXN5bmMgKGU6IFJlYWN0LkZvcm1FdmVudCkgPT4gewogICAgZS5wcmV2ZW50RGVmYXVsdCgpOwogICAgY29uc3QgZGF0YSA9IHsgLi4uZm9ybSwgbmJNZXRpZXJzOiBOdW1iZXIoZm9ybS5uYk1ldGllcnMpLCBvcmRyZTogTnVtYmVyKGZvcm0ub3JkcmUpIH07CiAgICBpZiAoZWRpdElkKSBhd2FpdCB1cGRhdGUubXV0YXRlQXN5bmMoeyB0b2tlbiwgaWQ6IGVkaXRJZCwgZGF0YSB9KTsKICAgIGVsc2UgYXdhaXQgY3JlYXRlLm11dGF0ZUFzeW5jKHsgdG9rZW4sIGRhdGEgfSk7CiAgICBzZXRGb3JtKGVtcHR5KTsgc2V0RWRpdElkKG51bGwpOyBzZXRTaG93Rm9ybShmYWxzZSk7CiAgfTsKCiAgcmV0dXJuICgKICAgIDxzZWN0aW9uPgogICAgICA8ZGl2IGNsYXNzTmFtZT0iZmxleCBpdGVtcy1jZW50ZXIganVzdGlmeS1iZXR3ZWVuIG1iLTQiPgogICAgICAgIDxoMiBjbGFzc05hbWU9InRleHQteGwgZm9udC1leHRyYWJvbGQgdGV4dC1bIzFhMmE0YV0iPkZpbGnDqHJlcyAvIFNlY3RldXJzPC9oMj4KICAgICAgICA8QnRuIHZhcmlhbnQ9ImdvbGQiIG9uQ2xpY2s9eygpID0+IHsgc2V0Rm9ybShlbXB0eSk7IHNldEVkaXRJZChudWxsKTsgc2V0U2hvd0Zvcm0oIXNob3dGb3JtKTsgfX0+CiAgICAgICAgICB7c2hvd0Zvcm0gPyAiRmVybWVyIiA6ICIrIE5vdXZlbGxlIGZpbGnDqHJlIn0KICAgICAgICA8L0J0bj4KICAgICAgPC9kaXY+CgogICAgICB7c2hvd0Zvcm0gJiYgKAogICAgICAgIDxmb3JtIG9uU3VibWl0PXtzdWJtaXR9IGNsYXNzTmFtZT0iYmctd2hpdGUgcm91bmRlZC14bCBzaGFkb3ctc20gYm9yZGVyIGJvcmRlci1zbGF0ZS0yMDAgcC01IG1iLTYgZ3JpZCBzbTpncmlkLWNvbHMtMiBnYXAtNCI+CiAgICAgICAgICA8RmllbGQgbGFiZWw9IlRpdHJlIj48aW5wdXQgcmVxdWlyZWQgY2xhc3NOYW1lPXtpbnB1dENsc30gdmFsdWU9e2Zvcm0udGl0cmV9IG9uQ2hhbmdlPXsoZSkgPT4gc2V0KCJ0aXRyZSIsIGUudGFyZ2V0LnZhbHVlKX0gLz48L0ZpZWxkPgogICAgICAgICAgPEZpZWxkIGxhYmVsPSJJY8O0bmUgKGVtb2ppKSI+PGlucHV0IGNsYXNzTmFtZT17aW5wdXRDbHN9IHZhbHVlPXtmb3JtLmljb25lfSBvbkNoYW5nZT17KGUpID0+IHNldCgiaWNvbmUiLCBlLnRhcmdldC52YWx1ZSl9IHBsYWNlaG9sZGVyPSLwn4+X77iPIiAvPjwvRmllbGQ+CiAgICAgICAgICA8ZGl2IGNsYXNzTmFtZT0ic206Y29sLXNwYW4tMiI+CiAgICAgICAgICAgIDxGaWVsZCBsYWJlbD0iRGVzY3JpcHRpb24iPjx0ZXh0YXJlYSByZXF1aXJlZCByb3dzPXszfSBjbGFzc05hbWU9e2lucHV0Q2xzfSB2YWx1ZT17Zm9ybS5kZXNjcmlwdGlvbn0gb25DaGFuZ2U9eyhlKSA9PiBzZXQoImRlc2NyaXB0aW9uIiwgZS50YXJnZXQudmFsdWUpfSAvPjwvRmllbGQ+CiAgICAgICAgICA8L2Rpdj4KICAgICAgICAgIDxGaWVsZCBsYWJlbD0iRHVyw6llIj48aW5wdXQgcmVxdWlyZWQgY2xhc3NOYW1lPXtpbnB1dENsc30gdmFsdWU9e2Zvcm0uZHVyZWVIZXVyZXN9IG9uQ2hhbmdlPXsoZSkgPT4gc2V0KCJkdXJlZUhldXJlcyIsIGUudGFyZ2V0LnZhbHVlKX0gcGxhY2Vob2xkZXI9IjEyMGgiIC8+PC9GaWVsZD4KICAgICAgICAgIDxGaWVsZCBsYWJlbD0iTm9tYnJlIGRlIG3DqXRpZXJzIj48aW5wdXQgcmVxdWlyZWQgdHlwZT0ibnVtYmVyIiBjbGFzc05hbWU9e2lucHV0Q2xzfSB2YWx1ZT17Zm9ybS5uYk1ldGllcnN9IG9uQ2hhbmdlPXsoZSkgPT4gc2V0KCJuYk1ldGllcnMiLCBlLnRhcmdldC52YWx1ZSBhcyBhbnkpfSAvPjwvRmllbGQ+CiAgICAgICAgICA8RmllbGQgbGFiZWw9IkJhZGdlIChvcHRpb25uZWwpIj48aW5wdXQgY2xhc3NOYW1lPXtpbnB1dENsc30gdmFsdWU9e2Zvcm0uYmFkZ2V9IG9uQ2hhbmdlPXsoZSkgPT4gc2V0KCJiYWRnZSIsIGUudGFyZ2V0LnZhbHVlKX0gcGxhY2Vob2xkZXI9IkZvcm1hdGlvbiBlbiBjb3VycyIgLz48L0ZpZWxkPgogICAgICAgICAgPGRpdiBjbGFzc05hbWU9InNtOmNvbC1zcGFuLTIiPgogICAgICAgICAgICA8RmllbGQgbGFiZWw9Ik3DqXRpZXJzIGTDqXRhaWxsw6lzICh1biBwYXIgbGlnbmUg4oCUIHV0aWxpc8OpcyBkYW5zIGxlIGZvcm11bGFpcmUgZCdpbnNjcmlwdGlvbikiPgogICAgICAgICAgICAgIDx0ZXh0YXJlYQogICAgICAgICAgICAgICAgcm93cz17NH0KICAgICAgICAgICAgICAgIGNsYXNzTmFtZT17aW5wdXRDbHN9CiAgICAgICAgICAgICAgICB2YWx1ZT17KCgpID0+IHsgdHJ5IHsgcmV0dXJuIChKU09OLnBhcnNlKGZvcm0ubWV0aWVycyB8fCAiW10iKSBhcyBzdHJpbmdbXSkuam9pbigiXG4iKTsgfSBjYXRjaCB7IHJldHVybiBmb3JtLm1ldGllcnM7IH0gfSkoKX0KICAgICAgICAgICAgICAgIG9uQ2hhbmdlPXsoZSkgPT4gc2V0KCJtZXRpZXJzIiwgSlNPTi5zdHJpbmdpZnkoZS50YXJnZXQudmFsdWUuc3BsaXQoIlxuIikubWFwKChzKSA9PiBzLnRyaW0oKSkuZmlsdGVyKEJvb2xlYW4pKSl9CiAgICAgICAgICAgICAgICBwbGFjZWhvbGRlcj17Ik1hw6dvblxuRmVycmFpbGxldXJcbsOJbGVjdHJpY2llbiBiw6J0aW1lbnQifQogICAgICAgICAgICAgIC8+CiAgICAgICAgICAgIDwvRmllbGQ+CiAgICAgICAgICA8L2Rpdj4KICAgICAgICAgIDxGaWVsZCBsYWJlbD0iT3JkcmUgZCdhZmZpY2hhZ2UiPjxpbnB1dCB0eXBlPSJudW1iZXIiIGNsYXNzTmFtZT17aW5wdXRDbHN9IHZhbHVlPXtmb3JtLm9yZHJlfSBvbkNoYW5nZT17KGUpID0+IHNldCgib3JkcmUiLCBlLnRhcmdldC52YWx1ZSBhcyBhbnkpfSAvPjwvRmllbGQ+CiAgICAgICAgICA8RmllbGQgbGFiZWw9IkN5Y2xlIGFzc29jacOpIj4KICAgICAgICAgICAgPHNlbGVjdCBjbGFzc05hbWU9e2lucHV0Q2xzfSB2YWx1ZT17Zm9ybS5jeWNsZUlkID8/ICIifSBvbkNoYW5nZT17KGUpID0+IHNldCgiY3ljbGVJZCIsIGUudGFyZ2V0LnZhbHVlID8gTnVtYmVyKGUudGFyZ2V0LnZhbHVlKSA6IG51bGwpfT4KICAgICAgICAgICAgICA8b3B0aW9uIHZhbHVlPSIiPlRvdXMgbGVzIGN5Y2xlczwvb3B0aW9uPgogICAgICAgICAgICAgIHsoY3ljbGVzID8/IFtdKS5tYXAoKGMpID0+IDxvcHRpb24ga2V5PXtjLmlkfSB2YWx1ZT17TnVtYmVyKGMuaWQpfT57Yy5ub219PC9vcHRpb24+KX0KICAgICAgICAgICAgPC9zZWxlY3Q+CiAgICAgICAgICA8L0ZpZWxkPgogICAgICAgICAgPGRpdiBjbGFzc05hbWU9ImZsZXggaXRlbXMtY2VudGVyIGdhcC0zIj4KICAgICAgICAgICAgPFRvZ2dsZSBjaGVja2VkPXtmb3JtLmFjdGlmfSBvbkNoYW5nZT17KHYpID0+IHNldCgiYWN0aWYiLCB2KX0gLz4KICAgICAgICAgICAgPHNwYW4gY2xhc3NOYW1lPSJ0ZXh0LXNtIGZvbnQtc2VtaWJvbGQgdGV4dC1zbGF0ZS02MDAiPkZpbGnDqHJlIGFjdGl2ZTwvc3Bhbj4KICAgICAgICAgIDwvZGl2PgogICAgICAgICAgPGRpdiBjbGFzc05hbWU9ImZsZXggZ2FwLTIgc206anVzdGlmeS1lbmQgaXRlbXMtZW5kIHNtOmNvbC1zcGFuLTIiPgogICAgICAgICAgICA8QnRuIHR5cGU9InN1Ym1pdCIgdmFyaWFudD0iZ29sZCI+e2VkaXRJZCA/ICJFbnJlZ2lzdHJlciIgOiAiQ3LDqWVyIn08L0J0bj4KICAgICAgICAgICAge2VkaXRJZCAmJiA8QnRuIHZhcmlhbnQ9Imdob3N0IiBvbkNsaWNrPXsoKSA9PiB7IHNldEVkaXRJZChudWxsKTsgc2V0Rm9ybShlbXB0eSk7IH19PkFubnVsZXI8L0J0bj59CiAgICAgICAgICA8L2Rpdj4KICAgICAgICA8L2Zvcm0+CiAgICAgICl9CgogICAgICA8VGFibGUgaGVhZD17WyJJY8O0bmUiLCAiVGl0cmUiLCAiRGVzY3JpcHRpb24iLCAiRHVyw6llIiwgIk3DqXRpZXJzIiwgIkJhZGdlIiwgIk9yZHJlIiwgIkFjdGl2ZSIsICJBY3Rpb25zIl19PgogICAgICAgIHsoZmlsaWVyZXMgPz8gW10pLm1hcCgoZikgPT4gKAogICAgICAgICAgPHRyIGtleT17Zi5pZH0gY2xhc3NOYW1lPSJib3JkZXItdCBib3JkZXItc2xhdGUtMTAwIj4KICAgICAgICAgICAgPHRkIGNsYXNzTmFtZT0icHgtNCBweS0zIHRleHQtMnhsIj57Zi5pY29uZX08L3RkPgogICAgICAgICAgICA8dGQgY2xhc3NOYW1lPSJweC00IHB5LTMgZm9udC1ib2xkIHRleHQtWyMxYTJhNGFdIHdoaXRlc3BhY2Utbm93cmFwIj57Zi50aXRyZX08L3RkPgogICAgICAgICAgICA8dGQgY2xhc3NOYW1lPSJweC00IHB5LTMgbWF4LXctNzIgdHJ1bmNhdGUgdGV4dC1zbGF0ZS02MDAiPntmLmRlc2NyaXB0aW9ufTwvdGQ+CiAgICAgICAgICAgIDx0ZCBjbGFzc05hbWU9InB4LTQgcHktMyI+e2YuZHVyZWVIZXVyZXN9PC90ZD4KICAgICAgICAgICAgPHRkIGNsYXNzTmFtZT0icHgtNCBweS0zIj57Zi5uYk1ldGllcnN9PC90ZD4KICAgICAgICAgICAgPHRkIGNsYXNzTmFtZT0icHgtNCBweS0zIj57Zi5iYWRnZSAmJiA8c3BhbiBjbGFzc05hbWU9InRleHQteHMgYmctWyNjOWEyMjddLzIwIHRleHQtWyM4YTZkMWFdIGZvbnQtYm9sZCBweC0yIHB5LTEgcm91bmRlZC1mdWxsIj57Zi5iYWRnZX08L3NwYW4+fTwvdGQ+CiAgICAgICAgICAgIDx0ZCBjbGFzc05hbWU9InB4LTQgcHktMyI+e2Yub3JkcmV9PC90ZD4KICAgICAgICAgICAgPHRkIGNsYXNzTmFtZT0icHgtNCBweS0zIj48VG9nZ2xlIGNoZWNrZWQ9e2YuYWN0aWZ9IG9uQ2hhbmdlPXsodikgPT4gdXBkYXRlLm11dGF0ZSh7IHRva2VuLCBpZDogTnVtYmVyKGYuaWQpLCBkYXRhOiB7IGFjdGlmOiB2IH0gfSl9IC8+PC90ZD4KICAgICAgICAgICAgPHRkIGNsYXNzTmFtZT0icHgtNCBweS0zIHdoaXRlc3BhY2Utbm93cmFwIHNwYWNlLXgtMiI+CiAgICAgICAgICAgICAgPEJ0biB2YXJpYW50PSJnaG9zdCIgb25DbGljaz17KCkgPT4gewogICAgICAgICAgICAgICAgc2V0RWRpdElkKE51bWJlcihmLmlkKSk7CiAgICAgICAgICAgICAgICBzZXRGb3JtKHsKICAgICAgICAgICAgICAgICAgY3ljbGVJZDogZi5jeWNsZUlkID8/IG51bGwsIHRpdHJlOiBmLnRpdHJlLCBkZXNjcmlwdGlvbjogZi5kZXNjcmlwdGlvbiwKICAgICAgICAgICAgICAgICAgZHVyZWVIZXVyZXM6IGYuZHVyZWVIZXVyZXMsIG5iTWV0aWVyczogZi5uYk1ldGllcnMsIGljb25lOiBmLmljb25lLAogICAgICAgICAgICAgICAgICBiYWRnZTogZi5iYWRnZSwgbWV0aWVyczogZi5tZXRpZXJzID8/ICIiLCBvcmRyZTogZi5vcmRyZSwgYWN0aWY6IGYuYWN0aWYsCiAgICAgICAgICAgICAgICB9KTsKICAgICAgICAgICAgICAgIHNldFNob3dGb3JtKHRydWUpOwogICAgICAgICAgICAgIH19PuKcj++4jyBNb2RpZmllcjwvQnRuPgogICAgICAgICAgICAgIDxCdG4gdmFyaWFudD0iZGFuZ2VyIiBvbkNsaWNrPXsoKSA9PiBjb25maXJtKCJTdXBwcmltZXIgY2V0dGUgZmlsacOocmUgPyIpICYmIGRlbC5tdXRhdGUoeyB0b2tlbiwgaWQ6IE51bWJlcihmLmlkKSB9KX0+8J+XkTwvQnRuPgogICAgICAgICAgICA8L3RkPgogICAgICAgICAgPC90cj4KICAgICAgICApKX0KICAgICAgPC9UYWJsZT4KICAgIDwvc2VjdGlvbj4KICApOwp9Cg==
+import { useState } from "react";
+import { trpc } from "@/providers/trpc";
+import { useAdmin, Field, Btn, Table, Toggle, inputCls } from "../ui";
+
+const empty = {
+  cycleId: null as number | null, titre: "", description: "",
+  dureeHeures: "120h", nbMetiers: 1, icone: "📚", badge: "", metiers: "", ordre: 0, actif: true,
+};
+type Form = typeof empty;
+
+export default function FilieresSection() {
+  const { token, refresh } = useAdmin();
+  const { data: filieres } = trpc.admin.listFilieres.useQuery({ token });
+  const { data: cycles } = trpc.admin.listCycles.useQuery({ token });
+  const create = trpc.admin.createFiliere.useMutation({ onSuccess: refresh });
+  const update = trpc.admin.updateFiliere.useMutation({ onSuccess: refresh });
+  const del = trpc.admin.deleteFiliere.useMutation({ onSuccess: refresh });
+
+  const [form, setForm] = useState<Form>(empty);
+  const [editId, setEditId] = useState<number | null>(null);
+  const [showForm, setShowForm] = useState(false);
+  const set = (k: keyof Form, v: any) => setForm((f) => ({ ...f, [k]: v }));
+
+  const submit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    const data = { ...form, nbMetiers: Number(form.nbMetiers), ordre: Number(form.ordre) };
+    if (editId) await update.mutateAsync({ token, id: editId, data });
+    else await create.mutateAsync({ token, data });
+    setForm(empty); setEditId(null); setShowForm(false);
+  };
+
+  return (
+    <section>
+      <div className="flex items-center justify-between mb-4">
+        <h2 className="text-xl font-extrabold text-[#1a2a4a]">Filières / Secteurs</h2>
+        <Btn variant="gold" onClick={() => { setForm(empty); setEditId(null); setShowForm(!showForm); }}>
+          {showForm ? "Fermer" : "+ Nouvelle filière"}
+        </Btn>
+      </div>
+
+      {showForm && (
+        <form onSubmit={submit} className="bg-white rounded-xl shadow-sm border border-slate-200 p-5 mb-6 grid sm:grid-cols-2 gap-4">
+          <Field label="Titre"><input required className={inputCls} value={form.titre} onChange={(e) => set("titre", e.target.value)} /></Field>
+          <Field label="Icône (emoji)"><input className={inputCls} value={form.icone} onChange={(e) => set("icone", e.target.value)} placeholder="🏗️" /></Field>
+          <div className="sm:col-span-2">
+            <Field label="Description"><textarea required rows={3} className={inputCls} value={form.description} onChange={(e) => set("description", e.target.value)} /></Field>
+          </div>
+          <Field label="Durée"><input required className={inputCls} value={form.dureeHeures} onChange={(e) => set("dureeHeures", e.target.value)} placeholder="120h" /></Field>
+          <Field label="Nombre de métiers"><input required type="number" className={inputCls} value={form.nbMetiers} onChange={(e) => set("nbMetiers", e.target.value as any)} /></Field>
+          <Field label="Badge (optionnel)"><input className={inputCls} value={form.badge} onChange={(e) => set("badge", e.target.value)} placeholder="Formation en cours" /></Field>
+          <div className="sm:col-span-2">
+            <Field label="Métiers détaillés (un par ligne — utilisés dans le formulaire d'inscription)">
+              <textarea
+                rows={4}
+                className={inputCls}
+                value={(() => { try { return (JSON.parse(form.metiers || "[]") as string[]).join("\n"); } catch { return form.metiers; } })()}
+                onChange={(e) => set("metiers", JSON.stringify(e.target.value.split("\n").map((s) => s.trim()).filter(Boolean)))}
+                placeholder={"Maçon\nFerrailleur\nÉlectricien bâtiment"}
+              />
+            </Field>
+          </div>
+          <Field label="Ordre d'affichage"><input type="number" className={inputCls} value={form.ordre} onChange={(e) => set("ordre", e.target.value as any)} /></Field>
+          <Field label="Cycle associé">
+            <select className={inputCls} value={form.cycleId ?? ""} onChange={(e) => set("cycleId", e.target.value ? Number(e.target.value) : null)}>
+              <option value="">Tous les cycles</option>
+              {(cycles ?? []).map((c) => <option key={c.id} value={Number(c.id)}>{c.nom}</option>)}
+            </select>
+          </Field>
+          <div className="flex items-center gap-3">
+            <Toggle checked={form.actif} onChange={(v) => set("actif", v)} />
+            <span className="text-sm font-semibold text-slate-600">Filière active</span>
+          </div>
+          <div className="flex gap-2 sm:justify-end items-end sm:col-span-2">
+            <Btn type="submit" variant="gold">{editId ? "Enregistrer" : "Créer"}</Btn>
+            {editId && <Btn variant="ghost" onClick={() => { setEditId(null); setForm(empty); }}>Annuler</Btn>}
+          </div>
+        </form>
+      )}
+
+      <Table head={["Icône", "Titre", "Description", "Durée", "Métiers", "Badge", "Ordre", "Active", "Actions"]}>
+        {(filieres ?? []).map((f) => (
+          <tr key={f.id} className="border-t border-slate-100">
+            <td className="px-4 py-3 text-2xl">{f.icone}</td>
+            <td className="px-4 py-3 font-bold text-[#1a2a4a] whitespace-nowrap">{f.titre}</td>
+            <td className="px-4 py-3 max-w-72 truncate text-slate-600">{f.description}</td>
+            <td className="px-4 py-3">{f.dureeHeures}</td>
+            <td className="px-4 py-3">{f.nbMetiers}</td>
+            <td className="px-4 py-3">{f.badge && <span className="text-xs bg-[#c9a227]/20 text-[#8a6d1a] font-bold px-2 py-1 rounded-full">{f.badge}</span>}</td>
+            <td className="px-4 py-3">{f.ordre}</td>
+            <td className="px-4 py-3"><Toggle checked={f.actif} onChange={(v) => update.mutate({ token, id: Number(f.id), data: { actif: v } })} /></td>
+            <td className="px-4 py-3 whitespace-nowrap space-x-2">
+              <Btn variant="ghost" onClick={() => {
+                setEditId(Number(f.id));
+                setForm({
+                  cycleId: f.cycleId ?? null, titre: f.titre, description: f.description,
+                  dureeHeures: f.dureeHeures, nbMetiers: f.nbMetiers, icone: f.icone,
+                  badge: f.badge, metiers: f.metiers ?? "", ordre: f.ordre, actif: f.actif,
+                });
+                setShowForm(true);
+              }}>✏️ Modifier</Btn>
+              <Btn variant="danger" onClick={() => confirm("Supprimer cette filière ?") && del.mutate({ token, id: Number(f.id) })}>🗑</Btn>
+            </td>
+          </tr>
+        ))}
+      </Table>
+    </section>
+  );
+}

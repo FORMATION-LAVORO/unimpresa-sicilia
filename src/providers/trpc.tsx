@@ -1,1 +1,34 @@
-aW1wb3J0IHsgY3JlYXRlVFJQQ1JlYWN0IH0gZnJvbSAiQHRycGMvcmVhY3QtcXVlcnkiOwppbXBvcnQgeyBodHRwQmF0Y2hMaW5rIH0gZnJvbSAiQHRycGMvY2xpZW50IjsKaW1wb3J0IHsgUXVlcnlDbGllbnQsIFF1ZXJ5Q2xpZW50UHJvdmlkZXIgfSBmcm9tICJAdGFuc3RhY2svcmVhY3QtcXVlcnkiOwppbXBvcnQgc3VwZXJqc29uIGZyb20gInN1cGVyanNvbiI7CmltcG9ydCB0eXBlIHsgQXBwUm91dGVyIH0gZnJvbSAiLi4vLi4vYXBpL3JvdXRlciI7CmltcG9ydCB0eXBlIHsgUmVhY3ROb2RlIH0gZnJvbSAicmVhY3QiOwoKZXhwb3J0IGNvbnN0IHRycGMgPSBjcmVhdGVUUlBDUmVhY3Q8QXBwUm91dGVyPigpOwoKY29uc3QgcXVlcnlDbGllbnQgPSBuZXcgUXVlcnlDbGllbnQoKTsKY29uc3QgdHJwY0NsaWVudCA9IHRycGMuY3JlYXRlQ2xpZW50KHsKICBsaW5rczogWwogICAgaHR0cEJhdGNoTGluayh7CiAgICAgIHVybDogIi9hcGkvdHJwYyIsCiAgICAgIHRyYW5zZm9ybWVyOiBzdXBlcmpzb24sCiAgICAgIGZldGNoKGlucHV0LCBpbml0KSB7CiAgICAgICAgcmV0dXJuIGdsb2JhbFRoaXMuZmV0Y2goaW5wdXQsIHsKICAgICAgICAgIC4uLihpbml0ID8/IHt9KSwKICAgICAgICAgIGNyZWRlbnRpYWxzOiAiaW5jbHVkZSIsCiAgICAgICAgfSk7CiAgICAgIH0sCiAgICB9KSwKICBdLAp9KTsKCmV4cG9ydCBmdW5jdGlvbiBUUlBDUHJvdmlkZXIoeyBjaGlsZHJlbiB9OiB7IGNoaWxkcmVuOiBSZWFjdE5vZGUgfSkgewogIHJldHVybiAoCiAgICA8dHJwYy5Qcm92aWRlciBjbGllbnQ9e3RycGNDbGllbnR9IHF1ZXJ5Q2xpZW50PXtxdWVyeUNsaWVudH0+CiAgICAgIDxRdWVyeUNsaWVudFByb3ZpZGVyIGNsaWVudD17cXVlcnlDbGllbnR9PgogICAgICAgIHtjaGlsZHJlbn0KICAgICAgPC9RdWVyeUNsaWVudFByb3ZpZGVyPgogICAgPC90cnBjLlByb3ZpZGVyPgogICk7Cn0K
+import { createTRPCReact } from "@trpc/react-query";
+import { httpBatchLink } from "@trpc/client";
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+import superjson from "superjson";
+import type { AppRouter } from "../../api/router";
+import type { ReactNode } from "react";
+
+export const trpc = createTRPCReact<AppRouter>();
+
+const queryClient = new QueryClient();
+const trpcClient = trpc.createClient({
+  links: [
+    httpBatchLink({
+      url: "/api/trpc",
+      transformer: superjson,
+      fetch(input, init) {
+        return globalThis.fetch(input, {
+          ...(init ?? {}),
+          credentials: "include",
+        });
+      },
+    }),
+  ],
+});
+
+export function TRPCProvider({ children }: { children: ReactNode }) {
+  return (
+    <trpc.Provider client={trpcClient} queryClient={queryClient}>
+      <QueryClientProvider client={queryClient}>
+        {children}
+      </QueryClientProvider>
+    </trpc.Provider>
+  );
+}

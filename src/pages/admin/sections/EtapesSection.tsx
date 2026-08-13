@@ -1,1 +1,95 @@
-aW1wb3J0IHsgdXNlU3RhdGUgfSBmcm9tICJyZWFjdCI7CmltcG9ydCB7IHRycGMgfSBmcm9tICJAL3Byb3ZpZGVycy90cnBjIjsKaW1wb3J0IHsgdXNlQWRtaW4sIEZpZWxkLCBCdG4sIFRhYmxlLCBpbnB1dENscyB9IGZyb20gIi4uL3VpIjsKCmNvbnN0IGVtcHR5ID0geyBjeWNsZUlkOiBudWxsIGFzIG51bWJlciB8IG51bGwsIG51bWVybzogIjAxIiwgaWNvbmU6ICLwn5OMIiwgdGl0cmU6ICIiLCBkZXNjcmlwdGlvbjogIiIsIG9yZHJlOiAwIH07CnR5cGUgRm9ybSA9IHR5cGVvZiBlbXB0eTsKCmV4cG9ydCBkZWZhdWx0IGZ1bmN0aW9uIEV0YXBlc1NlY3Rpb24oKSB7CiAgY29uc3QgeyB0b2tlbiwgcmVmcmVzaCB9ID0gdXNlQWRtaW4oKTsKICBjb25zdCB7IGRhdGE6IGV0YXBlcyB9ID0gdHJwYy5hZG1pbi5saXN0RXRhcGVzLnVzZVF1ZXJ5KHsgdG9rZW4gfSk7CiAgY29uc3QgeyBkYXRhOiBjeWNsZXMgfSA9IHRycGMuYWRtaW4ubGlzdEN5Y2xlcy51c2VRdWVyeSh7IHRva2VuIH0pOwogIGNvbnN0IGNyZWF0ZSA9IHRycGMuYWRtaW4uY3JlYXRlRXRhcGUudXNlTXV0YXRpb24oeyBvblN1Y2Nlc3M6IHJlZnJlc2ggfSk7CiAgY29uc3QgdXBkYXRlID0gdHJwYy5hZG1pbi51cGRhdGVFdGFwZS51c2VNdXRhdGlvbih7IG9uU3VjY2VzczogcmVmcmVzaCB9KTsKICBjb25zdCBkZWwgPSB0cnBjLmFkbWluLmRlbGV0ZUV0YXBlLnVzZU11dGF0aW9uKHsgb25TdWNjZXNzOiByZWZyZXNoIH0pOwogIGNvbnN0IHJlb3JkZXIgPSB0cnBjLmFkbWluLnJlb3JkZXJFdGFwZXMudXNlTXV0YXRpb24oeyBvblN1Y2Nlc3M6IHJlZnJlc2ggfSk7CgogIGNvbnN0IFtmb3JtLCBzZXRGb3JtXSA9IHVzZVN0YXRlPEZvcm0+KGVtcHR5KTsKICBjb25zdCBbZWRpdElkLCBzZXRFZGl0SWRdID0gdXNlU3RhdGU8bnVtYmVyIHwgbnVsbD4obnVsbCk7CiAgY29uc3QgW3Nob3dGb3JtLCBzZXRTaG93Rm9ybV0gPSB1c2VTdGF0ZShmYWxzZSk7CiAgY29uc3Qgc2V0ID0gKGs6IGtleW9mIEZvcm0sIHY6IGFueSkgPT4gc2V0Rm9ybSgoZikgPT4gKHsgLi4uZiwgW2tdOiB2IH0pKTsKCiAgY29uc3Qgc3VibWl0ID0gYXN5bmMgKGU6IFJlYWN0LkZvcm1FdmVudCkgPT4gewogICAgZS5wcmV2ZW50RGVmYXVsdCgpOwogICAgY29uc3QgZGF0YSA9IHsgLi4uZm9ybSwgb3JkcmU6IE51bWJlcihmb3JtLm9yZHJlKSB9OwogICAgaWYgKGVkaXRJZCkgYXdhaXQgdXBkYXRlLm11dGF0ZUFzeW5jKHsgdG9rZW4sIGlkOiBlZGl0SWQsIGRhdGEgfSk7CiAgICBlbHNlIGF3YWl0IGNyZWF0ZS5tdXRhdGVBc3luYyh7IHRva2VuLCBkYXRhIH0pOwogICAgc2V0Rm9ybShlbXB0eSk7IHNldEVkaXRJZChudWxsKTsgc2V0U2hvd0Zvcm0oZmFsc2UpOwogIH07CgogIGNvbnN0IG1vdmUgPSAoaW5kZXg6IG51bWJlciwgZGlyOiAtMSB8IDEpID0+IHsKICAgIGlmICghZXRhcGVzKSByZXR1cm47CiAgICBjb25zdCBpZHMgPSBldGFwZXMubWFwKChlKSA9PiBOdW1iZXIoZS5pZCkpOwogICAgY29uc3QgaiA9IGluZGV4ICsgZGlyOwogICAgaWYgKGogPCAwIHx8IGogPj0gaWRzLmxlbmd0aCkgcmV0dXJuOwogICAgW2lkc1tpbmRleF0sIGlkc1tqXV0gPSBbaWRzW2pdLCBpZHNbaW5kZXhdXTsKICAgIHJlb3JkZXIubXV0YXRlKHsgdG9rZW4sIGlkcyB9KTsKICB9OwoKICByZXR1cm4gKAogICAgPHNlY3Rpb24+CiAgICAgIDxkaXYgY2xhc3NOYW1lPSJmbGV4IGl0ZW1zLWNlbnRlciBqdXN0aWZ5LWJldHdlZW4gbWItNCI+CiAgICAgICAgPGgyIGNsYXNzTmFtZT0idGV4dC14bCBmb250LWV4dHJhYm9sZCB0ZXh0LVsjMWEyYTRhXSI+RMOpcm91bGVtZW50ICh0aW1lbGluZSk8L2gyPgogICAgICAgIDxCdG4gdmFyaWFudD0iZ29sZCIgb25DbGljaz17KCkgPT4geyBzZXRGb3JtKGVtcHR5KTsgc2V0RWRpdElkKG51bGwpOyBzZXRTaG93Rm9ybSghc2hvd0Zvcm0pOyB9fT4KICAgICAgICAgIHtzaG93Rm9ybSA/ICJGZXJtZXIiIDogIisgTm91dmVsbGUgw6l0YXBlIn0KICAgICAgICA8L0J0bj4KICAgICAgPC9kaXY+CgogICAgICB7c2hvd0Zvcm0gJiYgKAogICAgICAgIDxmb3JtIG9uU3VibWl0PXtzdWJtaXR9IGNsYXNzTmFtZT0iYmctd2hpdGUgcm91bmRlZC14bCBzaGFkb3ctc20gYm9yZGVyIGJvcmRlci1zbGF0ZS0yMDAgcC01IG1iLTYgZ3JpZCBzbTpncmlkLWNvbHMtMiBnYXAtNCI+CiAgICAgICAgICA8RmllbGQgbGFiZWw9Ik51bcOpcm8iPjxpbnB1dCByZXF1aXJlZCBjbGFzc05hbWU9e2lucHV0Q2xzfSB2YWx1ZT17Zm9ybS5udW1lcm99IG9uQ2hhbmdlPXsoZSkgPT4gc2V0KCJudW1lcm8iLCBlLnRhcmdldC52YWx1ZSl9IHBsYWNlaG9sZGVyPSIwMiIgLz48L0ZpZWxkPgogICAgICAgICAgPEZpZWxkIGxhYmVsPSJJY8O0bmUgKGVtb2ppKSI+PGlucHV0IGNsYXNzTmFtZT17aW5wdXRDbHN9IHZhbHVlPXtmb3JtLmljb25lfSBvbkNoYW5nZT17KGUpID0+IHNldCgiaWNvbmUiLCBlLnRhcmdldC52YWx1ZSl9IC8+PC9GaWVsZD4KICAgICAgICAgIDxGaWVsZCBsYWJlbD0iVGl0cmUiPjxpbnB1dCByZXF1aXJlZCBjbGFzc05hbWU9e2lucHV0Q2xzfSB2YWx1ZT17Zm9ybS50aXRyZX0gb25DaGFuZ2U9eyhlKSA9PiBzZXQoInRpdHJlIiwgZS50YXJnZXQudmFsdWUpfSAvPjwvRmllbGQ+CiAgICAgICAgICA8RmllbGQgbGFiZWw9IkN5Y2xlIGFzc29jacOpIj4KICAgICAgICAgICAgPHNlbGVjdCBjbGFzc05hbWU9e2lucHV0Q2xzfSB2YWx1ZT17Zm9ybS5jeWNsZUlkID8/ICIifSBvbkNoYW5nZT17KGUpID0+IHNldCgiY3ljbGVJZCIsIGUudGFyZ2V0LnZhbHVlID8gTnVtYmVyKGUudGFyZ2V0LnZhbHVlKSA6IG51bGwpfT4KICAgICAgICAgICAgICA8b3B0aW9uIHZhbHVlPSIiPlRvdXMgbGVzIGN5Y2xlczwvb3B0aW9uPgogICAgICAgICAgICAgIHsoY3ljbGVzID8/IFtdKS5tYXAoKGMpID0+IDxvcHRpb24ga2V5PXtjLmlkfSB2YWx1ZT17TnVtYmVyKGMuaWQpfT57Yy5ub219PC9vcHRpb24+KX0KICAgICAgICAgICAgPC9zZWxlY3Q+CiAgICAgICAgICA8L0ZpZWxkPgogICAgICAgICAgPGRpdiBjbGFzc05hbWU9InNtOmNvbC1zcGFuLTIiPgogICAgICAgICAgICA8RmllbGQgbGFiZWw9IkRlc2NyaXB0aW9uIj48dGV4dGFyZWEgcmVxdWlyZWQgcm93cz17M30gY2xhc3NOYW1lPXtpbnB1dENsc30gdmFsdWU9e2Zvcm0uZGVzY3JpcHRpb259IG9uQ2hhbmdlPXsoZSkgPT4gc2V0KCJkZXNjcmlwdGlvbiIsIGUudGFyZ2V0LnZhbHVlKX0gLz48L0ZpZWxkPgogICAgICAgICAgPC9kaXY+CiAgICAgICAgICA8ZGl2IGNsYXNzTmFtZT0iZmxleCBnYXAtMiBzbTpqdXN0aWZ5LWVuZCBpdGVtcy1lbmQgc206Y29sLXNwYW4tMiI+CiAgICAgICAgICAgIDxCdG4gdHlwZT0ic3VibWl0IiB2YXJpYW50PSJnb2xkIj57ZWRpdElkID8gIkVucmVnaXN0cmVyIiA6ICJDcsOpZXIifTwvQnRuPgogICAgICAgICAgICB7ZWRpdElkICYmIDxCdG4gdmFyaWFudD0iZ2hvc3QiIG9uQ2xpY2s9eygpID0+IHsgc2V0RWRpdElkKG51bGwpOyBzZXRGb3JtKGVtcHR5KTsgfX0+QW5udWxlcjwvQnRuPn0KICAgICAgICAgIDwvZGl2PgogICAgICAgIDwvZm9ybT4KICAgICAgKX0KCiAgICAgIDxUYWJsZSBoZWFkPXtbIk9yZHJlIiwgIk7CsCIsICJJY8O0bmUiLCAiVGl0cmUiLCAiRGVzY3JpcHRpb24iLCAiQWN0aW9ucyJdfT4KICAgICAgICB7KGV0YXBlcyA/PyBbXSkubWFwKChlLCBpKSA9PiAoCiAgICAgICAgICA8dHIga2V5PXtlLmlkfSBjbGFzc05hbWU9ImJvcmRlci10IGJvcmRlci1zbGF0ZS0xMDAiPgogICAgICAgICAgICA8dGQgY2xhc3NOYW1lPSJweC00IHB5LTMgd2hpdGVzcGFjZS1ub3dyYXAiPgogICAgICAgICAgICAgIDxidXR0b24gY2xhc3NOYW1lPSJweC0yIGRpc2FibGVkOm9wYWNpdHktMzAiIGRpc2FibGVkPXtpID09PSAwfSBvbkNsaWNrPXsoKSA9PiBtb3ZlKGksIC0xKX0+4qyG77iPPC9idXR0b24+CiAgICAgICAgICAgICAgPGJ1dHRvbiBjbGFzc05hbWU9InB4LTIgZGlzYWJsZWQ6b3BhY2l0eS0zMCIgZGlzYWJsZWQ9e2kgPT09IChldGFwZXM/Lmxlbmd0aCA/PyAwKSAtIDF9IG9uQ2xpY2s9eygpID0+IG1vdmUoaSwgMSl9PuKsh++4jzwvYnV0dG9uPgogICAgICAgICAgICA8L3RkPgogICAgICAgICAgICA8dGQgY2xhc3NOYW1lPSJweC00IHB5LTMiPgogICAgICAgICAgICAgIDxzcGFuIGNsYXNzTmFtZT0iaW5saW5lLWZsZXggdy04IGgtOCByb3VuZGVkLWZ1bGwgYmctWyNjOWEyMjddIHRleHQtWyMwZjFmMmVdIGZvbnQtZXh0cmFib2xkIHRleHQteHMgaXRlbXMtY2VudGVyIGp1c3RpZnktY2VudGVyIj57ZS5udW1lcm99PC9zcGFuPgogICAgICAgICAgICA8L3RkPgogICAgICAgICAgICA8dGQgY2xhc3NOYW1lPSJweC00IHB5LTMgdGV4dC14bCI+e2UuaWNvbmV9PC90ZD4KICAgICAgICAgICAgPHRkIGNsYXNzTmFtZT0icHgtNCBweS0zIGZvbnQtYm9sZCB0ZXh0LVsjMWEyYTRhXSB3aGl0ZXNwYWNlLW5vd3JhcCI+e2UudGl0cmV9PC90ZD4KICAgICAgICAgICAgPHRkIGNsYXNzTmFtZT0icHgtNCBweS0zIG1heC13LTgwIHRydW5jYXRlIHRleHQtc2xhdGUtNjAwIj57ZS5kZXNjcmlwdGlvbn08L3RkPgogICAgICAgICAgICA8dGQgY2xhc3NOYW1lPSJweC00IHB5LTMgd2hpdGVzcGFjZS1ub3dyYXAgc3BhY2UteC0yIj4KICAgICAgICAgICAgICA8QnRuIHZhcmlhbnQ9Imdob3N0IiBvbkNsaWNrPXsoKSA9PiB7CiAgICAgICAgICAgICAgICBzZXRFZGl0SWQoTnVtYmVyKGUuaWQpKTsKICAgICAgICAgICAgICAgIHNldEZvcm0oeyBjeWNsZUlkOiBlLmN5Y2xlSWQgPz8gbnVsbCwgbnVtZXJvOiBlLm51bWVybywgaWNvbmU6IGUuaWNvbmUsIHRpdHJlOiBlLnRpdHJlLCBkZXNjcmlwdGlvbjogZS5kZXNjcmlwdGlvbiwgb3JkcmU6IGUub3JkcmUgfSk7CiAgICAgICAgICAgICAgICBzZXRTaG93Rm9ybSh0cnVlKTsKICAgICAgICAgICAgICB9fT7inI/vuI8gTW9kaWZpZXI8L0J0bj4KICAgICAgICAgICAgICA8QnRuIHZhcmlhbnQ9ImRhbmdlciIgb25DbGljaz17KCkgPT4gY29uZmlybSgiU3VwcHJpbWVyIGNldHRlIMOpdGFwZSA/IikgJiYgZGVsLm11dGF0ZSh7IHRva2VuLCBpZDogTnVtYmVyKGUuaWQpIH0pfT7wn5eRPC9CdG4+CiAgICAgICAgICAgIDwvdGQ+CiAgICAgICAgICA8L3RyPgogICAgICAgICkpfQogICAgICA8L1RhYmxlPgogICAgPC9zZWN0aW9uPgogICk7Cn0K
+import { useState } from "react";
+import { trpc } from "@/providers/trpc";
+import { useAdmin, Field, Btn, Table, inputCls } from "../ui";
+
+const empty = { cycleId: null as number | null, numero: "01", icone: "📌", titre: "", description: "", ordre: 0 };
+type Form = typeof empty;
+
+export default function EtapesSection() {
+  const { token, refresh } = useAdmin();
+  const { data: etapes } = trpc.admin.listEtapes.useQuery({ token });
+  const { data: cycles } = trpc.admin.listCycles.useQuery({ token });
+  const create = trpc.admin.createEtape.useMutation({ onSuccess: refresh });
+  const update = trpc.admin.updateEtape.useMutation({ onSuccess: refresh });
+  const del = trpc.admin.deleteEtape.useMutation({ onSuccess: refresh });
+  const reorder = trpc.admin.reorderEtapes.useMutation({ onSuccess: refresh });
+
+  const [form, setForm] = useState<Form>(empty);
+  const [editId, setEditId] = useState<number | null>(null);
+  const [showForm, setShowForm] = useState(false);
+  const set = (k: keyof Form, v: any) => setForm((f) => ({ ...f, [k]: v }));
+
+  const submit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    const data = { ...form, ordre: Number(form.ordre) };
+    if (editId) await update.mutateAsync({ token, id: editId, data });
+    else await create.mutateAsync({ token, data });
+    setForm(empty); setEditId(null); setShowForm(false);
+  };
+
+  const move = (index: number, dir: -1 | 1) => {
+    if (!etapes) return;
+    const ids = etapes.map((e) => Number(e.id));
+    const j = index + dir;
+    if (j < 0 || j >= ids.length) return;
+    [ids[index], ids[j]] = [ids[j], ids[index]];
+    reorder.mutate({ token, ids });
+  };
+
+  return (
+    <section>
+      <div className="flex items-center justify-between mb-4">
+        <h2 className="text-xl font-extrabold text-[#1a2a4a]">Déroulement (timeline)</h2>
+        <Btn variant="gold" onClick={() => { setForm(empty); setEditId(null); setShowForm(!showForm); }}>
+          {showForm ? "Fermer" : "+ Nouvelle étape"}
+        </Btn>
+      </div>
+
+      {showForm && (
+        <form onSubmit={submit} className="bg-white rounded-xl shadow-sm border border-slate-200 p-5 mb-6 grid sm:grid-cols-2 gap-4">
+          <Field label="Numéro"><input required className={inputCls} value={form.numero} onChange={(e) => set("numero", e.target.value)} placeholder="02" /></Field>
+          <Field label="Icône (emoji)"><input className={inputCls} value={form.icone} onChange={(e) => set("icone", e.target.value)} /></Field>
+          <Field label="Titre"><input required className={inputCls} value={form.titre} onChange={(e) => set("titre", e.target.value)} /></Field>
+          <Field label="Cycle associé">
+            <select className={inputCls} value={form.cycleId ?? ""} onChange={(e) => set("cycleId", e.target.value ? Number(e.target.value) : null)}>
+              <option value="">Tous les cycles</option>
+              {(cycles ?? []).map((c) => <option key={c.id} value={Number(c.id)}>{c.nom}</option>)}
+            </select>
+          </Field>
+          <div className="sm:col-span-2">
+            <Field label="Description"><textarea required rows={3} className={inputCls} value={form.description} onChange={(e) => set("description", e.target.value)} /></Field>
+          </div>
+          <div className="flex gap-2 sm:justify-end items-end sm:col-span-2">
+            <Btn type="submit" variant="gold">{editId ? "Enregistrer" : "Créer"}</Btn>
+            {editId && <Btn variant="ghost" onClick={() => { setEditId(null); setForm(empty); }}>Annuler</Btn>}
+          </div>
+        </form>
+      )}
+
+      <Table head={["Ordre", "N°", "Icône", "Titre", "Description", "Actions"]}>
+        {(etapes ?? []).map((e, i) => (
+          <tr key={e.id} className="border-t border-slate-100">
+            <td className="px-4 py-3 whitespace-nowrap">
+              <button className="px-2 disabled:opacity-30" disabled={i === 0} onClick={() => move(i, -1)}>⬆️</button>
+              <button className="px-2 disabled:opacity-30" disabled={i === (etapes?.length ?? 0) - 1} onClick={() => move(i, 1)}>⬇️</button>
+            </td>
+            <td className="px-4 py-3">
+              <span className="inline-flex w-8 h-8 rounded-full bg-[#c9a227] text-[#0f1f2e] font-extrabold text-xs items-center justify-center">{e.numero}</span>
+            </td>
+            <td className="px-4 py-3 text-xl">{e.icone}</td>
+            <td className="px-4 py-3 font-bold text-[#1a2a4a] whitespace-nowrap">{e.titre}</td>
+            <td className="px-4 py-3 max-w-80 truncate text-slate-600">{e.description}</td>
+            <td className="px-4 py-3 whitespace-nowrap space-x-2">
+              <Btn variant="ghost" onClick={() => {
+                setEditId(Number(e.id));
+                setForm({ cycleId: e.cycleId ?? null, numero: e.numero, icone: e.icone, titre: e.titre, description: e.description, ordre: e.ordre });
+                setShowForm(true);
+              }}>✏️ Modifier</Btn>
+              <Btn variant="danger" onClick={() => confirm("Supprimer cette étape ?") && del.mutate({ token, id: Number(e.id) })}>🗑</Btn>
+            </td>
+          </tr>
+        ))}
+      </Table>
+    </section>
+  );
+}

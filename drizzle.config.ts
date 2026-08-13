@@ -1,1 +1,16 @@
-aW1wb3J0ICJkb3RlbnYvY29uZmlnIjsKaW1wb3J0IHsgZGVmaW5lQ29uZmlnIH0gZnJvbSAiZHJpenpsZS1raXQiOwoKY29uc3QgY29ubmVjdGlvblN0cmluZyA9IHByb2Nlc3MuZW52LkRBVEFCQVNFX1VSTDsKaWYgKCFjb25uZWN0aW9uU3RyaW5nKSB7CiAgdGhyb3cgbmV3IEVycm9yKCJEQVRBQkFTRV9VUkwgaXMgcmVxdWlyZWQgdG8gcnVuIGRyaXp6bGUgY29tbWFuZHMiKTsKfQoKZXhwb3J0IGRlZmF1bHQgZGVmaW5lQ29uZmlnKHsKICBzY2hlbWE6ICIuL2RiL3NjaGVtYS50cyIsCiAgb3V0OiAiLi9kYi9taWdyYXRpb25zIiwKICBkaWFsZWN0OiAicG9zdGdyZXNxbCIsCiAgZGJDcmVkZW50aWFsczogewogICAgdXJsOiBjb25uZWN0aW9uU3RyaW5nLAogIH0sCn0pOwo=
+import "dotenv/config";
+import { defineConfig } from "drizzle-kit";
+
+const connectionString = process.env.DATABASE_URL;
+if (!connectionString) {
+  throw new Error("DATABASE_URL is required to run drizzle commands");
+}
+
+export default defineConfig({
+  schema: "./db/schema.ts",
+  out: "./db/migrations",
+  dialect: "postgresql",
+  dbCredentials: {
+    url: connectionString,
+  },
+});

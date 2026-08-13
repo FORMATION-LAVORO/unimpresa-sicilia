@@ -1,1 +1,19 @@
-aW1wb3J0IHsgZGVmaW5lQ29uZmlnIH0gZnJvbSAidml0ZXN0L2NvbmZpZyI7CmltcG9ydCBwYXRoIGZyb20gInBhdGgiOwoKY29uc3QgdGVtcGxhdGVSb290ID0gcGF0aC5yZXNvbHZlKGltcG9ydC5tZXRhLmRpcm5hbWUpOwoKZXhwb3J0IGRlZmF1bHQgZGVmaW5lQ29uZmlnKHsKICByb290OiB0ZW1wbGF0ZVJvb3QsCiAgcmVzb2x2ZTogewogICAgYWxpYXM6IHsKICAgICAgIkAiOiBwYXRoLnJlc29sdmUodGVtcGxhdGVSb290LCAic3JjIiksCiAgICAgICJAY29udHJhY3RzIjogcGF0aC5yZXNvbHZlKHRlbXBsYXRlUm9vdCwgImNvbnRyYWN0cyIpLAogICAgICAiQGFzc2V0cyI6IHBhdGgucmVzb2x2ZSh0ZW1wbGF0ZVJvb3QsICJhdHRhY2hlZF9hc3NldHMiKSwKICAgIH0sCiAgfSwKICB0ZXN0OiB7CiAgICBlbnZpcm9ubWVudDogIm5vZGUiLAogICAgaW5jbHVkZTogWyJhcGkvKiovKi50ZXN0LnRzIiwgImFwaS8qKi8qLnNwZWMudHMiXSwKICB9LAp9KTsK
+import { defineConfig } from "vitest/config";
+import path from "path";
+
+const templateRoot = path.resolve(import.meta.dirname);
+
+export default defineConfig({
+  root: templateRoot,
+  resolve: {
+    alias: {
+      "@": path.resolve(templateRoot, "src"),
+      "@contracts": path.resolve(templateRoot, "contracts"),
+      "@assets": path.resolve(templateRoot, "attached_assets"),
+    },
+  },
+  test: {
+    environment: "node",
+    include: ["api/**/*.test.ts", "api/**/*.spec.ts"],
+  },
+});

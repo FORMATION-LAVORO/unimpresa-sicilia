@@ -1,1 +1,30 @@
-IyBVTklNUFJFU0EgU2ljaWxpYSDigJQgc2l0ZSB2aXRyaW5lICsgcGFubmVhdSBTdXBlciBBZG1pbiAoZnVsbC1zdGFjaykKIyBCdWlsZCBtdWx0aS3DqXRhcGVzIDogaW1hZ2UgZmluYWxlIGzDqWfDqHJlLCBkw6ltYXJyYWdlIGluc3RhbnRhbsOpLgoKIyDilIDilIAgw4l0YXBlIDEgOiBpbnN0YWxsYXRpb24gZGVzIGTDqXBlbmRhbmNlcyBkZSBidWlsZCDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIAKRlJPTSBub2RlOjIwLXNsaW0gQVMgYnVpbGQKV09SS0RJUiAvYXBwCkNPUFkgcGFja2FnZS5qc29uIHBhY2thZ2UtbG9jay5qc29uIC4vClJVTiBucG0gY2kgLS1uby1hdWRpdCAtLW5vLWZ1bmQKCiMg4pSA4pSAIMOJdGFwZSAyIDogYnVpbGQgZnJvbnRlbmQgKFZpdGUpICsgYnVuZGxlIHNlcnZldXIgKGVzYnVpbGQpIOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgApDT1BZIC4gLgpSVU4gbnBtIHJ1biBidWlsZAoKIyDilIDilIAgw4l0YXBlIDMgOiBpbWFnZSBmaW5hbGUgZGUgcHJvZHVjdGlvbiDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIAKRlJPTSBub2RlOjIwLXNsaW0KV09SS0RJUiAvYXBwCkVOViBOT0RFX0VOVj1wcm9kdWN0aW9uCgojIFNldWxlcyBsZXMgZMOpcGVuZGFuY2VzIG7DqWNlc3NhaXJlcyBhdSBydW50aW1lIDogbGUgc2VydmV1ciBlc3QgZMOpasOgIGJ1bmRsw6kKIyBwYXIgZXNidWlsZCAoZGlzdC9ib290LmpzIGVzdCBhdXRvbm9tZSksIG9uIG5lIGdhcmRlIHF1ZSBsZXMgYXNzZXRzIHN0YXRpcXVlcwojIGV0IGxlIGJ1bmRsZS4gZHJpenpsZS1raXQvdHN4IHNlcnZlbnQgw6AgbCdlbnN1cmUtZGIgZW4gYXJyacOocmUtcGxhbi4KQ09QWSAtLWZyb209YnVpbGQgL2FwcC9kaXN0IC4vZGlzdApDT1BZIC0tZnJvbT1idWlsZCAvYXBwL2RiIC4vZGIKQ09QWSAtLWZyb209YnVpbGQgL2FwcC9kcml6emxlLmNvbmZpZy50cyAuLwpDT1BZIC0tZnJvbT1idWlsZCAvYXBwL3BhY2thZ2UuanNvbiAvYXBwL3BhY2thZ2UtbG9jay5qc29uIC4vCkNPUFkgLS1mcm9tPWJ1aWxkIC9hcHAvbm9kZV9tb2R1bGVzIC4vbm9kZV9tb2R1bGVzCgpFWFBPU0UgMzAwMAojIExlIHNlcnZldXIgw6ljb3V0ZSBpbW3DqWRpYXRlbWVudCA7IHNjaMOpbWEgKyBzZWVkIHNlIGZvbnQgZW4gYXJyacOocmUtcGxhbi4KQ01EIFsibm9kZSIsICJkaXN0L2Jvb3QuanMiXQo=
+# UNIMPRESA Sicilia — site vitrine + panneau Super Admin (full-stack)
+# Build multi-étapes : image finale légère, démarrage instantané.
+
+# ── Étape 1 : installation des dépendances de build ──────────────────────────
+FROM node:20-slim AS build
+WORKDIR /app
+COPY package.json package-lock.json ./
+RUN npm ci --no-audit --no-fund
+
+# ── Étape 2 : build frontend (Vite) + bundle serveur (esbuild) ───────────────
+COPY . .
+RUN npm run build
+
+# ── Étape 3 : image finale de production ─────────────────────────────────────
+FROM node:20-slim
+WORKDIR /app
+ENV NODE_ENV=production
+
+# Seules les dépendances nécessaires au runtime : le serveur est déjà bundlé
+# par esbuild (dist/boot.js est autonome), on ne garde que les assets statiques
+# et le bundle. drizzle-kit/tsx servent à l'ensure-db en arrière-plan.
+COPY --from=build /app/dist ./dist
+COPY --from=build /app/db ./db
+COPY --from=build /app/drizzle.config.ts ./
+COPY --from=build /app/package.json /app/package-lock.json ./
+COPY --from=build /app/node_modules ./node_modules
+
+EXPOSE 3000
+# Le serveur écoute immédiatement ; schéma + seed se font en arrière-plan.
+CMD ["node", "dist/boot.js"]

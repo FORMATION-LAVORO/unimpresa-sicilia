@@ -1,1 +1,10 @@
-aW1wb3J0IHsgaW5pdFRSUEMgfSBmcm9tICJAdHJwYy9zZXJ2ZXIiOwppbXBvcnQgc3VwZXJqc29uIGZyb20gInN1cGVyanNvbiI7CmltcG9ydCB0eXBlIHsgVHJwY0NvbnRleHQgfSBmcm9tICIuL2NvbnRleHQiOwoKY29uc3QgdCA9IGluaXRUUlBDLmNvbnRleHQ8VHJwY0NvbnRleHQ+KCkuY3JlYXRlKHsKICB0cmFuc2Zvcm1lcjogc3VwZXJqc29uLAp9KTsKCmV4cG9ydCBjb25zdCBjcmVhdGVSb3V0ZXIgPSB0LnJvdXRlcjsKZXhwb3J0IGNvbnN0IHB1YmxpY1F1ZXJ5ID0gdC5wcm9jZWR1cmU7Cg==
+import { initTRPC } from "@trpc/server";
+import superjson from "superjson";
+import type { TrpcContext } from "./context";
+
+const t = initTRPC.context<TrpcContext>().create({
+  transformer: superjson,
+});
+
+export const createRouter = t.router;
+export const publicQuery = t.procedure;

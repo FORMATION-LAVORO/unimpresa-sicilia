@@ -1,1 +1,16 @@
-aW1wb3J0ICJkb3RlbnYvY29uZmlnIjsKCmZ1bmN0aW9uIHJlcXVpcmVkKG5hbWU6IHN0cmluZyk6IHN0cmluZyB7CiAgY29uc3QgdmFsdWUgPSBwcm9jZXNzLmVudltuYW1lXTsKICBpZiAoIXZhbHVlICYmIHByb2Nlc3MuZW52Lk5PREVfRU5WID09PSAicHJvZHVjdGlvbiIpIHsKICAgIHRocm93IG5ldyBFcnJvcihgTWlzc2luZyByZXF1aXJlZCBlbnZpcm9ubWVudCB2YXJpYWJsZTogJHtuYW1lfWApOwogIH0KICByZXR1cm4gdmFsdWUgPz8gIiI7Cn0KCmV4cG9ydCBjb25zdCBlbnYgPSB7CiAgYXBwSWQ6IHByb2Nlc3MuZW52LkFQUF9JRCA/PyAiIiwKICBhcHBTZWNyZXQ6IHByb2Nlc3MuZW52LkFQUF9TRUNSRVQgPz8gIiIsCiAgaXNQcm9kdWN0aW9uOiBwcm9jZXNzLmVudi5OT0RFX0VOViA9PT0gInByb2R1Y3Rpb24iLAogIGRhdGFiYXNlVXJsOiByZXF1aXJlZCgiREFUQUJBU0VfVVJMIiksCn07Cg==
+import "dotenv/config";
+
+function required(name: string): string {
+  const value = process.env[name];
+  if (!value && process.env.NODE_ENV === "production") {
+    throw new Error(`Missing required environment variable: ${name}`);
+  }
+  return value ?? "";
+}
+
+export const env = {
+  appId: process.env.APP_ID ?? "",
+  appSecret: process.env.APP_SECRET ?? "",
+  isProduction: process.env.NODE_ENV === "production",
+  databaseUrl: required("DATABASE_URL"),
+};

@@ -1,1 +1,22 @@
-aW1wb3J0IHsgZHJpenpsZSB9IGZyb20gImRyaXp6bGUtb3JtL25vZGUtcG9zdGdyZXMiOwppbXBvcnQgcGcgZnJvbSAicGciOwppbXBvcnQgeyBlbnYgfSBmcm9tICIuLi9saWIvZW52IjsKaW1wb3J0ICogYXMgc2NoZW1hIGZyb20gIkBkYi9zY2hlbWEiOwppbXBvcnQgKiBhcyByZWxhdGlvbnMgZnJvbSAiQGRiL3JlbGF0aW9ucyI7Cgpjb25zdCBmdWxsU2NoZW1hID0geyAuLi5zY2hlbWEsIC4uLnJlbGF0aW9ucyB9OwoKbGV0IGluc3RhbmNlOiBSZXR1cm5UeXBlPHR5cGVvZiBkcml6emxlPHR5cGVvZiBmdWxsU2NoZW1hPj47CgpleHBvcnQgZnVuY3Rpb24gZ2V0RGIoKSB7CiAgaWYgKCFpbnN0YW5jZSkgewogICAgY29uc3QgcG9vbCA9IG5ldyBwZy5Qb29sKHsKICAgICAgY29ubmVjdGlvblN0cmluZzogZW52LmRhdGFiYXNlVXJsLAogICAgICBtYXg6IDEwLAogICAgICBpZGxlVGltZW91dE1pbGxpczogMzAwMDAsCiAgICAgIGNvbm5lY3Rpb25UaW1lb3V0TWlsbGlzOiAxMDAwMCwKICAgIH0pOwogICAgaW5zdGFuY2UgPSBkcml6emxlKHBvb2wsIHsgc2NoZW1hOiBmdWxsU2NoZW1hIH0pOwogIH0KICByZXR1cm4gaW5zdGFuY2U7Cn0K
+import { drizzle } from "drizzle-orm/node-postgres";
+import pg from "pg";
+import { env } from "../lib/env";
+import * as schema from "@db/schema";
+import * as relations from "@db/relations";
+
+const fullSchema = { ...schema, ...relations };
+
+let instance: ReturnType<typeof drizzle<typeof fullSchema>>;
+
+export function getDb() {
+  if (!instance) {
+    const pool = new pg.Pool({
+      connectionString: env.databaseUrl,
+      max: 10,
+      idleTimeoutMillis: 30000,
+      connectionTimeoutMillis: 10000,
+    });
+    instance = drizzle(pool, { schema: fullSchema });
+  }
+  return instance;
+}

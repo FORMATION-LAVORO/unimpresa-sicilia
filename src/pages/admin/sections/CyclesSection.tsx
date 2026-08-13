@@ -1,1 +1,94 @@
-aW1wb3J0IHsgdXNlU3RhdGUgfSBmcm9tICJyZWFjdCI7CmltcG9ydCB7IHRycGMgfSBmcm9tICJAL3Byb3ZpZGVycy90cnBjIjsKaW1wb3J0IHsgdXNlQWRtaW4sIEZpZWxkLCBCdG4sIFRhYmxlLCBUb2dnbGUsIGlucHV0Q2xzIH0gZnJvbSAiLi4vdWkiOwoKY29uc3QgZW1wdHkgPSB7CiAgbm9tOiAiIiwgZGF0ZURlYnV0OiAiIiwgZGF0ZUZpbjogIiIsIHNlc3Npb25MYWJlbDogIiIsCiAgZHVyZWVIZXVyZXM6ICIxMjAiLCBuYlBhcnRpY2lwYW50czogNTAwLCBsaWV1OiAiIiwKICB2aWxsZTogIkRha2FyIiwgcGF5czogIlPDqW7DqWdhbCIsIGFjdGlmOiB0cnVlLAp9Owp0eXBlIEZvcm0gPSB0eXBlb2YgZW1wdHk7CgpleHBvcnQgZGVmYXVsdCBmdW5jdGlvbiBDeWNsZXNTZWN0aW9uKCkgewogIGNvbnN0IHsgdG9rZW4sIHJlZnJlc2ggfSA9IHVzZUFkbWluKCk7CiAgY29uc3QgeyBkYXRhOiBjeWNsZXMgfSA9IHRycGMuYWRtaW4ubGlzdEN5Y2xlcy51c2VRdWVyeSh7IHRva2VuIH0pOwogIGNvbnN0IGNyZWF0ZSA9IHRycGMuYWRtaW4uY3JlYXRlQ3ljbGUudXNlTXV0YXRpb24oeyBvblN1Y2Nlc3M6IHJlZnJlc2ggfSk7CiAgY29uc3QgdXBkYXRlID0gdHJwYy5hZG1pbi51cGRhdGVDeWNsZS51c2VNdXRhdGlvbih7IG9uU3VjY2VzczogcmVmcmVzaCB9KTsKICBjb25zdCBkZWwgPSB0cnBjLmFkbWluLmRlbGV0ZUN5Y2xlLnVzZU11dGF0aW9uKHsgb25TdWNjZXNzOiByZWZyZXNoIH0pOwoKICBjb25zdCBbZm9ybSwgc2V0Rm9ybV0gPSB1c2VTdGF0ZTxGb3JtPihlbXB0eSk7CiAgY29uc3QgW2VkaXRJZCwgc2V0RWRpdElkXSA9IHVzZVN0YXRlPG51bWJlciB8IG51bGw+KG51bGwpOwogIGNvbnN0IFtzaG93Rm9ybSwgc2V0U2hvd0Zvcm1dID0gdXNlU3RhdGUoZmFsc2UpOwoKICBjb25zdCBzZXQgPSAoazoga2V5b2YgRm9ybSwgdjogYW55KSA9PiBzZXRGb3JtKChmKSA9PiAoeyAuLi5mLCBba106IHYgfSkpOwoKICBjb25zdCBzdWJtaXQgPSBhc3luYyAoZTogUmVhY3QuRm9ybUV2ZW50KSA9PiB7CiAgICBlLnByZXZlbnREZWZhdWx0KCk7CiAgICBjb25zdCBkYXRhID0geyAuLi5mb3JtLCBuYlBhcnRpY2lwYW50czogTnVtYmVyKGZvcm0ubmJQYXJ0aWNpcGFudHMpIH07CiAgICBpZiAoZWRpdElkKSBhd2FpdCB1cGRhdGUubXV0YXRlQXN5bmMoeyB0b2tlbiwgaWQ6IGVkaXRJZCwgZGF0YSB9KTsKICAgIGVsc2UgYXdhaXQgY3JlYXRlLm11dGF0ZUFzeW5jKHsgdG9rZW4sIGRhdGEgfSk7CiAgICBzZXRGb3JtKGVtcHR5KTsgc2V0RWRpdElkKG51bGwpOyBzZXRTaG93Rm9ybShmYWxzZSk7CiAgfTsKCiAgcmV0dXJuICgKICAgIDxzZWN0aW9uPgogICAgICA8ZGl2IGNsYXNzTmFtZT0iZmxleCBpdGVtcy1jZW50ZXIganVzdGlmeS1iZXR3ZWVuIG1iLTQiPgogICAgICAgIDxoMiBjbGFzc05hbWU9InRleHQteGwgZm9udC1leHRyYWJvbGQgdGV4dC1bIzFhMmE0YV0iPkN5Y2xlcyAvIFNlc3Npb25zPC9oMj4KICAgICAgICA8QnRuIHZhcmlhbnQ9ImdvbGQiIG9uQ2xpY2s9eygpID0+IHsgc2V0Rm9ybShlbXB0eSk7IHNldEVkaXRJZChudWxsKTsgc2V0U2hvd0Zvcm0oIXNob3dGb3JtKTsgfX0+CiAgICAgICAgICB7c2hvd0Zvcm0gPyAiRmVybWVyIiA6ICIrIE5vdXZlYXUgY3ljbGUifQogICAgICAgIDwvQnRuPgogICAgICA8L2Rpdj4KCiAgICAgIHtzaG93Rm9ybSAmJiAoCiAgICAgICAgPGZvcm0gb25TdWJtaXQ9e3N1Ym1pdH0gY2xhc3NOYW1lPSJiZy13aGl0ZSByb3VuZGVkLXhsIHNoYWRvdy1zbSBib3JkZXIgYm9yZGVyLXNsYXRlLTIwMCBwLTUgbWItNiBncmlkIHNtOmdyaWQtY29scy0yIGdhcC00Ij4KICAgICAgICAgIDxGaWVsZCBsYWJlbD0iTm9tIGR1IGN5Y2xlIj48aW5wdXQgcmVxdWlyZWQgY2xhc3NOYW1lPXtpbnB1dENsc30gdmFsdWU9e2Zvcm0ubm9tfSBvbkNoYW5nZT17KGUpID0+IHNldCgibm9tIiwgZS50YXJnZXQudmFsdWUpfSBwbGFjZWhvbGRlcj0iQ3ljbGUgMjAyNyIgLz48L0ZpZWxkPgogICAgICAgICAgPEZpZWxkIGxhYmVsPSJMYWJlbCBzZXNzaW9uIChiYWRnZSkiPjxpbnB1dCBjbGFzc05hbWU9e2lucHV0Q2xzfSB2YWx1ZT17Zm9ybS5zZXNzaW9uTGFiZWx9IG9uQ2hhbmdlPXsoZSkgPT4gc2V0KCJzZXNzaW9uTGFiZWwiLCBlLnRhcmdldC52YWx1ZSl9IHBsYWNlaG9sZGVyPSJEdSAwMS8wOSBhdSAzMC8xMS8yMDI3ICgzIG1vaXMpIiAvPjwvRmllbGQ+CiAgICAgICAgICA8RmllbGQgbGFiZWw9IkRhdGUgZMOpYnV0Ij48aW5wdXQgcmVxdWlyZWQgY2xhc3NOYW1lPXtpbnB1dENsc30gdmFsdWU9e2Zvcm0uZGF0ZURlYnV0fSBvbkNoYW5nZT17KGUpID0+IHNldCgiZGF0ZURlYnV0IiwgZS50YXJnZXQudmFsdWUpfSBwbGFjZWhvbGRlcj0iMDEvMDkvMjAyNyIgLz48L0ZpZWxkPgogICAgICAgICAgPEZpZWxkIGxhYmVsPSJEYXRlIGZpbiI+PGlucHV0IHJlcXVpcmVkIGNsYXNzTmFtZT17aW5wdXRDbHN9IHZhbHVlPXtmb3JtLmRhdGVGaW59IG9uQ2hhbmdlPXsoZSkgPT4gc2V0KCJkYXRlRmluIiwgZS50YXJnZXQudmFsdWUpfSBwbGFjZWhvbGRlcj0iMzAvMTEvMjAyNyIgLz48L0ZpZWxkPgogICAgICAgICAgPEZpZWxkIGxhYmVsPSJEdXLDqWUgKGhldXJlcykiPjxpbnB1dCByZXF1aXJlZCBjbGFzc05hbWU9e2lucHV0Q2xzfSB2YWx1ZT17Zm9ybS5kdXJlZUhldXJlc30gb25DaGFuZ2U9eyhlKSA9PiBzZXQoImR1cmVlSGV1cmVzIiwgZS50YXJnZXQudmFsdWUpfSAvPjwvRmllbGQ+CiAgICAgICAgICA8RmllbGQgbGFiZWw9IlBhcnRpY2lwYW50cyBtYXgiPjxpbnB1dCByZXF1aXJlZCB0eXBlPSJudW1iZXIiIGNsYXNzTmFtZT17aW5wdXRDbHN9IHZhbHVlPXtmb3JtLm5iUGFydGljaXBhbnRzfSBvbkNoYW5nZT17KGUpID0+IHNldCgibmJQYXJ0aWNpcGFudHMiLCBlLnRhcmdldC52YWx1ZSBhcyBhbnkpfSAvPjwvRmllbGQ+CiAgICAgICAgICA8RmllbGQgbGFiZWw9IlZpbGxlIj48aW5wdXQgY2xhc3NOYW1lPXtpbnB1dENsc30gdmFsdWU9e2Zvcm0udmlsbGV9IG9uQ2hhbmdlPXsoZSkgPT4gc2V0KCJ2aWxsZSIsIGUudGFyZ2V0LnZhbHVlKX0gLz48L0ZpZWxkPgogICAgICAgICAgPEZpZWxkIGxhYmVsPSJQYXlzIj48aW5wdXQgY2xhc3NOYW1lPXtpbnB1dENsc30gdmFsdWU9e2Zvcm0ucGF5c30gb25DaGFuZ2U9eyhlKSA9PiBzZXQoInBheXMiLCBlLnRhcmdldC52YWx1ZSl9IC8+PC9GaWVsZD4KICAgICAgICAgIDxkaXYgY2xhc3NOYW1lPSJzbTpjb2wtc3Bhbi0yIj4KICAgICAgICAgICAgPEZpZWxkIGxhYmVsPSJMaWV1IC8gYWRyZXNzZSBkdSBjZW50cmUiPjxpbnB1dCByZXF1aXJlZCBjbGFzc05hbWU9e2lucHV0Q2xzfSB2YWx1ZT17Zm9ybS5saWV1fSBvbkNoYW5nZT17KGUpID0+IHNldCgibGlldSIsIGUudGFyZ2V0LnZhbHVlKX0gLz48L0ZpZWxkPgogICAgICAgICAgPC9kaXY+CiAgICAgICAgICA8ZGl2IGNsYXNzTmFtZT0iZmxleCBpdGVtcy1jZW50ZXIgZ2FwLTMiPgogICAgICAgICAgICA8VG9nZ2xlIGNoZWNrZWQ9e2Zvcm0uYWN0aWZ9IG9uQ2hhbmdlPXsodikgPT4gc2V0KCJhY3RpZiIsIHYpfSAvPgogICAgICAgICAgICA8c3BhbiBjbGFzc05hbWU9InRleHQtc20gZm9udC1zZW1pYm9sZCB0ZXh0LXNsYXRlLTYwMCI+Q3ljbGUgYWN0aWY8L3NwYW4+CiAgICAgICAgICA8L2Rpdj4KICAgICAgICAgIDxkaXYgY2xhc3NOYW1lPSJmbGV4IGdhcC0yIHNtOmp1c3RpZnktZW5kIGl0ZW1zLWVuZCI+CiAgICAgICAgICAgIDxCdG4gdHlwZT0ic3VibWl0IiB2YXJpYW50PSJnb2xkIj57ZWRpdElkID8gIkVucmVnaXN0cmVyIiA6ICJDcsOpZXIifTwvQnRuPgogICAgICAgICAgICB7ZWRpdElkICYmIDxCdG4gdmFyaWFudD0iZ2hvc3QiIG9uQ2xpY2s9eygpID0+IHsgc2V0RWRpdElkKG51bGwpOyBzZXRGb3JtKGVtcHR5KTsgfX0+QW5udWxlcjwvQnRuPn0KICAgICAgICAgIDwvZGl2PgogICAgICAgIDwvZm9ybT4KICAgICAgKX0KCiAgICAgIDxUYWJsZSBoZWFkPXtbIk5vbSIsICJTZXNzaW9uIiwgIkR1csOpZSIsICJQYXJ0aWNpcGFudHMiLCAiTGlldSIsICJBY3RpZiIsICJBY3Rpb25zIl19PgogICAgICAgIHsoY3ljbGVzID8/IFtdKS5tYXAoKGMpID0+ICgKICAgICAgICAgIDx0ciBrZXk9e2MuaWR9IGNsYXNzTmFtZT0iYm9yZGVyLXQgYm9yZGVyLXNsYXRlLTEwMCI+CiAgICAgICAgICAgIDx0ZCBjbGFzc05hbWU9InB4LTQgcHktMyBmb250LWJvbGQgdGV4dC1bIzFhMmE0YV0iPntjLm5vbX08L3RkPgogICAgICAgICAgICA8dGQgY2xhc3NOYW1lPSJweC00IHB5LTMiPntjLnNlc3Npb25MYWJlbCB8fCBgJHtjLmRhdGVEZWJ1dH0g4oaSICR7Yy5kYXRlRmlufWB9PC90ZD4KICAgICAgICAgICAgPHRkIGNsYXNzTmFtZT0icHgtNCBweS0zIj57Yy5kdXJlZUhldXJlc31oPC90ZD4KICAgICAgICAgICAgPHRkIGNsYXNzTmFtZT0icHgtNCBweS0zIj57Yy5uYlBhcnRpY2lwYW50c308L3RkPgogICAgICAgICAgICA8dGQgY2xhc3NOYW1lPSJweC00IHB5LTMgbWF4LXctNTYgdHJ1bmNhdGUiPntjLmxpZXV9PC90ZD4KICAgICAgICAgICAgPHRkIGNsYXNzTmFtZT0icHgtNCBweS0zIj4KICAgICAgICAgICAgICA8VG9nZ2xlIGNoZWNrZWQ9e2MuYWN0aWZ9IG9uQ2hhbmdlPXsodikgPT4gdXBkYXRlLm11dGF0ZSh7IHRva2VuLCBpZDogTnVtYmVyKGMuaWQpLCBkYXRhOiB7IGFjdGlmOiB2IH0gfSl9IC8+CiAgICAgICAgICAgIDwvdGQ+CiAgICAgICAgICAgIDx0ZCBjbGFzc05hbWU9InB4LTQgcHktMyB3aGl0ZXNwYWNlLW5vd3JhcCBzcGFjZS14LTIiPgogICAgICAgICAgICAgIDxCdG4gdmFyaWFudD0iZ2hvc3QiIG9uQ2xpY2s9eygpID0+IHsKICAgICAgICAgICAgICAgIHNldEVkaXRJZChOdW1iZXIoYy5pZCkpOwogICAgICAgICAgICAgICAgc2V0Rm9ybSh7CiAgICAgICAgICAgICAgICAgIG5vbTogYy5ub20sIGRhdGVEZWJ1dDogYy5kYXRlRGVidXQsIGRhdGVGaW46IGMuZGF0ZUZpbiwKICAgICAgICAgICAgICAgICAgc2Vzc2lvbkxhYmVsOiBjLnNlc3Npb25MYWJlbCwgZHVyZWVIZXVyZXM6IGMuZHVyZWVIZXVyZXMsCiAgICAgICAgICAgICAgICAgIG5iUGFydGljaXBhbnRzOiBjLm5iUGFydGljaXBhbnRzLCBsaWV1OiBjLmxpZXUsIHZpbGxlOiBjLnZpbGxlLCBwYXlzOiBjLnBheXMsIGFjdGlmOiBjLmFjdGlmLAogICAgICAgICAgICAgICAgfSk7CiAgICAgICAgICAgICAgICBzZXRTaG93Rm9ybSh0cnVlKTsKICAgICAgICAgICAgICB9fT7inI/vuI8gTW9kaWZpZXI8L0J0bj4KICAgICAgICAgICAgICA8QnRuIHZhcmlhbnQ9ImRhbmdlciIgb25DbGljaz17KCkgPT4gY29uZmlybSgiU3VwcHJpbWVyIGNlIGN5Y2xlID8iKSAmJiBkZWwubXV0YXRlKHsgdG9rZW4sIGlkOiBOdW1iZXIoYy5pZCkgfSl9PvCfl5E8L0J0bj4KICAgICAgICAgICAgPC90ZD4KICAgICAgICAgIDwvdHI+CiAgICAgICAgKSl9CiAgICAgIDwvVGFibGU+CiAgICA8L3NlY3Rpb24+CiAgKTsKfQo=
+import { useState } from "react";
+import { trpc } from "@/providers/trpc";
+import { useAdmin, Field, Btn, Table, Toggle, inputCls } from "../ui";
+
+const empty = {
+  nom: "", dateDebut: "", dateFin: "", sessionLabel: "",
+  dureeHeures: "120", nbParticipants: 500, lieu: "",
+  ville: "Dakar", pays: "Sénégal", actif: true,
+};
+type Form = typeof empty;
+
+export default function CyclesSection() {
+  const { token, refresh } = useAdmin();
+  const { data: cycles } = trpc.admin.listCycles.useQuery({ token });
+  const create = trpc.admin.createCycle.useMutation({ onSuccess: refresh });
+  const update = trpc.admin.updateCycle.useMutation({ onSuccess: refresh });
+  const del = trpc.admin.deleteCycle.useMutation({ onSuccess: refresh });
+
+  const [form, setForm] = useState<Form>(empty);
+  const [editId, setEditId] = useState<number | null>(null);
+  const [showForm, setShowForm] = useState(false);
+
+  const set = (k: keyof Form, v: any) => setForm((f) => ({ ...f, [k]: v }));
+
+  const submit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    const data = { ...form, nbParticipants: Number(form.nbParticipants) };
+    if (editId) await update.mutateAsync({ token, id: editId, data });
+    else await create.mutateAsync({ token, data });
+    setForm(empty); setEditId(null); setShowForm(false);
+  };
+
+  return (
+    <section>
+      <div className="flex items-center justify-between mb-4">
+        <h2 className="text-xl font-extrabold text-[#1a2a4a]">Cycles / Sessions</h2>
+        <Btn variant="gold" onClick={() => { setForm(empty); setEditId(null); setShowForm(!showForm); }}>
+          {showForm ? "Fermer" : "+ Nouveau cycle"}
+        </Btn>
+      </div>
+
+      {showForm && (
+        <form onSubmit={submit} className="bg-white rounded-xl shadow-sm border border-slate-200 p-5 mb-6 grid sm:grid-cols-2 gap-4">
+          <Field label="Nom du cycle"><input required className={inputCls} value={form.nom} onChange={(e) => set("nom", e.target.value)} placeholder="Cycle 2027" /></Field>
+          <Field label="Label session (badge)"><input className={inputCls} value={form.sessionLabel} onChange={(e) => set("sessionLabel", e.target.value)} placeholder="Du 01/09 au 30/11/2027 (3 mois)" /></Field>
+          <Field label="Date début"><input required className={inputCls} value={form.dateDebut} onChange={(e) => set("dateDebut", e.target.value)} placeholder="01/09/2027" /></Field>
+          <Field label="Date fin"><input required className={inputCls} value={form.dateFin} onChange={(e) => set("dateFin", e.target.value)} placeholder="30/11/2027" /></Field>
+          <Field label="Durée (heures)"><input required className={inputCls} value={form.dureeHeures} onChange={(e) => set("dureeHeures", e.target.value)} /></Field>
+          <Field label="Participants max"><input required type="number" className={inputCls} value={form.nbParticipants} onChange={(e) => set("nbParticipants", e.target.value as any)} /></Field>
+          <Field label="Ville"><input className={inputCls} value={form.ville} onChange={(e) => set("ville", e.target.value)} /></Field>
+          <Field label="Pays"><input className={inputCls} value={form.pays} onChange={(e) => set("pays", e.target.value)} /></Field>
+          <div className="sm:col-span-2">
+            <Field label="Lieu / adresse du centre"><input required className={inputCls} value={form.lieu} onChange={(e) => set("lieu", e.target.value)} /></Field>
+          </div>
+          <div className="flex items-center gap-3">
+            <Toggle checked={form.actif} onChange={(v) => set("actif", v)} />
+            <span className="text-sm font-semibold text-slate-600">Cycle actif</span>
+          </div>
+          <div className="flex gap-2 sm:justify-end items-end">
+            <Btn type="submit" variant="gold">{editId ? "Enregistrer" : "Créer"}</Btn>
+            {editId && <Btn variant="ghost" onClick={() => { setEditId(null); setForm(empty); }}>Annuler</Btn>}
+          </div>
+        </form>
+      )}
+
+      <Table head={["Nom", "Session", "Durée", "Participants", "Lieu", "Actif", "Actions"]}>
+        {(cycles ?? []).map((c) => (
+          <tr key={c.id} className="border-t border-slate-100">
+            <td className="px-4 py-3 font-bold text-[#1a2a4a]">{c.nom}</td>
+            <td className="px-4 py-3">{c.sessionLabel || `${c.dateDebut} → ${c.dateFin}`}</td>
+            <td className="px-4 py-3">{c.dureeHeures}h</td>
+            <td className="px-4 py-3">{c.nbParticipants}</td>
+            <td className="px-4 py-3 max-w-56 truncate">{c.lieu}</td>
+            <td className="px-4 py-3">
+              <Toggle checked={c.actif} onChange={(v) => update.mutate({ token, id: Number(c.id), data: { actif: v } })} />
+            </td>
+            <td className="px-4 py-3 whitespace-nowrap space-x-2">
+              <Btn variant="ghost" onClick={() => {
+                setEditId(Number(c.id));
+                setForm({
+                  nom: c.nom, dateDebut: c.dateDebut, dateFin: c.dateFin,
+                  sessionLabel: c.sessionLabel, dureeHeures: c.dureeHeures,
+                  nbParticipants: c.nbParticipants, lieu: c.lieu, ville: c.ville, pays: c.pays, actif: c.actif,
+                });
+                setShowForm(true);
+              }}>✏️ Modifier</Btn>
+              <Btn variant="danger" onClick={() => confirm("Supprimer ce cycle ?") && del.mutate({ token, id: Number(c.id) })}>🗑</Btn>
+            </td>
+          </tr>
+        ))}
+      </Table>
+    </section>
+  );
+}

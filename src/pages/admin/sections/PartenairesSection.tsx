@@ -1,1 +1,69 @@
-aW1wb3J0IHsgdXNlU3RhdGUgfSBmcm9tICJyZWFjdCI7CmltcG9ydCB7IHRycGMgfSBmcm9tICJAL3Byb3ZpZGVycy90cnBjIjsKaW1wb3J0IHsgdXNlQWRtaW4sIEZpZWxkLCBCdG4sIFRhYmxlLCBUb2dnbGUsIGlucHV0Q2xzIH0gZnJvbSAiLi4vdWkiOwoKY29uc3QgZW1wdHkgPSB7IG5vbTogIiIsIGRlc2NyaXB0aW9uOiAiIiwgbG9nbzogIiIsIG9yZHJlOiAwLCBhY3RpZjogdHJ1ZSB9Owp0eXBlIEZvcm0gPSB0eXBlb2YgZW1wdHk7CgpleHBvcnQgZGVmYXVsdCBmdW5jdGlvbiBQYXJ0ZW5haXJlc1NlY3Rpb24oKSB7CiAgY29uc3QgeyB0b2tlbiwgcmVmcmVzaCB9ID0gdXNlQWRtaW4oKTsKICBjb25zdCB7IGRhdGEgfSA9IHRycGMuYWRtaW4ubGlzdFBhcnRlbmFpcmVzLnVzZVF1ZXJ5KHsgdG9rZW4gfSk7CiAgY29uc3QgY3JlYXRlID0gdHJwYy5hZG1pbi5jcmVhdGVQYXJ0ZW5haXJlLnVzZU11dGF0aW9uKHsgb25TdWNjZXNzOiByZWZyZXNoIH0pOwogIGNvbnN0IHVwZGF0ZSA9IHRycGMuYWRtaW4udXBkYXRlUGFydGVuYWlyZS51c2VNdXRhdGlvbih7IG9uU3VjY2VzczogcmVmcmVzaCB9KTsKICBjb25zdCBkZWwgPSB0cnBjLmFkbWluLmRlbGV0ZVBhcnRlbmFpcmUudXNlTXV0YXRpb24oeyBvblN1Y2Nlc3M6IHJlZnJlc2ggfSk7CgogIGNvbnN0IFtmb3JtLCBzZXRGb3JtXSA9IHVzZVN0YXRlPEZvcm0+KGVtcHR5KTsKICBjb25zdCBbZWRpdElkLCBzZXRFZGl0SWRdID0gdXNlU3RhdGU8bnVtYmVyIHwgbnVsbD4obnVsbCk7CiAgY29uc3QgW3Nob3dGb3JtLCBzZXRTaG93Rm9ybV0gPSB1c2VTdGF0ZShmYWxzZSk7CiAgY29uc3Qgc2V0ID0gKGs6IGtleW9mIEZvcm0sIHY6IGFueSkgPT4gc2V0Rm9ybSgoZikgPT4gKHsgLi4uZiwgW2tdOiB2IH0pKTsKCiAgY29uc3Qgc3VibWl0ID0gYXN5bmMgKGU6IFJlYWN0LkZvcm1FdmVudCkgPT4gewogICAgZS5wcmV2ZW50RGVmYXVsdCgpOwogICAgY29uc3QgZCA9IHsgLi4uZm9ybSwgb3JkcmU6IE51bWJlcihmb3JtLm9yZHJlKSB9OwogICAgaWYgKGVkaXRJZCkgYXdhaXQgdXBkYXRlLm11dGF0ZUFzeW5jKHsgdG9rZW4sIGlkOiBlZGl0SWQsIGRhdGE6IGQgfSk7CiAgICBlbHNlIGF3YWl0IGNyZWF0ZS5tdXRhdGVBc3luYyh7IHRva2VuLCBkYXRhOiBkIH0pOwogICAgc2V0Rm9ybShlbXB0eSk7IHNldEVkaXRJZChudWxsKTsgc2V0U2hvd0Zvcm0oZmFsc2UpOwogIH07CgogIHJldHVybiAoCiAgICA8c2VjdGlvbj4KICAgICAgPGRpdiBjbGFzc05hbWU9ImZsZXggaXRlbXMtY2VudGVyIGp1c3RpZnktYmV0d2VlbiBtYi00Ij4KICAgICAgICA8aDIgY2xhc3NOYW1lPSJ0ZXh0LXhsIGZvbnQtZXh0cmFib2xkIHRleHQtWyMxYTJhNGFdIj5QYXJ0ZW5haXJlczwvaDI+CiAgICAgICAgPEJ0biB2YXJpYW50PSJnb2xkIiBvbkNsaWNrPXsoKSA9PiB7IHNldEZvcm0oZW1wdHkpOyBzZXRFZGl0SWQobnVsbCk7IHNldFNob3dGb3JtKCFzaG93Rm9ybSk7IH19PgogICAgICAgICAge3Nob3dGb3JtID8gIkZlcm1lciIgOiAiKyBOb3V2ZWF1IHBhcnRlbmFpcmUifQogICAgICAgIDwvQnRuPgogICAgICA8L2Rpdj4KCiAgICAgIHtzaG93Rm9ybSAmJiAoCiAgICAgICAgPGZvcm0gb25TdWJtaXQ9e3N1Ym1pdH0gY2xhc3NOYW1lPSJiZy13aGl0ZSByb3VuZGVkLXhsIHNoYWRvdy1zbSBib3JkZXIgYm9yZGVyLXNsYXRlLTIwMCBwLTUgbWItNiBncmlkIHNtOmdyaWQtY29scy0yIGdhcC00Ij4KICAgICAgICAgIDxGaWVsZCBsYWJlbD0iTm9tIj48aW5wdXQgcmVxdWlyZWQgY2xhc3NOYW1lPXtpbnB1dENsc30gdmFsdWU9e2Zvcm0ubm9tfSBvbkNoYW5nZT17KGUpID0+IHNldCgibm9tIiwgZS50YXJnZXQudmFsdWUpfSAvPjwvRmllbGQ+CiAgICAgICAgICA8RmllbGQgbGFiZWw9IkxvZ28gKFVSTCwgb3B0aW9ubmVsKSI+PGlucHV0IGNsYXNzTmFtZT17aW5wdXRDbHN9IHZhbHVlPXtmb3JtLmxvZ299IG9uQ2hhbmdlPXsoZSkgPT4gc2V0KCJsb2dvIiwgZS50YXJnZXQudmFsdWUpfSBwbGFjZWhvbGRlcj0iaHR0cHM6Ly/igKYiIC8+PC9GaWVsZD4KICAgICAgICAgIDxkaXYgY2xhc3NOYW1lPSJzbTpjb2wtc3Bhbi0yIj4KICAgICAgICAgICAgPEZpZWxkIGxhYmVsPSJEZXNjcmlwdGlvbiI+PHRleHRhcmVhIHJvd3M9ezJ9IGNsYXNzTmFtZT17aW5wdXRDbHN9IHZhbHVlPXtmb3JtLmRlc2NyaXB0aW9ufSBvbkNoYW5nZT17KGUpID0+IHNldCgiZGVzY3JpcHRpb24iLCBlLnRhcmdldC52YWx1ZSl9IC8+PC9GaWVsZD4KICAgICAgICAgIDwvZGl2PgogICAgICAgICAgPEZpZWxkIGxhYmVsPSJPcmRyZSI+PGlucHV0IHR5cGU9Im51bWJlciIgY2xhc3NOYW1lPXtpbnB1dENsc30gdmFsdWU9e2Zvcm0ub3JkcmV9IG9uQ2hhbmdlPXsoZSkgPT4gc2V0KCJvcmRyZSIsIGUudGFyZ2V0LnZhbHVlIGFzIGFueSl9IC8+PC9GaWVsZD4KICAgICAgICAgIDxkaXYgY2xhc3NOYW1lPSJmbGV4IGl0ZW1zLWNlbnRlciBnYXAtMyI+PFRvZ2dsZSBjaGVja2VkPXtmb3JtLmFjdGlmfSBvbkNoYW5nZT17KHYpID0+IHNldCgiYWN0aWYiLCB2KX0gLz48c3BhbiBjbGFzc05hbWU9InRleHQtc20gZm9udC1zZW1pYm9sZCB0ZXh0LXNsYXRlLTYwMCI+VmlzaWJsZTwvc3Bhbj48L2Rpdj4KICAgICAgICAgIDxkaXYgY2xhc3NOYW1lPSJmbGV4IGdhcC0yIHNtOmp1c3RpZnktZW5kIGl0ZW1zLWVuZCBzbTpjb2wtc3Bhbi0yIj4KICAgICAgICAgICAgPEJ0biB0eXBlPSJzdWJtaXQiIHZhcmlhbnQ9ImdvbGQiPntlZGl0SWQgPyAiRW5yZWdpc3RyZXIiIDogIkNyw6llciJ9PC9CdG4+CiAgICAgICAgICAgIHtlZGl0SWQgJiYgPEJ0biB2YXJpYW50PSJnaG9zdCIgb25DbGljaz17KCkgPT4geyBzZXRFZGl0SWQobnVsbCk7IHNldEZvcm0oZW1wdHkpOyB9fT5Bbm51bGVyPC9CdG4+fQogICAgICAgICAgPC9kaXY+CiAgICAgICAgPC9mb3JtPgogICAgICApfQoKICAgICAgPFRhYmxlIGhlYWQ9e1siTm9tIiwgIkRlc2NyaXB0aW9uIiwgIk9yZHJlIiwgIlZpc2libGUiLCAiQWN0aW9ucyJdfT4KICAgICAgICB7KGRhdGEgPz8gW10pLm1hcCgocCkgPT4gKAogICAgICAgICAgPHRyIGtleT17cC5pZH0gY2xhc3NOYW1lPSJib3JkZXItdCBib3JkZXItc2xhdGUtMTAwIj4KICAgICAgICAgICAgPHRkIGNsYXNzTmFtZT0icHgtNCBweS0zIGZvbnQtYm9sZCB0ZXh0LVsjMWEyYTRhXSI+e3Aubm9tfTwvdGQ+CiAgICAgICAgICAgIDx0ZCBjbGFzc05hbWU9InB4LTQgcHktMyBtYXgtdy05NiB0cnVuY2F0ZSB0ZXh0LXNsYXRlLTYwMCI+e3AuZGVzY3JpcHRpb259PC90ZD4KICAgICAgICAgICAgPHRkIGNsYXNzTmFtZT0icHgtNCBweS0zIj57cC5vcmRyZX08L3RkPgogICAgICAgICAgICA8dGQgY2xhc3NOYW1lPSJweC00IHB5LTMiPjxUb2dnbGUgY2hlY2tlZD17cC5hY3RpZn0gb25DaGFuZ2U9eyh2KSA9PiB1cGRhdGUubXV0YXRlKHsgdG9rZW4sIGlkOiBOdW1iZXIocC5pZCksIGRhdGE6IHsgYWN0aWY6IHYgfSB9KX0gLz48L3RkPgogICAgICAgICAgICA8dGQgY2xhc3NOYW1lPSJweC00IHB5LTMgd2hpdGVzcGFjZS1ub3dyYXAgc3BhY2UteC0yIj4KICAgICAgICAgICAgICA8QnRuIHZhcmlhbnQ9Imdob3N0IiBvbkNsaWNrPXsoKSA9PiB7IHNldEVkaXRJZChOdW1iZXIocC5pZCkpOyBzZXRGb3JtKHsgbm9tOiBwLm5vbSwgZGVzY3JpcHRpb246IHAuZGVzY3JpcHRpb24sIGxvZ286IHAubG9nbywgb3JkcmU6IHAub3JkcmUsIGFjdGlmOiBwLmFjdGlmIH0pOyBzZXRTaG93Rm9ybSh0cnVlKTsgfX0+4pyP77iPIE1vZGlmaWVyPC9CdG4+CiAgICAgICAgICAgICAgPEJ0biB2YXJpYW50PSJkYW5nZXIiIG9uQ2xpY2s9eygpID0+IGNvbmZpcm0oIlN1cHByaW1lciBjZSBwYXJ0ZW5haXJlID8iKSAmJiBkZWwubXV0YXRlKHsgdG9rZW4sIGlkOiBOdW1iZXIocC5pZCkgfSl9PvCfl5E8L0J0bj4KICAgICAgICAgICAgPC90ZD4KICAgICAgICAgIDwvdHI+CiAgICAgICAgKSl9CiAgICAgIDwvVGFibGU+CiAgICA8L3NlY3Rpb24+CiAgKTsKfQo=
+import { useState } from "react";
+import { trpc } from "@/providers/trpc";
+import { useAdmin, Field, Btn, Table, Toggle, inputCls } from "../ui";
+
+const empty = { nom: "", description: "", logo: "", ordre: 0, actif: true };
+type Form = typeof empty;
+
+export default function PartenairesSection() {
+  const { token, refresh } = useAdmin();
+  const { data } = trpc.admin.listPartenaires.useQuery({ token });
+  const create = trpc.admin.createPartenaire.useMutation({ onSuccess: refresh });
+  const update = trpc.admin.updatePartenaire.useMutation({ onSuccess: refresh });
+  const del = trpc.admin.deletePartenaire.useMutation({ onSuccess: refresh });
+
+  const [form, setForm] = useState<Form>(empty);
+  const [editId, setEditId] = useState<number | null>(null);
+  const [showForm, setShowForm] = useState(false);
+  const set = (k: keyof Form, v: any) => setForm((f) => ({ ...f, [k]: v }));
+
+  const submit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    const d = { ...form, ordre: Number(form.ordre) };
+    if (editId) await update.mutateAsync({ token, id: editId, data: d });
+    else await create.mutateAsync({ token, data: d });
+    setForm(empty); setEditId(null); setShowForm(false);
+  };
+
+  return (
+    <section>
+      <div className="flex items-center justify-between mb-4">
+        <h2 className="text-xl font-extrabold text-[#1a2a4a]">Partenaires</h2>
+        <Btn variant="gold" onClick={() => { setForm(empty); setEditId(null); setShowForm(!showForm); }}>
+          {showForm ? "Fermer" : "+ Nouveau partenaire"}
+        </Btn>
+      </div>
+
+      {showForm && (
+        <form onSubmit={submit} className="bg-white rounded-xl shadow-sm border border-slate-200 p-5 mb-6 grid sm:grid-cols-2 gap-4">
+          <Field label="Nom"><input required className={inputCls} value={form.nom} onChange={(e) => set("nom", e.target.value)} /></Field>
+          <Field label="Logo (URL, optionnel)"><input className={inputCls} value={form.logo} onChange={(e) => set("logo", e.target.value)} placeholder="https://…" /></Field>
+          <div className="sm:col-span-2">
+            <Field label="Description"><textarea rows={2} className={inputCls} value={form.description} onChange={(e) => set("description", e.target.value)} /></Field>
+          </div>
+          <Field label="Ordre"><input type="number" className={inputCls} value={form.ordre} onChange={(e) => set("ordre", e.target.value as any)} /></Field>
+          <div className="flex items-center gap-3"><Toggle checked={form.actif} onChange={(v) => set("actif", v)} /><span className="text-sm font-semibold text-slate-600">Visible</span></div>
+          <div className="flex gap-2 sm:justify-end items-end sm:col-span-2">
+            <Btn type="submit" variant="gold">{editId ? "Enregistrer" : "Créer"}</Btn>
+            {editId && <Btn variant="ghost" onClick={() => { setEditId(null); setForm(empty); }}>Annuler</Btn>}
+          </div>
+        </form>
+      )}
+
+      <Table head={["Nom", "Description", "Ordre", "Visible", "Actions"]}>
+        {(data ?? []).map((p) => (
+          <tr key={p.id} className="border-t border-slate-100">
+            <td className="px-4 py-3 font-bold text-[#1a2a4a]">{p.nom}</td>
+            <td className="px-4 py-3 max-w-96 truncate text-slate-600">{p.description}</td>
+            <td className="px-4 py-3">{p.ordre}</td>
+            <td className="px-4 py-3"><Toggle checked={p.actif} onChange={(v) => update.mutate({ token, id: Number(p.id), data: { actif: v } })} /></td>
+            <td className="px-4 py-3 whitespace-nowrap space-x-2">
+              <Btn variant="ghost" onClick={() => { setEditId(Number(p.id)); setForm({ nom: p.nom, description: p.description, logo: p.logo, ordre: p.ordre, actif: p.actif }); setShowForm(true); }}>✏️ Modifier</Btn>
+              <Btn variant="danger" onClick={() => confirm("Supprimer ce partenaire ?") && del.mutate({ token, id: Number(p.id) })}>🗑</Btn>
+            </td>
+          </tr>
+        ))}
+      </Table>
+    </section>
+  );
+}

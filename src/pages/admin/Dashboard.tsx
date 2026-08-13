@@ -1,1 +1,129 @@
-aW1wb3J0IHsgdXNlRWZmZWN0IH0gZnJvbSAicmVhY3QiOwppbXBvcnQgeyBMaW5rLCBOYXZMaW5rLCB1c2VMb2NhdGlvbiwgdXNlTmF2aWdhdGUsIE5hdmlnYXRlIH0gZnJvbSAicmVhY3Qtcm91dGVyIjsKaW1wb3J0IHsgdHJwYyB9IGZyb20gIkAvcHJvdmlkZXJzL3RycGMiOwppbXBvcnQgeyBnZXRBZG1pblRva2VuLCBnZXRBZG1pblVzZXIsIGNsZWFyQWRtaW5TZXNzaW9uIH0gZnJvbSAiQC9saWIvYWRtaW5BdXRoIjsKaW1wb3J0IEN5Y2xlc1NlY3Rpb24gZnJvbSAiLi9zZWN0aW9ucy9DeWNsZXNTZWN0aW9uIjsKaW1wb3J0IEZpbGllcmVzU2VjdGlvbiBmcm9tICIuL3NlY3Rpb25zL0ZpbGllcmVzU2VjdGlvbiI7CmltcG9ydCBUYXJpZnNTZWN0aW9uIGZyb20gIi4vc2VjdGlvbnMvVGFyaWZzU2VjdGlvbiI7CmltcG9ydCBFdGFwZXNTZWN0aW9uIGZyb20gIi4vc2VjdGlvbnMvRXRhcGVzU2VjdGlvbiI7CmltcG9ydCBQYXJhbWV0cmVzU2VjdGlvbiBmcm9tICIuL3NlY3Rpb25zL1BhcmFtZXRyZXNTZWN0aW9uIjsKaW1wb3J0IEluc2NyaXB0aW9uc1NlY3Rpb24gZnJvbSAiLi9zZWN0aW9ucy9JbnNjcmlwdGlvbnNTZWN0aW9uIjsKaW1wb3J0IFBhcnRlbmFpcmVzU2VjdGlvbiBmcm9tICIuL3NlY3Rpb25zL1BhcnRlbmFpcmVzU2VjdGlvbiI7CmltcG9ydCBBdmFudGFnZXNTZWN0aW9uIGZyb20gIi4vc2VjdGlvbnMvQXZhbnRhZ2VzU2VjdGlvbiI7CmltcG9ydCBSZW5kZXpWb3VzU2VjdGlvbiBmcm9tICIuL3NlY3Rpb25zL1JlbmRlelZvdXNTZWN0aW9uIjsKCmNvbnN0IE5BViA9IFsKICB7IHBhdGg6ICIvYWRtaW4vZGFzaGJvYXJkIiwgbGFiZWw6ICLwn5OKIFRhYmxlYXUgZGUgYm9yZCIsIGtleTogImRhc2hib2FyZCIgfSwKICB7IHBhdGg6ICIvYWRtaW4vY3ljbGVzIiwgbGFiZWw6ICLwn5eT77iPIEN5Y2xlcyIsIGtleTogImN5Y2xlcyIgfSwKICB7IHBhdGg6ICIvYWRtaW4vZmlsaWVyZXMiLCBsYWJlbDogIvCfk5ogRmlsacOocmVzIiwga2V5OiAiZmlsaWVyZXMiIH0sCiAgeyBwYXRoOiAiL2FkbWluL3RhcmlmcyIsIGxhYmVsOiAi8J+SsCBUYXJpZnMiLCBrZXk6ICJ0YXJpZnMiIH0sCiAgeyBwYXRoOiAiL2FkbWluL2V0YXBlcyIsIGxhYmVsOiAi8J+qnCBEw6lyb3VsZW1lbnQiLCBrZXk6ICJldGFwZXMiIH0sCiAgeyBwYXRoOiAiL2FkbWluL3BhcnRlbmFpcmVzIiwgbGFiZWw6ICLwn6SdIFBhcnRlbmFpcmVzIiwga2V5OiAicGFydGVuYWlyZXMiIH0sCiAgeyBwYXRoOiAiL2FkbWluL2F2YW50YWdlcyIsIGxhYmVsOiAi4q2QIEF2YW50YWdlcyIsIGtleTogImF2YW50YWdlcyIgfSwKICB7IHBhdGg6ICIvYWRtaW4vaW5zY3JpcHRpb25zIiwgbGFiZWw6ICLwn5OdIEluc2NyaXB0aW9ucyIsIGtleTogImluc2NyaXB0aW9ucyIgfSwKICB7IHBhdGg6ICIvYWRtaW4vcmVuZGV6dm91cyIsIGxhYmVsOiAi8J+ThSBSZW5kZXotdm91cyIsIGtleTogInJlbmRlenZvdXMiIH0sCiAgeyBwYXRoOiAiL2FkbWluL3BhcmFtZXRyZXMiLCBsYWJlbDogIuKame+4jyBQYXJhbcOodHJlcyIsIGtleTogInBhcmFtZXRyZXMiIH0sCl07CgpmdW5jdGlvbiBTdGF0c0hvbWUoKSB7CiAgY29uc3QgdG9rZW4gPSBnZXRBZG1pblRva2VuKCk7CiAgY29uc3QgeyBkYXRhIH0gPSB0cnBjLmFkbWluLnN0YXRzLnVzZVF1ZXJ5KHsgdG9rZW4gfSk7CiAgY29uc3QgY2FyZHMgPSBbCiAgICB7IGxhYmVsOiAiQ3ljbGVzIiwgdmFsdWU6IGRhdGE/LmN5Y2xlcywgaWNvbjogIvCfl5PvuI8iLCB0bzogIi9hZG1pbi9jeWNsZXMiIH0sCiAgICB7IGxhYmVsOiAiRmlsacOocmVzIiwgdmFsdWU6IGRhdGE/LmZpbGllcmVzLCBpY29uOiAi8J+TmiIsIHRvOiAiL2FkbWluL2ZpbGllcmVzIiB9LAogICAgeyBsYWJlbDogIkxpZ25lcyBkZSB0YXJpZnMiLCB2YWx1ZTogZGF0YT8udGFyaWZzLCBpY29uOiAi8J+SsCIsIHRvOiAiL2FkbWluL3RhcmlmcyIgfSwKICAgIHsgbGFiZWw6ICLDiXRhcGVzIiwgdmFsdWU6IGRhdGE/LmV0YXBlcywgaWNvbjogIvCfqpwiLCB0bzogIi9hZG1pbi9ldGFwZXMiIH0sCiAgICB7IGxhYmVsOiAiSW5zY3JpcHRpb25zIiwgdmFsdWU6IGRhdGE/Lmluc2NyaXB0aW9ucywgaWNvbjogIvCfk50iLCB0bzogIi9hZG1pbi9pbnNjcmlwdGlvbnMiIH0sCiAgICB7IGxhYmVsOiAiUGFyYW3DqHRyZXMiLCB2YWx1ZTogZGF0YT8ucGFyYW1ldHJlcywgaWNvbjogIuKame+4jyIsIHRvOiAiL2FkbWluL3BhcmFtZXRyZXMiIH0sCiAgXTsKICByZXR1cm4gKAogICAgPHNlY3Rpb24+CiAgICAgIDxoMiBjbGFzc05hbWU9InRleHQteGwgZm9udC1leHRyYWJvbGQgdGV4dC1bIzFhMmE0YV0gbWItMiI+QmllbnZlbnVlLCB7Z2V0QWRtaW5Vc2VyKCl9IPCfkYs8L2gyPgogICAgICA8cCBjbGFzc05hbWU9InRleHQtc20gdGV4dC1zbGF0ZS01MDAgbWItNiI+CiAgICAgICAgR8OpcmV6IHRvdXQgbGUgY29udGVudSBkdSBzaXRlIHB1YmxpYyBzYW5zIHRvdWNoZXIgYXUgY29kZS4gQ2hhcXVlIG1vZGlmaWNhdGlvbiBlc3QgdmlzaWJsZSBpbW3DqWRpYXRlbWVudCBzdXIgbGUgc2l0ZS4KICAgICAgPC9wPgogICAgICA8ZGl2IGNsYXNzTmFtZT0iZ3JpZCBncmlkLWNvbHMtMiBsZzpncmlkLWNvbHMtMyBnYXAtNCI+CiAgICAgICAge2NhcmRzLm1hcCgoYykgPT4gKAogICAgICAgICAgPExpbmsga2V5PXtjLmxhYmVsfSB0bz17Yy50b30gY2xhc3NOYW1lPSJiZy13aGl0ZSByb3VuZGVkLXhsIHNoYWRvdy1zbSBib3JkZXIgYm9yZGVyLXNsYXRlLTIwMCBwLTUgaG92ZXI6c2hhZG93LW1kIGhvdmVyOi10cmFuc2xhdGUteS0wLjUgdHJhbnNpdGlvbiI+CiAgICAgICAgICAgIDxkaXYgY2xhc3NOYW1lPSJ0ZXh0LTN4bCI+e2MuaWNvbn08L2Rpdj4KICAgICAgICAgICAgPGRpdiBjbGFzc05hbWU9Im10LTIgdGV4dC0zeGwgZm9udC1leHRyYWJvbGQgdGV4dC1bIzFhMmE0YV0iPntjLnZhbHVlID8/ICLigKYifTwvZGl2PgogICAgICAgICAgICA8ZGl2IGNsYXNzTmFtZT0idGV4dC1zbSB0ZXh0LXNsYXRlLTUwMCBmb250LXNlbWlib2xkIj57Yy5sYWJlbH08L2Rpdj4KICAgICAgICAgIDwvTGluaz4KICAgICAgICApKX0KICAgICAgPC9kaXY+CiAgICAgIDxkaXYgY2xhc3NOYW1lPSJtdC02IGJnLVsjMWEyYTRhXSByb3VuZGVkLXhsIHAtNSB0ZXh0LXdoaXRlIGZsZXggZmxleC13cmFwIGl0ZW1zLWNlbnRlciBqdXN0aWZ5LWJldHdlZW4gZ2FwLTMiPgogICAgICAgIDxkaXY+CiAgICAgICAgICA8ZGl2IGNsYXNzTmFtZT0iZm9udC1ib2xkIj5Wb2lyIGxlIHNpdGUgcHVibGljPC9kaXY+CiAgICAgICAgICA8ZGl2IGNsYXNzTmFtZT0idGV4dC13aGl0ZS82MCB0ZXh0LXNtIj5Ww6lyaWZpZXogdm9zIG1vZGlmaWNhdGlvbnMgZW4gdGVtcHMgcsOpZWwuPC9kaXY+CiAgICAgICAgPC9kaXY+CiAgICAgICAgPExpbmsgdG89Ii8iIGNsYXNzTmFtZT0icHgtNSBweS0yLjUgcm91bmRlZC1sZyBiZy1bI2M5YTIyN10gdGV4dC1bIzBmMWYyZV0gZm9udC1ib2xkIHRleHQtc20gaG92ZXI6YnJpZ2h0bmVzcy0xMTAgdHJhbnNpdGlvbiI+CiAgICAgICAgICDwn4yQIE91dnJpciBsZSBzaXRlCiAgICAgICAgPC9MaW5rPgogICAgICA8L2Rpdj4KICAgIDwvc2VjdGlvbj4KICApOwp9CgpleHBvcnQgZGVmYXVsdCBmdW5jdGlvbiBBZG1pbkRhc2hib2FyZCgpIHsKICBjb25zdCBsb2NhdGlvbiA9IHVzZUxvY2F0aW9uKCk7CiAgY29uc3QgbmF2aWdhdGUgPSB1c2VOYXZpZ2F0ZSgpOwogIGNvbnN0IHRva2VuID0gZ2V0QWRtaW5Ub2tlbigpOwogIGNvbnN0IGtleSA9IE5BVi5maW5kKChuKSA9PiBsb2NhdGlvbi5wYXRobmFtZS5zdGFydHNXaXRoKG4ucGF0aCkpPy5rZXkgPz8gImRhc2hib2FyZCI7CgogIHVzZUVmZmVjdCgoKSA9PiB7CiAgICBpZiAoIXRva2VuKSBuYXZpZ2F0ZSgiL2FkbWluL2xvZ2luIiwgeyByZXBsYWNlOiB0cnVlIH0pOwogIH0sIFt0b2tlbiwgbmF2aWdhdGVdKTsKCiAgaWYgKCF0b2tlbikgcmV0dXJuIDxOYXZpZ2F0ZSB0bz0iL2FkbWluL2xvZ2luIiByZXBsYWNlIC8+OwoKICByZXR1cm4gKAogICAgPGRpdiBjbGFzc05hbWU9Im1pbi1oLXNjcmVlbiBiZy1zbGF0ZS0xMDAgZmxleCBmbGV4LWNvbCBtZDpmbGV4LXJvdyI+CiAgICAgIHsvKiBTaWRlYmFyICovfQogICAgICA8YXNpZGUgY2xhc3NOYW1lPSJtZDp3LTY0IGJnLVsjMGYxZjJlXSB0ZXh0LXdoaXRlIG1kOm1pbi1oLXNjcmVlbiBzaHJpbmstMCI+CiAgICAgICAgPGRpdiBjbGFzc05hbWU9InAtNCBmbGV4IGl0ZW1zLWNlbnRlciBnYXAtMi41IGJvcmRlci1iIGJvcmRlci13aGl0ZS8xMCI+CiAgICAgICAgICA8c3BhbiBjbGFzc05hbWU9InctOSBoLTkgcm91bmRlZC1mdWxsIGJnLVsjYzlhMjI3XSBmbGV4IGl0ZW1zLWNlbnRlciBqdXN0aWZ5LWNlbnRlciB0ZXh0LWxnIj7wn46TPC9zcGFuPgogICAgICAgICAgPGRpdiBjbGFzc05hbWU9Im1pbi13LTAiPgogICAgICAgICAgICA8ZGl2IGNsYXNzTmFtZT0iZm9udC1leHRyYWJvbGQgbGVhZGluZy10aWdodCB0cnVuY2F0ZSI+VU5JTVBSRVNBIFNpY2lsaWE8L2Rpdj4KICAgICAgICAgICAgPGRpdiBjbGFzc05hbWU9InRleHQtWzExcHhdIHRleHQtWyNjOWEyMjddIGZvbnQtYm9sZCB0cmFja2luZy13aWRlIHVwcGVyY2FzZSI+U3VwZXIgQWRtaW48L2Rpdj4KICAgICAgICAgIDwvZGl2PgogICAgICAgIDwvZGl2PgogICAgICAgIDxuYXYgY2xhc3NOYW1lPSJwLTMgZmxleCBtZDpmbGV4LWNvbCBnYXAtMSBvdmVyZmxvdy14LWF1dG8iPgogICAgICAgICAge05BVi5tYXAoKG4pID0+ICgKICAgICAgICAgICAgPE5hdkxpbmsKICAgICAgICAgICAgICBrZXk9e24ua2V5fQogICAgICAgICAgICAgIHRvPXtuLnBhdGh9CiAgICAgICAgICAgICAgY2xhc3NOYW1lPXtgcHgtMyBweS0yLjUgcm91bmRlZC1sZyB0ZXh0LXNtIGZvbnQtc2VtaWJvbGQgd2hpdGVzcGFjZS1ub3dyYXAgdHJhbnNpdGlvbiAkewogICAgICAgICAgICAgICAga2V5ID09PSBuLmtleSA/ICJiZy1bI2M5YTIyN10gdGV4dC1bIzBmMWYyZV0iIDogInRleHQtd2hpdGUvNzAgaG92ZXI6Ymctd2hpdGUvMTAiCiAgICAgICAgICAgICAgfWB9CiAgICAgICAgICAgID4KICAgICAgICAgICAgICB7bi5sYWJlbH0KICAgICAgICAgICAgPC9OYXZMaW5rPgogICAgICAgICAgKSl9CiAgICAgICAgPC9uYXY+CiAgICAgICAgPGRpdiBjbGFzc05hbWU9InAtMyBtZDptdC1hdXRvIGJvcmRlci10IGJvcmRlci13aGl0ZS8xMCBmbGV4IG1kOmZsZXgtY29sIGdhcC0yIj4KICAgICAgICAgIDxMaW5rIHRvPSIvIiBjbGFzc05hbWU9InB4LTMgcHktMiByb3VuZGVkLWxnIHRleHQtc20gdGV4dC13aGl0ZS82MCBob3ZlcjpiZy13aGl0ZS8xMCB0cmFuc2l0aW9uIj7wn4yQIFNpdGUgcHVibGljPC9MaW5rPgogICAgICAgICAgPGJ1dHRvbgogICAgICAgICAgICBvbkNsaWNrPXsoKSA9PiB7IGNsZWFyQWRtaW5TZXNzaW9uKCk7IG5hdmlnYXRlKCIvYWRtaW4vbG9naW4iKTsgfX0KICAgICAgICAgICAgY2xhc3NOYW1lPSJweC0zIHB5LTIgcm91bmRlZC1sZyB0ZXh0LXNtIHRleHQtcmVkLTMwMCBob3ZlcjpiZy13aGl0ZS8xMCB0ZXh0LWxlZnQgdHJhbnNpdGlvbiIKICAgICAgICAgID4KICAgICAgICAgICAg8J+aqiBEw6ljb25uZXhpb24KICAgICAgICAgIDwvYnV0dG9uPgogICAgICAgIDwvZGl2PgogICAgICA8L2FzaWRlPgoKICAgICAgey8qIENvbnRlbnUgKi99CiAgICAgIDxtYWluIGNsYXNzTmFtZT0iZmxleC0xIHAtNCBtZDpwLTggbWF4LXctNnhsIHctZnVsbCBteC1hdXRvIj4KICAgICAgICB7a2V5ID09PSAiZGFzaGJvYXJkIiAmJiA8U3RhdHNIb21lIC8+fQogICAgICAgIHtrZXkgPT09ICJjeWNsZXMiICYmIDxDeWNsZXNTZWN0aW9uIC8+fQogICAgICAgIHtrZXkgPT09ICJmaWxpZXJlcyIgJiYgPEZpbGllcmVzU2VjdGlvbiAvPn0KICAgICAgICB7a2V5ID09PSAidGFyaWZzIiAmJiA8VGFyaWZzU2VjdGlvbiAvPn0KICAgICAgICB7a2V5ID09PSAiZXRhcGVzIiAmJiA8RXRhcGVzU2VjdGlvbiAvPn0KICAgICAgICB7a2V5ID09PSAicGFydGVuYWlyZXMiICYmIDxQYXJ0ZW5haXJlc1NlY3Rpb24gLz59CiAgICAgICAge2tleSA9PT0gImF2YW50YWdlcyIgJiYgPEF2YW50YWdlc1NlY3Rpb24gLz59CiAgICAgICAge2tleSA9PT0gImluc2NyaXB0aW9ucyIgJiYgPEluc2NyaXB0aW9uc1NlY3Rpb24gLz59CiAgICAgICAge2tleSA9PT0gInJlbmRlenZvdXMiICYmIDxSZW5kZXpWb3VzU2VjdGlvbiAvPn0KICAgICAgICB7a2V5ID09PSAicGFyYW1ldHJlcyIgJiYgPFBhcmFtZXRyZXNTZWN0aW9uIC8+fQogICAgICA8L21haW4+CiAgICA8L2Rpdj4KICApOwp9Cg==
+import { useEffect } from "react";
+import { Link, NavLink, useLocation, useNavigate, Navigate } from "react-router";
+import { trpc } from "@/providers/trpc";
+import { getAdminToken, getAdminUser, clearAdminSession } from "@/lib/adminAuth";
+import CyclesSection from "./sections/CyclesSection";
+import FilieresSection from "./sections/FilieresSection";
+import TarifsSection from "./sections/TarifsSection";
+import EtapesSection from "./sections/EtapesSection";
+import ParametresSection from "./sections/ParametresSection";
+import InscriptionsSection from "./sections/InscriptionsSection";
+import PartenairesSection from "./sections/PartenairesSection";
+import AvantagesSection from "./sections/AvantagesSection";
+import RendezVousSection from "./sections/RendezVousSection";
+
+const NAV = [
+  { path: "/admin/dashboard", label: "📊 Tableau de bord", key: "dashboard" },
+  { path: "/admin/cycles", label: "🗓️ Cycles", key: "cycles" },
+  { path: "/admin/filieres", label: "📚 Filières", key: "filieres" },
+  { path: "/admin/tarifs", label: "💰 Tarifs", key: "tarifs" },
+  { path: "/admin/etapes", label: "🪜 Déroulement", key: "etapes" },
+  { path: "/admin/partenaires", label: "🤝 Partenaires", key: "partenaires" },
+  { path: "/admin/avantages", label: "⭐ Avantages", key: "avantages" },
+  { path: "/admin/inscriptions", label: "📝 Inscriptions", key: "inscriptions" },
+  { path: "/admin/rendezvous", label: "📅 Rendez-vous", key: "rendezvous" },
+  { path: "/admin/parametres", label: "⚙️ Paramètres", key: "parametres" },
+];
+
+function StatsHome() {
+  const token = getAdminToken();
+  const { data } = trpc.admin.stats.useQuery({ token });
+  const cards = [
+    { label: "Cycles", value: data?.cycles, icon: "🗓️", to: "/admin/cycles" },
+    { label: "Filières", value: data?.filieres, icon: "📚", to: "/admin/filieres" },
+    { label: "Lignes de tarifs", value: data?.tarifs, icon: "💰", to: "/admin/tarifs" },
+    { label: "Étapes", value: data?.etapes, icon: "🪜", to: "/admin/etapes" },
+    { label: "Inscriptions", value: data?.inscriptions, icon: "📝", to: "/admin/inscriptions" },
+    { label: "Paramètres", value: data?.parametres, icon: "⚙️", to: "/admin/parametres" },
+  ];
+  return (
+    <section>
+      <h2 className="text-xl font-extrabold text-[#1a2a4a] mb-2">Bienvenue, {getAdminUser()} 👋</h2>
+      <p className="text-sm text-slate-500 mb-6">
+        Gérez tout le contenu du site public sans toucher au code. Chaque modification est visible immédiatement sur le site.
+      </p>
+      <div className="grid grid-cols-2 lg:grid-cols-3 gap-4">
+        {cards.map((c) => (
+          <Link key={c.label} to={c.to} className="bg-white rounded-xl shadow-sm border border-slate-200 p-5 hover:shadow-md hover:-translate-y-0.5 transition">
+            <div className="text-3xl">{c.icon}</div>
+            <div className="mt-2 text-3xl font-extrabold text-[#1a2a4a]">{c.value ?? "…"}</div>
+            <div className="text-sm text-slate-500 font-semibold">{c.label}</div>
+          </Link>
+        ))}
+      </div>
+      <div className="mt-6 bg-[#1a2a4a] rounded-xl p-5 text-white flex flex-wrap items-center justify-between gap-3">
+        <div>
+          <div className="font-bold">Voir le site public</div>
+          <div className="text-white/60 text-sm">Vérifiez vos modifications en temps réel.</div>
+        </div>
+        <Link to="/" className="px-5 py-2.5 rounded-lg bg-[#c9a227] text-[#0f1f2e] font-bold text-sm hover:brightness-110 transition">
+          🌐 Ouvrir le site
+        </Link>
+      </div>
+    </section>
+  );
+}
+
+export default function AdminDashboard() {
+  const location = useLocation();
+  const navigate = useNavigate();
+  const token = getAdminToken();
+  const key = NAV.find((n) => location.pathname.startsWith(n.path))?.key ?? "dashboard";
+
+  useEffect(() => {
+    if (!token) navigate("/admin/login", { replace: true });
+  }, [token, navigate]);
+
+  if (!token) return <Navigate to="/admin/login" replace />;
+
+  return (
+    <div className="min-h-screen bg-slate-100 flex flex-col md:flex-row">
+      {/* Sidebar */}
+      <aside className="md:w-64 bg-[#0f1f2e] text-white md:min-h-screen shrink-0">
+        <div className="p-4 flex items-center gap-2.5 border-b border-white/10">
+          <span className="w-9 h-9 rounded-full bg-[#c9a227] flex items-center justify-center text-lg">🎓</span>
+          <div className="min-w-0">
+            <div className="font-extrabold leading-tight truncate">UNIMPRESA Sicilia</div>
+            <div className="text-[11px] text-[#c9a227] font-bold tracking-wide uppercase">Super Admin</div>
+          </div>
+        </div>
+        <nav className="p-3 flex md:flex-col gap-1 overflow-x-auto">
+          {NAV.map((n) => (
+            <NavLink
+              key={n.key}
+              to={n.path}
+              className={`px-3 py-2.5 rounded-lg text-sm font-semibold whitespace-nowrap transition ${
+                key === n.key ? "bg-[#c9a227] text-[#0f1f2e]" : "text-white/70 hover:bg-white/10"
+              }`}
+            >
+              {n.label}
+            </NavLink>
+          ))}
+        </nav>
+        <div className="p-3 md:mt-auto border-t border-white/10 flex md:flex-col gap-2">
+          <Link to="/" className="px-3 py-2 rounded-lg text-sm text-white/60 hover:bg-white/10 transition">🌐 Site public</Link>
+          <button
+            onClick={() => { clearAdminSession(); navigate("/admin/login"); }}
+            className="px-3 py-2 rounded-lg text-sm text-red-300 hover:bg-white/10 text-left transition"
+          >
+            🚪 Déconnexion
+          </button>
+        </div>
+      </aside>
+
+      {/* Contenu */}
+      <main className="flex-1 p-4 md:p-8 max-w-6xl w-full mx-auto">
+        {key === "dashboard" && <StatsHome />}
+        {key === "cycles" && <CyclesSection />}
+        {key === "filieres" && <FilieresSection />}
+        {key === "tarifs" && <TarifsSection />}
+        {key === "etapes" && <EtapesSection />}
+        {key === "partenaires" && <PartenairesSection />}
+        {key === "avantages" && <AvantagesSection />}
+        {key === "inscriptions" && <InscriptionsSection />}
+        {key === "rendezvous" && <RendezVousSection />}
+        {key === "parametres" && <ParametresSection />}
+      </main>
+    </div>
+  );
+}

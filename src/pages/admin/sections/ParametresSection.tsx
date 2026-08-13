@@ -1,1 +1,125 @@
-aW1wb3J0IHsgdXNlRWZmZWN0LCB1c2VTdGF0ZSB9IGZyb20gInJlYWN0IjsKaW1wb3J0IHsgdHJwYyB9IGZyb20gIkAvcHJvdmlkZXJzL3RycGMiOwppbXBvcnQgeyB1c2VBZG1pbiwgRmllbGQsIEJ0biwgaW5wdXRDbHMgfSBmcm9tICIuLi91aSI7CgovKiogUmVncm91cGUgbGVzIHBhcmFtw6h0cmVzIHBhciB0aMOobWUgcG91ciB1bmUgw6lkaXRpb24gY29udml2aWFsZSAqLwpjb25zdCBHUk9VUFM6IHsgdGl0cmU6IHN0cmluZzsgaWNvbjogc3RyaW5nOyBrZXlzOiBzdHJpbmdbXSB9W10gPSBbCiAgewogICAgdGl0cmU6ICJPcmdhbmlzYXRpb24gJiBpZGVudGl0w6kiLCBpY29uOiAi8J+Pm++4jyIsCiAgICBrZXlzOiBbIm9yZ19uYW1lIiwgImhlcm9fc3VidGl0bGUiLCAiaGVyb19kZXNjcmlwdGlvbiIsICJsb2dvX3VybCIsICJmb290ZXJfdGV4dGUiXSwKICB9LAogIHsKICAgIHRpdHJlOiAiQm91dG9ucyAmIGxhYmVscyIsIGljb246ICLwn5SYIiwKICAgIGtleXM6IFsiY3RhX2luc2NyaXB0aW9uIiwgImN0YV9yZHYiLCAiY3RhX21ldGllcnMiLCAiY3RhX2ZpbmFsIiwgImJhZGdlX2NlcnRpZmllZSIsICJiYWRnZV9jZXJ0aWZpZWVfbGFiZWwiLCAiZHVyZWVfbGFiZWwiLCAicGFydGljaXBhbnRzX2xhYmVsIiwgInZpbGxlX2xhYmVsIl0sCiAgfSwKICB7CiAgICB0aXRyZTogIlNlY3Rpb25zIiwgaWNvbjogIvCfk5EiLAogICAga2V5czogWyJzZWN0aW9uX2ZpbGllcmVzX3RpdHJlIiwgInNlY3Rpb25fZmlsaWVyZXNfc291c3RpdHJlIiwgInNlY3Rpb25fcHJvZ3JhbW1lX3RpdHJlIiwgInNlY3Rpb25fdGFyaWZzX3RpdHJlIiwgInRhcmlmc19jb2xfZGVzY3JpcHRpb24iLCAidGFyaWZzX2NvbF9tb250YW50Il0sCiAgfSwKICB7CiAgICB0aXRyZTogIlBhaWVtZW50ICYgZGV2aXNlIiwgaWNvbjogIvCfkrAiLAogICAga2V5czogWyJkZXZpc2UiLCAiaW5mb190aXRyZSIsICJpbmZvX3RleHRlIl0sCiAgfSwKICB7CiAgICB0aXRyZTogIkNvdWxldXJzIiwgaWNvbjogIvCfjqgiLAogICAga2V5czogWyJjb3VsZXVyX2ZvbmQiLCAiY291bGV1cl9wcmluY2lwYWxlIiwgImNvdWxldXJfYWNjZW50Il0sCiAgfSwKICB7CiAgICB0aXRyZTogIkNvbnRhY3QgJiBhZHJlc3NlIiwgaWNvbjogIvCfk54iLAogICAga2V5czogWyJhZHJlc3NlX2NlbnRyZSIsICJjb250YWN0X2VtYWlsIiwgImNvbnRhY3RfdGVsZXBob25lIiwgImNvbnRhY3Rfd2hhdHNhcHAiXSwKICB9LApdOwoKY29uc3QgTE9OR19URVhUID0gbmV3IFNldChbImluZm9fdGV4dGUiLCAiaGVyb19kZXNjcmlwdGlvbiIsICJzZWN0aW9uX2ZpbGllcmVzX3NvdXN0aXRyZSIsICJmb290ZXJfdGV4dGUiLCAiYWRyZXNzZV9jZW50cmUiXSk7CmNvbnN0IENPTE9SUyA9IG5ldyBTZXQoWyJjb3VsZXVyX2ZvbmQiLCAiY291bGV1cl9wcmluY2lwYWxlIiwgImNvdWxldXJfYWNjZW50Il0pOwoKZXhwb3J0IGRlZmF1bHQgZnVuY3Rpb24gUGFyYW1ldHJlc1NlY3Rpb24oKSB7CiAgY29uc3QgeyB0b2tlbiwgcmVmcmVzaCB9ID0gdXNlQWRtaW4oKTsKICBjb25zdCB7IGRhdGEgfSA9IHRycGMuYWRtaW4ubGlzdFBhcmFtZXRyZXMudXNlUXVlcnkoeyB0b2tlbiB9KTsKICBjb25zdCBzZXRQYXJhbSA9IHRycGMuYWRtaW4uc2V0UGFyYW1ldHJlLnVzZU11dGF0aW9uKHsgb25TdWNjZXNzOiByZWZyZXNoIH0pOwogIGNvbnN0IGNoYW5nZVB3ZCA9IHRycGMuYWRtaW4uY2hhbmdlUGFzc3dvcmQudXNlTXV0YXRpb24oKTsKCiAgY29uc3QgW3ZhbHVlcywgc2V0VmFsdWVzXSA9IHVzZVN0YXRlPFJlY29yZDxzdHJpbmcsIHN0cmluZz4+KHt9KTsKICBjb25zdCBbc2F2ZWQsIHNldFNhdmVkXSA9IHVzZVN0YXRlKCIiKTsKICBjb25zdCBbcHdkLCBzZXRQd2RdID0gdXNlU3RhdGUoeyBvbGRQYXNzd29yZDogIiIsIG5ld1Bhc3N3b3JkOiAiIiB9KTsKICBjb25zdCBbcHdkTXNnLCBzZXRQd2RNc2ddID0gdXNlU3RhdGUoIiIpOwoKICB1c2VFZmZlY3QoKCkgPT4gewogICAgaWYgKGRhdGEpIHNldFZhbHVlcyhPYmplY3QuZnJvbUVudHJpZXMoZGF0YS5tYXAoKHApID0+IFtwLmNsZSwgcC52YWxldXJdKSkpOwogIH0sIFtkYXRhXSk7CgogIGNvbnN0IHNhdmVHcm91cCA9IGFzeW5jIChrZXlzOiBzdHJpbmdbXSkgPT4gewogICAgZm9yIChjb25zdCBjbGUgb2Yga2V5cykgewogICAgICBhd2FpdCBzZXRQYXJhbS5tdXRhdGVBc3luYyh7IHRva2VuLCBjbGUsIHZhbGV1cjogdmFsdWVzW2NsZV0gPz8gIiIgfSk7CiAgICB9CiAgICBzZXRTYXZlZChrZXlzWzBdKTsKICAgIHNldFRpbWVvdXQoKCkgPT4gc2V0U2F2ZWQoIiIpLCAyMDAwKTsKICB9OwoKICByZXR1cm4gKAogICAgPHNlY3Rpb24gY2xhc3NOYW1lPSJzcGFjZS15LTgiPgogICAgICA8aDIgY2xhc3NOYW1lPSJ0ZXh0LXhsIGZvbnQtZXh0cmFib2xkIHRleHQtWyMxYTJhNGFdIj5QYXJhbcOodHJlcyBkdSBzaXRlPC9oMj4KICAgICAgPHAgY2xhc3NOYW1lPSJ0ZXh0LXNtIHRleHQtc2xhdGUtNTAwIC1tdC00Ij4KICAgICAgICBUb3VzIGxlcyB0ZXh0ZXMsIGNvdWxldXJzIGV0IGNvb3Jkb25uw6llcyBkdSBzaXRlIHB1YmxpYyBzZSBtb2RpZmllbnQgaWNpIOKAlCBsZXMgY2hhbmdlbWVudHMgc29udCB2aXNpYmxlcyBpbW3DqWRpYXRlbWVudC4KICAgICAgPC9wPgoKICAgICAge0dST1VQUy5tYXAoKGcpID0+ICgKICAgICAgICA8ZGl2IGtleT17Zy50aXRyZX0gY2xhc3NOYW1lPSJiZy13aGl0ZSByb3VuZGVkLXhsIHNoYWRvdy1zbSBib3JkZXIgYm9yZGVyLXNsYXRlLTIwMCBwLTUiPgogICAgICAgICAgPGgzIGNsYXNzTmFtZT0iZm9udC1leHRyYWJvbGQgdGV4dC1bIzFhMmE0YV0gbWItNCI+e2cuaWNvbn0ge2cudGl0cmV9PC9oMz4KICAgICAgICAgIDxkaXYgY2xhc3NOYW1lPSJncmlkIHNtOmdyaWQtY29scy0yIGdhcC00Ij4KICAgICAgICAgICAge2cua2V5cy5tYXAoKGNsZSkgPT4gKAogICAgICAgICAgICAgIDxkaXYga2V5PXtjbGV9IGNsYXNzTmFtZT17TE9OR19URVhULmhhcyhjbGUpID8gInNtOmNvbC1zcGFuLTIiIDogIiJ9PgogICAgICAgICAgICAgICAgPEZpZWxkIGxhYmVsPXtjbGV9PgogICAgICAgICAgICAgICAgICB7TE9OR19URVhULmhhcyhjbGUpID8gKAogICAgICAgICAgICAgICAgICAgIDx0ZXh0YXJlYSByb3dzPXszfSBjbGFzc05hbWU9e2lucHV0Q2xzfSB2YWx1ZT17dmFsdWVzW2NsZV0gPz8gIiJ9IG9uQ2hhbmdlPXsoZSkgPT4gc2V0VmFsdWVzKHsgLi4udmFsdWVzLCBbY2xlXTogZS50YXJnZXQudmFsdWUgfSl9IC8+CiAgICAgICAgICAgICAgICAgICkgOiBDT0xPUlMuaGFzKGNsZSkgPyAoCiAgICAgICAgICAgICAgICAgICAgPGRpdiBjbGFzc05hbWU9ImZsZXggaXRlbXMtY2VudGVyIGdhcC0yIj4KICAgICAgICAgICAgICAgICAgICAgIDxpbnB1dCB0eXBlPSJjb2xvciIgY2xhc3NOYW1lPSJ3LTEyIGgtOSByb3VuZGVkIGJvcmRlciBib3JkZXItc2xhdGUtMzAwIGN1cnNvci1wb2ludGVyIiB2YWx1ZT17dmFsdWVzW2NsZV0gfHwgIiMwMDAwMDAifSBvbkNoYW5nZT17KGUpID0+IHNldFZhbHVlcyh7IC4uLnZhbHVlcywgW2NsZV06IGUudGFyZ2V0LnZhbHVlIH0pfSAvPgogICAgICAgICAgICAgICAgICAgICAgPGlucHV0IGNsYXNzTmFtZT17aW5wdXRDbHN9IHZhbHVlPXt2YWx1ZXNbY2xlXSA/PyAiIn0gb25DaGFuZ2U9eyhlKSA9PiBzZXRWYWx1ZXMoeyAuLi52YWx1ZXMsIFtjbGVdOiBlLnRhcmdldC52YWx1ZSB9KX0gLz4KICAgICAgICAgICAgICAgICAgICA8L2Rpdj4KICAgICAgICAgICAgICAgICAgKSA6ICgKICAgICAgICAgICAgICAgICAgICA8aW5wdXQgY2xhc3NOYW1lPXtpbnB1dENsc30gdmFsdWU9e3ZhbHVlc1tjbGVdID8/ICIifSBvbkNoYW5nZT17KGUpID0+IHNldFZhbHVlcyh7IC4uLnZhbHVlcywgW2NsZV06IGUudGFyZ2V0LnZhbHVlIH0pfSAvPgogICAgICAgICAgICAgICAgICApfQogICAgICAgICAgICAgICAgPC9GaWVsZD4KICAgICAgICAgICAgICA8L2Rpdj4KICAgICAgICAgICAgKSl9CiAgICAgICAgICA8L2Rpdj4KICAgICAgICAgIDxkaXYgY2xhc3NOYW1lPSJtdC00IGZsZXggaXRlbXMtY2VudGVyIGdhcC0zIj4KICAgICAgICAgICAgPEJ0biB2YXJpYW50PSJnb2xkIiBvbkNsaWNrPXsoKSA9PiBzYXZlR3JvdXAoZy5rZXlzKX0gZGlzYWJsZWQ9e3NldFBhcmFtLmlzUGVuZGluZ30+8J+SviBFbnJlZ2lzdHJlciBjZSBncm91cGU8L0J0bj4KICAgICAgICAgICAge3NhdmVkID09PSBnLmtleXNbMF0gJiYgPHNwYW4gY2xhc3NOYW1lPSJ0ZXh0LWdyZWVuLTYwMCB0ZXh0LXNtIGZvbnQtYm9sZCI+4pyTIEVucmVnaXN0csOpICE8L3NwYW4+fQogICAgICAgICAgPC9kaXY+CiAgICAgICAgPC9kaXY+CiAgICAgICkpfQoKICAgICAgey8qIFPDqWN1cml0w6kgKi99CiAgICAgIDxkaXYgY2xhc3NOYW1lPSJiZy13aGl0ZSByb3VuZGVkLXhsIHNoYWRvdy1zbSBib3JkZXIgYm9yZGVyLXNsYXRlLTIwMCBwLTUiPgogICAgICAgIDxoMyBjbGFzc05hbWU9ImZvbnQtZXh0cmFib2xkIHRleHQtWyMxYTJhNGFdIG1iLTQiPvCflJAgQ2hhbmdlciBsZSBtb3QgZGUgcGFzc2UgYWRtaW48L2gzPgogICAgICAgIDxmb3JtCiAgICAgICAgICBjbGFzc05hbWU9ImdyaWQgc206Z3JpZC1jb2xzLTIgZ2FwLTQiCiAgICAgICAgICBvblN1Ym1pdD17YXN5bmMgKGUpID0+IHsKICAgICAgICAgICAgZS5wcmV2ZW50RGVmYXVsdCgpOwogICAgICAgICAgICBzZXRQd2RNc2coIiIpOwogICAgICAgICAgICB0cnkgewogICAgICAgICAgICAgIGF3YWl0IGNoYW5nZVB3ZC5tdXRhdGVBc3luYyh7IHRva2VuLCAuLi5wd2QgfSk7CiAgICAgICAgICAgICAgc2V0UHdkTXNnKCLinJMgTW90IGRlIHBhc3NlIG1pcyDDoCBqb3VyICEiKTsKICAgICAgICAgICAgICBzZXRQd2QoeyBvbGRQYXNzd29yZDogIiIsIG5ld1Bhc3N3b3JkOiAiIiB9KTsKICAgICAgICAgICAgfSBjYXRjaCAoZXJyOiBhbnkpIHsKICAgICAgICAgICAgICBzZXRQd2RNc2coZXJyPy5tZXNzYWdlID8/ICJFcnJldXIuIik7CiAgICAgICAgICAgIH0KICAgICAgICAgIH19CiAgICAgICAgPgogICAgICAgICAgPEZpZWxkIGxhYmVsPSJBbmNpZW4gbW90IGRlIHBhc3NlIj4KICAgICAgICAgICAgPGlucHV0IHJlcXVpcmVkIHR5cGU9InBhc3N3b3JkIiBjbGFzc05hbWU9e2lucHV0Q2xzfSB2YWx1ZT17cHdkLm9sZFBhc3N3b3JkfSBvbkNoYW5nZT17KGUpID0+IHNldFB3ZCh7IC4uLnB3ZCwgb2xkUGFzc3dvcmQ6IGUudGFyZ2V0LnZhbHVlIH0pfSAvPgogICAgICAgICAgPC9GaWVsZD4KICAgICAgICAgIDxGaWVsZCBsYWJlbD0iTm91dmVhdSBtb3QgZGUgcGFzc2UgKG1pbi4gNiBjYXJhY3TDqHJlcykiPgogICAgICAgICAgICA8aW5wdXQgcmVxdWlyZWQgdHlwZT0icGFzc3dvcmQiIG1pbkxlbmd0aD17Nn0gY2xhc3NOYW1lPXtpbnB1dENsc30gdmFsdWU9e3B3ZC5uZXdQYXNzd29yZH0gb25DaGFuZ2U9eyhlKSA9PiBzZXRQd2QoeyAuLi5wd2QsIG5ld1Bhc3N3b3JkOiBlLnRhcmdldC52YWx1ZSB9KX0gLz4KICAgICAgICAgIDwvRmllbGQ+CiAgICAgICAgICA8ZGl2IGNsYXNzTmFtZT0ic206Y29sLXNwYW4tMiBmbGV4IGl0ZW1zLWNlbnRlciBnYXAtMyI+CiAgICAgICAgICAgIDxCdG4gdHlwZT0ic3VibWl0IiB2YXJpYW50PSJwcmltYXJ5Ij5NZXR0cmUgw6Agam91cjwvQnRuPgogICAgICAgICAgICB7cHdkTXNnICYmIDxzcGFuIGNsYXNzTmFtZT0idGV4dC1zbSBmb250LWJvbGQgdGV4dC1zbGF0ZS03MDAiPntwd2RNc2d9PC9zcGFuPn0KICAgICAgICAgIDwvZGl2PgogICAgICAgIDwvZm9ybT4KICAgICAgPC9kaXY+CiAgICA8L3NlY3Rpb24+CiAgKTsKfQo=
+import { useEffect, useState } from "react";
+import { trpc } from "@/providers/trpc";
+import { useAdmin, Field, Btn, inputCls } from "../ui";
+
+/** Regroupe les paramètres par thème pour une édition conviviale */
+const GROUPS: { titre: string; icon: string; keys: string[] }[] = [
+  {
+    titre: "Organisation & identité", icon: "🏛️",
+    keys: ["org_name", "hero_subtitle", "hero_description", "logo_url", "footer_texte"],
+  },
+  {
+    titre: "Boutons & labels", icon: "🔘",
+    keys: ["cta_inscription", "cta_rdv", "cta_metiers", "cta_final", "badge_certifiee", "badge_certifiee_label", "duree_label", "participants_label", "ville_label"],
+  },
+  {
+    titre: "Sections", icon: "📑",
+    keys: ["section_filieres_titre", "section_filieres_soustitre", "section_programme_titre", "section_tarifs_titre", "tarifs_col_description", "tarifs_col_montant"],
+  },
+  {
+    titre: "Paiement & devise", icon: "💰",
+    keys: ["devise", "info_titre", "info_texte"],
+  },
+  {
+    titre: "Couleurs", icon: "🎨",
+    keys: ["couleur_fond", "couleur_principale", "couleur_accent"],
+  },
+  {
+    titre: "Contact & adresse", icon: "📞",
+    keys: ["adresse_centre", "contact_email", "contact_telephone", "contact_whatsapp"],
+  },
+];
+
+const LONG_TEXT = new Set(["info_texte", "hero_description", "section_filieres_soustitre", "footer_texte", "adresse_centre"]);
+const COLORS = new Set(["couleur_fond", "couleur_principale", "couleur_accent"]);
+
+export default function ParametresSection() {
+  const { token, refresh } = useAdmin();
+  const { data } = trpc.admin.listParametres.useQuery({ token });
+  const setParam = trpc.admin.setParametre.useMutation({ onSuccess: refresh });
+  const changePwd = trpc.admin.changePassword.useMutation();
+
+  const [values, setValues] = useState<Record<string, string>>({});
+  const [saved, setSaved] = useState("");
+  const [pwd, setPwd] = useState({ oldPassword: "", newPassword: "" });
+  const [pwdMsg, setPwdMsg] = useState("");
+
+  useEffect(() => {
+    if (data) setValues(Object.fromEntries(data.map((p) => [p.cle, p.valeur])));
+  }, [data]);
+
+  const saveGroup = async (keys: string[]) => {
+    for (const cle of keys) {
+      await setParam.mutateAsync({ token, cle, valeur: values[cle] ?? "" });
+    }
+    setSaved(keys[0]);
+    setTimeout(() => setSaved(""), 2000);
+  };
+
+  return (
+    <section className="space-y-8">
+      <h2 className="text-xl font-extrabold text-[#1a2a4a]">Paramètres du site</h2>
+      <p className="text-sm text-slate-500 -mt-4">
+        Tous les textes, couleurs et coordonnées du site public se modifient ici — les changements sont visibles immédiatement.
+      </p>
+
+      {GROUPS.map((g) => (
+        <div key={g.titre} className="bg-white rounded-xl shadow-sm border border-slate-200 p-5">
+          <h3 className="font-extrabold text-[#1a2a4a] mb-4">{g.icon} {g.titre}</h3>
+          <div className="grid sm:grid-cols-2 gap-4">
+            {g.keys.map((cle) => (
+              <div key={cle} className={LONG_TEXT.has(cle) ? "sm:col-span-2" : ""}>
+                <Field label={cle}>
+                  {LONG_TEXT.has(cle) ? (
+                    <textarea rows={3} className={inputCls} value={values[cle] ?? ""} onChange={(e) => setValues({ ...values, [cle]: e.target.value })} />
+                  ) : COLORS.has(cle) ? (
+                    <div className="flex items-center gap-2">
+                      <input type="color" className="w-12 h-9 rounded border border-slate-300 cursor-pointer" value={values[cle] || "#000000"} onChange={(e) => setValues({ ...values, [cle]: e.target.value })} />
+                      <input className={inputCls} value={values[cle] ?? ""} onChange={(e) => setValues({ ...values, [cle]: e.target.value })} />
+                    </div>
+                  ) : (
+                    <input className={inputCls} value={values[cle] ?? ""} onChange={(e) => setValues({ ...values, [cle]: e.target.value })} />
+                  )}
+                </Field>
+              </div>
+            ))}
+          </div>
+          <div className="mt-4 flex items-center gap-3">
+            <Btn variant="gold" onClick={() => saveGroup(g.keys)} disabled={setParam.isPending}>💾 Enregistrer ce groupe</Btn>
+            {saved === g.keys[0] && <span className="text-green-600 text-sm font-bold">✓ Enregistré !</span>}
+          </div>
+        </div>
+      ))}
+
+      {/* Sécurité */}
+      <div className="bg-white rounded-xl shadow-sm border border-slate-200 p-5">
+        <h3 className="font-extrabold text-[#1a2a4a] mb-4">🔐 Changer le mot de passe admin</h3>
+        <form
+          className="grid sm:grid-cols-2 gap-4"
+          onSubmit={async (e) => {
+            e.preventDefault();
+            setPwdMsg("");
+            try {
+              await changePwd.mutateAsync({ token, ...pwd });
+              setPwdMsg("✓ Mot de passe mis à jour !");
+              setPwd({ oldPassword: "", newPassword: "" });
+            } catch (err: any) {
+              setPwdMsg(err?.message ?? "Erreur.");
+            }
+          }}
+        >
+          <Field label="Ancien mot de passe">
+            <input required type="password" className={inputCls} value={pwd.oldPassword} onChange={(e) => setPwd({ ...pwd, oldPassword: e.target.value })} />
+          </Field>
+          <Field label="Nouveau mot de passe (min. 6 caractères)">
+            <input required type="password" minLength={6} className={inputCls} value={pwd.newPassword} onChange={(e) => setPwd({ ...pwd, newPassword: e.target.value })} />
+          </Field>
+          <div className="sm:col-span-2 flex items-center gap-3">
+            <Btn type="submit" variant="primary">Mettre à jour</Btn>
+            {pwdMsg && <span className="text-sm font-bold text-slate-700">{pwdMsg}</span>}
+          </div>
+        </form>
+      </div>
+    </section>
+  );
+}

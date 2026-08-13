@@ -1,1 +1,96 @@
-IyBVTklNUFJFU0EgU2ljaWxpYSDigJQgU2l0ZSB2aXRyaW5lICsgUGFubmVhdSBTdXBlciBBZG1pbgoKQXBwbGljYXRpb24gd2ViIGNvbXBsw6h0ZSBwb3VyIGxlIHByb2dyYW1tZSBkZSBmb3JtYXRpb24gY2VydGlmaWFudCAqKlVOSU1QUkVTQSBTaWNpbGlhKiogKERha2FyLCBTw6luw6lnYWwg4oaSIGluc2VydGlvbiBwcm9mZXNzaW9ubmVsbGUgZW4gSXRhbGllKS4KCiMjIEZvbmN0aW9ubmFsaXTDqXMKCioqU2l0ZSBwdWJsaWMqKgotIGAvYCDigJQgUGFnZSBkJ2FjY3VlaWwgOiBoZXJvLCBwYXJ0ZW5haXJlcywgNiBmaWxpw6hyZXMsIGTDqXJvdWxlbWVudCAodGltZWxpbmUpLCB0YXJpZnMsIGVuY2FkcsOpIHBhaWVtZW50LCBpbmZvcyBlc3NlbnRpZWxsZXMsIGF2YW50YWdlcywgZm9vdGVyIGNvbnRhY3QuIDEwMCAlIGR1IGNvbnRlbnUgdmllbnQgZGUgbGEgYmFzZSBkZSBkb25uw6llcy4KLSBgL2luc2NyaXB0aW9uYCDigJQgRG9zc2llciBjYW5kaWRhdCBtdWx0aS3DqXRhcGVzIChpZGVudGl0w6ksIGNvbnRhY3QsIHNpdHVhdGlvbiBwcm8sIGZvcm1hdGlvbiBhdmVjIG3DqXRpZXJzIGTDqXRhaWxsw6lzLCBlbmdhZ2VtZW50KSBhdmVjIG51bcOpcm8gZGUgZG9zc2llciB1bmlxdWUgKFVTLUFBQUEtWFhYWCkuIE5vdGlmaWNhdGlvbiBlbWFpbCBhdSBTdXBlciBBZG1pbiBzaSBTTVRQIGNvbmZpZ3Vyw6kuCi0gYC9yZW5kZXp2b3VzYCDigJQgUHJpc2UgZGUgcmVuZGV6LXZvdXMgKG1vdGlmLCBkYXRlIHNvdWhhaXTDqWUpLgoKKipQYW5uZWF1IFN1cGVyIEFkbWluKiogKHByb3TDqWfDqSBwYXIgSldUICsgYmNyeXB0KQotIGAvYWRtaW4vbG9naW5gIOKAlCBDb25uZXhpb24KLSBgL2FkbWluL2Rhc2hib2FyZGAg4oCUIFN0YXRpc3RpcXVlcwotIGAvYWRtaW4vY3ljbGVzYCDigJQgQ1JVRCBjeWNsZXMgLyBzZXNzaW9ucyAoZGF0ZXMsIGR1csOpZSwgcGFydGljaXBhbnRzLCBhY3RpdmF0aW9uKQotIGAvYWRtaW4vZmlsaWVyZXNgIOKAlCBDUlVEIGZpbGnDqHJlcyAoaWPDtG5lLCB0aXRyZSwgZGVzY3JpcHRpb24sIGR1csOpZSwgbcOpdGllcnMsIGJhZGdlLCBhY3RpdmF0aW9uKQotIGAvYWRtaW4vdGFyaWZzYCDigJQgQ1JVRCB0YXJpZnMgKG1vbnRhbnRzIGNoaWZmcmVzICsgbGV0dHJlcywgbGlnbmUgVG90YWwpCi0gYC9hZG1pbi9ldGFwZXNgIOKAlCBDUlVEICsgcsOpb3Jkb25uYW5jZW1lbnQgZGUgbGEgdGltZWxpbmUKLSBgL2FkbWluL3BhcnRlbmFpcmVzYCDigJQgQ1JVRCBwYXJ0ZW5haXJlcwotIGAvYWRtaW4vYXZhbnRhZ2VzYCDigJQgQ1JVRCBhdmFudGFnZXMgKMKrIFBvdXJxdW9pIG5vdXMgY2hvaXNpciDCuykKLSBgL2FkbWluL2luc2NyaXB0aW9uc2Ag4oCUIERvc3NpZXJzIGNhbmRpZGF0cyBjb21wbGV0cyAoc3RhdHV0cykKLSBgL2FkbWluL3JlbmRlenZvdXNgIOKAlCBTdWl2aSBkZXMgcmVuZGV6LXZvdXMKLSBgL2FkbWluL3BhcmFtZXRyZXNgIOKAlCBUb3VzIGxlcyB0ZXh0ZXMgZ2xvYmF1eCwgY291bGV1cnMsIGRldmlzZSwgbG9nbywgY29udGFjdCArIGNoYW5nZW1lbnQgZGUgbW90IGRlIHBhc3NlCgojIyBJZGVudGlmaWFudHMgYWRtaW4gcGFyIGTDqWZhdXQKCnwgQ2hhbXAgfCBWYWxldXIgfAp8LS0tfC0tLXwKfCBVUkwgfCBgL2FkbWluL2xvZ2luYCB8CnwgVXRpbGlzYXRldXIgfCBgYWRtaW5gIHwKfCBNb3QgZGUgcGFzc2UgfCBgYWRtaW4xMjNgIHwKCuKaoO+4jyBDaGFuZ2V6IGNlIG1vdCBkZSBwYXNzZSBhcHLDqHMgbGEgcHJlbWnDqHJlIGNvbm5leGlvbiAob25nbGV0IFBhcmFtw6h0cmVzKS4KCiMjIFN0YWNrCgotIEZyb250ZW5kIDogUmVhY3QgMTkgKyBUeXBlU2NyaXB0ICsgVml0ZSArIFRhaWx3aW5kIENTUwotIEJhY2tlbmQgOiBIb25vICsgdFJQQyAxMSAoQVBJIHR5cMOpZSBkZSBib3V0IGVuIGJvdXQpCi0gQkREIDogUG9zdGdyZVNRTCB2aWEgRHJpenpsZSBPUk0KLSBBdXRoIDogSldUICgxMiBoKSArIGJjcnlwdAoKIyMgRMOpcGxvaWVtZW50IHN1ciBSZW5kZXIKCkxlIGTDqXDDtHQgY29udGllbnQgdW4gKipibHVlcHJpbnQqKiAoYHJlbmRlci55YW1sYCkgOiB0b3V0IHNlIGNyw6llIGVuIHF1ZWxxdWVzIGNsaWNzLgoKMS4gU3VyIFtkYXNoYm9hcmQucmVuZGVyLmNvbV0oaHR0cHM6Ly9kYXNoYm9hcmQucmVuZGVyLmNvbSkg4oaSICoqTmV3ICsqKiDihpIgKipCbHVlcHJpbnQqKgoyLiBDb25uZWN0ZXogbGUgZMOpcMO0dCBHaXRIdWIgYEZPUk1BVElPTi1MQVZPUk8vdW5pbXByZXNhLXNpY2lsaWFgCjMuIFJlbmRlciBjcsOpZSBhdXRvbWF0aXF1ZW1lbnQgOgogICAtIHVuZSBiYXNlICoqUG9zdGdyZVNRTCoqIChgdW5pbXByZXNhLWRiYCkKICAgLSBsZSAqKnNlcnZpY2Ugd2ViKiogRG9ja2VyIChgZm9ybWF0aW9ucy1zZW5lZ2FsLWl0YWxpZWApIGF2ZWMgYERBVEFCQVNFX1VSTGAgZXQgYEpXVF9TRUNSRVRgIGTDqWrDoCBicmFuY2jDqXMKNC4gQXUgcHJlbWllciBkw6ltYXJyYWdlLCBsZSBzY2jDqW1hIGV0IGxlcyBkb25uw6llcyBwYXIgZMOpZmF1dCAoY3ljbGUsIGZpbGnDqHJlcywgdGFyaWZzLCDDqXRhcGVzLCBwYXJhbcOodHJlcywgY29tcHRlIGFkbWluKSBzb250IGNyw6nDqXMgYXV0b21hdGlxdWVtZW50IGVuIGFycmnDqHJlLXBsYW4g4oCUIHBhdGllbnRleiAx4oCTMiBtaW51dGVzIHB1aXMgcmVjaGFyZ2V6IGxhIHBhZ2UuCgojIyMgVmFyaWFibGVzIGQnZW52aXJvbm5lbWVudCAoY3LDqcOpZXMgcGFyIGxlIGJsdWVwcmludCkKCnwgQ2zDqSB8IFZhbGV1ciB8CnwtLS18LS0tfAp8IGBEQVRBQkFTRV9VUkxgIHwgZm91cm5pZSBhdXRvbWF0aXF1ZW1lbnQgcGFyIGxhIGJhc2UgUmVuZGVyIHwKfCBgSldUX1NFQ1JFVGAgfCBnw6luw6lyw6llIGF1dG9tYXRpcXVlbWVudCB8CnwgYE5PREVfRU5WYCB8IGBwcm9kdWN0aW9uYCB8CgojIyMgUmVwcmVuZHJlIGwnVVJMIGV4aXN0YW50ZSBgZm9ybWF0aW9ucy1zZW5lZ2FsLWl0YWxpZS5vbnJlbmRlci5jb21gCgpMZSBibHVlcHJpbnQgbm9tbWUgZMOpasOgIGxlIHNlcnZpY2UgYGZvcm1hdGlvbnMtc2VuZWdhbC1pdGFsaWVgLiBTaSBsJ2FuY2llbiBzZXJ2aWNlIG9jY3VwZSBlbmNvcmUgY2Ugbm9tIDogc3VwcHJpbWV6IGwnYW5jaWVuIHNlcnZpY2UgKG91IHJlbm9tbWV6LWxlKSAqKmF2YW50KiogZGUgbGFuY2VyIGxlIGJsdWVwcmludCwgbCdVUkwgc2VyYSBhbG9ycyByZXByaXNlIMOgIGwnaWRlbnRpcXVlLgoKIyMgRMOpdmVsb3BwZW1lbnQgbG9jYWwKCmBgYGJhc2gKbnBtIGluc3RhbGwKbnBtIHJ1biBkYjpwdXNoICAgICAgICAjIHN5bmNocm9uaXNlIGxlIHNjaMOpbWEKbnB4IHRzeCBkYi9zZWVkLnRzICAgICAjIGRvbm7DqWVzIHBhciBkw6lmYXV0IChjYXB0dXJlcykgKyBjb21wdGUgYWRtaW4KbnBtIHJ1biBkZXYgICAgICAgICAgICAjIGh0dHA6Ly9sb2NhbGhvc3Q6MzAwMApgYGAKCiMjIFByb2R1Y3Rpb24KCmBgYGJhc2gKbnBtIHJ1biBidWlsZApucG0gc3RhcnQKYGBgCgpMZSBgRG9ja2VyZmlsZWAgaW5jbHVzIGJ1aWxkIGwnYXBwbGljYXRpb24gZXQgZMOpbWFycmUgbGUgc2VydmV1ciBzdXIgbGUgcG9ydCAzMDAwLgoKIyMgRW1haWwgKG9wdGlvbm5lbCkKCkxhIG5vdGlmaWNhdGlvbiBlbWFpbCBkZXMgaW5zY3JpcHRpb25zIGVzdCBhY3RpdsOpZSBlbiBkw6lmaW5pc3NhbnQgOgpgU01UUF9IT1NUYCwgYFNNVFBfUE9SVGAsIGBTTVRQX1VTRVJgLCBgU01UUF9QQVNTYCwgYFNNVFBfRlJPTWAsIGBBRE1JTl9FTUFJTGAuClNhbnMgY29uZmlndXJhdGlvbiBTTVRQLCBsZXMgaW5zY3JpcHRpb25zIHNvbnQgc2ltcGxlbWVudCBqb3VybmFsaXPDqWVzIGPDtHTDqSBzZXJ2ZXVyLgoKIyMgU3RydWN0dXJlCgpgYGAKYXBpLyAgICAgICAgICBTZXJ2ZXVyIEhvbm8gKyByb3V0ZXVycyB0UlBDIChzaXRlIHB1YmxpYywgYWRtaW4pCmNvbnRyYWN0cy8gICAgVHlwZXMgcGFydGFnw6lzIGZyb250L2JhY2sKZGIvICAgICAgICAgICBTY2jDqW1hIERyaXp6bGUgKyBzZWVkCnNyYy9wYWdlcy8gICAgUGFnZXMgcHVibGlxdWVzIGV0IHBhbm5lYXUgYWRtaW4KYGBgCg==
+# UNIMPRESA Sicilia — Site vitrine + Panneau Super Admin
+
+Application web complète pour le programme de formation certifiant **UNIMPRESA Sicilia** (Dakar, Sénégal → insertion professionnelle en Italie).
+
+## Fonctionnalités
+
+**Site public**
+- `/` — Page d'accueil : hero, partenaires, 6 filières, déroulement (timeline), tarifs, encadré paiement, infos essentielles, avantages, footer contact. 100 % du contenu vient de la base de données.
+- `/inscription` — Dossier candidat multi-étapes (identité, contact, situation pro, formation avec métiers détaillés, engagement) avec numéro de dossier unique (US-AAAA-XXXX). Notification email au Super Admin si SMTP configuré.
+- `/rendezvous` — Prise de rendez-vous (motif, date souhaitée).
+
+**Panneau Super Admin** (protégé par JWT + bcrypt)
+- `/admin/login` — Connexion
+- `/admin/dashboard` — Statistiques
+- `/admin/cycles` — CRUD cycles / sessions (dates, durée, participants, activation)
+- `/admin/filieres` — CRUD filières (icône, titre, description, durée, métiers, badge, activation)
+- `/admin/tarifs` — CRUD tarifs (montants chiffres + lettres, ligne Total)
+- `/admin/etapes` — CRUD + réordonnancement de la timeline
+- `/admin/partenaires` — CRUD partenaires
+- `/admin/avantages` — CRUD avantages (« Pourquoi nous choisir »)
+- `/admin/inscriptions` — Dossiers candidats complets (statuts)
+- `/admin/rendezvous` — Suivi des rendez-vous
+- `/admin/parametres` — Tous les textes globaux, couleurs, devise, logo, contact + changement de mot de passe
+
+## Identifiants admin par défaut
+
+| Champ | Valeur |
+|---|---|
+| URL | `/admin/login` |
+| Utilisateur | `admin` |
+| Mot de passe | `admin123` |
+
+⚠️ Changez ce mot de passe après la première connexion (onglet Paramètres).
+
+## Stack
+
+- Frontend : React 19 + TypeScript + Vite + Tailwind CSS
+- Backend : Hono + tRPC 11 (API typée de bout en bout)
+- BDD : PostgreSQL via Drizzle ORM
+- Auth : JWT (12 h) + bcrypt
+
+## Déploiement sur Render
+
+Le dépôt contient un **blueprint** (`render.yaml`) : tout se crée en quelques clics.
+
+1. Sur [dashboard.render.com](https://dashboard.render.com) → **New +** → **Blueprint**
+2. Connectez le dépôt GitHub `FORMATION-LAVORO/unimpresa-sicilia`
+3. Render crée automatiquement :
+   - une base **PostgreSQL** (`unimpresa-db`)
+   - le **service web** Docker (`formations-senegal-italie`) avec `DATABASE_URL` et `JWT_SECRET` déjà branchés
+4. Au premier démarrage, le schéma et les données par défaut (cycle, filières, tarifs, étapes, paramètres, compte admin) sont créés automatiquement en arrière-plan — patientez 1–2 minutes puis rechargez la page.
+
+### Variables d'environnement (créées par le blueprint)
+
+| Clé | Valeur |
+|---|---|
+| `DATABASE_URL` | fournie automatiquement par la base Render |
+| `JWT_SECRET` | générée automatiquement |
+| `NODE_ENV` | `production` |
+
+### Reprendre l'URL existante `formations-senegal-italie.onrender.com`
+
+Le blueprint nomme déjà le service `formations-senegal-italie`. Si l'ancien service occupe encore ce nom : supprimez l'ancien service (ou renommez-le) **avant** de lancer le blueprint, l'URL sera alors reprise à l'identique.
+
+## Développement local
+
+```bash
+npm install
+npm run db:push        # synchronise le schéma
+npx tsx db/seed.ts     # données par défaut (captures) + compte admin
+npm run dev            # http://localhost:3000
+```
+
+## Production
+
+```bash
+npm run build
+npm start
+```
+
+Le `Dockerfile` inclus build l'application et démarre le serveur sur le port 3000.
+
+## Email (optionnel)
+
+La notification email des inscriptions est activée en définissant :
+`SMTP_HOST`, `SMTP_PORT`, `SMTP_USER`, `SMTP_PASS`, `SMTP_FROM`, `ADMIN_EMAIL`.
+Sans configuration SMTP, les inscriptions sont simplement journalisées côté serveur.
+
+## Structure
+
+```
+api/          Serveur Hono + routeurs tRPC (site public, admin)
+contracts/    Types partagés front/back
+db/           Schéma Drizzle + seed
+src/pages/    Pages publiques et panneau admin
+```

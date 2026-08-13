@@ -1,1 +1,12 @@
-aW1wb3J0IHR5cGUgeyBGZXRjaENyZWF0ZUNvbnRleHRGbk9wdGlvbnMgfSBmcm9tICJAdHJwYy9zZXJ2ZXIvYWRhcHRlcnMvZmV0Y2giOwoKZXhwb3J0IHR5cGUgVHJwY0NvbnRleHQgPSB7CiAgcmVxOiBSZXF1ZXN0OwogIHJlc0hlYWRlcnM6IEhlYWRlcnM7Cn07CgpleHBvcnQgYXN5bmMgZnVuY3Rpb24gY3JlYXRlQ29udGV4dCgKICBvcHRzOiBGZXRjaENyZWF0ZUNvbnRleHRGbk9wdGlvbnMsCik6IFByb21pc2U8VHJwY0NvbnRleHQ+IHsKICByZXR1cm4geyByZXE6IG9wdHMucmVxLCByZXNIZWFkZXJzOiBvcHRzLnJlc0hlYWRlcnMgfTsKfQo=
+import type { FetchCreateContextFnOptions } from "@trpc/server/adapters/fetch";
+
+export type TrpcContext = {
+  req: Request;
+  resHeaders: Headers;
+};
+
+export async function createContext(
+  opts: FetchCreateContextFnOptions,
+): Promise<TrpcContext> {
+  return { req: opts.req, resHeaders: opts.resHeaders };
+}

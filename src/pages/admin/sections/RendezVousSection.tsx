@@ -1,1 +1,52 @@
-aW1wb3J0IHsgdHJwYyB9IGZyb20gIkAvcHJvdmlkZXJzL3RycGMiOwppbXBvcnQgeyB1c2VBZG1pbiwgQnRuLCBUYWJsZSB9IGZyb20gIi4uL3VpIjsKCmNvbnN0IFNUQVRVVFMgPSBbIm5vdXZlYXUiLCAiY29uZmlybcOpIiwgImhvbm9yw6kiLCAiYW5udWzDqSJdOwpjb25zdCBTVFlMRTogUmVjb3JkPHN0cmluZywgc3RyaW5nPiA9IHsKICBub3V2ZWF1OiAiYmctYmx1ZS0xMDAgdGV4dC1ibHVlLTcwMCIsCiAgY29uZmlybcOpOiAiYmctZ3JlZW4tMTAwIHRleHQtZ3JlZW4tNzAwIiwKICBob25vcsOpOiAiYmctZW1lcmFsZC0xMDAgdGV4dC1lbWVyYWxkLTgwMCIsCiAgYW5udWzDqTogImJnLXJlZC0xMDAgdGV4dC1yZWQtNzAwIiwKfTsKCmV4cG9ydCBkZWZhdWx0IGZ1bmN0aW9uIFJlbmRlelZvdXNTZWN0aW9uKCkgewogIGNvbnN0IHsgdG9rZW4sIHJlZnJlc2ggfSA9IHVzZUFkbWluKCk7CiAgY29uc3QgeyBkYXRhIH0gPSB0cnBjLmFkbWluLmxpc3RSZW5kZXpWb3VzLnVzZVF1ZXJ5KHsgdG9rZW4gfSk7CiAgY29uc3QgdXBkYXRlID0gdHJwYy5hZG1pbi51cGRhdGVSZW5kZXpWb3VzLnVzZU11dGF0aW9uKHsgb25TdWNjZXNzOiByZWZyZXNoIH0pOwogIGNvbnN0IGRlbCA9IHRycGMuYWRtaW4uZGVsZXRlUmVuZGV6Vm91cy51c2VNdXRhdGlvbih7IG9uU3VjY2VzczogcmVmcmVzaCB9KTsKCiAgcmV0dXJuICgKICAgIDxzZWN0aW9uPgogICAgICA8aDIgY2xhc3NOYW1lPSJ0ZXh0LXhsIGZvbnQtZXh0cmFib2xkIHRleHQtWyMxYTJhNGFdIG1iLTQiPlJlbmRlei12b3VzICh7ZGF0YT8ubGVuZ3RoID8/IDB9KTwvaDI+CiAgICAgIDxUYWJsZSBoZWFkPXtbIkRhdGUgZGVtYW5kZSIsICJWaXNpdGV1ciIsICJDb250YWN0IiwgIk1vdGlmIiwgIkRhdGUgc291aGFpdMOpZSIsICJTdGF0dXQiLCAiQWN0aW9ucyJdfT4KICAgICAgICB7KGRhdGEgPz8gW10pLm1hcCgocikgPT4gKAogICAgICAgICAgPHRyIGtleT17ci5pZH0gY2xhc3NOYW1lPSJib3JkZXItdCBib3JkZXItc2xhdGUtMTAwIj4KICAgICAgICAgICAgPHRkIGNsYXNzTmFtZT0icHgtNCBweS0zIHRleHQtc2xhdGUtNTAwIHdoaXRlc3BhY2Utbm93cmFwIj57bmV3IERhdGUoci5jcmVhdGVkQXQpLnRvTG9jYWxlRGF0ZVN0cmluZygiZnItRlIiKX08L3RkPgogICAgICAgICAgICA8dGQgY2xhc3NOYW1lPSJweC00IHB5LTMgZm9udC1ib2xkIHRleHQtWyMxYTJhNGFdIHdoaXRlc3BhY2Utbm93cmFwIj57ci5wcmVub219IHtyLm5vbX08L3RkPgogICAgICAgICAgICA8dGQgY2xhc3NOYW1lPSJweC00IHB5LTMiPgogICAgICAgICAgICAgIDxkaXY+e3IudGVsZXBob25lfTwvZGl2PgogICAgICAgICAgICAgIDxkaXYgY2xhc3NOYW1lPSJ0ZXh0LXhzIHRleHQtc2xhdGUtNTAwIj57ci5lbWFpbH08L2Rpdj4KICAgICAgICAgICAgPC90ZD4KICAgICAgICAgICAgPHRkIGNsYXNzTmFtZT0icHgtNCBweS0zIG1heC13LTU2IHRydW5jYXRlIj57ci5tb3RpZn08L3RkPgogICAgICAgICAgICA8dGQgY2xhc3NOYW1lPSJweC00IHB5LTMiPntyLmRhdGVTb3VoYWl0ZWUgfHwgIuKAlCJ9PC90ZD4KICAgICAgICAgICAgPHRkIGNsYXNzTmFtZT0icHgtNCBweS0zIj4KICAgICAgICAgICAgICA8c2VsZWN0CiAgICAgICAgICAgICAgICBjbGFzc05hbWU9e2B0ZXh0LXhzIGZvbnQtYm9sZCBweC0yLjUgcHktMS41IHJvdW5kZWQtZnVsbCBib3JkZXItMCBjdXJzb3ItcG9pbnRlciAke1NUWUxFW3Iuc3RhdHV0XSA/PyAiYmctc2xhdGUtMTAwIn1gfQogICAgICAgICAgICAgICAgdmFsdWU9e3Iuc3RhdHV0fQogICAgICAgICAgICAgICAgb25DaGFuZ2U9eyhlKSA9PiB1cGRhdGUubXV0YXRlKHsgdG9rZW4sIGlkOiBOdW1iZXIoci5pZCksIHN0YXR1dDogZS50YXJnZXQudmFsdWUgfSl9CiAgICAgICAgICAgICAgPgogICAgICAgICAgICAgICAge1NUQVRVVFMubWFwKChzKSA9PiA8b3B0aW9uIGtleT17c30gdmFsdWU9e3N9PntzfTwvb3B0aW9uPil9CiAgICAgICAgICAgICAgPC9zZWxlY3Q+CiAgICAgICAgICAgIDwvdGQ+CiAgICAgICAgICAgIDx0ZCBjbGFzc05hbWU9InB4LTQgcHktMyI+CiAgICAgICAgICAgICAgPEJ0biB2YXJpYW50PSJkYW5nZXIiIG9uQ2xpY2s9eygpID0+IGNvbmZpcm0oIlN1cHByaW1lciBjZSByZW5kZXotdm91cyA/IikgJiYgZGVsLm11dGF0ZSh7IHRva2VuLCBpZDogTnVtYmVyKHIuaWQpIH0pfT7wn5eRPC9CdG4+CiAgICAgICAgICAgIDwvdGQ+CiAgICAgICAgICA8L3RyPgogICAgICAgICkpfQogICAgICAgIHsoZGF0YSA/PyBbXSkubGVuZ3RoID09PSAwICYmICgKICAgICAgICAgIDx0cj48dGQgY29sU3Bhbj17N30gY2xhc3NOYW1lPSJweC00IHB5LTEwIHRleHQtY2VudGVyIHRleHQtc2xhdGUtNDAwIj5BdWN1bmUgZGVtYW5kZSBkZSByZW5kZXotdm91cy48L3RkPjwvdHI+CiAgICAgICAgKX0KICAgICAgPC9UYWJsZT4KICAgIDwvc2VjdGlvbj4KICApOwp9Cg==
+import { trpc } from "@/providers/trpc";
+import { useAdmin, Btn, Table } from "../ui";
+
+const STATUTS = ["nouveau", "confirmé", "honoré", "annulé"];
+const STYLE: Record<string, string> = {
+  nouveau: "bg-blue-100 text-blue-700",
+  confirmé: "bg-green-100 text-green-700",
+  honoré: "bg-emerald-100 text-emerald-800",
+  annulé: "bg-red-100 text-red-700",
+};
+
+export default function RendezVousSection() {
+  const { token, refresh } = useAdmin();
+  const { data } = trpc.admin.listRendezVous.useQuery({ token });
+  const update = trpc.admin.updateRendezVous.useMutation({ onSuccess: refresh });
+  const del = trpc.admin.deleteRendezVous.useMutation({ onSuccess: refresh });
+
+  return (
+    <section>
+      <h2 className="text-xl font-extrabold text-[#1a2a4a] mb-4">Rendez-vous ({data?.length ?? 0})</h2>
+      <Table head={["Date demande", "Visiteur", "Contact", "Motif", "Date souhaitée", "Statut", "Actions"]}>
+        {(data ?? []).map((r) => (
+          <tr key={r.id} className="border-t border-slate-100">
+            <td className="px-4 py-3 text-slate-500 whitespace-nowrap">{new Date(r.createdAt).toLocaleDateString("fr-FR")}</td>
+            <td className="px-4 py-3 font-bold text-[#1a2a4a] whitespace-nowrap">{r.prenom} {r.nom}</td>
+            <td className="px-4 py-3">
+              <div>{r.telephone}</div>
+              <div className="text-xs text-slate-500">{r.email}</div>
+            </td>
+            <td className="px-4 py-3 max-w-56 truncate">{r.motif}</td>
+            <td className="px-4 py-3">{r.dateSouhaitee || "—"}</td>
+            <td className="px-4 py-3">
+              <select
+                className={`text-xs font-bold px-2.5 py-1.5 rounded-full border-0 cursor-pointer ${STYLE[r.statut] ?? "bg-slate-100"}`}
+                value={r.statut}
+                onChange={(e) => update.mutate({ token, id: Number(r.id), statut: e.target.value })}
+              >
+                {STATUTS.map((s) => <option key={s} value={s}>{s}</option>)}
+              </select>
+            </td>
+            <td className="px-4 py-3">
+              <Btn variant="danger" onClick={() => confirm("Supprimer ce rendez-vous ?") && del.mutate({ token, id: Number(r.id) })}>🗑</Btn>
+            </td>
+          </tr>
+        ))}
+        {(data ?? []).length === 0 && (
+          <tr><td colSpan={7} className="px-4 py-10 text-center text-slate-400">Aucune demande de rendez-vous.</td></tr>
+        )}
+      </Table>
+    </section>
+  );
+}

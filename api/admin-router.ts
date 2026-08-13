@@ -1,1 +1,316 @@
-aW1wb3J0IHsgeiB9IGZyb20gInpvZCI7CmltcG9ydCB7IGFzYywgZGVzYywgZXEgfSBmcm9tICJkcml6emxlLW9ybSI7CmltcG9ydCB7IFRSUENFcnJvciB9IGZyb20gIkB0cnBjL3NlcnZlciI7CmltcG9ydCBiY3J5cHQgZnJvbSAiYmNyeXB0anMiOwppbXBvcnQgand0IGZyb20gImpzb253ZWJ0b2tlbiI7CmltcG9ydCB7IGNyZWF0ZVJvdXRlciwgcHVibGljUXVlcnkgfSBmcm9tICIuL21pZGRsZXdhcmUiOwppbXBvcnQgeyBnZXREYiB9IGZyb20gIi4vcXVlcmllcy9jb25uZWN0aW9uIjsKaW1wb3J0IHsKICBjeWNsZXMsCiAgZmlsaWVyZXMsCiAgdGFyaWZzLAogIGV0YXBlcywKICBwYXJhbWV0cmVzLAogIGFkbWlucywKICBpbnNjcmlwdGlvbnMsCiAgcGFydGVuYWlyZXMsCiAgYXZhbnRhZ2VzLAogIHJlbmRlelZvdXMsCn0gZnJvbSAiLi4vZGIvc2NoZW1hIjsKCmNvbnN0IEpXVF9TRUNSRVQgPSBwcm9jZXNzLmVudi5KV1RfU0VDUkVUID8/ICJ1bmltcHJlc2EtZGV2LXNlY3JldCI7CmNvbnN0IFRPS0VOX1RUTCA9ICIxMmgiOwoKLyoqIFbDqXJpZmllIGxlIHRva2VuIEpXVCBhZG1pbiDigJQgbMOodmUgVU5BVVRIT1JJWkVEIHNpIGludmFsaWRlICovCmZ1bmN0aW9uIHJlcXVpcmVBZG1pbih0b2tlbjogc3RyaW5nKSB7CiAgdHJ5IHsKICAgIHJldHVybiBqd3QudmVyaWZ5KHRva2VuLCBKV1RfU0VDUkVUKSBhcyB1bmtub3duIGFzIHsgc3ViOiBudW1iZXI7IHJvbGU6IHN0cmluZyB9OwogIH0gY2F0Y2ggewogICAgdGhyb3cgbmV3IFRSUENFcnJvcih7IGNvZGU6ICJVTkFVVEhPUklaRUQiLCBtZXNzYWdlOiAiU2Vzc2lvbiBleHBpcsOpZSwgcmVjb25uZWN0ZXotdm91cy4iIH0pOwogIH0KfQoKY29uc3Qgd2l0aFRva2VuID0geyB0b2tlbjogei5zdHJpbmcoKS5taW4oMSkgfTsKCmNvbnN0IGN5Y2xlSW5wdXQgPSB6Lm9iamVjdCh7CiAgbm9tOiB6LnN0cmluZygpLm1pbigxKSwKICBkYXRlRGVidXQ6IHouc3RyaW5nKCkubWluKDEpLAogIGRhdGVGaW46IHouc3RyaW5nKCkubWluKDEpLAogIHNlc3Npb25MYWJlbDogei5zdHJpbmcoKS5kZWZhdWx0KCIiKSwKICBkdXJlZUhldXJlczogei5zdHJpbmcoKS5taW4oMSksCiAgbmJQYXJ0aWNpcGFudHM6IHoubnVtYmVyKCkuaW50KCkubWluKDApLAogIGxpZXU6IHouc3RyaW5nKCkubWluKDEpLAogIHZpbGxlOiB6LnN0cmluZygpLmRlZmF1bHQoIkRha2FyIiksCiAgcGF5czogei5zdHJpbmcoKS5kZWZhdWx0KCJTw6luw6lnYWwiKSwKICBhY3RpZjogei5ib29sZWFuKCkuZGVmYXVsdCh0cnVlKSwKfSk7Cgpjb25zdCBmaWxpZXJlSW5wdXQgPSB6Lm9iamVjdCh7CiAgY3ljbGVJZDogei5udW1iZXIoKS5udWxsYWJsZSgpLmRlZmF1bHQobnVsbCksCiAgdGl0cmU6IHouc3RyaW5nKCkubWluKDEpLAogIGRlc2NyaXB0aW9uOiB6LnN0cmluZygpLm1pbigxKSwKICBkdXJlZUhldXJlczogei5zdHJpbmcoKS5taW4oMSksCiAgbmJNZXRpZXJzOiB6Lm51bWJlcigpLmludCgpLm1pbigwKSwKICBpY29uZTogei5zdHJpbmcoKS5kZWZhdWx0KCLwn5OaIiksCiAgYmFkZ2U6IHouc3RyaW5nKCkuZGVmYXVsdCgiIiksCiAgbWV0aWVyczogei5zdHJpbmcoKS5kZWZhdWx0KCIiKSwKICBvcmRyZTogei5udW1iZXIoKS5pbnQoKS5kZWZhdWx0KDApLAogIGFjdGlmOiB6LmJvb2xlYW4oKS5kZWZhdWx0KHRydWUpLAp9KTsKCmNvbnN0IHRhcmlmSW5wdXQgPSB6Lm9iamVjdCh7CiAgY3ljbGVJZDogei5udW1iZXIoKS5udWxsYWJsZSgpLmRlZmF1bHQobnVsbCksCiAgbGFiZWw6IHouc3RyaW5nKCkubWluKDEpLAogIG1vbnRhbnRDaGlmZnJlczogei5zdHJpbmcoKS5taW4oMSksCiAgbW9udGFudExldHRyZXM6IHouc3RyaW5nKCkuZGVmYXVsdCgiIiksCiAgZGVzY3JpcHRpb246IHouc3RyaW5nKCkuZGVmYXVsdCgiIiksCiAgZXN0VG90YWw6IHouYm9vbGVhbigpLmRlZmF1bHQoZmFsc2UpLAogIG9yZHJlOiB6Lm51bWJlcigpLmludCgpLmRlZmF1bHQoMCksCn0pOwoKY29uc3QgZXRhcGVJbnB1dCA9IHoub2JqZWN0KHsKICBjeWNsZUlkOiB6Lm51bWJlcigpLm51bGxhYmxlKCkuZGVmYXVsdChudWxsKSwKICBudW1lcm86IHouc3RyaW5nKCkubWluKDEpLAogIGljb25lOiB6LnN0cmluZygpLmRlZmF1bHQoIvCfk4wiKSwKICB0aXRyZTogei5zdHJpbmcoKS5taW4oMSksCiAgZGVzY3JpcHRpb246IHouc3RyaW5nKCkubWluKDEpLAogIG9yZHJlOiB6Lm51bWJlcigpLmludCgpLmRlZmF1bHQoMCksCn0pOwoKZXhwb3J0IGNvbnN0IGFkbWluUm91dGVyID0gY3JlYXRlUm91dGVyKHsKICAvKiogQ29ubmV4aW9uIFN1cGVyIEFkbWluIChiY3J5cHQgKyBKV1QpICovCiAgbG9naW46IHB1YmxpY1F1ZXJ5CiAgICAuaW5wdXQoei5vYmplY3QoeyB1c2VybmFtZTogei5zdHJpbmcoKS5taW4oMSksIHBhc3N3b3JkOiB6LnN0cmluZygpLm1pbigxKSB9KSkKICAgIC5tdXRhdGlvbihhc3luYyAoeyBpbnB1dCB9KSA9PiB7CiAgICAgIGNvbnN0IGRiID0gZ2V0RGIoKTsKICAgICAgY29uc3QgW2FkbWluXSA9IGF3YWl0IGRiLnNlbGVjdCgpLmZyb20oYWRtaW5zKS53aGVyZShlcShhZG1pbnMudXNlcm5hbWUsIGlucHV0LnVzZXJuYW1lKSkubGltaXQoMSk7CiAgICAgIGlmICghYWRtaW4gfHwgIShhd2FpdCBiY3J5cHQuY29tcGFyZShpbnB1dC5wYXNzd29yZCwgYWRtaW4ucGFzc3dvcmRIYXNoKSkpIHsKICAgICAgICB0aHJvdyBuZXcgVFJQQ0Vycm9yKHsgY29kZTogIlVOQVVUSE9SSVpFRCIsIG1lc3NhZ2U6ICJJZGVudGlmaWFudHMgaW5jb3JyZWN0cy4iIH0pOwogICAgICB9CiAgICAgIGNvbnN0IHRva2VuID0gand0LnNpZ24oeyBzdWI6IE51bWJlcihhZG1pbi5pZCksIHJvbGU6IGFkbWluLnJvbGUgfSwgSldUX1NFQ1JFVCwgeyBleHBpcmVzSW46IFRPS0VOX1RUTCB9KTsKICAgICAgcmV0dXJuIHsgdG9rZW4sIHVzZXJuYW1lOiBhZG1pbi51c2VybmFtZSwgcm9sZTogYWRtaW4ucm9sZSB9OwogICAgfSksCgogIC8qKiBTdGF0aXN0aXF1ZXMgZHUgdGFibGVhdSBkZSBib3JkICovCiAgc3RhdHM6IHB1YmxpY1F1ZXJ5LmlucHV0KHoub2JqZWN0KHdpdGhUb2tlbikpLnF1ZXJ5KGFzeW5jICh7IGlucHV0IH0pID0+IHsKICAgIHJlcXVpcmVBZG1pbihpbnB1dC50b2tlbik7CiAgICBjb25zdCBkYiA9IGdldERiKCk7CiAgICBjb25zdCBjb3VudCA9IGFzeW5jICh0OiBhbnkpID0+IChhd2FpdCBkYi5zZWxlY3QoKS5mcm9tKHQgYXMgYW55KSkubGVuZ3RoOwogICAgcmV0dXJuIHsKICAgICAgY3ljbGVzOiBhd2FpdCBjb3VudChjeWNsZXMpLAogICAgICBmaWxpZXJlczogYXdhaXQgY291bnQoZmlsaWVyZXMpLAogICAgICB0YXJpZnM6IGF3YWl0IGNvdW50KHRhcmlmcyksCiAgICAgIGV0YXBlczogYXdhaXQgY291bnQoZXRhcGVzKSwKICAgICAgaW5zY3JpcHRpb25zOiBhd2FpdCBjb3VudChpbnNjcmlwdGlvbnMpLAogICAgICBwYXJhbWV0cmVzOiBhd2FpdCBjb3VudChwYXJhbWV0cmVzKSwKICAgIH07CiAgfSksCgogIC8vIOKUgOKUgOKUgCBDWUNMRVMg4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSACiAgbGlzdEN5Y2xlczogcHVibGljUXVlcnkuaW5wdXQoei5vYmplY3Qod2l0aFRva2VuKSkucXVlcnkoYXN5bmMgKHsgaW5wdXQgfSkgPT4gewogICAgcmVxdWlyZUFkbWluKGlucHV0LnRva2VuKTsKICAgIHJldHVybiBnZXREYigpLnNlbGVjdCgpLmZyb20oY3ljbGVzKS5vcmRlckJ5KGRlc2MoY3ljbGVzLmlkKSk7CiAgfSksCiAgY3JlYXRlQ3ljbGU6IHB1YmxpY1F1ZXJ5LmlucHV0KHoub2JqZWN0KHsgLi4ud2l0aFRva2VuLCBkYXRhOiBjeWNsZUlucHV0IH0pKS5tdXRhdGlvbihhc3luYyAoeyBpbnB1dCB9KSA9PiB7CiAgICByZXF1aXJlQWRtaW4oaW5wdXQudG9rZW4pOwogICAgY29uc3QgW3JdID0gYXdhaXQgZ2V0RGIoKS5pbnNlcnQoY3ljbGVzKS52YWx1ZXMoaW5wdXQuZGF0YSkucmV0dXJuaW5nKHsgaWQ6IGN5Y2xlcy5pZCB9KTsKICAgIHJldHVybiB7IGlkOiBOdW1iZXIoci5pZCkgfTsKICB9KSwKICB1cGRhdGVDeWNsZTogcHVibGljUXVlcnkuaW5wdXQoei5vYmplY3QoeyAuLi53aXRoVG9rZW4sIGlkOiB6Lm51bWJlcigpLCBkYXRhOiBjeWNsZUlucHV0LnBhcnRpYWwoKSB9KSkubXV0YXRpb24oYXN5bmMgKHsgaW5wdXQgfSkgPT4gewogICAgcmVxdWlyZUFkbWluKGlucHV0LnRva2VuKTsKICAgIGF3YWl0IGdldERiKCkudXBkYXRlKGN5Y2xlcykuc2V0KGlucHV0LmRhdGEpLndoZXJlKGVxKGN5Y2xlcy5pZCwgaW5wdXQuaWQpKTsKICAgIHJldHVybiB7IG9rOiB0cnVlIH07CiAgfSksCiAgZGVsZXRlQ3ljbGU6IHB1YmxpY1F1ZXJ5LmlucHV0KHoub2JqZWN0KHsgLi4ud2l0aFRva2VuLCBpZDogei5udW1iZXIoKSB9KSkubXV0YXRpb24oYXN5bmMgKHsgaW5wdXQgfSkgPT4gewogICAgcmVxdWlyZUFkbWluKGlucHV0LnRva2VuKTsKICAgIGF3YWl0IGdldERiKCkuZGVsZXRlKGN5Y2xlcykud2hlcmUoZXEoY3ljbGVzLmlkLCBpbnB1dC5pZCkpOwogICAgcmV0dXJuIHsgb2s6IHRydWUgfTsKICB9KSwKCiAgLy8g4pSA4pSA4pSAIEZJTEnDiFJFUyDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIAKICBsaXN0RmlsaWVyZXM6IHB1YmxpY1F1ZXJ5LmlucHV0KHoub2JqZWN0KHdpdGhUb2tlbikpLnF1ZXJ5KGFzeW5jICh7IGlucHV0IH0pID0+IHsKICAgIHJlcXVpcmVBZG1pbihpbnB1dC50b2tlbik7CiAgICByZXR1cm4gZ2V0RGIoKS5zZWxlY3QoKS5mcm9tKGZpbGllcmVzKS5vcmRlckJ5KGFzYyhmaWxpZXJlcy5vcmRyZSksIGFzYyhmaWxpZXJlcy5pZCkpOwogIH0pLAogIGNyZWF0ZUZpbGllcmU6IHB1YmxpY1F1ZXJ5LmlucHV0KHoub2JqZWN0KHsgLi4ud2l0aFRva2VuLCBkYXRhOiBmaWxpZXJlSW5wdXQgfSkpLm11dGF0aW9uKGFzeW5jICh7IGlucHV0IH0pID0+IHsKICAgIHJlcXVpcmVBZG1pbihpbnB1dC50b2tlbik7CiAgICBjb25zdCBbcl0gPSBhd2FpdCBnZXREYigpLmluc2VydChmaWxpZXJlcykudmFsdWVzKGlucHV0LmRhdGEpLnJldHVybmluZyh7IGlkOiBmaWxpZXJlcy5pZCB9KTsKICAgIHJldHVybiB7IGlkOiBOdW1iZXIoci5pZCkgfTsKICB9KSwKICB1cGRhdGVGaWxpZXJlOiBwdWJsaWNRdWVyeS5pbnB1dCh6Lm9iamVjdCh7IC4uLndpdGhUb2tlbiwgaWQ6IHoubnVtYmVyKCksIGRhdGE6IGZpbGllcmVJbnB1dC5wYXJ0aWFsKCkgfSkpLm11dGF0aW9uKGFzeW5jICh7IGlucHV0IH0pID0+IHsKICAgIHJlcXVpcmVBZG1pbihpbnB1dC50b2tlbik7CiAgICBhd2FpdCBnZXREYigpLnVwZGF0ZShmaWxpZXJlcykuc2V0KGlucHV0LmRhdGEpLndoZXJlKGVxKGZpbGllcmVzLmlkLCBpbnB1dC5pZCkpOwogICAgcmV0dXJuIHsgb2s6IHRydWUgfTsKICB9KSwKICBkZWxldGVGaWxpZXJlOiBwdWJsaWNRdWVyeS5pbnB1dCh6Lm9iamVjdCh7IC4uLndpdGhUb2tlbiwgaWQ6IHoubnVtYmVyKCkgfSkpLm11dGF0aW9uKGFzeW5jICh7IGlucHV0IH0pID0+IHsKICAgIHJlcXVpcmVBZG1pbihpbnB1dC50b2tlbik7CiAgICBhd2FpdCBnZXREYigpLmRlbGV0ZShmaWxpZXJlcykud2hlcmUoZXEoZmlsaWVyZXMuaWQsIGlucHV0LmlkKSk7CiAgICByZXR1cm4geyBvazogdHJ1ZSB9OwogIH0pLAoKICAvLyDilIDilIDilIAgVEFSSUZTIOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgAogIGxpc3RUYXJpZnM6IHB1YmxpY1F1ZXJ5LmlucHV0KHoub2JqZWN0KHdpdGhUb2tlbikpLnF1ZXJ5KGFzeW5jICh7IGlucHV0IH0pID0+IHsKICAgIHJlcXVpcmVBZG1pbihpbnB1dC50b2tlbik7CiAgICByZXR1cm4gZ2V0RGIoKS5zZWxlY3QoKS5mcm9tKHRhcmlmcykub3JkZXJCeShhc2ModGFyaWZzLm9yZHJlKSwgYXNjKHRhcmlmcy5pZCkpOwogIH0pLAogIGNyZWF0ZVRhcmlmOiBwdWJsaWNRdWVyeS5pbnB1dCh6Lm9iamVjdCh7IC4uLndpdGhUb2tlbiwgZGF0YTogdGFyaWZJbnB1dCB9KSkubXV0YXRpb24oYXN5bmMgKHsgaW5wdXQgfSkgPT4gewogICAgcmVxdWlyZUFkbWluKGlucHV0LnRva2VuKTsKICAgIGNvbnN0IFtyXSA9IGF3YWl0IGdldERiKCkuaW5zZXJ0KHRhcmlmcykudmFsdWVzKGlucHV0LmRhdGEpLnJldHVybmluZyh7IGlkOiB0YXJpZnMuaWQgfSk7CiAgICByZXR1cm4geyBpZDogTnVtYmVyKHIuaWQpIH07CiAgfSksCiAgdXBkYXRlVGFyaWY6IHB1YmxpY1F1ZXJ5LmlucHV0KHoub2JqZWN0KHsgLi4ud2l0aFRva2VuLCBpZDogei5udW1iZXIoKSwgZGF0YTogdGFyaWZJbnB1dC5wYXJ0aWFsKCkgfSkpLm11dGF0aW9uKGFzeW5jICh7IGlucHV0IH0pID0+IHsKICAgIHJlcXVpcmVBZG1pbihpbnB1dC50b2tlbik7CiAgICBhd2FpdCBnZXREYigpLnVwZGF0ZSh0YXJpZnMpLnNldChpbnB1dC5kYXRhKS53aGVyZShlcSh0YXJpZnMuaWQsIGlucHV0LmlkKSk7CiAgICByZXR1cm4geyBvazogdHJ1ZSB9OwogIH0pLAogIGRlbGV0ZVRhcmlmOiBwdWJsaWNRdWVyeS5pbnB1dCh6Lm9iamVjdCh7IC4uLndpdGhUb2tlbiwgaWQ6IHoubnVtYmVyKCkgfSkpLm11dGF0aW9uKGFzeW5jICh7IGlucHV0IH0pID0+IHsKICAgIHJlcXVpcmVBZG1pbihpbnB1dC50b2tlbik7CiAgICBhd2FpdCBnZXREYigpLmRlbGV0ZSh0YXJpZnMpLndoZXJlKGVxKHRhcmlmcy5pZCwgaW5wdXQuaWQpKTsKICAgIHJldHVybiB7IG9rOiB0cnVlIH07CiAgfSksCgogIC8vIOKUgOKUgOKUgCDDiVRBUEVTICh0aW1lbGluZSkg4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSACiAgbGlzdEV0YXBlczogcHVibGljUXVlcnkuaW5wdXQoei5vYmplY3Qod2l0aFRva2VuKSkucXVlcnkoYXN5bmMgKHsgaW5wdXQgfSkgPT4gewogICAgcmVxdWlyZUFkbWluKGlucHV0LnRva2VuKTsKICAgIHJldHVybiBnZXREYigpLnNlbGVjdCgpLmZyb20oZXRhcGVzKS5vcmRlckJ5KGFzYyhldGFwZXMub3JkcmUpLCBhc2MoZXRhcGVzLmlkKSk7CiAgfSksCiAgY3JlYXRlRXRhcGU6IHB1YmxpY1F1ZXJ5LmlucHV0KHoub2JqZWN0KHsgLi4ud2l0aFRva2VuLCBkYXRhOiBldGFwZUlucHV0IH0pKS5tdXRhdGlvbihhc3luYyAoeyBpbnB1dCB9KSA9PiB7CiAgICByZXF1aXJlQWRtaW4oaW5wdXQudG9rZW4pOwogICAgY29uc3QgW3JdID0gYXdhaXQgZ2V0RGIoKS5pbnNlcnQoZXRhcGVzKS52YWx1ZXMoaW5wdXQuZGF0YSkucmV0dXJuaW5nKHsgaWQ6IGV0YXBlcy5pZCB9KTsKICAgIHJldHVybiB7IGlkOiBOdW1iZXIoci5pZCkgfTsKICB9KSwKICB1cGRhdGVFdGFwZTogcHVibGljUXVlcnkuaW5wdXQoei5vYmplY3QoeyAuLi53aXRoVG9rZW4sIGlkOiB6Lm51bWJlcigpLCBkYXRhOiBldGFwZUlucHV0LnBhcnRpYWwoKSB9KSkubXV0YXRpb24oYXN5bmMgKHsgaW5wdXQgfSkgPT4gewogICAgcmVxdWlyZUFkbWluKGlucHV0LnRva2VuKTsKICAgIGF3YWl0IGdldERiKCkudXBkYXRlKGV0YXBlcykuc2V0KGlucHV0LmRhdGEpLndoZXJlKGVxKGV0YXBlcy5pZCwgaW5wdXQuaWQpKTsKICAgIHJldHVybiB7IG9rOiB0cnVlIH07CiAgfSksCiAgZGVsZXRlRXRhcGU6IHB1YmxpY1F1ZXJ5LmlucHV0KHoub2JqZWN0KHsgLi4ud2l0aFRva2VuLCBpZDogei5udW1iZXIoKSB9KSkubXV0YXRpb24oYXN5bmMgKHsgaW5wdXQgfSkgPT4gewogICAgcmVxdWlyZUFkbWluKGlucHV0LnRva2VuKTsKICAgIGF3YWl0IGdldERiKCkuZGVsZXRlKGV0YXBlcykud2hlcmUoZXEoZXRhcGVzLmlkLCBpbnB1dC5pZCkpOwogICAgcmV0dXJuIHsgb2s6IHRydWUgfTsKICB9KSwKICAvKiogUsOpb3Jkb25uZSBsZXMgw6l0YXBlcyA6IGxpc3RlIG9yZG9ubsOpZSBkJ2lkcyAqLwogIHJlb3JkZXJFdGFwZXM6IHB1YmxpY1F1ZXJ5LmlucHV0KHoub2JqZWN0KHsgLi4ud2l0aFRva2VuLCBpZHM6IHouYXJyYXkoei5udW1iZXIoKSkgfSkpLm11dGF0aW9uKGFzeW5jICh7IGlucHV0IH0pID0+IHsKICAgIHJlcXVpcmVBZG1pbihpbnB1dC50b2tlbik7CiAgICBjb25zdCBkYiA9IGdldERiKCk7CiAgICBhd2FpdCBQcm9taXNlLmFsbChpbnB1dC5pZHMubWFwKChpZCwgaSkgPT4gZGIudXBkYXRlKGV0YXBlcykuc2V0KHsgb3JkcmU6IGkgKyAxIH0pLndoZXJlKGVxKGV0YXBlcy5pZCwgaWQpKSkpOwogICAgcmV0dXJuIHsgb2s6IHRydWUgfTsKICB9KSwKCiAgLy8g4pSA4pSA4pSAIFBBUkFNw4hUUkVTICh0ZXh0ZXMgZ2xvYmF1eCwgY291bGV1cnMsIGNvbnRhY3QsIGxvZ28pIOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgAogIGxpc3RQYXJhbWV0cmVzOiBwdWJsaWNRdWVyeS5pbnB1dCh6Lm9iamVjdCh3aXRoVG9rZW4pKS5xdWVyeShhc3luYyAoeyBpbnB1dCB9KSA9PiB7CiAgICByZXF1aXJlQWRtaW4oaW5wdXQudG9rZW4pOwogICAgcmV0dXJuIGdldERiKCkuc2VsZWN0KCkuZnJvbShwYXJhbWV0cmVzKS5vcmRlckJ5KGFzYyhwYXJhbWV0cmVzLmNsZSkpOwogIH0pLAogIHNldFBhcmFtZXRyZTogcHVibGljUXVlcnkuaW5wdXQoei5vYmplY3QoeyAuLi53aXRoVG9rZW4sIGNsZTogei5zdHJpbmcoKS5taW4oMSkubWF4KDEwMCksIHZhbGV1cjogei5zdHJpbmcoKSB9KSkubXV0YXRpb24oYXN5bmMgKHsgaW5wdXQgfSkgPT4gewogICAgcmVxdWlyZUFkbWluKGlucHV0LnRva2VuKTsKICAgIGNvbnN0IGRiID0gZ2V0RGIoKTsKICAgIGNvbnN0IFtleGlzdGluZ10gPSBhd2FpdCBkYi5zZWxlY3QoKS5mcm9tKHBhcmFtZXRyZXMpLndoZXJlKGVxKHBhcmFtZXRyZXMuY2xlLCBpbnB1dC5jbGUpKS5saW1pdCgxKTsKICAgIGlmIChleGlzdGluZykgewogICAgICBhd2FpdCBkYi51cGRhdGUocGFyYW1ldHJlcykuc2V0KHsgdmFsZXVyOiBpbnB1dC52YWxldXIgfSkud2hlcmUoZXEocGFyYW1ldHJlcy5jbGUsIGlucHV0LmNsZSkpOwogICAgfSBlbHNlIHsKICAgICAgYXdhaXQgZGIuaW5zZXJ0KHBhcmFtZXRyZXMpLnZhbHVlcyh7IGNsZTogaW5wdXQuY2xlLCB2YWxldXI6IGlucHV0LnZhbGV1ciB9KTsKICAgIH0KICAgIHJldHVybiB7IG9rOiB0cnVlIH07CiAgfSksCgogIC8vIOKUgOKUgOKUgCBJTlNDUklQVElPTlMg4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSACiAgbGlzdEluc2NyaXB0aW9uczogcHVibGljUXVlcnkuaW5wdXQoei5vYmplY3Qod2l0aFRva2VuKSkucXVlcnkoYXN5bmMgKHsgaW5wdXQgfSkgPT4gewogICAgcmVxdWlyZUFkbWluKGlucHV0LnRva2VuKTsKICAgIHJldHVybiBnZXREYigpLnNlbGVjdCgpLmZyb20oaW5zY3JpcHRpb25zKS5vcmRlckJ5KGRlc2MoaW5zY3JpcHRpb25zLmlkKSk7CiAgfSksCiAgdXBkYXRlSW5zY3JpcHRpb246IHB1YmxpY1F1ZXJ5CiAgICAuaW5wdXQoei5vYmplY3QoeyAuLi53aXRoVG9rZW4sIGlkOiB6Lm51bWJlcigpLCBzdGF0dXQ6IHouc3RyaW5nKCkubWluKDEpLm1heCg1MCkgfSkpCiAgICAubXV0YXRpb24oYXN5bmMgKHsgaW5wdXQgfSkgPT4gewogICAgICByZXF1aXJlQWRtaW4oaW5wdXQudG9rZW4pOwogICAgICBhd2FpdCBnZXREYigpLnVwZGF0ZShpbnNjcmlwdGlvbnMpLnNldCh7IHN0YXR1dDogaW5wdXQuc3RhdHV0IH0pLndoZXJlKGVxKGluc2NyaXB0aW9ucy5pZCwgaW5wdXQuaWQpKTsKICAgICAgcmV0dXJuIHsgb2s6IHRydWUgfTsKICAgIH0pLAogIGRlbGV0ZUluc2NyaXB0aW9uOiBwdWJsaWNRdWVyeS5pbnB1dCh6Lm9iamVjdCh7IC4uLndpdGhUb2tlbiwgaWQ6IHoubnVtYmVyKCkgfSkpLm11dGF0aW9uKGFzeW5jICh7IGlucHV0IH0pID0+IHsKICAgIHJlcXVpcmVBZG1pbihpbnB1dC50b2tlbik7CiAgICBhd2FpdCBnZXREYigpLmRlbGV0ZShpbnNjcmlwdGlvbnMpLndoZXJlKGVxKGluc2NyaXB0aW9ucy5pZCwgaW5wdXQuaWQpKTsKICAgIHJldHVybiB7IG9rOiB0cnVlIH07CiAgfSksCgogIC8vIOKUgOKUgOKUgCBQQVJURU5BSVJFUyDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIAKICBsaXN0UGFydGVuYWlyZXM6IHB1YmxpY1F1ZXJ5LmlucHV0KHoub2JqZWN0KHdpdGhUb2tlbikpLnF1ZXJ5KGFzeW5jICh7IGlucHV0IH0pID0+IHsKICAgIHJlcXVpcmVBZG1pbihpbnB1dC50b2tlbik7CiAgICByZXR1cm4gZ2V0RGIoKS5zZWxlY3QoKS5mcm9tKHBhcnRlbmFpcmVzKS5vcmRlckJ5KGFzYyhwYXJ0ZW5haXJlcy5vcmRyZSksIGFzYyhwYXJ0ZW5haXJlcy5pZCkpOwogIH0pLAogIGNyZWF0ZVBhcnRlbmFpcmU6IHB1YmxpY1F1ZXJ5CiAgICAuaW5wdXQoei5vYmplY3QoeyAuLi53aXRoVG9rZW4sIGRhdGE6IHoub2JqZWN0KHsgbm9tOiB6LnN0cmluZygpLm1pbigxKSwgZGVzY3JpcHRpb246IHouc3RyaW5nKCkuZGVmYXVsdCgiIiksIGxvZ286IHouc3RyaW5nKCkuZGVmYXVsdCgiIiksIG9yZHJlOiB6Lm51bWJlcigpLmludCgpLmRlZmF1bHQoMCksIGFjdGlmOiB6LmJvb2xlYW4oKS5kZWZhdWx0KHRydWUpIH0pIH0pKQogICAgLm11dGF0aW9uKGFzeW5jICh7IGlucHV0IH0pID0+IHsKICAgICAgcmVxdWlyZUFkbWluKGlucHV0LnRva2VuKTsKICAgICAgY29uc3QgW3JdID0gYXdhaXQgZ2V0RGIoKS5pbnNlcnQocGFydGVuYWlyZXMpLnZhbHVlcyhpbnB1dC5kYXRhKS5yZXR1cm5pbmcoeyBpZDogcGFydGVuYWlyZXMuaWQgfSk7CiAgICAgIHJldHVybiB7IGlkOiBOdW1iZXIoci5pZCkgfTsKICAgIH0pLAogIHVwZGF0ZVBhcnRlbmFpcmU6IHB1YmxpY1F1ZXJ5CiAgICAuaW5wdXQoei5vYmplY3QoeyAuLi53aXRoVG9rZW4sIGlkOiB6Lm51bWJlcigpLCBkYXRhOiB6Lm9iamVjdCh7IG5vbTogei5zdHJpbmcoKSwgZGVzY3JpcHRpb246IHouc3RyaW5nKCksIGxvZ286IHouc3RyaW5nKCksIG9yZHJlOiB6Lm51bWJlcigpLmludCgpLCBhY3RpZjogei5ib29sZWFuKCkgfSkucGFydGlhbCgpIH0pKQogICAgLm11dGF0aW9uKGFzeW5jICh7IGlucHV0IH0pID0+IHsKICAgICAgcmVxdWlyZUFkbWluKGlucHV0LnRva2VuKTsKICAgICAgYXdhaXQgZ2V0RGIoKS51cGRhdGUocGFydGVuYWlyZXMpLnNldChpbnB1dC5kYXRhKS53aGVyZShlcShwYXJ0ZW5haXJlcy5pZCwgaW5wdXQuaWQpKTsKICAgICAgcmV0dXJuIHsgb2s6IHRydWUgfTsKICAgIH0pLAogIGRlbGV0ZVBhcnRlbmFpcmU6IHB1YmxpY1F1ZXJ5LmlucHV0KHoub2JqZWN0KHsgLi4ud2l0aFRva2VuLCBpZDogei5udW1iZXIoKSB9KSkubXV0YXRpb24oYXN5bmMgKHsgaW5wdXQgfSkgPT4gewogICAgcmVxdWlyZUFkbWluKGlucHV0LnRva2VuKTsKICAgIGF3YWl0IGdldERiKCkuZGVsZXRlKHBhcnRlbmFpcmVzKS53aGVyZShlcShwYXJ0ZW5haXJlcy5pZCwgaW5wdXQuaWQpKTsKICAgIHJldHVybiB7IG9rOiB0cnVlIH07CiAgfSksCgogIC8vIOKUgOKUgOKUgCBBVkFOVEFHRVMg4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSACiAgbGlzdEF2YW50YWdlczogcHVibGljUXVlcnkuaW5wdXQoei5vYmplY3Qod2l0aFRva2VuKSkucXVlcnkoYXN5bmMgKHsgaW5wdXQgfSkgPT4gewogICAgcmVxdWlyZUFkbWluKGlucHV0LnRva2VuKTsKICAgIHJldHVybiBnZXREYigpLnNlbGVjdCgpLmZyb20oYXZhbnRhZ2VzKS5vcmRlckJ5KGFzYyhhdmFudGFnZXMub3JkcmUpLCBhc2MoYXZhbnRhZ2VzLmlkKSk7CiAgfSksCiAgY3JlYXRlQXZhbnRhZ2U6IHB1YmxpY1F1ZXJ5CiAgICAuaW5wdXQoei5vYmplY3QoeyAuLi53aXRoVG9rZW4sIGRhdGE6IHoub2JqZWN0KHsgaWNvbmU6IHouc3RyaW5nKCkuZGVmYXVsdCgi4pyFIiksIHRpdHJlOiB6LnN0cmluZygpLm1pbigxKSwgZGVzY3JpcHRpb246IHouc3RyaW5nKCkuZGVmYXVsdCgiIiksIG9yZHJlOiB6Lm51bWJlcigpLmludCgpLmRlZmF1bHQoMCksIGFjdGlmOiB6LmJvb2xlYW4oKS5kZWZhdWx0KHRydWUpIH0pIH0pKQogICAgLm11dGF0aW9uKGFzeW5jICh7IGlucHV0IH0pID0+IHsKICAgICAgcmVxdWlyZUFkbWluKGlucHV0LnRva2VuKTsKICAgICAgY29uc3QgW3JdID0gYXdhaXQgZ2V0RGIoKS5pbnNlcnQoYXZhbnRhZ2VzKS52YWx1ZXMoaW5wdXQuZGF0YSkucmV0dXJuaW5nKHsgaWQ6IGF2YW50YWdlcy5pZCB9KTsKICAgICAgcmV0dXJuIHsgaWQ6IE51bWJlcihyLmlkKSB9OwogICAgfSksCiAgdXBkYXRlQXZhbnRhZ2U6IHB1YmxpY1F1ZXJ5CiAgICAuaW5wdXQoei5vYmplY3QoeyAuLi53aXRoVG9rZW4sIGlkOiB6Lm51bWJlcigpLCBkYXRhOiB6Lm9iamVjdCh7IGljb25lOiB6LnN0cmluZygpLCB0aXRyZTogei5zdHJpbmcoKSwgZGVzY3JpcHRpb246IHouc3RyaW5nKCksIG9yZHJlOiB6Lm51bWJlcigpLmludCgpLCBhY3RpZjogei5ib29sZWFuKCkgfSkucGFydGlhbCgpIH0pKQogICAgLm11dGF0aW9uKGFzeW5jICh7IGlucHV0IH0pID0+IHsKICAgICAgcmVxdWlyZUFkbWluKGlucHV0LnRva2VuKTsKICAgICAgYXdhaXQgZ2V0RGIoKS51cGRhdGUoYXZhbnRhZ2VzKS5zZXQoaW5wdXQuZGF0YSkud2hlcmUoZXEoYXZhbnRhZ2VzLmlkLCBpbnB1dC5pZCkpOwogICAgICByZXR1cm4geyBvazogdHJ1ZSB9OwogICAgfSksCiAgZGVsZXRlQXZhbnRhZ2U6IHB1YmxpY1F1ZXJ5LmlucHV0KHoub2JqZWN0KHsgLi4ud2l0aFRva2VuLCBpZDogei5udW1iZXIoKSB9KSkubXV0YXRpb24oYXN5bmMgKHsgaW5wdXQgfSkgPT4gewogICAgcmVxdWlyZUFkbWluKGlucHV0LnRva2VuKTsKICAgIGF3YWl0IGdldERiKCkuZGVsZXRlKGF2YW50YWdlcykud2hlcmUoZXEoYXZhbnRhZ2VzLmlkLCBpbnB1dC5pZCkpOwogICAgcmV0dXJuIHsgb2s6IHRydWUgfTsKICB9KSwKCiAgLy8g4pSA4pSA4pSAIFJFTkRFWi1WT1VTIOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgAogIGxpc3RSZW5kZXpWb3VzOiBwdWJsaWNRdWVyeS5pbnB1dCh6Lm9iamVjdCh3aXRoVG9rZW4pKS5xdWVyeShhc3luYyAoeyBpbnB1dCB9KSA9PiB7CiAgICByZXF1aXJlQWRtaW4oaW5wdXQudG9rZW4pOwogICAgcmV0dXJuIGdldERiKCkuc2VsZWN0KCkuZnJvbShyZW5kZXpWb3VzKS5vcmRlckJ5KGRlc2MocmVuZGV6Vm91cy5pZCkpOwogIH0pLAogIHVwZGF0ZVJlbmRlelZvdXM6IHB1YmxpY1F1ZXJ5CiAgICAuaW5wdXQoei5vYmplY3QoeyAuLi53aXRoVG9rZW4sIGlkOiB6Lm51bWJlcigpLCBzdGF0dXQ6IHouc3RyaW5nKCkubWluKDEpLm1heCg1MCkgfSkpCiAgICAubXV0YXRpb24oYXN5bmMgKHsgaW5wdXQgfSkgPT4gewogICAgICByZXF1aXJlQWRtaW4oaW5wdXQudG9rZW4pOwogICAgICBhd2FpdCBnZXREYigpLnVwZGF0ZShyZW5kZXpWb3VzKS5zZXQoeyBzdGF0dXQ6IGlucHV0LnN0YXR1dCB9KS53aGVyZShlcShyZW5kZXpWb3VzLmlkLCBpbnB1dC5pZCkpOwogICAgICByZXR1cm4geyBvazogdHJ1ZSB9OwogICAgfSksCiAgZGVsZXRlUmVuZGV6Vm91czogcHVibGljUXVlcnkuaW5wdXQoei5vYmplY3QoeyAuLi53aXRoVG9rZW4sIGlkOiB6Lm51bWJlcigpIH0pKS5tdXRhdGlvbihhc3luYyAoeyBpbnB1dCB9KSA9PiB7CiAgICByZXF1aXJlQWRtaW4oaW5wdXQudG9rZW4pOwogICAgYXdhaXQgZ2V0RGIoKS5kZWxldGUocmVuZGV6Vm91cykud2hlcmUoZXEocmVuZGV6Vm91cy5pZCwgaW5wdXQuaWQpKTsKICAgIHJldHVybiB7IG9rOiB0cnVlIH07CiAgfSksCgogIC8qKiBDaGFuZ2VyIGxlIG1vdCBkZSBwYXNzZSBhZG1pbiAqLwogIGNoYW5nZVBhc3N3b3JkOiBwdWJsaWNRdWVyeQogICAgLmlucHV0KHoub2JqZWN0KHsgLi4ud2l0aFRva2VuLCBvbGRQYXNzd29yZDogei5zdHJpbmcoKSwgbmV3UGFzc3dvcmQ6IHouc3RyaW5nKCkubWluKDYpIH0pKQogICAgLm11dGF0aW9uKGFzeW5jICh7IGlucHV0IH0pID0+IHsKICAgICAgY29uc3QgcGF5bG9hZCA9IHJlcXVpcmVBZG1pbihpbnB1dC50b2tlbik7CiAgICAgIGNvbnN0IGRiID0gZ2V0RGIoKTsKICAgICAgY29uc3QgW2FkbWluXSA9IGF3YWl0IGRiLnNlbGVjdCgpLmZyb20oYWRtaW5zKS53aGVyZShlcShhZG1pbnMuaWQsIHBheWxvYWQuc3ViKSkubGltaXQoMSk7CiAgICAgIGlmICghYWRtaW4gfHwgIShhd2FpdCBiY3J5cHQuY29tcGFyZShpbnB1dC5vbGRQYXNzd29yZCwgYWRtaW4ucGFzc3dvcmRIYXNoKSkpIHsKICAgICAgICB0aHJvdyBuZXcgVFJQQ0Vycm9yKHsgY29kZTogIlVOQVVUSE9SSVpFRCIsIG1lc3NhZ2U6ICJBbmNpZW4gbW90IGRlIHBhc3NlIGluY29ycmVjdC4iIH0pOwogICAgICB9CiAgICAgIGF3YWl0IGRiLnVwZGF0ZShhZG1pbnMpLnNldCh7IHBhc3N3b3JkSGFzaDogYXdhaXQgYmNyeXB0Lmhhc2goaW5wdXQubmV3UGFzc3dvcmQsIDEwKSB9KS53aGVyZShlcShhZG1pbnMuaWQsIGFkbWluLmlkKSk7CiAgICAgIHJldHVybiB7IG9rOiB0cnVlIH07CiAgICB9KSwKfSk7Cg==
+import { z } from "zod";
+import { asc, desc, eq } from "drizzle-orm";
+import { TRPCError } from "@trpc/server";
+import bcrypt from "bcryptjs";
+import jwt from "jsonwebtoken";
+import { createRouter, publicQuery } from "./middleware";
+import { getDb } from "./queries/connection";
+import {
+  cycles,
+  filieres,
+  tarifs,
+  etapes,
+  parametres,
+  admins,
+  inscriptions,
+  partenaires,
+  avantages,
+  rendezVous,
+} from "../db/schema";
+
+const JWT_SECRET = process.env.JWT_SECRET ?? "unimpresa-dev-secret";
+const TOKEN_TTL = "12h";
+
+/** Vérifie le token JWT admin — lève UNAUTHORIZED si invalide */
+function requireAdmin(token: string) {
+  try {
+    return jwt.verify(token, JWT_SECRET) as unknown as { sub: number; role: string };
+  } catch {
+    throw new TRPCError({ code: "UNAUTHORIZED", message: "Session expirée, reconnectez-vous." });
+  }
+}
+
+const withToken = { token: z.string().min(1) };
+
+const cycleInput = z.object({
+  nom: z.string().min(1),
+  dateDebut: z.string().min(1),
+  dateFin: z.string().min(1),
+  sessionLabel: z.string().default(""),
+  dureeHeures: z.string().min(1),
+  nbParticipants: z.number().int().min(0),
+  lieu: z.string().min(1),
+  ville: z.string().default("Dakar"),
+  pays: z.string().default("Sénégal"),
+  actif: z.boolean().default(true),
+});
+
+const filiereInput = z.object({
+  cycleId: z.number().nullable().default(null),
+  titre: z.string().min(1),
+  description: z.string().min(1),
+  dureeHeures: z.string().min(1),
+  nbMetiers: z.number().int().min(0),
+  icone: z.string().default("📚"),
+  badge: z.string().default(""),
+  metiers: z.string().default(""),
+  ordre: z.number().int().default(0),
+  actif: z.boolean().default(true),
+});
+
+const tarifInput = z.object({
+  cycleId: z.number().nullable().default(null),
+  label: z.string().min(1),
+  montantChiffres: z.string().min(1),
+  montantLettres: z.string().default(""),
+  description: z.string().default(""),
+  estTotal: z.boolean().default(false),
+  ordre: z.number().int().default(0),
+});
+
+const etapeInput = z.object({
+  cycleId: z.number().nullable().default(null),
+  numero: z.string().min(1),
+  icone: z.string().default("📌"),
+  titre: z.string().min(1),
+  description: z.string().min(1),
+  ordre: z.number().int().default(0),
+});
+
+export const adminRouter = createRouter({
+  /** Connexion Super Admin (bcrypt + JWT) */
+  login: publicQuery
+    .input(z.object({ username: z.string().min(1), password: z.string().min(1) }))
+    .mutation(async ({ input }) => {
+      const db = getDb();
+      const [admin] = await db.select().from(admins).where(eq(admins.username, input.username)).limit(1);
+      if (!admin || !(await bcrypt.compare(input.password, admin.passwordHash))) {
+        throw new TRPCError({ code: "UNAUTHORIZED", message: "Identifiants incorrects." });
+      }
+      const token = jwt.sign({ sub: Number(admin.id), role: admin.role }, JWT_SECRET, { expiresIn: TOKEN_TTL });
+      return { token, username: admin.username, role: admin.role };
+    }),
+
+  /** Statistiques du tableau de bord */
+  stats: publicQuery.input(z.object(withToken)).query(async ({ input }) => {
+    requireAdmin(input.token);
+    const db = getDb();
+    const count = async (t: any) => (await db.select().from(t as any)).length;
+    return {
+      cycles: await count(cycles),
+      filieres: await count(filieres),
+      tarifs: await count(tarifs),
+      etapes: await count(etapes),
+      inscriptions: await count(inscriptions),
+      parametres: await count(parametres),
+    };
+  }),
+
+  // ─── CYCLES ─────────────────────────────────────────────────────────────
+  listCycles: publicQuery.input(z.object(withToken)).query(async ({ input }) => {
+    requireAdmin(input.token);
+    return getDb().select().from(cycles).orderBy(desc(cycles.id));
+  }),
+  createCycle: publicQuery.input(z.object({ ...withToken, data: cycleInput })).mutation(async ({ input }) => {
+    requireAdmin(input.token);
+    const [r] = await getDb().insert(cycles).values(input.data).returning({ id: cycles.id });
+    return { id: Number(r.id) };
+  }),
+  updateCycle: publicQuery.input(z.object({ ...withToken, id: z.number(), data: cycleInput.partial() })).mutation(async ({ input }) => {
+    requireAdmin(input.token);
+    await getDb().update(cycles).set(input.data).where(eq(cycles.id, input.id));
+    return { ok: true };
+  }),
+  deleteCycle: publicQuery.input(z.object({ ...withToken, id: z.number() })).mutation(async ({ input }) => {
+    requireAdmin(input.token);
+    await getDb().delete(cycles).where(eq(cycles.id, input.id));
+    return { ok: true };
+  }),
+
+  // ─── FILIÈRES ───────────────────────────────────────────────────────────
+  listFilieres: publicQuery.input(z.object(withToken)).query(async ({ input }) => {
+    requireAdmin(input.token);
+    return getDb().select().from(filieres).orderBy(asc(filieres.ordre), asc(filieres.id));
+  }),
+  createFiliere: publicQuery.input(z.object({ ...withToken, data: filiereInput })).mutation(async ({ input }) => {
+    requireAdmin(input.token);
+    const [r] = await getDb().insert(filieres).values(input.data).returning({ id: filieres.id });
+    return { id: Number(r.id) };
+  }),
+  updateFiliere: publicQuery.input(z.object({ ...withToken, id: z.number(), data: filiereInput.partial() })).mutation(async ({ input }) => {
+    requireAdmin(input.token);
+    await getDb().update(filieres).set(input.data).where(eq(filieres.id, input.id));
+    return { ok: true };
+  }),
+  deleteFiliere: publicQuery.input(z.object({ ...withToken, id: z.number() })).mutation(async ({ input }) => {
+    requireAdmin(input.token);
+    await getDb().delete(filieres).where(eq(filieres.id, input.id));
+    return { ok: true };
+  }),
+
+  // ─── TARIFS ─────────────────────────────────────────────────────────────
+  listTarifs: publicQuery.input(z.object(withToken)).query(async ({ input }) => {
+    requireAdmin(input.token);
+    return getDb().select().from(tarifs).orderBy(asc(tarifs.ordre), asc(tarifs.id));
+  }),
+  createTarif: publicQuery.input(z.object({ ...withToken, data: tarifInput })).mutation(async ({ input }) => {
+    requireAdmin(input.token);
+    const [r] = await getDb().insert(tarifs).values(input.data).returning({ id: tarifs.id });
+    return { id: Number(r.id) };
+  }),
+  updateTarif: publicQuery.input(z.object({ ...withToken, id: z.number(), data: tarifInput.partial() })).mutation(async ({ input }) => {
+    requireAdmin(input.token);
+    await getDb().update(tarifs).set(input.data).where(eq(tarifs.id, input.id));
+    return { ok: true };
+  }),
+  deleteTarif: publicQuery.input(z.object({ ...withToken, id: z.number() })).mutation(async ({ input }) => {
+    requireAdmin(input.token);
+    await getDb().delete(tarifs).where(eq(tarifs.id, input.id));
+    return { ok: true };
+  }),
+
+  // ─── ÉTAPES (timeline) ─────────────────────────────────────────────────
+  listEtapes: publicQuery.input(z.object(withToken)).query(async ({ input }) => {
+    requireAdmin(input.token);
+    return getDb().select().from(etapes).orderBy(asc(etapes.ordre), asc(etapes.id));
+  }),
+  createEtape: publicQuery.input(z.object({ ...withToken, data: etapeInput })).mutation(async ({ input }) => {
+    requireAdmin(input.token);
+    const [r] = await getDb().insert(etapes).values(input.data).returning({ id: etapes.id });
+    return { id: Number(r.id) };
+  }),
+  updateEtape: publicQuery.input(z.object({ ...withToken, id: z.number(), data: etapeInput.partial() })).mutation(async ({ input }) => {
+    requireAdmin(input.token);
+    await getDb().update(etapes).set(input.data).where(eq(etapes.id, input.id));
+    return { ok: true };
+  }),
+  deleteEtape: publicQuery.input(z.object({ ...withToken, id: z.number() })).mutation(async ({ input }) => {
+    requireAdmin(input.token);
+    await getDb().delete(etapes).where(eq(etapes.id, input.id));
+    return { ok: true };
+  }),
+  /** Réordonne les étapes : liste ordonnée d'ids */
+  reorderEtapes: publicQuery.input(z.object({ ...withToken, ids: z.array(z.number()) })).mutation(async ({ input }) => {
+    requireAdmin(input.token);
+    const db = getDb();
+    await Promise.all(input.ids.map((id, i) => db.update(etapes).set({ ordre: i + 1 }).where(eq(etapes.id, id))));
+    return { ok: true };
+  }),
+
+  // ─── PARAMÈTRES (textes globaux, couleurs, contact, logo) ─────────────
+  listParametres: publicQuery.input(z.object(withToken)).query(async ({ input }) => {
+    requireAdmin(input.token);
+    return getDb().select().from(parametres).orderBy(asc(parametres.cle));
+  }),
+  setParametre: publicQuery.input(z.object({ ...withToken, cle: z.string().min(1).max(100), valeur: z.string() })).mutation(async ({ input }) => {
+    requireAdmin(input.token);
+    const db = getDb();
+    const [existing] = await db.select().from(parametres).where(eq(parametres.cle, input.cle)).limit(1);
+    if (existing) {
+      await db.update(parametres).set({ valeur: input.valeur }).where(eq(parametres.cle, input.cle));
+    } else {
+      await db.insert(parametres).values({ cle: input.cle, valeur: input.valeur });
+    }
+    return { ok: true };
+  }),
+
+  // ─── INSCRIPTIONS ──────────────────────────────────────────────────────
+  listInscriptions: publicQuery.input(z.object(withToken)).query(async ({ input }) => {
+    requireAdmin(input.token);
+    return getDb().select().from(inscriptions).orderBy(desc(inscriptions.id));
+  }),
+  updateInscription: publicQuery
+    .input(z.object({ ...withToken, id: z.number(), statut: z.string().min(1).max(50) }))
+    .mutation(async ({ input }) => {
+      requireAdmin(input.token);
+      await getDb().update(inscriptions).set({ statut: input.statut }).where(eq(inscriptions.id, input.id));
+      return { ok: true };
+    }),
+  deleteInscription: publicQuery.input(z.object({ ...withToken, id: z.number() })).mutation(async ({ input }) => {
+    requireAdmin(input.token);
+    await getDb().delete(inscriptions).where(eq(inscriptions.id, input.id));
+    return { ok: true };
+  }),
+
+  // ─── PARTENAIRES ───────────────────────────────────────────────────────
+  listPartenaires: publicQuery.input(z.object(withToken)).query(async ({ input }) => {
+    requireAdmin(input.token);
+    return getDb().select().from(partenaires).orderBy(asc(partenaires.ordre), asc(partenaires.id));
+  }),
+  createPartenaire: publicQuery
+    .input(z.object({ ...withToken, data: z.object({ nom: z.string().min(1), description: z.string().default(""), logo: z.string().default(""), ordre: z.number().int().default(0), actif: z.boolean().default(true) }) }))
+    .mutation(async ({ input }) => {
+      requireAdmin(input.token);
+      const [r] = await getDb().insert(partenaires).values(input.data).returning({ id: partenaires.id });
+      return { id: Number(r.id) };
+    }),
+  updatePartenaire: publicQuery
+    .input(z.object({ ...withToken, id: z.number(), data: z.object({ nom: z.string(), description: z.string(), logo: z.string(), ordre: z.number().int(), actif: z.boolean() }).partial() }))
+    .mutation(async ({ input }) => {
+      requireAdmin(input.token);
+      await getDb().update(partenaires).set(input.data).where(eq(partenaires.id, input.id));
+      return { ok: true };
+    }),
+  deletePartenaire: publicQuery.input(z.object({ ...withToken, id: z.number() })).mutation(async ({ input }) => {
+    requireAdmin(input.token);
+    await getDb().delete(partenaires).where(eq(partenaires.id, input.id));
+    return { ok: true };
+  }),
+
+  // ─── AVANTAGES ─────────────────────────────────────────────────────────
+  listAvantages: publicQuery.input(z.object(withToken)).query(async ({ input }) => {
+    requireAdmin(input.token);
+    return getDb().select().from(avantages).orderBy(asc(avantages.ordre), asc(avantages.id));
+  }),
+  createAvantage: publicQuery
+    .input(z.object({ ...withToken, data: z.object({ icone: z.string().default("✅"), titre: z.string().min(1), description: z.string().default(""), ordre: z.number().int().default(0), actif: z.boolean().default(true) }) }))
+    .mutation(async ({ input }) => {
+      requireAdmin(input.token);
+      const [r] = await getDb().insert(avantages).values(input.data).returning({ id: avantages.id });
+      return { id: Number(r.id) };
+    }),
+  updateAvantage: publicQuery
+    .input(z.object({ ...withToken, id: z.number(), data: z.object({ icone: z.string(), titre: z.string(), description: z.string(), ordre: z.number().int(), actif: z.boolean() }).partial() }))
+    .mutation(async ({ input }) => {
+      requireAdmin(input.token);
+      await getDb().update(avantages).set(input.data).where(eq(avantages.id, input.id));
+      return { ok: true };
+    }),
+  deleteAvantage: publicQuery.input(z.object({ ...withToken, id: z.number() })).mutation(async ({ input }) => {
+    requireAdmin(input.token);
+    await getDb().delete(avantages).where(eq(avantages.id, input.id));
+    return { ok: true };
+  }),
+
+  // ─── RENDEZ-VOUS ───────────────────────────────────────────────────────
+  listRendezVous: publicQuery.input(z.object(withToken)).query(async ({ input }) => {
+    requireAdmin(input.token);
+    return getDb().select().from(rendezVous).orderBy(desc(rendezVous.id));
+  }),
+  updateRendezVous: publicQuery
+    .input(z.object({ ...withToken, id: z.number(), statut: z.string().min(1).max(50) }))
+    .mutation(async ({ input }) => {
+      requireAdmin(input.token);
+      await getDb().update(rendezVous).set({ statut: input.statut }).where(eq(rendezVous.id, input.id));
+      return { ok: true };
+    }),
+  deleteRendezVous: publicQuery.input(z.object({ ...withToken, id: z.number() })).mutation(async ({ input }) => {
+    requireAdmin(input.token);
+    await getDb().delete(rendezVous).where(eq(rendezVous.id, input.id));
+    return { ok: true };
+  }),
+
+  /** Changer le mot de passe admin */
+  changePassword: publicQuery
+    .input(z.object({ ...withToken, oldPassword: z.string(), newPassword: z.string().min(6) }))
+    .mutation(async ({ input }) => {
+      const payload = requireAdmin(input.token);
+      const db = getDb();
+      const [admin] = await db.select().from(admins).where(eq(admins.id, payload.sub)).limit(1);
+      if (!admin || !(await bcrypt.compare(input.oldPassword, admin.passwordHash))) {
+        throw new TRPCError({ code: "UNAUTHORIZED", message: "Ancien mot de passe incorrect." });
+      }
+      await db.update(admins).set({ passwordHash: await bcrypt.hash(input.newPassword, 10) }).where(eq(admins.id, admin.id));
+      return { ok: true };
+    }),
+});

@@ -1,1 +1,150 @@
-aW1wb3J0IHsKICBwZ1RhYmxlLAogIHNlcmlhbCwKICBiaWdpbnQsCiAgdmFyY2hhciwKICB0ZXh0LAogIGludGVnZXIsCiAgYm9vbGVhbiwKICB0aW1lc3RhbXAsCn0gZnJvbSAiZHJpenpsZS1vcm0vcGctY29yZSI7CgovLyDilIDilIDilIAgQ3ljbGVzIC8gc2Vzc2lvbnMgZGUgZm9ybWF0aW9uIOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgApleHBvcnQgY29uc3QgY3ljbGVzID0gcGdUYWJsZSgiY3ljbGVzIiwgewogIGlkOiBzZXJpYWwoImlkIikucHJpbWFyeUtleSgpLAogIG5vbTogdmFyY2hhcigibm9tIiwgeyBsZW5ndGg6IDI1NSB9KS5ub3ROdWxsKCksCiAgZGF0ZURlYnV0OiB2YXJjaGFyKCJkYXRlX2RlYnV0IiwgeyBsZW5ndGg6IDEwMCB9KS5ub3ROdWxsKCksCiAgZGF0ZUZpbjogdmFyY2hhcigiZGF0ZV9maW4iLCB7IGxlbmd0aDogMTAwIH0pLm5vdE51bGwoKSwKICBzZXNzaW9uTGFiZWw6IHZhcmNoYXIoInNlc3Npb25fbGFiZWwiLCB7IGxlbmd0aDogMjU1IH0pLm5vdE51bGwoKS5kZWZhdWx0KCIiKSwKICBkdXJlZUhldXJlczogdmFyY2hhcigiZHVyZWVfaGV1cmVzIiwgeyBsZW5ndGg6IDUwIH0pLm5vdE51bGwoKSwKICBuYlBhcnRpY2lwYW50czogaW50ZWdlcigibmJfcGFydGljaXBhbnRzIikubm90TnVsbCgpLAogIGxpZXU6IHRleHQoImxpZXUiKS5ub3ROdWxsKCksCiAgdmlsbGU6IHZhcmNoYXIoInZpbGxlIiwgeyBsZW5ndGg6IDEwMCB9KS5ub3ROdWxsKCkuZGVmYXVsdCgiRGFrYXIiKSwKICBwYXlzOiB2YXJjaGFyKCJwYXlzIiwgeyBsZW5ndGg6IDEwMCB9KS5ub3ROdWxsKCkuZGVmYXVsdCgiU8OpbsOpZ2FsIiksCiAgYWN0aWY6IGJvb2xlYW4oImFjdGlmIikubm90TnVsbCgpLmRlZmF1bHQodHJ1ZSksCiAgY3JlYXRlZEF0OiB0aW1lc3RhbXAoImNyZWF0ZWRfYXQiKS5ub3ROdWxsKCkuZGVmYXVsdE5vdygpLAp9KTsKCi8vIOKUgOKUgOKUgCBGaWxpw6hyZXMgLyBzZWN0ZXVycyDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIAKZXhwb3J0IGNvbnN0IGZpbGllcmVzID0gcGdUYWJsZSgiZmlsaWVyZXMiLCB7CiAgaWQ6IHNlcmlhbCgiaWQiKS5wcmltYXJ5S2V5KCksCiAgY3ljbGVJZDogYmlnaW50KCJjeWNsZV9pZCIsIHsgbW9kZTogIm51bWJlciIgfSksCiAgdGl0cmU6IHZhcmNoYXIoInRpdHJlIiwgeyBsZW5ndGg6IDI1NSB9KS5ub3ROdWxsKCksCiAgZGVzY3JpcHRpb246IHRleHQoImRlc2NyaXB0aW9uIikubm90TnVsbCgpLAogIGR1cmVlSGV1cmVzOiB2YXJjaGFyKCJkdXJlZV9oZXVyZXMiLCB7IGxlbmd0aDogNTAgfSkubm90TnVsbCgpLAogIG5iTWV0aWVyczogaW50ZWdlcigibmJfbWV0aWVycyIpLm5vdE51bGwoKSwKICBpY29uZTogdmFyY2hhcigiaWNvbmUiLCB7IGxlbmd0aDogNTAgfSkubm90TnVsbCgpLmRlZmF1bHQoIvCfk5oiKSwKICBiYWRnZTogdmFyY2hhcigiYmFkZ2UiLCB7IGxlbmd0aDogMTAwIH0pLm5vdE51bGwoKS5kZWZhdWx0KCIiKSwKICBtZXRpZXJzOiB0ZXh0KCJtZXRpZXJzIikubm90TnVsbCgpLmRlZmF1bHQoIiIpLAogIG9yZHJlOiBpbnRlZ2VyKCJvcmRyZSIpLm5vdE51bGwoKS5kZWZhdWx0KDApLAogIGFjdGlmOiBib29sZWFuKCJhY3RpZiIpLm5vdE51bGwoKS5kZWZhdWx0KHRydWUpLAp9KTsKCi8vIOKUgOKUgOKUgCBUYXJpZnMg4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSACmV4cG9ydCBjb25zdCB0YXJpZnMgPSBwZ1RhYmxlKCJ0YXJpZnMiLCB7CiAgaWQ6IHNlcmlhbCgiaWQiKS5wcmltYXJ5S2V5KCksCiAgY3ljbGVJZDogYmlnaW50KCJjeWNsZV9pZCIsIHsgbW9kZTogIm51bWJlciIgfSksCiAgbGFiZWw6IHZhcmNoYXIoImxhYmVsIiwgeyBsZW5ndGg6IDI1NSB9KS5ub3ROdWxsKCksCiAgbW9udGFudENoaWZmcmVzOiB2YXJjaGFyKCJtb250YW50X2NoaWZmcmVzIiwgeyBsZW5ndGg6IDEwMCB9KS5ub3ROdWxsKCksCiAgbW9udGFudExldHRyZXM6IHZhcmNoYXIoIm1vbnRhbnRfbGV0dHJlcyIsIHsgbGVuZ3RoOiAyNTUgfSkubm90TnVsbCgpLmRlZmF1bHQoIiIpLAogIGRlc2NyaXB0aW9uOiB2YXJjaGFyKCJkZXNjcmlwdGlvbiIsIHsgbGVuZ3RoOiAyNTUgfSkubm90TnVsbCgpLmRlZmF1bHQoIiIpLAogIGVzdFRvdGFsOiBib29sZWFuKCJlc3RfdG90YWwiKS5ub3ROdWxsKCkuZGVmYXVsdChmYWxzZSksCiAgb3JkcmU6IGludGVnZXIoIm9yZHJlIikubm90TnVsbCgpLmRlZmF1bHQoMCksCn0pOwoKLy8g4pSA4pSA4pSAIMOJdGFwZXMgZHUgZMOpcm91bGVtZW50ICh0aW1lbGluZSkg4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSACmV4cG9ydCBjb25zdCBldGFwZXMgPSBwZ1RhYmxlKCJldGFwZXMiLCB7CiAgaWQ6IHNlcmlhbCgiaWQiKS5wcmltYXJ5S2V5KCksCiAgY3ljbGVJZDogYmlnaW50KCJjeWNsZV9pZCIsIHsgbW9kZTogIm51bWJlciIgfSksCiAgbnVtZXJvOiB2YXJjaGFyKCJudW1lcm8iLCB7IGxlbmd0aDogMTAgfSkubm90TnVsbCgpLAogIGljb25lOiB2YXJjaGFyKCJpY29uZSIsIHsgbGVuZ3RoOiA1MCB9KS5ub3ROdWxsKCkuZGVmYXVsdCgi8J+TjCIpLAogIHRpdHJlOiB2YXJjaGFyKCJ0aXRyZSIsIHsgbGVuZ3RoOiAyNTUgfSkubm90TnVsbCgpLAogIGRlc2NyaXB0aW9uOiB0ZXh0KCJkZXNjcmlwdGlvbiIpLm5vdE51bGwoKSwKICBvcmRyZTogaW50ZWdlcigib3JkcmUiKS5ub3ROdWxsKCkuZGVmYXVsdCgwKSwKfSk7CgovLyDilIDilIDilIAgUGFyYW3DqHRyZXMgZ2xvYmF1eCAoY2zDqSAvIHZhbGV1cikg4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSACmV4cG9ydCBjb25zdCBwYXJhbWV0cmVzID0gcGdUYWJsZSgicGFyYW1ldHJlcyIsIHsKICBpZDogc2VyaWFsKCJpZCIpLnByaW1hcnlLZXkoKSwKICBjbGU6IHZhcmNoYXIoImNsZSIsIHsgbGVuZ3RoOiAxMDAgfSkubm90TnVsbCgpLnVuaXF1ZSgpLAogIHZhbGV1cjogdGV4dCgidmFsZXVyIikubm90TnVsbCgpLAp9KTsKCi8vIOKUgOKUgOKUgCBBZG1pbnMg4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSACmV4cG9ydCBjb25zdCBhZG1pbnMgPSBwZ1RhYmxlKCJhZG1pbnMiLCB7CiAgaWQ6IHNlcmlhbCgiaWQiKS5wcmltYXJ5S2V5KCksCiAgdXNlcm5hbWU6IHZhcmNoYXIoInVzZXJuYW1lIiwgeyBsZW5ndGg6IDEwMCB9KS5ub3ROdWxsKCkudW5pcXVlKCksCiAgcGFzc3dvcmRIYXNoOiB2YXJjaGFyKCJwYXNzd29yZF9oYXNoIiwgeyBsZW5ndGg6IDI1NSB9KS5ub3ROdWxsKCksCiAgcm9sZTogdmFyY2hhcigicm9sZSIsIHsgbGVuZ3RoOiA1MCB9KS5ub3ROdWxsKCkuZGVmYXVsdCgic3VwZXJhZG1pbiIpLAp9KTsKCi8vIOKUgOKUgOKUgCBJbnNjcmlwdGlvbnMgY2FuZGlkYXRzIChkb3NzaWVyIGNvbXBsZXQpIOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgApleHBvcnQgY29uc3QgaW5zY3JpcHRpb25zID0gcGdUYWJsZSgiaW5zY3JpcHRpb25zIiwgewogIGlkOiBzZXJpYWwoImlkIikucHJpbWFyeUtleSgpLAogIG51bWVyb0Rvc3NpZXI6IHZhcmNoYXIoIm51bWVyb19kb3NzaWVyIiwgeyBsZW5ndGg6IDUwIH0pLm5vdE51bGwoKS5kZWZhdWx0KCIiKSwKICBub206IHZhcmNoYXIoIm5vbSIsIHsgbGVuZ3RoOiAxMDAgfSkubm90TnVsbCgpLAogIHByZW5vbTogdmFyY2hhcigicHJlbm9tIiwgeyBsZW5ndGg6IDEwMCB9KS5ub3ROdWxsKCksCiAgZW1haWw6IHZhcmNoYXIoImVtYWlsIiwgeyBsZW5ndGg6IDI1NSB9KS5ub3ROdWxsKCksCiAgdGVsZXBob25lOiB2YXJjaGFyKCJ0ZWxlcGhvbmUiLCB7IGxlbmd0aDogNTAgfSkubm90TnVsbCgpLAogIGZpbGllcmVJZDogYmlnaW50KCJmaWxpZXJlX2lkIiwgeyBtb2RlOiAibnVtYmVyIiB9KSwKICBmaWxpZXJlTGFiZWw6IHZhcmNoYXIoImZpbGllcmVfbGFiZWwiLCB7IGxlbmd0aDogMjU1IH0pLm5vdE51bGwoKS5kZWZhdWx0KCIiKSwKICBjeWNsZUlkOiBiaWdpbnQoImN5Y2xlX2lkIiwgeyBtb2RlOiAibnVtYmVyIiB9KSwKICBjeWNsZUxhYmVsOiB2YXJjaGFyKCJjeWNsZV9sYWJlbCIsIHsgbGVuZ3RoOiAyNTUgfSkubm90TnVsbCgpLmRlZmF1bHQoIiIpLAogIHN0YXR1dDogdmFyY2hhcigic3RhdHV0IiwgeyBsZW5ndGg6IDUwIH0pLm5vdE51bGwoKS5kZWZhdWx0KCJub3V2ZWF1IiksCiAgZGF0ZU5haXNzYW5jZTogdmFyY2hhcigiZGF0ZV9uYWlzc2FuY2UiLCB7IGxlbmd0aDogMzAgfSkubm90TnVsbCgpLmRlZmF1bHQoIiIpLAogIGxpZXVOYWlzc2FuY2U6IHZhcmNoYXIoImxpZXVfbmFpc3NhbmNlIiwgeyBsZW5ndGg6IDE1MCB9KS5ub3ROdWxsKCkuZGVmYXVsdCgiIiksCiAgc2V4ZTogdmFyY2hhcigic2V4ZSIsIHsgbGVuZ3RoOiAyMCB9KS5ub3ROdWxsKCkuZGVmYXVsdCgiIiksCiAgc2l0dWF0aW9uRmFtaWxpYWxlOiB2YXJjaGFyKCJzaXR1YXRpb25fZmFtaWxpYWxlIiwgeyBsZW5ndGg6IDMwIH0pLm5vdE51bGwoKS5kZWZhdWx0KCIiKSwKICBkb2N1bWVudHM6IHRleHQoImRvY3VtZW50cyIpLm5vdE51bGwoKS5kZWZhdWx0KCIiKSwKICBhZHJlc3NlOiB2YXJjaGFyKCJhZHJlc3NlIiwgeyBsZW5ndGg6IDI1NSB9KS5ub3ROdWxsKCkuZGVmYXVsdCgiIiksCiAgdXJnZW5jZU5vbTogdmFyY2hhcigidXJnZW5jZV9ub20iLCB7IGxlbmd0aDogMTUwIH0pLm5vdE51bGwoKS5kZWZhdWx0KCIiKSwKICB1cmdlbmNlVGVsZXBob25lOiB2YXJjaGFyKCJ1cmdlbmNlX3RlbGVwaG9uZSIsIHsgbGVuZ3RoOiA1MCB9KS5ub3ROdWxsKCkuZGVmYXVsdCgiIiksCiAgZW5BY3Rpdml0ZTogdmFyY2hhcigiZW5fYWN0aXZpdGUiLCB7IGxlbmd0aDogMTAgfSkubm90TnVsbCgpLmRlZmF1bHQoIiIpLAogIHByb2Zlc3Npb246IHZhcmNoYXIoInByb2Zlc3Npb24iLCB7IGxlbmd0aDogMTUwIH0pLm5vdE51bGwoKS5kZWZhdWx0KCIiKSwKICBlbXBsb3lldXI6IHZhcmNoYXIoImVtcGxveWV1ciIsIHsgbGVuZ3RoOiAxNTAgfSkubm90TnVsbCgpLmRlZmF1bHQoIiIpLAogIG1ldGllckNob2lzaTogdmFyY2hhcigibWV0aWVyX2Nob2lzaSIsIHsgbGVuZ3RoOiAxNTAgfSkubm90TnVsbCgpLmRlZmF1bHQoIiIpLAogIGNyZWF0ZWRBdDogdGltZXN0YW1wKCJjcmVhdGVkX2F0Iikubm90TnVsbCgpLmRlZmF1bHROb3coKSwKfSk7CgovLyDilIDilIDilIAgUGFydGVuYWlyZXMg4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSACmV4cG9ydCBjb25zdCBwYXJ0ZW5haXJlcyA9IHBnVGFibGUoInBhcnRlbmFpcmVzIiwgewogIGlkOiBzZXJpYWwoImlkIikucHJpbWFyeUtleSgpLAogIG5vbTogdmFyY2hhcigibm9tIiwgeyBsZW5ndGg6IDI1NSB9KS5ub3ROdWxsKCksCiAgZGVzY3JpcHRpb246IHRleHQoImRlc2NyaXB0aW9uIikubm90TnVsbCgpLmRlZmF1bHQoIiIpLAogIGxvZ286IHZhcmNoYXIoImxvZ28iLCB7IGxlbmd0aDogNTAwIH0pLm5vdE51bGwoKS5kZWZhdWx0KCIiKSwKICBvcmRyZTogaW50ZWdlcigib3JkcmUiKS5ub3ROdWxsKCkuZGVmYXVsdCgwKSwKICBhY3RpZjogYm9vbGVhbigiYWN0aWYiKS5ub3ROdWxsKCkuZGVmYXVsdCh0cnVlKSwKfSk7CgovLyDilIDilIDilIAgQXZhbnRhZ2VzICjCqyBQb3VycXVvaSBub3VzIGNob2lzaXIgwrspIOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgApleHBvcnQgY29uc3QgYXZhbnRhZ2VzID0gcGdUYWJsZSgiYXZhbnRhZ2VzIiwgewogIGlkOiBzZXJpYWwoImlkIikucHJpbWFyeUtleSgpLAogIGljb25lOiB2YXJjaGFyKCJpY29uZSIsIHsgbGVuZ3RoOiA1MCB9KS5ub3ROdWxsKCkuZGVmYXVsdCgi4pyFIiksCiAgdGl0cmU6IHZhcmNoYXIoInRpdHJlIiwgeyBsZW5ndGg6IDI1NSB9KS5ub3ROdWxsKCksCiAgZGVzY3JpcHRpb246IHRleHQoImRlc2NyaXB0aW9uIikubm90TnVsbCgpLmRlZmF1bHQoIiIpLAogIG9yZHJlOiBpbnRlZ2VyKCJvcmRyZSIpLm5vdE51bGwoKS5kZWZhdWx0KDApLAogIGFjdGlmOiBib29sZWFuKCJhY3RpZiIpLm5vdE51bGwoKS5kZWZhdWx0KHRydWUpLAp9KTsKCi8vIOKUgOKUgOKUgCBSZW5kZXotdm91cyDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIAKZXhwb3J0IGNvbnN0IHJlbmRlelZvdXMgPSBwZ1RhYmxlKCJyZW5kZXpfdm91cyIsIHsKICBpZDogc2VyaWFsKCJpZCIpLnByaW1hcnlLZXkoKSwKICBwcmVub206IHZhcmNoYXIoInByZW5vbSIsIHsgbGVuZ3RoOiAxMDAgfSkubm90TnVsbCgpLAogIG5vbTogdmFyY2hhcigibm9tIiwgeyBsZW5ndGg6IDEwMCB9KS5ub3ROdWxsKCksCiAgdGVsZXBob25lOiB2YXJjaGFyKCJ0ZWxlcGhvbmUiLCB7IGxlbmd0aDogNTAgfSkubm90TnVsbCgpLAogIGVtYWlsOiB2YXJjaGFyKCJlbWFpbCIsIHsgbGVuZ3RoOiAyNTUgfSkubm90TnVsbCgpLmRlZmF1bHQoIiIpLAogIG1vdGlmOiB0ZXh0KCJtb3RpZiIpLm5vdE51bGwoKS5kZWZhdWx0KCIiKSwKICBkYXRlU291aGFpdGVlOiB2YXJjaGFyKCJkYXRlX3NvdWhhaXRlZSIsIHsgbGVuZ3RoOiA1MCB9KS5ub3ROdWxsKCkuZGVmYXVsdCgiIiksCiAgc3RhdHV0OiB2YXJjaGFyKCJzdGF0dXQiLCB7IGxlbmd0aDogNTAgfSkubm90TnVsbCgpLmRlZmF1bHQoIm5vdXZlYXUiKSwKICBjcmVhdGVkQXQ6IHRpbWVzdGFtcCgiY3JlYXRlZF9hdCIpLm5vdE51bGwoKS5kZWZhdWx0Tm93KCksCn0pOwoKZXhwb3J0IHR5cGUgQ3ljbGUgPSB0eXBlb2YgY3ljbGVzLiRpbmZlclNlbGVjdDsKZXhwb3J0IHR5cGUgRmlsaWVyZSA9IHR5cGVvZiBmaWxpZXJlcy4kaW5mZXJTZWxlY3Q7CmV4cG9ydCB0eXBlIFRhcmlmID0gdHlwZW9mIHRhcmlmcy4kaW5mZXJTZWxlY3Q7CmV4cG9ydCB0eXBlIEV0YXBlID0gdHlwZW9mIGV0YXBlcy4kaW5mZXJTZWxlY3Q7CmV4cG9ydCB0eXBlIFBhcmFtZXRyZSA9IHR5cGVvZiBwYXJhbWV0cmVzLiRpbmZlclNlbGVjdDsKZXhwb3J0IHR5cGUgSW5zY3JpcHRpb24gPSB0eXBlb2YgaW5zY3JpcHRpb25zLiRpbmZlclNlbGVjdDsKZXhwb3J0IHR5cGUgUGFydGVuYWlyZSA9IHR5cGVvZiBwYXJ0ZW5haXJlcy4kaW5mZXJTZWxlY3Q7CmV4cG9ydCB0eXBlIEF2YW50YWdlID0gdHlwZW9mIGF2YW50YWdlcy4kaW5mZXJTZWxlY3Q7CmV4cG9ydCB0eXBlIFJlbmRlelZvdXMgPSB0eXBlb2YgcmVuZGV6Vm91cy4kaW5mZXJTZWxlY3Q7Cg==
+import {
+  pgTable,
+  serial,
+  bigint,
+  varchar,
+  text,
+  integer,
+  boolean,
+  timestamp,
+} from "drizzle-orm/pg-core";
+
+// ─── Cycles / sessions de formation ─────────────────────────────────────────
+export const cycles = pgTable("cycles", {
+  id: serial("id").primaryKey(),
+  nom: varchar("nom", { length: 255 }).notNull(),
+  dateDebut: varchar("date_debut", { length: 100 }).notNull(),
+  dateFin: varchar("date_fin", { length: 100 }).notNull(),
+  sessionLabel: varchar("session_label", { length: 255 }).notNull().default(""),
+  dureeHeures: varchar("duree_heures", { length: 50 }).notNull(),
+  nbParticipants: integer("nb_participants").notNull(),
+  lieu: text("lieu").notNull(),
+  ville: varchar("ville", { length: 100 }).notNull().default("Dakar"),
+  pays: varchar("pays", { length: 100 }).notNull().default("Sénégal"),
+  actif: boolean("actif").notNull().default(true),
+  createdAt: timestamp("created_at").notNull().defaultNow(),
+});
+
+// ─── Filières / secteurs ────────────────────────────────────────────────────
+export const filieres = pgTable("filieres", {
+  id: serial("id").primaryKey(),
+  cycleId: bigint("cycle_id", { mode: "number" }),
+  titre: varchar("titre", { length: 255 }).notNull(),
+  description: text("description").notNull(),
+  dureeHeures: varchar("duree_heures", { length: 50 }).notNull(),
+  nbMetiers: integer("nb_metiers").notNull(),
+  icone: varchar("icone", { length: 50 }).notNull().default("📚"),
+  badge: varchar("badge", { length: 100 }).notNull().default(""),
+  metiers: text("metiers").notNull().default(""),
+  ordre: integer("ordre").notNull().default(0),
+  actif: boolean("actif").notNull().default(true),
+});
+
+// ─── Tarifs ─────────────────────────────────────────────────────────────────
+export const tarifs = pgTable("tarifs", {
+  id: serial("id").primaryKey(),
+  cycleId: bigint("cycle_id", { mode: "number" }),
+  label: varchar("label", { length: 255 }).notNull(),
+  montantChiffres: varchar("montant_chiffres", { length: 100 }).notNull(),
+  montantLettres: varchar("montant_lettres", { length: 255 }).notNull().default(""),
+  description: varchar("description", { length: 255 }).notNull().default(""),
+  estTotal: boolean("est_total").notNull().default(false),
+  ordre: integer("ordre").notNull().default(0),
+});
+
+// ─── Étapes du déroulement (timeline) ───────────────────────────────────────
+export const etapes = pgTable("etapes", {
+  id: serial("id").primaryKey(),
+  cycleId: bigint("cycle_id", { mode: "number" }),
+  numero: varchar("numero", { length: 10 }).notNull(),
+  icone: varchar("icone", { length: 50 }).notNull().default("📌"),
+  titre: varchar("titre", { length: 255 }).notNull(),
+  description: text("description").notNull(),
+  ordre: integer("ordre").notNull().default(0),
+});
+
+// ─── Paramètres globaux (clé / valeur) ──────────────────────────────────────
+export const parametres = pgTable("parametres", {
+  id: serial("id").primaryKey(),
+  cle: varchar("cle", { length: 100 }).notNull().unique(),
+  valeur: text("valeur").notNull(),
+});
+
+// ─── Admins ─────────────────────────────────────────────────────────────────
+export const admins = pgTable("admins", {
+  id: serial("id").primaryKey(),
+  username: varchar("username", { length: 100 }).notNull().unique(),
+  passwordHash: varchar("password_hash", { length: 255 }).notNull(),
+  role: varchar("role", { length: 50 }).notNull().default("superadmin"),
+});
+
+// ─── Inscriptions candidats (dossier complet) ───────────────────────────────
+export const inscriptions = pgTable("inscriptions", {
+  id: serial("id").primaryKey(),
+  numeroDossier: varchar("numero_dossier", { length: 50 }).notNull().default(""),
+  nom: varchar("nom", { length: 100 }).notNull(),
+  prenom: varchar("prenom", { length: 100 }).notNull(),
+  email: varchar("email", { length: 255 }).notNull(),
+  telephone: varchar("telephone", { length: 50 }).notNull(),
+  filiereId: bigint("filiere_id", { mode: "number" }),
+  filiereLabel: varchar("filiere_label", { length: 255 }).notNull().default(""),
+  cycleId: bigint("cycle_id", { mode: "number" }),
+  cycleLabel: varchar("cycle_label", { length: 255 }).notNull().default(""),
+  statut: varchar("statut", { length: 50 }).notNull().default("nouveau"),
+  dateNaissance: varchar("date_naissance", { length: 30 }).notNull().default(""),
+  lieuNaissance: varchar("lieu_naissance", { length: 150 }).notNull().default(""),
+  sexe: varchar("sexe", { length: 20 }).notNull().default(""),
+  situationFamiliale: varchar("situation_familiale", { length: 30 }).notNull().default(""),
+  documents: text("documents").notNull().default(""),
+  adresse: varchar("adresse", { length: 255 }).notNull().default(""),
+  urgenceNom: varchar("urgence_nom", { length: 150 }).notNull().default(""),
+  urgenceTelephone: varchar("urgence_telephone", { length: 50 }).notNull().default(""),
+  enActivite: varchar("en_activite", { length: 10 }).notNull().default(""),
+  profession: varchar("profession", { length: 150 }).notNull().default(""),
+  employeur: varchar("employeur", { length: 150 }).notNull().default(""),
+  metierChoisi: varchar("metier_choisi", { length: 150 }).notNull().default(""),
+  createdAt: timestamp("created_at").notNull().defaultNow(),
+});
+
+// ─── Partenaires ────────────────────────────────────────────────────────────
+export const partenaires = pgTable("partenaires", {
+  id: serial("id").primaryKey(),
+  nom: varchar("nom", { length: 255 }).notNull(),
+  description: text("description").notNull().default(""),
+  logo: varchar("logo", { length: 500 }).notNull().default(""),
+  ordre: integer("ordre").notNull().default(0),
+  actif: boolean("actif").notNull().default(true),
+});
+
+// ─── Avantages (« Pourquoi nous choisir ») ──────────────────────────────────
+export const avantages = pgTable("avantages", {
+  id: serial("id").primaryKey(),
+  icone: varchar("icone", { length: 50 }).notNull().default("✅"),
+  titre: varchar("titre", { length: 255 }).notNull(),
+  description: text("description").notNull().default(""),
+  ordre: integer("ordre").notNull().default(0),
+  actif: boolean("actif").notNull().default(true),
+});
+
+// ─── Rendez-vous ────────────────────────────────────────────────────────────
+export const rendezVous = pgTable("rendez_vous", {
+  id: serial("id").primaryKey(),
+  prenom: varchar("prenom", { length: 100 }).notNull(),
+  nom: varchar("nom", { length: 100 }).notNull(),
+  telephone: varchar("telephone", { length: 50 }).notNull(),
+  email: varchar("email", { length: 255 }).notNull().default(""),
+  motif: text("motif").notNull().default(""),
+  dateSouhaitee: varchar("date_souhaitee", { length: 50 }).notNull().default(""),
+  statut: varchar("statut", { length: 50 }).notNull().default("nouveau"),
+  createdAt: timestamp("created_at").notNull().defaultNow(),
+});
+
+export type Cycle = typeof cycles.$inferSelect;
+export type Filiere = typeof filieres.$inferSelect;
+export type Tarif = typeof tarifs.$inferSelect;
+export type Etape = typeof etapes.$inferSelect;
+export type Parametre = typeof parametres.$inferSelect;
+export type Inscription = typeof inscriptions.$inferSelect;
+export type Partenaire = typeof partenaires.$inferSelect;
+export type Avantage = typeof avantages.$inferSelect;
+export type RendezVous = typeof rendezVous.$inferSelect;

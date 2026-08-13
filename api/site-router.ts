@@ -1,1 +1,221 @@
-aW1wb3J0IHsgeiB9IGZyb20gInpvZCI7CmltcG9ydCB7IGFzYywgZGVzYywgZXEgfSBmcm9tICJkcml6emxlLW9ybSI7CmltcG9ydCBub2RlbWFpbGVyIGZyb20gIm5vZGVtYWlsZXIiOwppbXBvcnQgeyBjcmVhdGVSb3V0ZXIsIHB1YmxpY1F1ZXJ5IH0gZnJvbSAiLi9taWRkbGV3YXJlIjsKaW1wb3J0IHsgZ2V0RGIgfSBmcm9tICIuL3F1ZXJpZXMvY29ubmVjdGlvbiI7CmltcG9ydCB7CiAgY3ljbGVzLAogIGZpbGllcmVzLAogIHRhcmlmcywKICBldGFwZXMsCiAgcGFyYW1ldHJlcywKICBpbnNjcmlwdGlvbnMsCiAgcGFydGVuYWlyZXMsCiAgYXZhbnRhZ2VzLAogIHJlbmRlelZvdXMsCn0gZnJvbSAiLi4vZGIvc2NoZW1hIjsKaW1wb3J0IHsKICBGQUxMQkFDS19DWUNMRSwKICBGQUxMQkFDS19QQVJBTVMsCiAgRkFMTEJBQ0tfRklMSUVSRVMsCiAgRkFMTEJBQ0tfVEFSSUZTLAogIEZBTExCQUNLX0VUQVBFUywKfSBmcm9tICIuL2xpYi9mYWxsYmFjayI7CgovKiogRG9ubsOpZXMgZGUgcmVwbGkgc2kgbGEgQkREIGVzdCBpbmpvaWduYWJsZSDigJQgbGUgc2l0ZSByZXN0ZSBhZmZpY2hhYmxlICovCmZ1bmN0aW9uIGZhbGxiYWNrUHVibGljRGF0YSgpIHsKICByZXR1cm4gewogICAgY3ljbGU6IEZBTExCQUNLX0NZQ0xFIGFzIGFueSwKICAgIGN5Y2xlczogW0ZBTExCQUNLX0NZQ0xFIGFzIGFueV0sCiAgICBmaWxpZXJlczogRkFMTEJBQ0tfRklMSUVSRVMgYXMgYW55LAogICAgdGFyaWZzOiBGQUxMQkFDS19UQVJJRlMgYXMgYW55LAogICAgZXRhcGVzOiBGQUxMQkFDS19FVEFQRVMgYXMgYW55LAogICAgcGFydGVuYWlyZXM6IFtdIGFzIGFueVtdLAogICAgYXZhbnRhZ2VzOiBbXSBhcyBhbnlbXSwKICAgIHBhcmFtczogRkFMTEJBQ0tfUEFSQU1TLAogIH07Cn0KCi8qKiBSw6ljdXDDqHJlIHRvdXMgbGVzIHBhcmFtw6h0cmVzIGdsb2JhdXggc291cyBmb3JtZSBkZSBtYXAgY2zDqSDihpIgdmFsZXVyICovCmFzeW5jIGZ1bmN0aW9uIGdldFBhcmFtc01hcCgpOiBQcm9taXNlPFJlY29yZDxzdHJpbmcsIHN0cmluZz4+IHsKICBjb25zdCByb3dzID0gYXdhaXQgZ2V0RGIoKS5zZWxlY3QoKS5mcm9tKHBhcmFtZXRyZXMpOwogIHJldHVybiBPYmplY3QuZnJvbUVudHJpZXMocm93cy5tYXAoKHIpID0+IFtyLmNsZSwgci52YWxldXJdKSk7Cn0KCi8qKiBDeWNsZSBhY3RpZiBsZSBwbHVzIHLDqWNlbnQgKGZhbGxiYWNrIDogbidpbXBvcnRlIHF1ZWwgY3ljbGUpICovCmFzeW5jIGZ1bmN0aW9uIGdldEFjdGl2ZUN5Y2xlKCkgewogIGNvbnN0IGRiID0gZ2V0RGIoKTsKICBjb25zdCBbYWN0aWZdID0gYXdhaXQgZGIKICAgIC5zZWxlY3QoKQogICAgLmZyb20oY3ljbGVzKQogICAgLndoZXJlKGVxKGN5Y2xlcy5hY3RpZiwgdHJ1ZSkpCiAgICAub3JkZXJCeShkZXNjKGN5Y2xlcy5pZCkpCiAgICAubGltaXQoMSk7CiAgaWYgKGFjdGlmKSByZXR1cm4gYWN0aWY7CiAgY29uc3QgW2FueV0gPSBhd2FpdCBkYi5zZWxlY3QoKS5mcm9tKGN5Y2xlcykub3JkZXJCeShkZXNjKGN5Y2xlcy5pZCkpLmxpbWl0KDEpOwogIHJldHVybiBhbnkgPz8gbnVsbDsKfQoKLyoqIEVudm9pZSB1bmUgbm90aWZpY2F0aW9uIGVtYWlsIGF1IFN1cGVyIEFkbWluIHNpIFNNVFAgZXN0IGNvbmZpZ3Vyw6kgKi8KYXN5bmMgZnVuY3Rpb24gbm90aWZ5QWRtaW5CeUVtYWlsKHN1YmplY3Q6IHN0cmluZywgYm9keTogc3RyaW5nKSB7CiAgY29uc3QgaG9zdCA9IHByb2Nlc3MuZW52LlNNVFBfSE9TVDsKICBjb25zdCB0byA9IHByb2Nlc3MuZW52LkFETUlOX0VNQUlMOwogIGlmICghaG9zdCB8fCAhdG8pIHsKICAgIGNvbnNvbGUubG9nKGBbbWFpbCBkw6lzYWN0aXbDqV0gJHtzdWJqZWN0fVxuJHtib2R5fWApOwogICAgcmV0dXJuOwogIH0KICB0cnkgewogICAgY29uc3QgdHJhbnNwb3J0ID0gbm9kZW1haWxlci5jcmVhdGVUcmFuc3BvcnQoewogICAgICBob3N0LAogICAgICBwb3J0OiBOdW1iZXIocHJvY2Vzcy5lbnYuU01UUF9QT1JUID8/IDU4NyksCiAgICAgIHNlY3VyZTogcHJvY2Vzcy5lbnYuU01UUF9TRUNVUkUgPT09ICJ0cnVlIiwKICAgICAgYXV0aDogcHJvY2Vzcy5lbnYuU01UUF9VU0VSCiAgICAgICAgPyB7IHVzZXI6IHByb2Nlc3MuZW52LlNNVFBfVVNFUiwgcGFzczogcHJvY2Vzcy5lbnYuU01UUF9QQVNTIH0KICAgICAgICA6IHVuZGVmaW5lZCwKICAgIH0pOwogICAgYXdhaXQgdHJhbnNwb3J0LnNlbmRNYWlsKHsKICAgICAgZnJvbTogcHJvY2Vzcy5lbnYuU01UUF9GUk9NID8/IHByb2Nlc3MuZW52LlNNVFBfVVNFUiwKICAgICAgdG8sCiAgICAgIHN1YmplY3QsCiAgICAgIHRleHQ6IGJvZHksCiAgICB9KTsKICB9IGNhdGNoIChlcnIpIHsKICAgIGNvbnNvbGUuZXJyb3IoIsOJY2hlYyBlbnZvaSBlbWFpbCBhZG1pbjoiLCBlcnIpOwogIH0KfQoKZXhwb3J0IGNvbnN0IHNpdGVSb3V0ZXIgPSBjcmVhdGVSb3V0ZXIoewogIC8qKiBEb25uw6llcyBwdWJsaXF1ZXMgZGUgbGEgcGFnZSBkJ2FjY3VlaWwg4oCUIHRvdXQgdmllbnQgZGUgbGEgQkREICovCiAgcHVibGljRGF0YTogcHVibGljUXVlcnkucXVlcnkoYXN5bmMgKCkgPT4gewogICAgdHJ5IHsKICAgICAgY29uc3QgZGIgPSBnZXREYigpOwogICAgICBjb25zdCBjeWNsZSA9IGF3YWl0IGdldEFjdGl2ZUN5Y2xlKCk7CiAgICAgIGNvbnN0IFtmaWwsIHRhciwgZXRhLCBwYXJhbXMsIGFsbEN5Y2xlcywgcGFydCwgYXZhbl0gPSBhd2FpdCBQcm9taXNlLmFsbChbCiAgICAgICAgZGIuc2VsZWN0KCkuZnJvbShmaWxpZXJlcykud2hlcmUoZXEoZmlsaWVyZXMuYWN0aWYsIHRydWUpKS5vcmRlckJ5KGFzYyhmaWxpZXJlcy5vcmRyZSksIGFzYyhmaWxpZXJlcy5pZCkpLAogICAgICAgIGRiLnNlbGVjdCgpLmZyb20odGFyaWZzKS5vcmRlckJ5KGFzYyh0YXJpZnMub3JkcmUpLCBhc2ModGFyaWZzLmlkKSksCiAgICAgICAgZGIuc2VsZWN0KCkuZnJvbShldGFwZXMpLm9yZGVyQnkoYXNjKGV0YXBlcy5vcmRyZSksIGFzYyhldGFwZXMuaWQpKSwKICAgICAgICBnZXRQYXJhbXNNYXAoKSwKICAgICAgICBkYi5zZWxlY3QoKS5mcm9tKGN5Y2xlcykub3JkZXJCeShkZXNjKGN5Y2xlcy5pZCkpLAogICAgICAgIGRiLnNlbGVjdCgpLmZyb20ocGFydGVuYWlyZXMpLndoZXJlKGVxKHBhcnRlbmFpcmVzLmFjdGlmLCB0cnVlKSkub3JkZXJCeShhc2MocGFydGVuYWlyZXMub3JkcmUpLCBhc2MocGFydGVuYWlyZXMuaWQpKSwKICAgICAgICBkYi5zZWxlY3QoKS5mcm9tKGF2YW50YWdlcykud2hlcmUoZXEoYXZhbnRhZ2VzLmFjdGlmLCB0cnVlKSkub3JkZXJCeShhc2MoYXZhbnRhZ2VzLm9yZHJlKSwgYXNjKGF2YW50YWdlcy5pZCkpLAogICAgICBdKTsKICAgICAgLy8gQkREIHZpZGUgKHNlZWQgcGFzIGVuY29yZSBleMOpY3V0w6kpIOKGkiB2YWxldXJzIHBhciBkw6lmYXV0IGRlcyBjYXB0dXJlcwogICAgICBpZiAoIWN5Y2xlICYmIGZpbC5sZW5ndGggPT09IDAgJiYgdGFyLmxlbmd0aCA9PT0gMCAmJiBldGEubGVuZ3RoID09PSAwKSB7CiAgICAgICAgcmV0dXJuIHsgLi4uZmFsbGJhY2tQdWJsaWNEYXRhKCksIHBhcnRlbmFpcmVzOiBwYXJ0LCBhdmFudGFnZXM6IGF2YW4gfTsKICAgICAgfQogICAgICByZXR1cm4gewogICAgICAgIGN5Y2xlLAogICAgICAgIGN5Y2xlczogYWxsQ3ljbGVzLmxlbmd0aCA/IGFsbEN5Y2xlcyA6IFtGQUxMQkFDS19DWUNMRSBhcyBhbnldLAogICAgICAgIGZpbGllcmVzOiBjeWNsZSA/IGZpbC5maWx0ZXIoKGYpID0+IGYuY3ljbGVJZCA9PSBudWxsIHx8IGYuY3ljbGVJZCA9PT0gY3ljbGUuaWQpIDogZmlsLAogICAgICAgIHRhcmlmczogY3ljbGUgPyB0YXIuZmlsdGVyKCh0KSA9PiB0LmN5Y2xlSWQgPT0gbnVsbCB8fCB0LmN5Y2xlSWQgPT09IGN5Y2xlLmlkKSA6IHRhciwKICAgICAgICBldGFwZXM6IGN5Y2xlID8gZXRhLmZpbHRlcigoZSkgPT4gZS5jeWNsZUlkID09IG51bGwgfHwgZS5jeWNsZUlkID09PSBjeWNsZS5pZCkgOiBldGEsCiAgICAgICAgcGFydGVuYWlyZXM6IHBhcnQsCiAgICAgICAgYXZhbnRhZ2VzOiBhdmFuLAogICAgICAgIHBhcmFtczogeyAuLi5GQUxMQkFDS19QQVJBTVMsIC4uLnBhcmFtcyB9LAogICAgICB9OwogICAgfSBjYXRjaCAoZXJyKSB7CiAgICAgIGNvbnNvbGUuZXJyb3IoInB1YmxpY0RhdGE6IEJERCBpbmpvaWduYWJsZSwgbW9kZSBkw6lncmFkw6k6IiwgZXJyKTsKICAgICAgcmV0dXJuIGZhbGxiYWNrUHVibGljRGF0YSgpOwogICAgfQogIH0pLAoKICAvKiogRm9ybXVsYWlyZSBwdWJsaWMgZCdpbnNjcmlwdGlvbiBjYW5kaWRhdCAoZG9zc2llciBjb21wbGV0KSAqLwogIGluc2NyaXJlOiBwdWJsaWNRdWVyeQogICAgLmlucHV0KAogICAgICB6Lm9iamVjdCh7CiAgICAgICAgbm9tOiB6LnN0cmluZygpLm1pbigxKS5tYXgoMTAwKSwKICAgICAgICBwcmVub206IHouc3RyaW5nKCkubWluKDEpLm1heCgxMDApLAogICAgICAgIGVtYWlsOiB6LnN0cmluZygpLmVtYWlsKCkubWF4KDI1NSksCiAgICAgICAgdGVsZXBob25lOiB6LnN0cmluZygpLm1pbig1KS5tYXgoNTApLAogICAgICAgIGZpbGllcmVJZDogei5udW1iZXIoKSwKICAgICAgICBjeWNsZUlkOiB6Lm51bWJlcigpLAogICAgICAgIGRhdGVOYWlzc2FuY2U6IHouc3RyaW5nKCkubWF4KDMwKS5kZWZhdWx0KCIiKSwKICAgICAgICBsaWV1TmFpc3NhbmNlOiB6LnN0cmluZygpLm1heCgxNTApLmRlZmF1bHQoIiIpLAogICAgICAgIHNleGU6IHouc3RyaW5nKCkubWF4KDIwKS5kZWZhdWx0KCIiKSwKICAgICAgICBzaXR1YXRpb25GYW1pbGlhbGU6IHouc3RyaW5nKCkubWF4KDMwKS5kZWZhdWx0KCIiKSwKICAgICAgICBkb2N1bWVudHM6IHouc3RyaW5nKCkuZGVmYXVsdCgiIiksCiAgICAgICAgYWRyZXNzZTogei5zdHJpbmcoKS5tYXgoMjU1KS5kZWZhdWx0KCIiKSwKICAgICAgICB1cmdlbmNlTm9tOiB6LnN0cmluZygpLm1heCgxNTApLmRlZmF1bHQoIiIpLAogICAgICAgIHVyZ2VuY2VUZWxlcGhvbmU6IHouc3RyaW5nKCkubWF4KDUwKS5kZWZhdWx0KCIiKSwKICAgICAgICBlbkFjdGl2aXRlOiB6LnN0cmluZygpLm1heCgxMCkuZGVmYXVsdCgiIiksCiAgICAgICAgcHJvZmVzc2lvbjogei5zdHJpbmcoKS5tYXgoMTUwKS5kZWZhdWx0KCIiKSwKICAgICAgICBlbXBsb3lldXI6IHouc3RyaW5nKCkubWF4KDE1MCkuZGVmYXVsdCgiIiksCiAgICAgICAgbWV0aWVyQ2hvaXNpOiB6LnN0cmluZygpLm1heCgxNTApLmRlZmF1bHQoIiIpLAogICAgICB9KSwKICAgICkKICAgIC5tdXRhdGlvbihhc3luYyAoeyBpbnB1dCB9KSA9PiB7CiAgICAgIGNvbnN0IGRiID0gZ2V0RGIoKTsKICAgICAgY29uc3QgW2ZpbF0gPSBhd2FpdCBkYi5zZWxlY3QoKS5mcm9tKGZpbGllcmVzKS53aGVyZShlcShmaWxpZXJlcy5pZCwgaW5wdXQuZmlsaWVyZUlkKSkubGltaXQoMSk7CiAgICAgIGNvbnN0IFtjeWNdID0gYXdhaXQgZGIuc2VsZWN0KCkuZnJvbShjeWNsZXMpLndoZXJlKGVxKGN5Y2xlcy5pZCwgaW5wdXQuY3ljbGVJZCkpLmxpbWl0KDEpOwogICAgICAvLyBOdW3DqXJvIGRlIGRvc3NpZXIgdW5pcXVlIGZhw6dvbiBzaXRlIHByaW5jaXBhbCA6IFVTLTIwMjYtWFhYWAogICAgICBjb25zdCBbbGFzdF0gPSBhd2FpdCBkYi5zZWxlY3QoKS5mcm9tKGluc2NyaXB0aW9ucykub3JkZXJCeShkZXNjKGluc2NyaXB0aW9ucy5pZCkpLmxpbWl0KDEpOwogICAgICBjb25zdCBzZXEgPSAobGFzdCA/IE51bWJlcihsYXN0LmlkKSA6IDApICsgMTsKICAgICAgY29uc3QgbnVtZXJvRG9zc2llciA9IGBVUy0ke25ldyBEYXRlKCkuZ2V0RnVsbFllYXIoKX0tJHtTdHJpbmcoc2VxKS5wYWRTdGFydCg0LCAiMCIpfWA7CiAgICAgIGF3YWl0IGRiLmluc2VydChpbnNjcmlwdGlvbnMpLnZhbHVlcyh7CiAgICAgICAgbnVtZXJvRG9zc2llciwKICAgICAgICBub206IGlucHV0Lm5vbSwKICAgICAgICBwcmVub206IGlucHV0LnByZW5vbSwKICAgICAgICBlbWFpbDogaW5wdXQuZW1haWwsCiAgICAgICAgdGVsZXBob25lOiBpbnB1dC50ZWxlcGhvbmUsCiAgICAgICAgZmlsaWVyZUlkOiBpbnB1dC5maWxpZXJlSWQsCiAgICAgICAgZmlsaWVyZUxhYmVsOiBmaWw/LnRpdHJlID8/ICIiLAogICAgICAgIGN5Y2xlSWQ6IGlucHV0LmN5Y2xlSWQsCiAgICAgICAgY3ljbGVMYWJlbDogY3ljPy5ub20gPz8gIiIsCiAgICAgICAgZGF0ZU5haXNzYW5jZTogaW5wdXQuZGF0ZU5haXNzYW5jZSwKICAgICAgICBsaWV1TmFpc3NhbmNlOiBpbnB1dC5saWV1TmFpc3NhbmNlLAogICAgICAgIHNleGU6IGlucHV0LnNleGUsCiAgICAgICAgc2l0dWF0aW9uRmFtaWxpYWxlOiBpbnB1dC5zaXR1YXRpb25GYW1pbGlhbGUsCiAgICAgICAgZG9jdW1lbnRzOiBpbnB1dC5kb2N1bWVudHMsCiAgICAgICAgYWRyZXNzZTogaW5wdXQuYWRyZXNzZSwKICAgICAgICB1cmdlbmNlTm9tOiBpbnB1dC51cmdlbmNlTm9tLAogICAgICAgIHVyZ2VuY2VUZWxlcGhvbmU6IGlucHV0LnVyZ2VuY2VUZWxlcGhvbmUsCiAgICAgICAgZW5BY3Rpdml0ZTogaW5wdXQuZW5BY3Rpdml0ZSwKICAgICAgICBwcm9mZXNzaW9uOiBpbnB1dC5wcm9mZXNzaW9uLAogICAgICAgIGVtcGxveWV1cjogaW5wdXQuZW1wbG95ZXVyLAogICAgICAgIG1ldGllckNob2lzaTogaW5wdXQubWV0aWVyQ2hvaXNpLAogICAgICB9KTsKICAgICAgYXdhaXQgbm90aWZ5QWRtaW5CeUVtYWlsKAogICAgICAgIGBOb3V2ZWxsZSBpbnNjcmlwdGlvbiAke251bWVyb0Rvc3NpZXJ9IOKAlCAke2lucHV0LnByZW5vbX0gJHtpbnB1dC5ub219YCwKICAgICAgICBbCiAgICAgICAgICBgRG9zc2llciA6ICR7bnVtZXJvRG9zc2llcn1gLAogICAgICAgICAgYE5vbSA6ICR7aW5wdXQubm9tfWAsCiAgICAgICAgICBgUHLDqW5vbSA6ICR7aW5wdXQucHJlbm9tfWAsCiAgICAgICAgICBgRW1haWwgOiAke2lucHV0LmVtYWlsfWAsCiAgICAgICAgICBgVMOpbMOpcGhvbmUgOiAke2lucHV0LnRlbGVwaG9uZX1gLAogICAgICAgICAgYEZpbGnDqHJlIDogJHtmaWw/LnRpdHJlID8/IGlucHV0LmZpbGllcmVJZH1gLAogICAgICAgICAgYE3DqXRpZXIgOiAke2lucHV0Lm1ldGllckNob2lzaX1gLAogICAgICAgICAgYEN5Y2xlIDogJHtjeWM/Lm5vbSA/PyBpbnB1dC5jeWNsZUlkfWAsCiAgICAgICAgXS5qb2luKCJcbiIpLAogICAgICApOwogICAgICByZXR1cm4geyBvazogdHJ1ZSwgbnVtZXJvRG9zc2llciB9OwogICAgfSksCgogIC8qKiBQcmlzZSBkZSByZW5kZXotdm91cyAqLwogIHByZW5kcmVSZHY6IHB1YmxpY1F1ZXJ5CiAgICAuaW5wdXQoCiAgICAgIHoub2JqZWN0KHsKICAgICAgICBwcmVub206IHouc3RyaW5nKCkubWluKDEpLm1heCgxMDApLAogICAgICAgIG5vbTogei5zdHJpbmcoKS5taW4oMSkubWF4KDEwMCksCiAgICAgICAgdGVsZXBob25lOiB6LnN0cmluZygpLm1pbig1KS5tYXgoNTApLAogICAgICAgIGVtYWlsOiB6LnN0cmluZygpLm1heCgyNTUpLmRlZmF1bHQoIiIpLAogICAgICAgIG1vdGlmOiB6LnN0cmluZygpLmRlZmF1bHQoIiIpLAogICAgICAgIGRhdGVTb3VoYWl0ZWU6IHouc3RyaW5nKCkubWF4KDUwKS5kZWZhdWx0KCIiKSwKICAgICAgfSksCiAgICApCiAgICAubXV0YXRpb24oYXN5bmMgKHsgaW5wdXQgfSkgPT4gewogICAgICBjb25zdCBkYiA9IGdldERiKCk7CiAgICAgIGF3YWl0IGRiLmluc2VydChyZW5kZXpWb3VzKS52YWx1ZXMoewogICAgICAgIHByZW5vbTogaW5wdXQucHJlbm9tLAogICAgICAgIG5vbTogaW5wdXQubm9tLAogICAgICAgIHRlbGVwaG9uZTogaW5wdXQudGVsZXBob25lLAogICAgICAgIGVtYWlsOiBpbnB1dC5lbWFpbCwKICAgICAgICBtb3RpZjogaW5wdXQubW90aWYsCiAgICAgICAgZGF0ZVNvdWhhaXRlZTogaW5wdXQuZGF0ZVNvdWhhaXRlZSwKICAgICAgfSk7CiAgICAgIGF3YWl0IG5vdGlmeUFkbWluQnlFbWFpbCgKICAgICAgICBgTm91dmVhdSByZW5kZXotdm91cyDigJQgJHtpbnB1dC5wcmVub219ICR7aW5wdXQubm9tfWAsCiAgICAgICAgYFTDqWzDqXBob25lIDogJHtpbnB1dC50ZWxlcGhvbmV9XG5FbWFpbCA6ICR7aW5wdXQuZW1haWx9XG5Nb3RpZiA6ICR7aW5wdXQubW90aWZ9XG5EYXRlIHNvdWhhaXTDqWUgOiAke2lucHV0LmRhdGVTb3VoYWl0ZWV9YCwKICAgICAgKTsKICAgICAgcmV0dXJuIHsgb2s6IHRydWUgfTsKICAgIH0pLAp9KTsK
+import { z } from "zod";
+import { asc, desc, eq } from "drizzle-orm";
+import nodemailer from "nodemailer";
+import { createRouter, publicQuery } from "./middleware";
+import { getDb } from "./queries/connection";
+import {
+  cycles,
+  filieres,
+  tarifs,
+  etapes,
+  parametres,
+  inscriptions,
+  partenaires,
+  avantages,
+  rendezVous,
+} from "../db/schema";
+import {
+  FALLBACK_CYCLE,
+  FALLBACK_PARAMS,
+  FALLBACK_FILIERES,
+  FALLBACK_TARIFS,
+  FALLBACK_ETAPES,
+} from "./lib/fallback";
+
+/** Données de repli si la BDD est injoignable — le site reste affichable */
+function fallbackPublicData() {
+  return {
+    cycle: FALLBACK_CYCLE as any,
+    cycles: [FALLBACK_CYCLE as any],
+    filieres: FALLBACK_FILIERES as any,
+    tarifs: FALLBACK_TARIFS as any,
+    etapes: FALLBACK_ETAPES as any,
+    partenaires: [] as any[],
+    avantages: [] as any[],
+    params: FALLBACK_PARAMS,
+  };
+}
+
+/** Récupère tous les paramètres globaux sous forme de map clé → valeur */
+async function getParamsMap(): Promise<Record<string, string>> {
+  const rows = await getDb().select().from(parametres);
+  return Object.fromEntries(rows.map((r) => [r.cle, r.valeur]));
+}
+
+/** Cycle actif le plus récent (fallback : n'importe quel cycle) */
+async function getActiveCycle() {
+  const db = getDb();
+  const [actif] = await db
+    .select()
+    .from(cycles)
+    .where(eq(cycles.actif, true))
+    .orderBy(desc(cycles.id))
+    .limit(1);
+  if (actif) return actif;
+  const [any] = await db.select().from(cycles).orderBy(desc(cycles.id)).limit(1);
+  return any ?? null;
+}
+
+/** Envoie une notification email au Super Admin si SMTP est configuré */
+async function notifyAdminByEmail(subject: string, body: string) {
+  const host = process.env.SMTP_HOST;
+  const to = process.env.ADMIN_EMAIL;
+  if (!host || !to) {
+    console.log(`[mail désactivé] ${subject}\n${body}`);
+    return;
+  }
+  try {
+    const transport = nodemailer.createTransport({
+      host,
+      port: Number(process.env.SMTP_PORT ?? 587),
+      secure: process.env.SMTP_SECURE === "true",
+      auth: process.env.SMTP_USER
+        ? { user: process.env.SMTP_USER, pass: process.env.SMTP_PASS }
+        : undefined,
+    });
+    await transport.sendMail({
+      from: process.env.SMTP_FROM ?? process.env.SMTP_USER,
+      to,
+      subject,
+      text: body,
+    });
+  } catch (err) {
+    console.error("Échec envoi email admin:", err);
+  }
+}
+
+export const siteRouter = createRouter({
+  /** Données publiques de la page d'accueil — tout vient de la BDD */
+  publicData: publicQuery.query(async () => {
+    try {
+      const db = getDb();
+      const cycle = await getActiveCycle();
+      const [fil, tar, eta, params, allCycles, part, avan] = await Promise.all([
+        db.select().from(filieres).where(eq(filieres.actif, true)).orderBy(asc(filieres.ordre), asc(filieres.id)),
+        db.select().from(tarifs).orderBy(asc(tarifs.ordre), asc(tarifs.id)),
+        db.select().from(etapes).orderBy(asc(etapes.ordre), asc(etapes.id)),
+        getParamsMap(),
+        db.select().from(cycles).orderBy(desc(cycles.id)),
+        db.select().from(partenaires).where(eq(partenaires.actif, true)).orderBy(asc(partenaires.ordre), asc(partenaires.id)),
+        db.select().from(avantages).where(eq(avantages.actif, true)).orderBy(asc(avantages.ordre), asc(avantages.id)),
+      ]);
+      // BDD vide (seed pas encore exécuté) → valeurs par défaut des captures
+      if (!cycle && fil.length === 0 && tar.length === 0 && eta.length === 0) {
+        return { ...fallbackPublicData(), partenaires: part, avantages: avan };
+      }
+      return {
+        cycle,
+        cycles: allCycles.length ? allCycles : [FALLBACK_CYCLE as any],
+        filieres: cycle ? fil.filter((f) => f.cycleId == null || f.cycleId === cycle.id) : fil,
+        tarifs: cycle ? tar.filter((t) => t.cycleId == null || t.cycleId === cycle.id) : tar,
+        etapes: cycle ? eta.filter((e) => e.cycleId == null || e.cycleId === cycle.id) : eta,
+        partenaires: part,
+        avantages: avan,
+        params: { ...FALLBACK_PARAMS, ...params },
+      };
+    } catch (err) {
+      console.error("publicData: BDD injoignable, mode dégradé:", err);
+      return fallbackPublicData();
+    }
+  }),
+
+  /** Formulaire public d'inscription candidat (dossier complet) */
+  inscrire: publicQuery
+    .input(
+      z.object({
+        nom: z.string().min(1).max(100),
+        prenom: z.string().min(1).max(100),
+        email: z.string().email().max(255),
+        telephone: z.string().min(5).max(50),
+        filiereId: z.number(),
+        cycleId: z.number(),
+        dateNaissance: z.string().max(30).default(""),
+        lieuNaissance: z.string().max(150).default(""),
+        sexe: z.string().max(20).default(""),
+        situationFamiliale: z.string().max(30).default(""),
+        documents: z.string().default(""),
+        adresse: z.string().max(255).default(""),
+        urgenceNom: z.string().max(150).default(""),
+        urgenceTelephone: z.string().max(50).default(""),
+        enActivite: z.string().max(10).default(""),
+        profession: z.string().max(150).default(""),
+        employeur: z.string().max(150).default(""),
+        metierChoisi: z.string().max(150).default(""),
+      }),
+    )
+    .mutation(async ({ input }) => {
+      const db = getDb();
+      const [fil] = await db.select().from(filieres).where(eq(filieres.id, input.filiereId)).limit(1);
+      const [cyc] = await db.select().from(cycles).where(eq(cycles.id, input.cycleId)).limit(1);
+      // Numéro de dossier unique façon site principal : US-2026-XXXX
+      const [last] = await db.select().from(inscriptions).orderBy(desc(inscriptions.id)).limit(1);
+      const seq = (last ? Number(last.id) : 0) + 1;
+      const numeroDossier = `US-${new Date().getFullYear()}-${String(seq).padStart(4, "0")}`;
+      await db.insert(inscriptions).values({
+        numeroDossier,
+        nom: input.nom,
+        prenom: input.prenom,
+        email: input.email,
+        telephone: input.telephone,
+        filiereId: input.filiereId,
+        filiereLabel: fil?.titre ?? "",
+        cycleId: input.cycleId,
+        cycleLabel: cyc?.nom ?? "",
+        dateNaissance: input.dateNaissance,
+        lieuNaissance: input.lieuNaissance,
+        sexe: input.sexe,
+        situationFamiliale: input.situationFamiliale,
+        documents: input.documents,
+        adresse: input.adresse,
+        urgenceNom: input.urgenceNom,
+        urgenceTelephone: input.urgenceTelephone,
+        enActivite: input.enActivite,
+        profession: input.profession,
+        employeur: input.employeur,
+        metierChoisi: input.metierChoisi,
+      });
+      await notifyAdminByEmail(
+        `Nouvelle inscription ${numeroDossier} — ${input.prenom} ${input.nom}`,
+        [
+          `Dossier : ${numeroDossier}`,
+          `Nom : ${input.nom}`,
+          `Prénom : ${input.prenom}`,
+          `Email : ${input.email}`,
+          `Téléphone : ${input.telephone}`,
+          `Filière : ${fil?.titre ?? input.filiereId}`,
+          `Métier : ${input.metierChoisi}`,
+          `Cycle : ${cyc?.nom ?? input.cycleId}`,
+        ].join("\n"),
+      );
+      return { ok: true, numeroDossier };
+    }),
+
+  /** Prise de rendez-vous */
+  prendreRdv: publicQuery
+    .input(
+      z.object({
+        prenom: z.string().min(1).max(100),
+        nom: z.string().min(1).max(100),
+        telephone: z.string().min(5).max(50),
+        email: z.string().max(255).default(""),
+        motif: z.string().default(""),
+        dateSouhaitee: z.string().max(50).default(""),
+      }),
+    )
+    .mutation(async ({ input }) => {
+      const db = getDb();
+      await db.insert(rendezVous).values({
+        prenom: input.prenom,
+        nom: input.nom,
+        telephone: input.telephone,
+        email: input.email,
+        motif: input.motif,
+        dateSouhaitee: input.dateSouhaitee,
+      });
+      await notifyAdminByEmail(
+        `Nouveau rendez-vous — ${input.prenom} ${input.nom}`,
+        `Téléphone : ${input.telephone}\nEmail : ${input.email}\nMotif : ${input.motif}\nDate souhaitée : ${input.dateSouhaitee}`,
+      );
+      return { ok: true };
+    }),
+});

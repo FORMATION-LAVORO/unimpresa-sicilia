@@ -1,1 +1,69 @@
-aW1wb3J0IHsgdHJwYyB9IGZyb20gIkAvcHJvdmlkZXJzL3RycGMiOwppbXBvcnQgeyB1c2VBZG1pbiwgQnRuLCBUYWJsZSB9IGZyb20gIi4uL3VpIjsKCmNvbnN0IFNUQVRVVFMgPSBbIm5vdXZlYXUiLCAiY29udGFjdMOpIiwgImNvbmZpcm3DqSIsICJwYXnDqSIsICJyZWZ1c8OpIl07CmNvbnN0IFNUQVRVVF9TVFlMRTogUmVjb3JkPHN0cmluZywgc3RyaW5nPiA9IHsKICBub3V2ZWF1OiAiYmctYmx1ZS0xMDAgdGV4dC1ibHVlLTcwMCIsCiAgY29udGFjdMOpOiAiYmctYW1iZXItMTAwIHRleHQtYW1iZXItNzAwIiwKICBjb25maXJtw6k6ICJiZy1ncmVlbi0xMDAgdGV4dC1ncmVlbi03MDAiLAogIHBhecOpOiAiYmctZW1lcmFsZC0xMDAgdGV4dC1lbWVyYWxkLTgwMCIsCiAgcmVmdXPDqTogImJnLXJlZC0xMDAgdGV4dC1yZWQtNzAwIiwKfTsKCmV4cG9ydCBkZWZhdWx0IGZ1bmN0aW9uIEluc2NyaXB0aW9uc1NlY3Rpb24oKSB7CiAgY29uc3QgeyB0b2tlbiwgcmVmcmVzaCB9ID0gdXNlQWRtaW4oKTsKICBjb25zdCB7IGRhdGEgfSA9IHRycGMuYWRtaW4ubGlzdEluc2NyaXB0aW9ucy51c2VRdWVyeSh7IHRva2VuIH0pOwogIGNvbnN0IHVwZGF0ZSA9IHRycGMuYWRtaW4udXBkYXRlSW5zY3JpcHRpb24udXNlTXV0YXRpb24oeyBvblN1Y2Nlc3M6IHJlZnJlc2ggfSk7CiAgY29uc3QgZGVsID0gdHJwYy5hZG1pbi5kZWxldGVJbnNjcmlwdGlvbi51c2VNdXRhdGlvbih7IG9uU3VjY2VzczogcmVmcmVzaCB9KTsKCiAgcmV0dXJuICgKICAgIDxzZWN0aW9uPgogICAgICA8aDIgY2xhc3NOYW1lPSJ0ZXh0LXhsIGZvbnQtZXh0cmFib2xkIHRleHQtWyMxYTJhNGFdIG1iLTQiPgogICAgICAgIEluc2NyaXB0aW9ucyBjYW5kaWRhdHMgKHtkYXRhPy5sZW5ndGggPz8gMH0pCiAgICAgIDwvaDI+CiAgICAgIDxUYWJsZSBoZWFkPXtbIkRvc3NpZXIiLCAiRGF0ZSIsICJDYW5kaWRhdCIsICJDb250YWN0IiwgIkZpbGnDqHJlIC8gTcOpdGllciIsICJEw6l0YWlscyIsICJTdGF0dXQiLCAiQWN0aW9ucyJdfT4KICAgICAgICB7KGRhdGEgPz8gW10pLm1hcCgoaSkgPT4gKAogICAgICAgICAgPHRyIGtleT17aS5pZH0gY2xhc3NOYW1lPSJib3JkZXItdCBib3JkZXItc2xhdGUtMTAwIj4KICAgICAgICAgICAgPHRkIGNsYXNzTmFtZT0icHgtNCBweS0zIGZvbnQtbW9ubyBmb250LWJvbGQgdGV4dC1bIzhhNmQxYV0gd2hpdGVzcGFjZS1ub3dyYXAiPntpLm51bWVyb0Rvc3NpZXIgfHwgIuKAlCJ9PC90ZD4KICAgICAgICAgICAgPHRkIGNsYXNzTmFtZT0icHgtNCBweS0zIHRleHQtc2xhdGUtNTAwIHdoaXRlc3BhY2Utbm93cmFwIj4KICAgICAgICAgICAgICB7bmV3IERhdGUoaS5jcmVhdGVkQXQpLnRvTG9jYWxlRGF0ZVN0cmluZygiZnItRlIiKX0KICAgICAgICAgICAgPC90ZD4KICAgICAgICAgICAgPHRkIGNsYXNzTmFtZT0icHgtNCBweS0zIGZvbnQtYm9sZCB0ZXh0LVsjMWEyYTRhXSB3aGl0ZXNwYWNlLW5vd3JhcCI+CiAgICAgICAgICAgICAge2kucHJlbm9tfSB7aS5ub219CiAgICAgICAgICAgICAgPGRpdiBjbGFzc05hbWU9InRleHQteHMgZm9udC1ub3JtYWwgdGV4dC1zbGF0ZS01MDAiPntpLnNleGV9IMK3IHtpLnNpdHVhdGlvbkZhbWlsaWFsZX08L2Rpdj4KICAgICAgICAgICAgPC90ZD4KICAgICAgICAgICAgPHRkIGNsYXNzTmFtZT0icHgtNCBweS0zIj4KICAgICAgICAgICAgICA8ZGl2IGNsYXNzTmFtZT0idGV4dC1zbGF0ZS03MDAiPntpLmVtYWlsfTwvZGl2PgogICAgICAgICAgICAgIDxkaXYgY2xhc3NOYW1lPSJ0ZXh0LXNsYXRlLTUwMCB0ZXh0LXhzIj57aS50ZWxlcGhvbmV9PC9kaXY+CiAgICAgICAgICAgIDwvdGQ+CiAgICAgICAgICAgIDx0ZCBjbGFzc05hbWU9InB4LTQgcHktMyI+CiAgICAgICAgICAgICAgPGRpdiBjbGFzc05hbWU9ImZvbnQtc2VtaWJvbGQiPntpLmZpbGllcmVMYWJlbH08L2Rpdj4KICAgICAgICAgICAgICA8ZGl2IGNsYXNzTmFtZT0idGV4dC14cyB0ZXh0LXNsYXRlLTUwMCI+e2kubWV0aWVyQ2hvaXNpfTwvZGl2PgogICAgICAgICAgICA8L3RkPgogICAgICAgICAgICA8dGQgY2xhc3NOYW1lPSJweC00IHB5LTMgdGV4dC14cyB0ZXh0LXNsYXRlLTUwMCBtYXgtdy01NiI+CiAgICAgICAgICAgICAge2kuZW5BY3Rpdml0ZSAmJiA8ZGl2PkFjdGl2aXTDqSA6IHtpLmVuQWN0aXZpdGV9e2kucHJvZmVzc2lvbiA/IGAgKCR7aS5wcm9mZXNzaW9ufSlgIDogIiJ9PC9kaXY+fQogICAgICAgICAgICAgIHtpLmRhdGVOYWlzc2FuY2UgJiYgPGRpdj5Ow6koZSkgbGUge2kuZGF0ZU5haXNzYW5jZX17aS5saWV1TmFpc3NhbmNlID8gYCDDoCAke2kubGlldU5haXNzYW5jZX1gIDogIiJ9PC9kaXY+fQogICAgICAgICAgICAgIHtpLnVyZ2VuY2VOb20gJiYgPGRpdj5VcmdlbmNlIDoge2kudXJnZW5jZU5vbX0ge2kudXJnZW5jZVRlbGVwaG9uZX08L2Rpdj59CiAgICAgICAgICAgICAgPGRpdj57aS5jeWNsZUxhYmVsfTwvZGl2PgogICAgICAgICAgICA8L3RkPgogICAgICAgICAgICA8dGQgY2xhc3NOYW1lPSJweC00IHB5LTMiPgogICAgICAgICAgICAgIDxzZWxlY3QKICAgICAgICAgICAgICAgIGNsYXNzTmFtZT17YHRleHQteHMgZm9udC1ib2xkIHB4LTIuNSBweS0xLjUgcm91bmRlZC1mdWxsIGJvcmRlci0wIGN1cnNvci1wb2ludGVyICR7U1RBVFVUX1NUWUxFW2kuc3RhdHV0XSA/PyAiYmctc2xhdGUtMTAwIn1gfQogICAgICAgICAgICAgICAgdmFsdWU9e2kuc3RhdHV0fQogICAgICAgICAgICAgICAgb25DaGFuZ2U9eyhlKSA9PiB1cGRhdGUubXV0YXRlKHsgdG9rZW4sIGlkOiBOdW1iZXIoaS5pZCksIHN0YXR1dDogZS50YXJnZXQudmFsdWUgfSl9CiAgICAgICAgICAgICAgPgogICAgICAgICAgICAgICAge1NUQVRVVFMubWFwKChzKSA9PiA8b3B0aW9uIGtleT17c30gdmFsdWU9e3N9PntzfTwvb3B0aW9uPil9CiAgICAgICAgICAgICAgPC9zZWxlY3Q+CiAgICAgICAgICAgIDwvdGQ+CiAgICAgICAgICAgIDx0ZCBjbGFzc05hbWU9InB4LTQgcHktMyI+CiAgICAgICAgICAgICAgPEJ0biB2YXJpYW50PSJkYW5nZXIiIG9uQ2xpY2s9eygpID0+IGNvbmZpcm0oIlN1cHByaW1lciBjZXR0ZSBpbnNjcmlwdGlvbiA/IikgJiYgZGVsLm11dGF0ZSh7IHRva2VuLCBpZDogTnVtYmVyKGkuaWQpIH0pfT7wn5eRPC9CdG4+CiAgICAgICAgICAgIDwvdGQ+CiAgICAgICAgICA8L3RyPgogICAgICAgICkpfQogICAgICAgIHsoZGF0YSA/PyBbXSkubGVuZ3RoID09PSAwICYmICgKICAgICAgICAgIDx0cj48dGQgY29sU3Bhbj17OH0gY2xhc3NOYW1lPSJweC00IHB5LTEwIHRleHQtY2VudGVyIHRleHQtc2xhdGUtNDAwIj5BdWN1bmUgaW5zY3JpcHRpb24gcG91ciBsZSBtb21lbnQuPC90ZD48L3RyPgogICAgICAgICl9CiAgICAgIDwvVGFibGU+CiAgICA8L3NlY3Rpb24+CiAgKTsKfQo=
+import { trpc } from "@/providers/trpc";
+import { useAdmin, Btn, Table } from "../ui";
+
+const STATUTS = ["nouveau", "contacté", "confirmé", "payé", "refusé"];
+const STATUT_STYLE: Record<string, string> = {
+  nouveau: "bg-blue-100 text-blue-700",
+  contacté: "bg-amber-100 text-amber-700",
+  confirmé: "bg-green-100 text-green-700",
+  payé: "bg-emerald-100 text-emerald-800",
+  refusé: "bg-red-100 text-red-700",
+};
+
+export default function InscriptionsSection() {
+  const { token, refresh } = useAdmin();
+  const { data } = trpc.admin.listInscriptions.useQuery({ token });
+  const update = trpc.admin.updateInscription.useMutation({ onSuccess: refresh });
+  const del = trpc.admin.deleteInscription.useMutation({ onSuccess: refresh });
+
+  return (
+    <section>
+      <h2 className="text-xl font-extrabold text-[#1a2a4a] mb-4">
+        Inscriptions candidats ({data?.length ?? 0})
+      </h2>
+      <Table head={["Dossier", "Date", "Candidat", "Contact", "Filière / Métier", "Détails", "Statut", "Actions"]}>
+        {(data ?? []).map((i) => (
+          <tr key={i.id} className="border-t border-slate-100">
+            <td className="px-4 py-3 font-mono font-bold text-[#8a6d1a] whitespace-nowrap">{i.numeroDossier || "—"}</td>
+            <td className="px-4 py-3 text-slate-500 whitespace-nowrap">
+              {new Date(i.createdAt).toLocaleDateString("fr-FR")}
+            </td>
+            <td className="px-4 py-3 font-bold text-[#1a2a4a] whitespace-nowrap">
+              {i.prenom} {i.nom}
+              <div className="text-xs font-normal text-slate-500">{i.sexe} · {i.situationFamiliale}</div>
+            </td>
+            <td className="px-4 py-3">
+              <div className="text-slate-700">{i.email}</div>
+              <div className="text-slate-500 text-xs">{i.telephone}</div>
+            </td>
+            <td className="px-4 py-3">
+              <div className="font-semibold">{i.filiereLabel}</div>
+              <div className="text-xs text-slate-500">{i.metierChoisi}</div>
+            </td>
+            <td className="px-4 py-3 text-xs text-slate-500 max-w-56">
+              {i.enActivite && <div>Activité : {i.enActivite}{i.profession ? ` (${i.profession})` : ""}</div>}
+              {i.dateNaissance && <div>Né(e) le {i.dateNaissance}{i.lieuNaissance ? ` à ${i.lieuNaissance}` : ""}</div>}
+              {i.urgenceNom && <div>Urgence : {i.urgenceNom} {i.urgenceTelephone}</div>}
+              <div>{i.cycleLabel}</div>
+            </td>
+            <td className="px-4 py-3">
+              <select
+                className={`text-xs font-bold px-2.5 py-1.5 rounded-full border-0 cursor-pointer ${STATUT_STYLE[i.statut] ?? "bg-slate-100"}`}
+                value={i.statut}
+                onChange={(e) => update.mutate({ token, id: Number(i.id), statut: e.target.value })}
+              >
+                {STATUTS.map((s) => <option key={s} value={s}>{s}</option>)}
+              </select>
+            </td>
+            <td className="px-4 py-3">
+              <Btn variant="danger" onClick={() => confirm("Supprimer cette inscription ?") && del.mutate({ token, id: Number(i.id) })}>🗑</Btn>
+            </td>
+          </tr>
+        ))}
+        {(data ?? []).length === 0 && (
+          <tr><td colSpan={8} className="px-4 py-10 text-center text-slate-400">Aucune inscription pour le moment.</td></tr>
+        )}
+      </Table>
+    </section>
+  );
+}

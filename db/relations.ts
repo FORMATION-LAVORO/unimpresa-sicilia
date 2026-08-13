@@ -1,1 +1,1 @@
-aW1wb3J0IHt9IGZyb20gIi4vc2NoZW1hIjsK
+import {} from "./schema";

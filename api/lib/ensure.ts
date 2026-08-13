@@ -1,1 +1,23 @@
-aW1wb3J0IHsgZXhlY0ZpbGUgfSBmcm9tICJjaGlsZF9wcm9jZXNzIjsKCi8qKgogKiBBdSBkw6ltYXJyYWdlIDogc3luY2hyb25pc2UgbGUgc2Now6ltYSBwdWlzIHNlZWRlIGxlcyBkb25uw6llcyBwYXIgZMOpZmF1dAogKiBlbiBhcnJpw6hyZS1wbGFuIChub24gYmxvcXVhbnQsIHNhbnMgamFtYWlzIGZhaXJlIMOpY2hvdWVyIGxlIHNlcnZldXIpLgogKiBMZSBzZWVkIG4naW5zw6hyZSByaWVuIHNpIGxlcyB0YWJsZXMgc29udCBkw6lqw6AgcmVtcGxpZXMuCiAqLwpleHBvcnQgZnVuY3Rpb24gZW5zdXJlRGF0YWJhc2VJbkJhY2tncm91bmQoKSB7CiAgY29uc3QgcnVuID0gKGNtZDogc3RyaW5nLCBhcmdzOiBzdHJpbmdbXSkgPT4KICAgIG5ldyBQcm9taXNlPHZvaWQ+KChyZXNvbHZlKSA9PiB7CiAgICAgIGV4ZWNGaWxlKGNtZCwgYXJncywgeyBjd2Q6IHByb2Nlc3MuY3dkKCksIGVudjogcHJvY2Vzcy5lbnYgfSwgKGVyciwgc3Rkb3V0LCBzdGRlcnIpID0+IHsKICAgICAgICBpZiAoZXJyKSBjb25zb2xlLmVycm9yKGBbZW5zdXJlLWRiXSAke2NtZH0gJHthcmdzLmpvaW4oIiAiKX06YCwgc3RkZXJyIHx8IGVyci5tZXNzYWdlKTsKICAgICAgICBlbHNlIGNvbnNvbGUubG9nKGBbZW5zdXJlLWRiXSAke2NtZH0gJHthcmdzLmpvaW4oIiAiKX0gT0tgLCBzdGRvdXQ/LnNsaWNlKDAsIDMwMCkpOwogICAgICAgIHJlc29sdmUoKTsKICAgICAgfSk7CiAgICB9KTsKCiAgLy8gTidhdHRlbmQgcGFzIGxhIGZpbiA6IGxlIHNlcnZldXIgw6ljb3V0ZSBpbW3DqWRpYXRlbWVudC4KICAoYXN5bmMgKCkgPT4gewogICAgYXdhaXQgcnVuKCJucHgiLCBbImRyaXp6bGUta2l0IiwgIm1pZ3JhdGUiXSk7CiAgICBhd2FpdCBydW4oIm5weCIsIFsidHN4IiwgImRiL3NlZWQudHMiXSk7CiAgfSkoKS5jYXRjaCgoZSkgPT4gY29uc29sZS5lcnJvcigiW2Vuc3VyZS1kYl0iLCBlKSk7Cn0K
+import { execFile } from "child_process";
+
+/**
+ * Au démarrage : synchronise le schéma puis seede les données par défaut
+ * en arrière-plan (non bloquant, sans jamais faire échouer le serveur).
+ * Le seed n'insère rien si les tables sont déjà remplies.
+ */
+export function ensureDatabaseInBackground() {
+  const run = (cmd: string, args: string[]) =>
+    new Promise<void>((resolve) => {
+      execFile(cmd, args, { cwd: process.cwd(), env: process.env }, (err, stdout, stderr) => {
+        if (err) console.error(`[ensure-db] ${cmd} ${args.join(" ")}:`, stderr || err.message);
+        else console.log(`[ensure-db] ${cmd} ${args.join(" ")} OK`, stdout?.slice(0, 300));
+        resolve();
+      });
+    });
+
+  // N'attend pas la fin : le serveur écoute immédiatement.
+  (async () => {
+    await run("npx", ["drizzle-kit", "migrate"]);
+    await run("npx", ["tsx", "db/seed.ts"]);
+  })().catch((e) => console.error("[ensure-db]", e));
+}

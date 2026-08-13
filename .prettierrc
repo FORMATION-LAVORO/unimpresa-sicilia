@@ -1,1 +1,15 @@
-ewogICJzZW1pIjogdHJ1ZSwKICAidHJhaWxpbmdDb21tYSI6ICJlczUiLAogICJzaW5nbGVRdW90ZSI6IGZhbHNlLAogICJwcmludFdpZHRoIjogODAsCiAgInRhYldpZHRoIjogMiwKICAidXNlVGFicyI6IGZhbHNlLAogICJicmFja2V0U3BhY2luZyI6IHRydWUsCiAgImJyYWNrZXRTYW1lTGluZSI6IGZhbHNlLAogICJhcnJvd1BhcmVucyI6ICJhdm9pZCIsCiAgImVuZE9mTGluZSI6ICJsZiIsCiAgInF1b3RlUHJvcHMiOiAiYXMtbmVlZGVkIiwKICAianN4U2luZ2xlUXVvdGUiOiBmYWxzZSwKICAicHJvc2VXcmFwIjogInByZXNlcnZlIgp9Cg==
+{
+  "semi": true,
+  "trailingComma": "es5",
+  "singleQuote": false,
+  "printWidth": 80,
+  "tabWidth": 2,
+  "useTabs": false,
+  "bracketSpacing": true,
+  "bracketSameLine": false,
+  "arrowParens": "avoid",
+  "endOfLine": "lf",
+  "quoteProps": "as-needed",
+  "jsxSingleQuote": false,
+  "proseWrap": "preserve"
+}

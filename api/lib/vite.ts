@@ -1,1 +1,23 @@
-aW1wb3J0IHR5cGUgeyBIb25vIH0gZnJvbSAiaG9ubyI7CmltcG9ydCB0eXBlIHsgSHR0cEJpbmRpbmdzIH0gZnJvbSAiQGhvbm8vbm9kZS1zZXJ2ZXIiOwppbXBvcnQgeyBzZXJ2ZVN0YXRpYyB9IGZyb20gIkBob25vL25vZGUtc2VydmVyL3NlcnZlLXN0YXRpYyI7CmltcG9ydCBmcyBmcm9tICJmcyI7CmltcG9ydCBwYXRoIGZyb20gInBhdGgiOwoKdHlwZSBBcHAgPSBIb25vPHsgQmluZGluZ3M6IEh0dHBCaW5kaW5ncyB9PjsKCmV4cG9ydCBmdW5jdGlvbiBzZXJ2ZVN0YXRpY0ZpbGVzKGFwcDogQXBwKSB7CiAgY29uc3QgZGlzdFBhdGggPSBwYXRoLnJlc29sdmUoaW1wb3J0Lm1ldGEuZGlybmFtZSwgIi4uL2Rpc3QvcHVibGljIik7CgogIGFwcC51c2UoIioiLCBzZXJ2ZVN0YXRpYyh7IHJvb3Q6ICIuL2Rpc3QvcHVibGljIiB9KSk7CgogIGFwcC5ub3RGb3VuZCgoYykgPT4gewogICAgY29uc3QgYWNjZXB0ID0gYy5yZXEuaGVhZGVyKCJhY2NlcHQiKSA/PyAiIjsKICAgIGlmICghYWNjZXB0LmluY2x1ZGVzKCJ0ZXh0L2h0bWwiKSkgewogICAgICByZXR1cm4gYy5qc29uKHsgZXJyb3I6ICJOb3QgRm91bmQiIH0sIDQwNCk7CiAgICB9CiAgICBjb25zdCBpbmRleFBhdGggPSBwYXRoLnJlc29sdmUoZGlzdFBhdGgsICJpbmRleC5odG1sIik7CiAgICBjb25zdCBjb250ZW50ID0gZnMucmVhZEZpbGVTeW5jKGluZGV4UGF0aCwgInV0Zi04Iik7CiAgICByZXR1cm4gYy5odG1sKGNvbnRlbnQpOwogIH0pOwp9Cg==
+import type { Hono } from "hono";
+import type { HttpBindings } from "@hono/node-server";
+import { serveStatic } from "@hono/node-server/serve-static";
+import fs from "fs";
+import path from "path";
+
+type App = Hono<{ Bindings: HttpBindings }>;
+
+export function serveStaticFiles(app: App) {
+  const distPath = path.resolve(import.meta.dirname, "../dist/public");
+
+  app.use("*", serveStatic({ root: "./dist/public" }));
+
+  app.notFound((c) => {
+    const accept = c.req.header("accept") ?? "";
+    if (!accept.includes("text/html")) {
+      return c.json({ error: "Not Found" }, 404);
+    }
+    const indexPath = path.resolve(distPath, "index.html");
+    const content = fs.readFileSync(indexPath, "utf-8");
+    return c.html(content);
+  });
+}

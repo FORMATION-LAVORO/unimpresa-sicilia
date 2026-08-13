@@ -1,1 +1,17 @@
-Y29uc3QgS0VZID0gInVuaW1wcmVzYV9hZG1pbl90b2tlbiI7CmNvbnN0IFVTRVJfS0VZID0gInVuaW1wcmVzYV9hZG1pbl91c2VyIjsKCmV4cG9ydCBmdW5jdGlvbiBnZXRBZG1pblRva2VuKCk6IHN0cmluZyB7CiAgcmV0dXJuIGxvY2FsU3RvcmFnZS5nZXRJdGVtKEtFWSkgPz8gIiI7Cn0KZXhwb3J0IGZ1bmN0aW9uIHNldEFkbWluU2Vzc2lvbih0b2tlbjogc3RyaW5nLCB1c2VybmFtZTogc3RyaW5nKSB7CiAgbG9jYWxTdG9yYWdlLnNldEl0ZW0oS0VZLCB0b2tlbik7CiAgbG9jYWxTdG9yYWdlLnNldEl0ZW0oVVNFUl9LRVksIHVzZXJuYW1lKTsKfQpleHBvcnQgZnVuY3Rpb24gZ2V0QWRtaW5Vc2VyKCk6IHN0cmluZyB7CiAgcmV0dXJuIGxvY2FsU3RvcmFnZS5nZXRJdGVtKFVTRVJfS0VZKSA/PyAiYWRtaW4iOwp9CmV4cG9ydCBmdW5jdGlvbiBjbGVhckFkbWluU2Vzc2lvbigpIHsKICBsb2NhbFN0b3JhZ2UucmVtb3ZlSXRlbShLRVkpOwogIGxvY2FsU3RvcmFnZS5yZW1vdmVJdGVtKFVTRVJfS0VZKTsKfQo=
+const KEY = "unimpresa_admin_token";
+const USER_KEY = "unimpresa_admin_user";
+
+export function getAdminToken(): string {
+  return localStorage.getItem(KEY) ?? "";
+}
+export function setAdminSession(token: string, username: string) {
+  localStorage.setItem(KEY, token);
+  localStorage.setItem(USER_KEY, username);
+}
+export function getAdminUser(): string {
+  return localStorage.getItem(USER_KEY) ?? "admin";
+}
+export function clearAdminSession() {
+  localStorage.removeItem(KEY);
+  localStorage.removeItem(USER_KEY);
+}
