@@ -1,6 +1,7 @@
 import { readFileSync, readdirSync } from "fs";
 import { join } from "path";
 import bcrypt from "bcryptjs";
+import { sql } from "drizzle-orm";
 import { getDb } from "../queries/connection";
 import * as s from "../../db/schema";
 
@@ -22,7 +23,7 @@ export async function bootstrapDatabase(): Promise<{ ok: boolean; steps: string[
       for (let i = 0; i < statements.length; i++) {
         const st = statements[i];
         try {
-          await (db as any).execute(st);
+          await (db as any).execute(sql.raw(st));
           console.log(`[bootstrap] ${f} [${i + 1}/${statements.length}] OK`);
         } catch (e: any) {
           const msg = String(e?.message ?? e);
