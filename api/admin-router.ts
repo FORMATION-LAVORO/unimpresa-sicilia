@@ -5,6 +5,7 @@ import bcrypt from "bcryptjs";
 import jwt from "jsonwebtoken";
 import { createRouter, publicQuery } from "./middleware";
 import { getDb } from "./queries/connection";
+import { numberToLetters, parseNumber } from "./lib/number-to-letters";
 import {
   cycles,
   filieres,
@@ -155,12 +156,24 @@ export const adminRouter = createRouter({
   }),
   createTarif: publicQuery.input(z.object({ ...withToken, data: tarifInput })).mutation(async ({ input }) => {
     requireAdmin(input.token);
-    const [r] = await getDb().insert(tarifs).values(input.data).returning({ id: tarifs.id });
+    const data = { ...input.data };
+    // Auto-génère le montant en lettres si vide ou si le montant a changé
+    if (!data.montantLettres || data.montantLettres.trim() === "") {
+      const num = parseNumber(data.montantChiffres);
+      data.montantLettres = num > 0 ? numberToLetters(num) : "";
+    }
+    const [r] = await getDb().insert(tarifs).values(data).returning({ id: tarifs.id });
     return { id: Number(r.id) };
   }),
   updateTarif: publicQuery.input(z.object({ ...withToken, id: z.number(), data: tarifInput.partial() })).mutation(async ({ input }) => {
     requireAdmin(input.token);
-    await getDb().update(tarifs).set(input.data).where(eq(tarifs.id, input.id));
+    const data = { ...input.data };
+    // Si le montant en chiffres change, régénère les lettres
+    if (data.montantChiffres !== undefined) {
+      const num = parseNumber(data.montantChiffres);
+      data.montantLettres = num > 0 ? numberToLetters(num) : "";
+    }
+    await getDb().update(tarifs).set(data).where(eq(tarifs.id, input.id));
     return { ok: true };
   }),
   deleteTarif: publicQuery.input(z.object({ ...withToken, id: z.number() })).mutation(async ({ input }) => {
