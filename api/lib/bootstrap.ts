@@ -2,6 +2,8 @@ import { readFileSync, readdirSync } from "fs";
 import { join } from "path";
 import bcrypt from "bcryptjs";
 import { sql } from "drizzle-orm";
+import pg from "pg";
+import { env } from "./env";
 import { getDb } from "../queries/connection";
 import * as s from "../../db/schema";
 
@@ -20,20 +22,26 @@ export async function bootstrapDatabase(): Promise<{ ok: boolean; steps: string[
       const statements = sqlText.split("--> statement-breakpoint").map((x) => x.trim()).filter(Boolean);
       console.log(`[bootstrap] ${f}: ${statements.length} statements`);
 
-      for (let i = 0; i < statements.length; i++) {
-        const st = statements[i];
-        try {
-          await (db as any).execute(sql.raw(st));
-          console.log(`[bootstrap] ${f} [${i + 1}/${statements.length}] OK`);
-        } catch (e: any) {
-          const msg = String(e?.message ?? e);
-          if (/already exists|duplicate|relation .* existe/i.test(msg)) {
-            console.log(`[bootstrap] ${f} [${i + 1}/${statements.length}] SKIP (existe déjà)`);
-          } else {
-            console.error(`[bootstrap] ${f} [${i + 1}/${statements.length}] ERREUR:`, msg);
-            throw new Error(`Migration ${f} statement ${i + 1}: ${msg}`);
+      const client = new pg.Client({ connectionString: env.databaseUrl });
+      await client.connect();
+      try {
+        for (let i = 0; i < statements.length; i++) {
+          const st = statements[i];
+          try {
+            await client.query(st);
+            console.log(`[bootstrap] ${f} [${i + 1}/${statements.length}] OK`);
+          } catch (e: any) {
+            const msg = String(e?.message ?? e);
+            if (/already exists|duplicate|relation .* existe/i.test(msg)) {
+              console.log(`[bootstrap] ${f} [${i + 1}/${statements.length}] SKIP (existe déjà)`);
+            } else {
+              console.error(`[bootstrap] ${f} [${i + 1}/${statements.length}] ERREUR:`, msg);
+              throw new Error(`Migration ${f} statement ${i + 1}: ${msg}`);
+            }
           }
         }
+      } finally {
+        await client.end();
       }
       steps.push(`migration ${f}`);
     }
