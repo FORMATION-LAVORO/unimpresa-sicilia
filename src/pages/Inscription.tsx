@@ -258,7 +258,7 @@ export default function Inscription() {
                       <p className="font-bold text-slate-800 mb-2">Engagement du candidat</p>
                       <p>
                         Je soussigné(e) <strong>{form.prenom} {form.nom}</strong>, m'engage à suivre assidûment
-                        la formation de 120 heures du programme {params.org_name}, à régler les frais
+                        la formation de {data?.cycle?.dureeHeures ?? "120"} heures du programme {params.org_name}, à régler les frais
                         selon les modalités prévues ({params.cout_total ?? "560 000 FCFA"}), et à respecter
                         le règlement intérieur du centre de formation.
                       </p>
