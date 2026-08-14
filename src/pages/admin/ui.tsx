@@ -69,8 +69,20 @@ export function Table({ head, children }: { head: string[]; children: ReactNode 
   );
 }
 
-export function Toggle({ checked, onChange }: { checked: boolean; onChange: (v: boolean) => void }) {
+/** Bouton d'export Excel : télécharge un jeu de données via /api/export/:name */
+export function ExportBtn({ dataset, label }: { dataset: string; label?: string }) {
+  const token = getAdminToken();
   return (
+    <a
+      href={`/api/export/${dataset}?token=${encodeURIComponent(token)}`}
+      className="px-4 py-2 rounded-lg text-sm font-semibold transition bg-green-700 text-white hover:bg-green-800 inline-block"
+    >
+      📊 {label ?? "Exporter Excel"}
+    </a>
+  );
+}
+
+export function Toggle({ checked, onChange }: { checked: boolean; onChange: (v: boolean) => void }) {  return (
     <button
       type="button"
       onClick={() => onChange(!checked)}

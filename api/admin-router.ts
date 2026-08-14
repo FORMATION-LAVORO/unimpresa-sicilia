@@ -17,6 +17,13 @@ import {
   partenaires,
   avantages,
   rendezVous,
+  travailleurs,
+  offresEmploi,
+  matchings,
+  transactions,
+  salles,
+  placements,
+  tuteurs,
 } from "../db/schema";
 
 const JWT_SECRET = process.env.JWT_SECRET ?? "unimpresa-dev-secret";
@@ -78,6 +85,99 @@ const etapeInput = z.object({
   ordre: z.number().int().default(0),
 });
 
+const travailleurInput = z.object({
+  inscriptionId: z.number().nullable().default(null),
+  nom: z.string().min(1),
+  prenom: z.string().min(1),
+  dateNaissance: z.string().default(""),
+  age: z.number().int().min(0).default(0),
+  sexe: z.string().default(""),
+  telephone: z.string().default(""),
+  email: z.string().default(""),
+  profession: z.string().default(""),
+  competences: z.string().default(""),
+  experienceAnnees: z.number().int().min(0).default(0),
+  niveauItalien: z.string().default("débutant"),
+  autresLangues: z.string().default(""),
+  filiereId: z.number().nullable().default(null),
+  metier: z.string().default(""),
+  statut: z.string().default("en_formation"),
+  notes: z.string().default(""),
+});
+
+const offreInput = z.object({
+  titre: z.string().min(1),
+  entreprise: z.string().default(""),
+  ville: z.string().default(""),
+  filiereId: z.number().nullable().default(null),
+  metier: z.string().default(""),
+  typeContrat: z.string().default(""),
+  salaire: z.string().default(""),
+  description: z.string().default(""),
+  statut: z.string().default("ouverte"),
+});
+
+const matchingInput = z.object({
+  travailleurId: z.number(),
+  offreId: z.number().nullable().default(null),
+  filiereId: z.number().nullable().default(null),
+  type: z.string().default("emploi"),
+  score: z.number().int().default(0),
+  statut: z.string().default("proposé"),
+  notes: z.string().default(""),
+});
+
+const transactionInput = z.object({
+  date: z.string().min(1),
+  type: z.string().default("recette"),
+  categorie: z.string().default(""),
+  libelle: z.string().min(1),
+  montantChiffres: z.string().min(1),
+  montantLettres: z.string().default(""),
+  modePaiement: z.string().default("espèces"),
+  inscriptionId: z.number().nullable().default(null),
+  notes: z.string().default(""),
+});
+
+const salleInput = z.object({
+  nom: z.string().min(1),
+  type: z.string().default("salle"),
+  capacite: z.number().int().min(0).default(30),
+  occupation: z.number().int().min(0).default(0),
+  equipements: z.string().default(""),
+  localisation: z.string().default(""),
+  seuilAlerte: z.number().int().min(1).max(100).default(90),
+  actif: z.boolean().default(true),
+});
+
+const placementInput = z.object({
+  travailleurId: z.number().nullable().default(null),
+  inscriptionId: z.number().nullable().default(null),
+  nomComplet: z.string().default(""),
+  type: z.string().default("reussite"),
+  entreprise: z.string().default(""),
+  poste: z.string().default(""),
+  ville: z.string().default(""),
+  typeContrat: z.string().default(""),
+  dateEvenement: z.string().default(""),
+  salaire: z.string().default(""),
+  statut: z.string().default("en_cours"),
+  notes: z.string().default(""),
+});
+
+const tuteurInput = z.object({
+  nom: z.string().min(1),
+  prenom: z.string().min(1),
+  role: z.string().default("enseignant"),
+  specialite: z.string().default(""),
+  filiereId: z.number().nullable().default(null),
+  telephone: z.string().default(""),
+  email: z.string().default(""),
+  langues: z.string().default(""),
+  statut: z.string().default("actif"),
+  notes: z.string().default(""),
+});
+
 export const adminRouter = createRouter({
   /** Connexion Super Admin (bcrypt + JWT) */
   login: publicQuery
@@ -104,6 +204,13 @@ export const adminRouter = createRouter({
       etapes: await count(etapes),
       inscriptions: await count(inscriptions),
       parametres: await count(parametres),
+      travailleurs: await count(travailleurs),
+      offres: await count(offresEmploi),
+      matchings: await count(matchings),
+      transactions: await count(transactions),
+      salles: await count(salles),
+      placements: await count(placements),
+      tuteurs: await count(tuteurs),
     };
   }),
 
@@ -326,4 +433,234 @@ export const adminRouter = createRouter({
       await db.update(admins).set({ passwordHash: await bcrypt.hash(input.newPassword, 10) }).where(eq(admins.id, admin.id));
       return { ok: true };
     }),
+
+  // ─── TRAVAILLEURS (profils professionnels) ─────────────────────────────
+  listTravailleurs: publicQuery.input(z.object(withToken)).query(async ({ input }) => {
+    requireAdmin(input.token);
+    return getDb().select().from(travailleurs).orderBy(desc(travailleurs.id));
+  }),
+  createTravailleur: publicQuery
+    .input(z.object({ ...withToken, data: travailleurInput }))
+    .mutation(async ({ input }) => {
+      requireAdmin(input.token);
+      const [r] = await getDb().insert(travailleurs).values(input.data).returning({ id: travailleurs.id });
+      return { id: Number(r.id) };
+    }),
+  updateTravailleur: publicQuery
+    .input(z.object({ ...withToken, id: z.number(), data: travailleurInput.partial() }))
+    .mutation(async ({ input }) => {
+      requireAdmin(input.token);
+      await getDb().update(travailleurs).set(input.data).where(eq(travailleurs.id, input.id));
+      return { ok: true };
+    }),
+  deleteTravailleur: publicQuery.input(z.object({ ...withToken, id: z.number() })).mutation(async ({ input }) => {
+    requireAdmin(input.token);
+    await getDb().delete(travailleurs).where(eq(travailleurs.id, input.id));
+    return { ok: true };
+  }),
+  /** Importe une inscription validée comme travailleur */
+  importInscription: publicQuery.input(z.object({ ...withToken, id: z.number() })).mutation(async ({ input }) => {
+    requireAdmin(input.token);
+    const db = getDb();
+    const [ins] = await db.select().from(inscriptions).where(eq(inscriptions.id, input.id)).limit(1);
+    if (!ins) throw new TRPCError({ code: "NOT_FOUND", message: "Inscription introuvable." });
+    let age = 0;
+    const m = ins.dateNaissance.match(/(\d{1,2})[\/\-.](\d{1,2})[\/\-.](\d{4})/) ?? ins.dateNaissance.match(/(\d{4})[\/\-.](\d{1,2})[\/\-.](\d{1,2})/);
+    if (m) {
+      const year = ins.dateNaissance.startsWith(m[1]) && m[1].length === 4 ? Number(m[1]) : Number(m[3]);
+      age = Math.max(0, new Date().getFullYear() - year);
+    }
+    const [r] = await db
+      .insert(travailleurs)
+      .values({
+        inscriptionId: ins.id,
+        nom: ins.nom,
+        prenom: ins.prenom,
+        dateNaissance: ins.dateNaissance,
+        age,
+        sexe: ins.sexe,
+        telephone: ins.telephone,
+        email: ins.email,
+        profession: ins.profession,
+        filiereId: ins.filiereId,
+        metier: ins.metierChoisi,
+      })
+      .returning({ id: travailleurs.id });
+    return { id: Number(r.id) };
+  }),
+
+  // ─── OFFRES D'EMPLOI ───────────────────────────────────────────────────
+  listOffres: publicQuery.input(z.object(withToken)).query(async ({ input }) => {
+    requireAdmin(input.token);
+    return getDb().select().from(offresEmploi).orderBy(desc(offresEmploi.id));
+  }),
+  createOffre: publicQuery.input(z.object({ ...withToken, data: offreInput })).mutation(async ({ input }) => {
+    requireAdmin(input.token);
+    const [r] = await getDb().insert(offresEmploi).values(input.data).returning({ id: offresEmploi.id });
+    return { id: Number(r.id) };
+  }),
+  updateOffre: publicQuery.input(z.object({ ...withToken, id: z.number(), data: offreInput.partial() })).mutation(async ({ input }) => {
+    requireAdmin(input.token);
+    await getDb().update(offresEmploi).set(input.data).where(eq(offresEmploi.id, input.id));
+    return { ok: true };
+  }),
+  deleteOffre: publicQuery.input(z.object({ ...withToken, id: z.number() })).mutation(async ({ input }) => {
+    requireAdmin(input.token);
+    await getDb().delete(offresEmploi).where(eq(offresEmploi.id, input.id));
+    return { ok: true };
+  }),
+
+  // ─── MATCHING ──────────────────────────────────────────────────────────
+  listMatchings: publicQuery.input(z.object(withToken)).query(async ({ input }) => {
+    requireAdmin(input.token);
+    return getDb().select().from(matchings).orderBy(desc(matchings.id));
+  }),
+  createMatching: publicQuery.input(z.object({ ...withToken, data: matchingInput })).mutation(async ({ input }) => {
+    requireAdmin(input.token);
+    const [r] = await getDb().insert(matchings).values(input.data).returning({ id: matchings.id });
+    return { id: Number(r.id) };
+  }),
+  updateMatching: publicQuery.input(z.object({ ...withToken, id: z.number(), data: matchingInput.partial() })).mutation(async ({ input }) => {
+    requireAdmin(input.token);
+    await getDb().update(matchings).set(input.data).where(eq(matchings.id, input.id));
+    return { ok: true };
+  }),
+  deleteMatching: publicQuery.input(z.object({ ...withToken, id: z.number() })).mutation(async ({ input }) => {
+    requireAdmin(input.token);
+    await getDb().delete(matchings).where(eq(matchings.id, input.id));
+    return { ok: true };
+  }),
+  /** Suggestions automatiques de matching pour un travailleur */
+  suggestMatches: publicQuery.input(z.object({ ...withToken, travailleurId: z.number() })).query(async ({ input }) => {
+    requireAdmin(input.token);
+    const db = getDb();
+    const [t] = await db.select().from(travailleurs).where(eq(travailleurs.id, input.travailleurId)).limit(1);
+    if (!t) return [];
+    const offres = await db.select().from(offresEmploi).where(eq(offresEmploi.statut, "ouverte"));
+    const norm = (s: string) => s.toLowerCase().normalize("NFD").replace(/[̀-ͯ]/g, "");
+    return offres
+      .map((o) => {
+        let score = 0;
+        if (t.filiereId && o.filiereId && Number(t.filiereId) === Number(o.filiereId)) score += 50;
+        if (t.metier && o.metier && norm(t.metier) === norm(o.metier)) score += 30;
+        else if (t.metier && o.metier && (norm(o.metier).includes(norm(t.metier)) || norm(t.metier).includes(norm(o.metier)))) score += 15;
+        if (t.niveauItalien === "avancé" || t.niveauItalien === "courant") score += 10;
+        else if (t.niveauItalien === "intermédiaire") score += 5;
+        if (t.experienceAnnees >= 2) score += 10;
+        return { offre: o, score };
+      })
+      .filter((s) => s.score > 0)
+      .sort((a, b) => b.score - a.score);
+  }),
+
+  // ─── COMPTABILITÉ ──────────────────────────────────────────────────────
+  listTransactions: publicQuery.input(z.object(withToken)).query(async ({ input }) => {
+    requireAdmin(input.token);
+    return getDb().select().from(transactions).orderBy(desc(transactions.id));
+  }),
+  createTransaction: publicQuery.input(z.object({ ...withToken, data: transactionInput })).mutation(async ({ input }) => {
+    requireAdmin(input.token);
+    const data = { ...input.data };
+    if (!data.montantLettres || data.montantLettres.trim() === "") {
+      const num = parseNumber(data.montantChiffres);
+      data.montantLettres = num > 0 ? numberToLetters(num) : "";
+    }
+    const [r] = await getDb().insert(transactions).values(data).returning({ id: transactions.id });
+    return { id: Number(r.id) };
+  }),
+  updateTransaction: publicQuery
+    .input(z.object({ ...withToken, id: z.number(), data: transactionInput.partial() }))
+    .mutation(async ({ input }) => {
+      requireAdmin(input.token);
+      const data = { ...input.data };
+      if (data.montantChiffres !== undefined) {
+        const num = parseNumber(data.montantChiffres);
+        data.montantLettres = num > 0 ? numberToLetters(num) : "";
+      }
+      await getDb().update(transactions).set(data).where(eq(transactions.id, input.id));
+      return { ok: true };
+    }),
+  deleteTransaction: publicQuery.input(z.object({ ...withToken, id: z.number() })).mutation(async ({ input }) => {
+    requireAdmin(input.token);
+    await getDb().delete(transactions).where(eq(transactions.id, input.id));
+    return { ok: true };
+  }),
+  /** Bilan comptable */
+  bilanCompta: publicQuery.input(z.object(withToken)).query(async ({ input }) => {
+    requireAdmin(input.token);
+    const rows = await getDb().select().from(transactions);
+    let recettes = 0;
+    let depenses = 0;
+    for (const r of rows) {
+      const n = parseNumber(r.montantChiffres);
+      if (r.type === "recette") recettes += n;
+      else depenses += n;
+    }
+    return { recettes, depenses, solde: recettes - depenses, count: rows.length };
+  }),
+
+  // ─── SALLES / AMPHITHÉÂTRES ────────────────────────────────────────────
+  listSalles: publicQuery.input(z.object(withToken)).query(async ({ input }) => {
+    requireAdmin(input.token);
+    return getDb().select().from(salles).orderBy(asc(salles.nom));
+  }),
+  createSalle: publicQuery.input(z.object({ ...withToken, data: salleInput })).mutation(async ({ input }) => {
+    requireAdmin(input.token);
+    const [r] = await getDb().insert(salles).values(input.data).returning({ id: salles.id });
+    return { id: Number(r.id) };
+  }),
+  updateSalle: publicQuery.input(z.object({ ...withToken, id: z.number(), data: salleInput.partial() })).mutation(async ({ input }) => {
+    requireAdmin(input.token);
+    await getDb().update(salles).set(input.data).where(eq(salles.id, input.id));
+    return { ok: true };
+  }),
+  deleteSalle: publicQuery.input(z.object({ ...withToken, id: z.number() })).mutation(async ({ input }) => {
+    requireAdmin(input.token);
+    await getDb().delete(salles).where(eq(salles.id, input.id));
+    return { ok: true };
+  }),
+
+  // ─── RÉUSSITES / PLACEMENTS ────────────────────────────────────────────
+  listPlacements: publicQuery.input(z.object(withToken)).query(async ({ input }) => {
+    requireAdmin(input.token);
+    return getDb().select().from(placements).orderBy(desc(placements.id));
+  }),
+  createPlacement: publicQuery.input(z.object({ ...withToken, data: placementInput })).mutation(async ({ input }) => {
+    requireAdmin(input.token);
+    const [r] = await getDb().insert(placements).values(input.data).returning({ id: placements.id });
+    return { id: Number(r.id) };
+  }),
+  updatePlacement: publicQuery
+    .input(z.object({ ...withToken, id: z.number(), data: placementInput.partial() }))
+    .mutation(async ({ input }) => {
+      requireAdmin(input.token);
+      await getDb().update(placements).set(input.data).where(eq(placements.id, input.id));
+      return { ok: true };
+    }),
+  deletePlacement: publicQuery.input(z.object({ ...withToken, id: z.number() })).mutation(async ({ input }) => {
+    requireAdmin(input.token);
+    await getDb().delete(placements).where(eq(placements.id, input.id));
+    return { ok: true };
+  }),
+
+  // ─── TUTEURS / ENSEIGNANTS ─────────────────────────────────────────────
+  listTuteurs: publicQuery.input(z.object(withToken)).query(async ({ input }) => {
+    requireAdmin(input.token);
+    return getDb().select().from(tuteurs).orderBy(asc(tuteurs.nom));
+  }),
+  createTuteur: publicQuery.input(z.object({ ...withToken, data: tuteurInput })).mutation(async ({ input }) => {
+    requireAdmin(input.token);
+    const [r] = await getDb().insert(tuteurs).values(input.data).returning({ id: tuteurs.id });
+    return { id: Number(r.id) };
+  }),
+  updateTuteur: publicQuery.input(z.object({ ...withToken, id: z.number(), data: tuteurInput.partial() })).mutation(async ({ input }) => {
+    requireAdmin(input.token);
+    await getDb().update(tuteurs).set(input.data).where(eq(tuteurs.id, input.id));
+    return { ok: true };
+  }),
+  deleteTuteur: publicQuery.input(z.object({ ...withToken, id: z.number() })).mutation(async ({ input }) => {
+    requireAdmin(input.token);
+    await getDb().delete(tuteurs).where(eq(tuteurs.id, input.id));
+    return { ok: true };
+  }),
 });

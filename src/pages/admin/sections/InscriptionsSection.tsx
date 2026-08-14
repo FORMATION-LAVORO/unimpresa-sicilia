@@ -14,6 +14,7 @@ export default function InscriptionsSection() {
   const { token, refresh } = useAdmin();
   const { data } = trpc.admin.listInscriptions.useQuery({ token });
   const update = trpc.admin.updateInscription.useMutation({ onSuccess: refresh });
+  const importMut = trpc.admin.importInscription.useMutation({ onSuccess: refresh });
   const del = trpc.admin.deleteInscription.useMutation({ onSuccess: refresh });
 
   return (
@@ -55,7 +56,12 @@ export default function InscriptionsSection() {
                 {STATUTS.map((s) => <option key={s} value={s}>{s}</option>)}
               </select>
             </td>
-            <td className="px-4 py-3">
+            <td className="px-4 py-3 whitespace-nowrap">
+              <button
+                title="Importer comme travailleur (module Matching)"
+                className="px-2 py-1 rounded-lg bg-blue-50 text-blue-700 text-xs font-bold mr-1.5 hover:bg-blue-100"
+                onClick={async () => { await importMut.mutateAsync({ token, id: Number(i.id) }); alert("✅ Importé dans Travailleurs"); }}
+              >👷</button>
               <Btn variant="danger" onClick={() => confirm("Supprimer cette inscription ?") && del.mutate({ token, id: Number(i.id) })}>🗑</Btn>
             </td>
           </tr>

@@ -148,3 +148,128 @@ export type Inscription = typeof inscriptions.$inferSelect;
 export type Partenaire = typeof partenaires.$inferSelect;
 export type Avantage = typeof avantages.$inferSelect;
 export type RendezVous = typeof rendezVous.$inferSelect;
+
+// ═══════════════════════════════════════════════════════════════════════════
+// MODULES BACK-OFFICE AVANCÉS
+// ═══════════════════════════════════════════════════════════════════════════
+
+// ─── Travailleurs (profils professionnels) ─────────────────────────────────
+export const travailleurs = pgTable("travailleurs", {
+  id: serial("id").primaryKey(),
+  inscriptionId: bigint("inscription_id", { mode: "number" }),
+  nom: varchar("nom", { length: 100 }).notNull(),
+  prenom: varchar("prenom", { length: 100 }).notNull(),
+  dateNaissance: varchar("date_naissance", { length: 30 }).notNull().default(""),
+  age: integer("age").notNull().default(0),
+  sexe: varchar("sexe", { length: 20 }).notNull().default(""),
+  telephone: varchar("telephone", { length: 50 }).notNull().default(""),
+  email: varchar("email", { length: 255 }).notNull().default(""),
+  profession: varchar("profession", { length: 150 }).notNull().default(""),
+  competences: text("competences").notNull().default(""),
+  experienceAnnees: integer("experience_annees").notNull().default(0),
+  niveauItalien: varchar("niveau_italien", { length: 30 }).notNull().default("débutant"),
+  autresLangues: varchar("autres_langues", { length: 255 }).notNull().default(""),
+  filiereId: bigint("filiere_id", { mode: "number" }),
+  metier: varchar("metier", { length: 150 }).notNull().default(""),
+  statut: varchar("statut", { length: 50 }).notNull().default("en_formation"),
+  notes: text("notes").notNull().default(""),
+  createdAt: timestamp("created_at").notNull().defaultNow(),
+});
+
+// ─── Offres d'emploi en Italie ──────────────────────────────────────────────
+export const offresEmploi = pgTable("offres_emploi", {
+  id: serial("id").primaryKey(),
+  titre: varchar("titre", { length: 255 }).notNull(),
+  entreprise: varchar("entreprise", { length: 255 }).notNull().default(""),
+  ville: varchar("ville", { length: 100 }).notNull().default(""),
+  filiereId: bigint("filiere_id", { mode: "number" }),
+  metier: varchar("metier", { length: 150 }).notNull().default(""),
+  typeContrat: varchar("type_contrat", { length: 100 }).notNull().default(""),
+  salaire: varchar("salaire", { length: 100 }).notNull().default(""),
+  description: text("description").notNull().default(""),
+  statut: varchar("statut", { length: 50 }).notNull().default("ouverte"),
+  createdAt: timestamp("created_at").notNull().defaultNow(),
+});
+
+// ─── Matching travailleurs ↔ offres / filières ─────────────────────────────
+export const matchings = pgTable("matchings", {
+  id: serial("id").primaryKey(),
+  travailleurId: bigint("travailleur_id", { mode: "number" }).notNull(),
+  offreId: bigint("offre_id", { mode: "number" }),
+  filiereId: bigint("filiere_id", { mode: "number" }),
+  type: varchar("type", { length: 30 }).notNull().default("emploi"),
+  score: integer("score").notNull().default(0),
+  statut: varchar("statut", { length: 50 }).notNull().default("proposé"),
+  notes: text("notes").notNull().default(""),
+  createdAt: timestamp("created_at").notNull().defaultNow(),
+});
+
+// ─── Comptabilité (recettes / dépenses) ────────────────────────────────────
+export const transactions = pgTable("transactions", {
+  id: serial("id").primaryKey(),
+  date: varchar("date", { length: 30 }).notNull(),
+  type: varchar("type", { length: 20 }).notNull().default("recette"),
+  categorie: varchar("categorie", { length: 100 }).notNull().default(""),
+  libelle: varchar("libelle", { length: 255 }).notNull(),
+  montantChiffres: varchar("montant_chiffres", { length: 100 }).notNull(),
+  montantLettres: varchar("montant_lettres", { length: 255 }).notNull().default(""),
+  modePaiement: varchar("mode_paiement", { length: 50 }).notNull().default("espèces"),
+  inscriptionId: bigint("inscription_id", { mode: "number" }),
+  notes: text("notes").notNull().default(""),
+  createdAt: timestamp("created_at").notNull().defaultNow(),
+});
+
+// ─── Salles de classe et amphithéâtres ─────────────────────────────────────
+export const salles = pgTable("salles", {
+  id: serial("id").primaryKey(),
+  nom: varchar("nom", { length: 255 }).notNull(),
+  type: varchar("type", { length: 30 }).notNull().default("salle"),
+  capacite: integer("capacite").notNull().default(30),
+  occupation: integer("occupation").notNull().default(0),
+  equipements: text("equipements").notNull().default(""),
+  localisation: varchar("localisation", { length: 255 }).notNull().default(""),
+  seuilAlerte: integer("seuil_alerte").notNull().default(90),
+  actif: boolean("actif").notNull().default(true),
+});
+
+// ─── Réussites et placements en contrats ───────────────────────────────────
+export const placements = pgTable("placements", {
+  id: serial("id").primaryKey(),
+  travailleurId: bigint("travailleur_id", { mode: "number" }),
+  inscriptionId: bigint("inscription_id", { mode: "number" }),
+  nomComplet: varchar("nom_complet", { length: 255 }).notNull().default(""),
+  type: varchar("type", { length: 30 }).notNull().default("reussite"),
+  entreprise: varchar("entreprise", { length: 255 }).notNull().default(""),
+  poste: varchar("poste", { length: 255 }).notNull().default(""),
+  ville: varchar("ville", { length: 100 }).notNull().default(""),
+  typeContrat: varchar("type_contrat", { length: 100 }).notNull().default(""),
+  dateEvenement: varchar("date_evenement", { length: 30 }).notNull().default(""),
+  salaire: varchar("salaire", { length: 100 }).notNull().default(""),
+  statut: varchar("statut", { length: 50 }).notNull().default("en_cours"),
+  notes: text("notes").notNull().default(""),
+  createdAt: timestamp("created_at").notNull().defaultNow(),
+});
+
+// ─── Tuteurs et enseignants ────────────────────────────────────────────────
+export const tuteurs = pgTable("tuteurs", {
+  id: serial("id").primaryKey(),
+  nom: varchar("nom", { length: 100 }).notNull(),
+  prenom: varchar("prenom", { length: 100 }).notNull(),
+  role: varchar("role", { length: 30 }).notNull().default("enseignant"),
+  specialite: varchar("specialite", { length: 255 }).notNull().default(""),
+  filiereId: bigint("filiere_id", { mode: "number" }),
+  telephone: varchar("telephone", { length: 50 }).notNull().default(""),
+  email: varchar("email", { length: 255 }).notNull().default(""),
+  langues: varchar("langues", { length: 255 }).notNull().default(""),
+  statut: varchar("statut", { length: 50 }).notNull().default("actif"),
+  notes: text("notes").notNull().default(""),
+  createdAt: timestamp("created_at").notNull().defaultNow(),
+});
+
+export type Travailleur = typeof travailleurs.$inferSelect;
+export type OffreEmploi = typeof offresEmploi.$inferSelect;
+export type Matching = typeof matchings.$inferSelect;
+export type Transaction = typeof transactions.$inferSelect;
+export type Salle = typeof salles.$inferSelect;
+export type Placement = typeof placements.$inferSelect;
+export type Tuteur = typeof tuteurs.$inferSelect;

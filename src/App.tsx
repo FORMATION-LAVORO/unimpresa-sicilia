@@ -22,6 +22,12 @@ export default function App() {
       <Route path="/admin/partenaires" element={<AdminDashboard />} />
       <Route path="/admin/avantages" element={<AdminDashboard />} />
       <Route path="/admin/rendezvous" element={<AdminDashboard />} />
+      <Route path="/admin/travailleurs" element={<AdminDashboard />} />
+      <Route path="/admin/matching" element={<AdminDashboard />} />
+      <Route path="/admin/comptabilite" element={<AdminDashboard />} />
+      <Route path="/admin/salles" element={<AdminDashboard />} />
+      <Route path="/admin/placements" element={<AdminDashboard />} />
+      <Route path="/admin/tuteurs" element={<AdminDashboard />} />
       <Route path="/admin/parametres" element={<AdminDashboard />} />
       <Route path="*" element={<Navigate to="/" replace />} />
     </Routes>

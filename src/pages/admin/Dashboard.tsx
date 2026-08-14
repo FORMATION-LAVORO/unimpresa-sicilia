@@ -11,6 +11,12 @@ import InscriptionsSection from "./sections/InscriptionsSection";
 import PartenairesSection from "./sections/PartenairesSection";
 import AvantagesSection from "./sections/AvantagesSection";
 import RendezVousSection from "./sections/RendezVousSection";
+import TravailleursSection from "./sections/TravailleursSection";
+import MatchingSection from "./sections/MatchingSection";
+import ComptabiliteSection from "./sections/ComptabiliteSection";
+import SallesSection from "./sections/SallesSection";
+import PlacementsSection from "./sections/PlacementsSection";
+import TuteursSection from "./sections/TuteursSection";
 
 const NAV = [
   { path: "/admin/dashboard", label: "📊 Tableau de bord", key: "dashboard" },
@@ -22,6 +28,12 @@ const NAV = [
   { path: "/admin/avantages", label: "⭐ Avantages", key: "avantages" },
   { path: "/admin/inscriptions", label: "📝 Inscriptions", key: "inscriptions" },
   { path: "/admin/rendezvous", label: "📅 Rendez-vous", key: "rendezvous" },
+  { path: "/admin/travailleurs", label: "👷 Travailleurs", key: "travailleurs" },
+  { path: "/admin/matching", label: "🔗 Matching & offres", key: "matching" },
+  { path: "/admin/comptabilite", label: "🧾 Comptabilité", key: "comptabilite" },
+  { path: "/admin/salles", label: "🏫 Salles & amphis", key: "salles" },
+  { path: "/admin/placements", label: "🎯 Réussites & contrats", key: "placements" },
+  { path: "/admin/tuteurs", label: "👨‍🏫 Tuteurs & enseignants", key: "tuteurs" },
   { path: "/admin/parametres", label: "⚙️ Paramètres", key: "parametres" },
 ];
 
@@ -34,6 +46,11 @@ function StatsHome() {
     { label: "Lignes de tarifs", value: data?.tarifs, icon: "💰", to: "/admin/tarifs" },
     { label: "Étapes", value: data?.etapes, icon: "🪜", to: "/admin/etapes" },
     { label: "Inscriptions", value: data?.inscriptions, icon: "📝", to: "/admin/inscriptions" },
+    { label: "Travailleurs", value: data?.travailleurs, icon: "👷", to: "/admin/travailleurs" },
+    { label: "Matchings", value: data?.matchings, icon: "🔗", to: "/admin/matching" },
+    { label: "Placements", value: data?.placements, icon: "🎯", to: "/admin/placements" },
+    { label: "Salles", value: data?.salles, icon: "🏫", to: "/admin/salles" },
+    { label: "Tuteurs", value: data?.tuteurs, icon: "👨‍🏫", to: "/admin/tuteurs" },
     { label: "Paramètres", value: data?.parametres, icon: "⚙️", to: "/admin/parametres" },
   ];
   return (
@@ -122,6 +139,12 @@ export default function AdminDashboard() {
         {key === "avantages" && <AvantagesSection />}
         {key === "inscriptions" && <InscriptionsSection />}
         {key === "rendezvous" && <RendezVousSection />}
+        {key === "travailleurs" && <TravailleursSection />}
+        {key === "matching" && <MatchingSection />}
+        {key === "comptabilite" && <ComptabiliteSection />}
+        {key === "salles" && <SallesSection />}
+        {key === "placements" && <PlacementsSection />}
+        {key === "tuteurs" && <TuteursSection />}
         {key === "parametres" && <ParametresSection />}
       </main>
     </div>

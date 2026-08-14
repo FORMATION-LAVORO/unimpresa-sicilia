@@ -34,6 +34,25 @@ app.post("/api/bootstrap", async (c) => {
   }
 });
 
+// Export Excel des données admin — GET /api/export/:name?token=<jwt>
+app.get("/api/export/:name", async (c) => {
+  const token = c.req.query("token") ?? "";
+  const { verifyAdminToken, buildExcel } = await import("./lib/export-excel");
+  if (!verifyAdminToken(token)) return c.json({ error: "Forbidden" }, 403);
+  try {
+    const file = await buildExcel(c.req.param("name"));
+    if (!file) return c.json({ error: "Jeu de données inconnu" }, 404);
+    return new Response(new Uint8Array(file.buffer), {
+      headers: {
+        "Content-Type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+        "Content-Disposition": `attachment; filename="${file.filename}"`,
+      },
+    });
+  } catch (e: any) {
+    return c.json({ ok: false, error: String(e?.message ?? e) }, 500);
+  }
+});
+
 app.all("/api/*", (c) => c.json({ error: "Not Found" }, 404));
 
 export default app;
