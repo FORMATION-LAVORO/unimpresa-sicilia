@@ -12,30 +12,23 @@ export default function App() {
       <Route path="/inscription" element={<Inscription />} />
       <Route path="/rendezvous" element={<RendezVous />} />
       <Route path="/admin/login" element={<AdminLogin />} />
-      <Route path="/admin" element={<Navigate to="/admin/dashboard" replace />} />
-      <Route path="/admin/dashboard" element={<AdminDashboard />} />
-      <Route path="/admin/cycles" element={<AdminDashboard />} />
-      <Route path="/admin/filieres" element={<AdminDashboard />} />
-      <Route path="/admin/tarifs" element={<AdminDashboard />} />
-      <Route path="/admin/etapes" element={<AdminDashboard />} />
-      <Route path="/admin/inscriptions" element={<AdminDashboard />} />
-      <Route path="/admin/partenaires" element={<AdminDashboard />} />
-      <Route path="/admin/avantages" element={<AdminDashboard />} />
+      <Route path="/admin" element={<AdminDashboard />} />
+      <Route path="/admin/dashboard" element={<Navigate to="/admin" replace />} />
+      <Route path="/admin/admins" element={<AdminDashboard />} />
       <Route path="/admin/rendezvous" element={<AdminDashboard />} />
-      <Route path="/admin/paiements" element={<AdminDashboard />} />
-      <Route path="/admin/travailleurs" element={<AdminDashboard />} />
-      <Route path="/admin/formation" element={<AdminDashboard />} />
-      <Route path="/admin/matching" element={<AdminDashboard />} />
-      <Route path="/admin/visa" element={<AdminDashboard />} />
-      <Route path="/admin/comptabilite" element={<AdminDashboard />} />
-      <Route path="/admin/centres" element={<AdminDashboard />} />
-      <Route path="/admin/salles" element={<AdminDashboard />} />
-      <Route path="/admin/placements" element={<AdminDashboard />} />
-      <Route path="/admin/tuteurs" element={<AdminDashboard />} />
-      <Route path="/admin/rapports" element={<AdminDashboard />} />
-      <Route path="/admin/utilisateurs" element={<AdminDashboard />} />
+      <Route path="/admin/whatsapp" element={<AdminDashboard />} />
       <Route path="/admin/parametres" element={<AdminDashboard />} />
-      <Route path="*" element={<Navigate to="/" replace />} />
+      <Route path="/admin/formations" element={<AdminDashboard />} />
+      <Route path="/admin/centres" element={<AdminDashboard />} />
+      <Route path="/admin/tuteurs" element={<AdminDashboard />} />
+      <Route path="/admin/apprenants" element={<AdminDashboard />} />
+      <Route path="/admin/comptabilite" element={<AdminDashboard />} />
+      <Route path="/admin/paiements" element={<AdminDashboard />} />
+      <Route path="/admin/rapports" element={<AdminDashboard />} />
+      <Route path="/admin/matching" element={<AdminDashboard />} />
+      <Route path="/admin/entreprises" element={<AdminDashboard />} />
+      <Route path="/admin/placements" element={<AdminDashboard />} />
+            <Route path="*" element={<Navigate to="/" replace />} />
     </Routes>
   )
 }
