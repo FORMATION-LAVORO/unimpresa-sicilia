@@ -108,9 +108,16 @@ export default function PaiementsSection() {
           </Field>
           {situation && form.inscriptionId > 0 && (
             <div className="bg-blue-50 border border-blue-200 rounded-lg p-3 text-sm">
-              <b>Situation du candidat :</b> payé {fmt(situation.paye)} FCFA
-              {situation.total > 0 && <> sur {fmt(situation.total)} FCFA — {situation.reste > 0 ? <b className="text-blue-800">reliquat : {fmt(situation.reste)} FCFA</b> : null}</>}
-              {situation.reste === 0 && situation.total > 0 && <span className="ml-1 px-2 py-0.5 rounded-full bg-green-100 text-green-800 text-xs font-bold">soldé ✅</span>}
+              <b>Situation :</b> versé {fmt(situation.paye)} FCFA
+              {situation.total > 0 && <> sur <b>{fmt(situation.total)} FCFA</b> (coût du programme)</>}
+              {situation.reste > 0
+                ? <> — <b className="text-amber-700">reliquat : {fmt(situation.reste)} FCFA</b></>
+                : situation.total > 0 && <span className="ml-1 px-2 py-0.5 rounded-full bg-green-100 text-green-800 text-xs font-bold">soldé ✅</span>}
+              {(situation.tranches ?? []).length > 0 && (
+                <div className="mt-1 text-xs text-slate-500">
+                  Tranches prévues : {situation.tranches!.map((t, i) => `${i + 1}ère : ${fmt(t)}`).join(" · ")} FCFA
+                </div>
+              )}
             </div>
           )}
           <Field label="Date"><input required type="date" className={inputCls} value={form.date} onChange={(e) => set("date", e.target.value)} /></Field>

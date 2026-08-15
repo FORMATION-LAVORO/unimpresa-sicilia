@@ -1,7 +1,7 @@
 import { readFileSync, readdirSync } from "fs";
 import { join } from "path";
 import bcrypt from "bcryptjs";
-import { sql } from "drizzle-orm";
+import { sql, eq } from "drizzle-orm";
 import pg from "pg";
 import { env } from "./env";
 import { getDb } from "../queries/connection";
@@ -156,6 +156,10 @@ export async function bootstrapDatabase(): Promise<{ ok: boolean; steps: string[
         logo_url: "",
         email_admin: "contact@unimpresa-sicilia.org",
         paiement_info: "Le paiement peut s'effectuer en plusieurs tranches. Un reliquat est payable après le début de la formation.",
+        cout_total: "560000",
+        tranche_1: "220000",
+        tranche_2: "170000",
+        tranche_3: "170000",
         pourquoi_titre: "Pourquoi choisir UNIMPRESA Sicilia ?",
       };
       for (const [cle, valeur] of Object.entries(defs)) {
@@ -164,6 +168,13 @@ export async function bootstrapDatabase(): Promise<{ ok: boolean; steps: string[
       steps.push(`${Object.keys(defs).length} paramètres`);
     } else {
       steps.push("paramètres existent déjà");
+    }
+
+    // Complète les paramètres manquants (ajouts ultérieurs)
+    const defsNew: Record<string, string> = { cout_total: "560000", tranche_1: "220000", tranche_2: "170000", tranche_3: "170000" };
+    for (const [cle, valeur] of Object.entries(defsNew)) {
+      const [existe] = await db.select().from(s.parametres).where(eq(s.parametres.cle, cle)).limit(1);
+      if (!existe) await db.insert(s.parametres).values({ cle, valeur });
     }
 
     // ── 5. Seed : partenaires + avantages ─────────────────────────────────────

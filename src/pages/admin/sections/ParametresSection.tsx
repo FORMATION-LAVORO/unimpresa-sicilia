@@ -18,7 +18,7 @@ const GROUPS: { titre: string; icon: string; keys: string[] }[] = [
   },
   {
     titre: "Paiement & devise", icon: "💰",
-    keys: ["devise", "info_titre", "info_texte"],
+    keys: ["devise", "cout_total", "tranche_1", "tranche_2", "tranche_3", "info_titre", "info_texte"],
   },
   {
     titre: "Couleurs", icon: "🎨",
@@ -67,6 +67,12 @@ export default function ParametresSection() {
         <div key={g.titre} className="bg-white rounded-xl shadow-sm border border-slate-200 p-5">
           <h3 className="font-extrabold text-[#1a2a4a] mb-4">{g.icon} {g.titre}</h3>
           <div className="grid sm:grid-cols-2 gap-4">
+            {g.titre.includes("Paiement") && (
+              <div className="sm:col-span-2 bg-amber-50 border border-amber-200 rounded-lg p-3 text-xs text-amber-900">
+                💡 <b>cout_total</b> : coût total du programme (ex. 560000). <b>tranche_1 / tranche_2 / tranche_3</b> : montants des versements —
+                la somme des tranches est déduite du coût pour calculer le reliquat. Ces valeurs pilotent tout le back-office (Paiements, Inscriptions, alertes).
+              </div>
+            )}
             {g.keys.map((cle) => (
               <div key={cle} className={LONG_TEXT.has(cle) ? "sm:col-span-2" : ""}>
                 <Field label={cle}>

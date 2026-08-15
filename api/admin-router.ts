@@ -45,6 +45,25 @@ function requireAdmin(token: string) {
 
 const withToken = { token: z.string().min(1) };
 
+/** Coût total de formation : priorité au paramètre admin « cout_total », sinon ligne « Total » des tarifs */
+async function getCoutTotal(db: any): Promise<number> {
+  const [param] = await db.select().from(parametres).where(eq(parametres.cle, "cout_total")).limit(1);
+  if (param) {
+    const n = parseNumber(param.valeur);
+    if (n > 0) return n;
+  }
+  const tarifsRows = await db.select().from(tarifs);
+  return tarifsRows.filter((t: any) => t.estTotal).reduce((s: number, t: any) => s + parseNumber(t.montantChiffres), 0)
+    || tarifsRows.reduce((s: number, t: any) => s + parseNumber(t.montantChiffres), 0);
+}
+
+/** Montants des tranches définis dans les paramètres admin (tranche_1, tranche_2, tranche_3) */
+async function getTranches(db: any): Promise<number[]> {
+  const rows = await db.select().from(parametres);
+  const val = (cle: string) => parseNumber(rows.find((p: any) => p.cle === cle)?.valeur ?? "");
+  return [val("tranche_1"), val("tranche_2"), val("tranche_3")].filter((n) => n > 0);
+}
+
 const cycleInput = z.object({
   nom: z.string().min(1),
   dateDebut: z.string().min(1),
@@ -443,9 +462,7 @@ export const adminRouter = createRouter({
       const pais = (await db.select().from(paiements)).filter((p) => Number(p.inscriptionId) === Number(ins.id));
       const paye = pais.reduce((s, p) => s + parseNumber(p.montantChiffres), 0);
       const nbVersements = pais.length;
-      const tarifsRows = await db.select().from(tarifs);
-      const total = tarifsRows.filter((t) => t.estTotal).reduce((s, t) => s + parseNumber(t.montantChiffres), 0)
-        || tarifsRows.reduce((s, t) => s + parseNumber(t.montantChiffres), 0);
+      const total = await getCoutTotal(db);
       const statutsTranches = ["nouveau", "contacté", "confirmé", "1ère tranche", "2ème tranche", "3ème tranche"];
       if (total > 0 && paye >= total) {
         // Tout est payé → soldé
@@ -630,9 +647,7 @@ export const adminRouter = createRouter({
       if (!ins) throw new TRPCError({ code: "NOT_FOUND", message: "Inscription introuvable." });
       const pais = (await db.select().from(paiements)).filter((p) => Number(p.inscriptionId) === input.id);
       const paye = pais.reduce((s, p) => s + parseNumber(p.montantChiffres), 0);
-      const tarifsRows = await db.select().from(tarifs);
-      const total = tarifsRows.filter((t) => t.estTotal).reduce((s, t) => s + parseNumber(t.montantChiffres), 0)
-        || tarifsRows.reduce((s, t) => s + parseNumber(t.montantChiffres), 0);
+      const total = await getCoutTotal(db);
       const [trav] = await db.select().from(travailleurs).where(eq(travailleurs.inscriptionId, ins.id)).limit(1);
       const centre = ins.centreId ? (await db.select().from(centres).where(eq(centres.id, ins.centreId)).limit(1))[0] : null;
       const salle = ins.salleId ? (await db.select().from(salles).where(eq(salles.id, ins.salleId)).limit(1))[0] : null;
@@ -928,10 +943,9 @@ export const adminRouter = createRouter({
       const db = getDb();
       const rows = (await db.select().from(paiements)).filter((p) => Number(p.inscriptionId) === input.inscriptionId);
       const paye = rows.reduce((s, p) => s + parseNumber(p.montantChiffres), 0);
-      const tarifsRows = await db.select().from(tarifs);
-      const total = tarifsRows.filter((t) => t.estTotal).reduce((s, t) => s + parseNumber(t.montantChiffres), 0)
-        || tarifsRows.reduce((s, t) => s + parseNumber(t.montantChiffres), 0);
-      return { paye, total, reste: Math.max(0, total - paye), paiements: rows };
+      const total = await getCoutTotal(db);
+      const tranches = await getTranches(db);
+      return { paye, total, reste: Math.max(0, total - paye), tranches, paiements: rows };
     }),
 
   // ─── COMPTABILITÉ PÉRIODIQUE ───────────────────────────────────────────
@@ -1135,10 +1149,8 @@ export const adminRouter = createRouter({
     const db = getDb();
     const insc = await db.select().from(inscriptions);
     const pais = await db.select().from(paiements);
-    const tarifsRows = await db.select().from(tarifs);
-    const total = tarifsRows.filter((t) => t.estTotal).reduce((s, t) => s + parseNumber(t.montantChiffres), 0)
-      || tarifsRows.reduce((s, t) => s + parseNumber(t.montantChiffres), 0);
-    const fraisInscription = tarifsRows.filter((t) => !t.estTotal).reduce((s, t) => s + parseNumber(t.montantChiffres), 0) || total;
+    const total = await getCoutTotal(db);
+    const fraisInscription = total;
     return insc
       .filter((i) => i.natureCandidat !== "boursier" && i.statut !== "refusé")
       .map((i) => {

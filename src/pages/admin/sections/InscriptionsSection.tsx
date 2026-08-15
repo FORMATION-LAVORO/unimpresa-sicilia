@@ -26,6 +26,7 @@ export default function InscriptionsSection() {
   const { data: salles } = trpc.admin.listSalles.useQuery({ token });
   const { data: paiements } = trpc.admin.listPaiements.useQuery({ token });
   const { data: tarifs } = trpc.admin.listTarifs.useQuery({ token });
+  const { data: params } = trpc.admin.listParametres.useQuery({ token });
   const update = trpc.admin.updateInscription.useMutation({ onSuccess: refresh });
   const updateNature = trpc.admin.updateNatureCandidat.useMutation({ onSuccess: refresh });
   const affecter = trpc.admin.affecterCandidat.useMutation({ onSuccess: refresh });
@@ -34,8 +35,10 @@ export default function InscriptionsSection() {
 
   const [dossierOuvert, setDossierOuvert] = useState<number | null>(null);
 
-  // Total théorique (ligne « Total » des tarifs, sinon somme)
-  const totalTheorique = (tarifs ?? []).filter((t) => t.estTotal).reduce((s, t) => s + Number((t.montantChiffres || "0").replace(/\s/g, "")), 0)
+  // Coût total : paramètre admin « cout_total » en priorité, sinon ligne « Total » des tarifs
+  const coutParam = Number((params?.find((p) => p.cle === "cout_total")?.valeur ?? "").replace(/[^\d]/g, ""));
+  const totalTheorique = (coutParam > 0 ? coutParam : 0)
+    || (tarifs ?? []).filter((t) => t.estTotal).reduce((s, t) => s + Number((t.montantChiffres || "0").replace(/\s/g, "")), 0)
     || (tarifs ?? []).reduce((s, t) => s + Number((t.montantChiffres || "0").replace(/\s/g, "")), 0);
 
   const payePar = (id: number) =>
