@@ -5,6 +5,7 @@ import { useAdmin, Field, Btn, Table, ExportBtn, inputCls } from "../ui";
 const empty = {
   inscriptionId: null as number | null,
   nom: "", prenom: "", dateNaissance: "", age: 0, sexe: "",
+  situationFamiliale: "", qualification: "",
   telephone: "", email: "", profession: "", competences: "",
   experienceAnnees: 0, niveauItalien: "débutant", autresLangues: "",
   filiereId: null as number | null, metier: "", statut: "en_formation", notes: "",
@@ -68,6 +69,12 @@ export default function TravailleursSection() {
               <option value="">—</option><option value="M">Masculin</option><option value="F">Féminin</option>
             </select>
           </Field>
+          <Field label="Situation familiale">
+            <select className={inputCls} value={form.situationFamiliale} onChange={(e) => set("situationFamiliale", e.target.value)}>
+              <option value="">—</option><option value="célibataire">Célibataire</option><option value="marié(e)">Marié(e)</option><option value="divorcé(e)">Divorcé(e)</option><option value="veuf/veuve">Veuf/Veuve</option>
+            </select>
+          </Field>
+          <Field label="Qualification / diplôme"><input className={inputCls} value={form.qualification} onChange={(e) => set("qualification", e.target.value)} placeholder="CAP, BT, certificat…" /></Field>
           <Field label="Téléphone"><input className={inputCls} value={form.telephone} onChange={(e) => set("telephone", e.target.value)} /></Field>
           <Field label="Email"><input className={inputCls} value={form.email} onChange={(e) => set("email", e.target.value)} /></Field>
           <Field label="Profession actuelle"><input className={inputCls} value={form.profession} onChange={(e) => set("profession", e.target.value)} /></Field>
@@ -104,9 +111,13 @@ export default function TravailleursSection() {
       <Table head={["Nom", "Âge", "Métier", "Filière", "Italien", "Autres langues", "Statut", "Actions"]}>
         {list.map((t) => (
           <tr key={t.id} className="border-t border-slate-100 hover:bg-slate-50">
-            <td className="px-4 py-3 font-semibold">{t.prenom} {t.nom}</td>
+            <td className="px-4 py-3 font-semibold">{t.prenom} {t.nom}
+              <div className="text-xs font-normal text-slate-500">{t.sexe}{t.situationFamiliale ? ` · ${t.situationFamiliale}` : ""}</div>
+            </td>
             <td className="px-4 py-3">{t.age || "—"}</td>
-            <td className="px-4 py-3">{t.metier || t.profession || "—"}</td>
+            <td className="px-4 py-3">{t.metier || t.profession || "—"}
+              <div className="text-xs text-slate-500">{t.qualification}</div>
+            </td>
             <td className="px-4 py-3 text-xs">{filiereNom(t.filiereId)}</td>
             <td className="px-4 py-3"><span className="px-2 py-0.5 rounded-full bg-blue-100 text-blue-800 text-xs font-bold">{t.niveauItalien}</span></td>
             <td className="px-4 py-3 text-xs">{t.autresLangues || "—"}</td>

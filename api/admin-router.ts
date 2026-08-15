@@ -24,6 +24,8 @@ import {
   salles,
   placements,
   tuteurs,
+  paiements,
+  centres,
 } from "../db/schema";
 
 const JWT_SECRET = process.env.JWT_SECRET ?? "unimpresa-dev-secret";
@@ -92,6 +94,8 @@ const travailleurInput = z.object({
   dateNaissance: z.string().default(""),
   age: z.number().int().min(0).default(0),
   sexe: z.string().default(""),
+  situationFamiliale: z.string().default(""),
+  qualification: z.string().default(""),
   telephone: z.string().default(""),
   email: z.string().default(""),
   profession: z.string().default(""),
@@ -178,6 +182,28 @@ const tuteurInput = z.object({
   notes: z.string().default(""),
 });
 
+const paiementInput = z.object({
+  inscriptionId: z.number(),
+  date: z.string().min(1),
+  nature: z.string().default("inscription"),
+  montantChiffres: z.string().min(1),
+  montantLettres: z.string().default(""),
+  modePaiement: z.string().default("espèces"),
+  reference: z.string().default(""),
+  notes: z.string().default(""),
+});
+
+const centreInput = z.object({
+  nom: z.string().min(1),
+  partenaire: z.string().default(""),
+  typePartenaire: z.string().default("privé"),
+  adresse: z.string().default(""),
+  ville: z.string().default("Dakar"),
+  capacite: z.number().int().min(0).default(0),
+  contact: z.string().default(""),
+  statut: z.string().default("actif"),
+});
+
 export const adminRouter = createRouter({
   /** Connexion Super Admin (bcrypt + JWT) */
   login: publicQuery
@@ -211,6 +237,8 @@ export const adminRouter = createRouter({
       salles: await count(salles),
       placements: await count(placements),
       tuteurs: await count(tuteurs),
+      paiements: await count(paiements),
+      centres: await count(centres),
     };
   }),
 
@@ -484,6 +512,7 @@ export const adminRouter = createRouter({
         profession: ins.profession,
         filiereId: ins.filiereId,
         metier: ins.metierChoisi,
+        situationFamiliale: ins.situationFamiliale,
       })
       .returning({ id: travailleurs.id });
     return { id: Number(r.id) };
@@ -663,4 +692,239 @@ export const adminRouter = createRouter({
     await getDb().delete(tuteurs).where(eq(tuteurs.id, input.id));
     return { ok: true };
   }),
+
+  // ─── PAIEMENTS CANDIDATS ───────────────────────────────────────────────
+  listPaiements: publicQuery.input(z.object(withToken)).query(async ({ input }) => {
+    requireAdmin(input.token);
+    return getDb().select().from(paiements).orderBy(desc(paiements.id));
+  }),
+  createPaiement: publicQuery.input(z.object({ ...withToken, data: paiementInput })).mutation(async ({ input }) => {
+    requireAdmin(input.token);
+    const db = getDb();
+    const data = { ...input.data };
+    if (!data.montantLettres || data.montantLettres.trim() === "") {
+      const num = parseNumber(data.montantChiffres);
+      data.montantLettres = num > 0 ? numberToLetters(num) : "";
+    }
+    const [r] = await db.insert(paiements).values(data).returning({ id: paiements.id });
+    // Alimente automatiquement la comptabilité
+    const [ins] = await db.select().from(inscriptions).where(eq(inscriptions.id, data.inscriptionId)).limit(1);
+    const nomComplet = ins ? `${ins.prenom} ${ins.nom}` : `Inscription #${data.inscriptionId}`;
+    await db.insert(transactions).values({
+      date: data.date,
+      type: "recette",
+      categorie: data.nature === "reliquat" ? "Reliquat formation" : "Frais d'inscription",
+      libelle: `${data.nature === "reliquat" ? "Reliquat" : "Inscription"} — ${nomComplet}`,
+      montantChiffres: data.montantChiffres,
+      montantLettres: data.montantLettres,
+      modePaiement: data.modePaiement,
+      inscriptionId: data.inscriptionId,
+      notes: data.reference ? `Réf: ${data.reference}` : "",
+    });
+    return { id: Number(r.id) };
+  }),
+  deletePaiement: publicQuery.input(z.object({ ...withToken, id: z.number() })).mutation(async ({ input }) => {
+    requireAdmin(input.token);
+    await getDb().delete(paiements).where(eq(paiements.id, input.id));
+    return { ok: true };
+  }),
+  /** Situation financière d'un candidat : total payé, reste à payer */
+  situationPaiement: publicQuery
+    .input(z.object({ ...withToken, inscriptionId: z.number() }))
+    .query(async ({ input }) => {
+      requireAdmin(input.token);
+      const db = getDb();
+      const rows = (await db.select().from(paiements)).filter((p) => Number(p.inscriptionId) === input.inscriptionId);
+      const paye = rows.reduce((s, p) => s + parseNumber(p.montantChiffres), 0);
+      const tarifsRows = await db.select().from(tarifs);
+      const total = tarifsRows.filter((t) => t.estTotal).reduce((s, t) => s + parseNumber(t.montantChiffres), 0)
+        || tarifsRows.reduce((s, t) => s + parseNumber(t.montantChiffres), 0);
+      return { paye, total, reste: Math.max(0, total - paye), paiements: rows };
+    }),
+
+  // ─── COMPTABILITÉ PÉRIODIQUE ───────────────────────────────────────────
+  comptaPeriode: publicQuery
+    .input(z.object({ ...withToken, periode: z.string().default("mois") }))
+    .query(async ({ input }) => {
+      requireAdmin(input.token);
+      const rows = await getDb().select().from(transactions).orderBy(desc(transactions.date));
+      const key = (dateStr: string) => {
+        const d = new Date(dateStr);
+        if (isNaN(d.getTime())) return "autre";
+        const y = d.getFullYear();
+        const m = String(d.getMonth() + 1).padStart(2, "0");
+        if (input.periode === "jour") return dateStr;
+        if (input.periode === "semaine") {
+          const onejan = new Date(y, 0, 1);
+          const week = Math.ceil(((d.getTime() - onejan.getTime()) / 86400000 + onejan.getDay() + 1) / 7);
+          return `${y}-S${String(week).padStart(2, "0")}`;
+        }
+        if (input.periode === "mois") return `${y}-${m}`;
+        if (input.periode === "trimestre") return `${y}-T${Math.floor(d.getMonth() / 3) + 1}`;
+        return String(y);
+      };
+      const groups: Record<string, { recettes: number; depenses: number; count: number }> = {};
+      for (const r of rows) {
+        const k = key(r.date);
+        if (!groups[k]) groups[k] = { recettes: 0, depenses: 0, count: 0 };
+        const n = parseNumber(r.montantChiffres);
+        if (r.type === "recette") groups[k].recettes += n;
+        else groups[k].depenses += n;
+        groups[k].count++;
+      }
+      return Object.entries(groups)
+        .map(([periode, v]) => ({ periode, ...v, solde: v.recettes - v.depenses }))
+        .sort((a, b) => b.periode.localeCompare(a.periode));
+    }),
+
+  // ─── PIPELINE CANDIDATS ────────────────────────────────────────────────
+  pipelineStats: publicQuery.input(z.object(withToken)).query(async ({ input }) => {
+    requireAdmin(input.token);
+    const db = getDb();
+    const insc = await db.select().from(inscriptions);
+    const trav = await db.select().from(travailleurs);
+    const match = await db.select().from(matchings);
+    const plac = await db.select().from(placements);
+    return {
+      inscrits: insc.length,
+      payants: insc.filter((i) => i.natureCandidat === "payant").length,
+      boursiers: insc.filter((i) => i.natureCandidat === "boursier").length,
+      admis: insc.filter((i) => i.statut === "accepté" || i.statut === "admis").length,
+      travailleurs: trav.length,
+      matchings: match.length,
+      matchingsAboutis: match.filter((m) => m.statut === "abouti").length,
+      contrats: plac.filter((p) => p.type === "contrat").length,
+      reussites: plac.filter((p) => p.type === "reussite").length,
+    };
+  }),
+
+  // ─── CENTRES DE FORMATION ──────────────────────────────────────────────
+  listCentres: publicQuery.input(z.object(withToken)).query(async ({ input }) => {
+    requireAdmin(input.token);
+    return getDb().select().from(centres).orderBy(asc(centres.nom));
+  }),
+  createCentre: publicQuery.input(z.object({ ...withToken, data: centreInput })).mutation(async ({ input }) => {
+    requireAdmin(input.token);
+    const [r] = await getDb().insert(centres).values(input.data).returning({ id: centres.id });
+    return { id: Number(r.id) };
+  }),
+  updateCentre: publicQuery.input(z.object({ ...withToken, id: z.number(), data: centreInput.partial() })).mutation(async ({ input }) => {
+    requireAdmin(input.token);
+    await getDb().update(centres).set(input.data).where(eq(centres.id, input.id));
+    return { ok: true };
+  }),
+  deleteCentre: publicQuery.input(z.object({ ...withToken, id: z.number() })).mutation(async ({ input }) => {
+    requireAdmin(input.token);
+    await getDb().delete(centres).where(eq(centres.id, input.id));
+    return { ok: true };
+  }),
+
+  // ─── COMPTES ADMIN (rôles) ─────────────────────────────────────────────
+  listAdmins: publicQuery.input(z.object(withToken)).query(async ({ input }) => {
+    requireAdmin(input.token);
+    const rows = await getDb().select().from(admins);
+    return rows.map((a) => ({ id: Number(a.id), username: a.username, role: a.role }));
+  }),
+  createAdmin: publicQuery
+    .input(z.object({ ...withToken, username: z.string().min(3), password: z.string().min(6), role: z.string().default("operateur") }))
+    .mutation(async ({ input }) => {
+      requireAdmin(input.token);
+      const db = getDb();
+      const [r] = await db
+        .insert(admins)
+        .values({ username: input.username, passwordHash: await bcrypt.hash(input.password, 10), role: input.role })
+        .returning({ id: admins.id });
+      return { id: Number(r.id) };
+    }),
+  updateAdminRole: publicQuery
+    .input(z.object({ ...withToken, id: z.number(), role: z.string() }))
+    .mutation(async ({ input }) => {
+      requireAdmin(input.token);
+      await getDb().update(admins).set({ role: input.role }).where(eq(admins.id, input.id));
+      return { ok: true };
+    }),
+  deleteAdmin: publicQuery.input(z.object({ ...withToken, id: z.number() })).mutation(async ({ input }) => {
+    const payload = requireAdmin(input.token);
+    if (payload.sub === input.id) throw new TRPCError({ code: "BAD_REQUEST", message: "Impossible de supprimer votre propre compte." });
+    await getDb().delete(admins).where(eq(admins.id, input.id));
+    return { ok: true };
+  }),
+
+  // ─── RAPPORT SYNTHÈSE (Ambassades / Ministères) ────────────────────────
+  rapportSynthese: publicQuery.input(z.object(withToken)).query(async ({ input }) => {
+    requireAdmin(input.token);
+    const db = getDb();
+    const insc = await db.select().from(inscriptions);
+    const trav = await db.select().from(travailleurs);
+    const plac = await db.select().from(placements);
+    const txs = await db.select().from(transactions);
+    const sallesRows = await db.select().from(salles);
+    const centresRows = await db.select().from(centres);
+    const tuteursRows = await db.select().from(tuteurs);
+    const fils = await db.select().from(filieres);
+    const cyc = await db.select().from(cycles);
+
+    const recettes = txs.filter((t) => t.type === "recette").reduce((s, t) => s + parseNumber(t.montantChiffres), 0);
+    const depenses = txs.filter((t) => t.type === "dépense").reduce((s, t) => s + parseNumber(t.montantChiffres), 0);
+    const contrats = plac.filter((p) => p.type === "contrat");
+    const reussites = plac.filter((p) => p.type === "reussite");
+
+    const parFiliere = fils.map((f) => ({
+      filiere: f.titre,
+      inscrits: insc.filter((i) => Number(i.filiereId) === Number(f.id)).length,
+      contrats: contrats.filter((c) => trav.find((t) => Number(t.id) === Number(c.travailleurId) && Number(t.filiereId) === Number(f.id))).length,
+    }));
+
+    return {
+      dateEdition: new Date().toISOString().slice(0, 10),
+      cycles: cyc.map((c) => ({ nom: c.nom, session: c.sessionLabel, heures: c.dureeHeures, participants: c.nbParticipants })),
+      inscrits: insc.length,
+      payants: insc.filter((i) => i.natureCandidat === "payant").length,
+      boursiers: insc.filter((i) => i.natureCandidat === "boursier").length,
+      travailleursFormes: trav.length,
+      reussites: reussites.length,
+      contratsConclus: contrats.length,
+      tauxPlacement: trav.length > 0 ? Math.round((contrats.length / trav.length) * 100) : 0,
+      recettes, depenses, solde: recettes - depenses,
+      recettesLettres: recettes > 0 ? numberToLetters(recettes) : "",
+      soldeLettres: recettes - depenses > 0 ? numberToLetters(recettes - depenses) : "",
+      centres: centresRows.length,
+      salles: sallesRows.length,
+      capaciteTotale: sallesRows.reduce((s, x) => s + x.capacite, 0) + centresRows.reduce((s, x) => s + x.capacite, 0),
+      encadrement: tuteursRows.length,
+      parFiliere,
+      parCentre: centresRows.map((c) => ({
+        centre: c.nom, partenaire: c.partenaire, type: c.typePartenaire, ville: c.ville, capacite: c.capacite,
+        inscrits: insc.filter((i) => Number(i.centreId) === Number(c.id)).length,
+      })),
+    };
+  }),
+
+  /** Vue entreprise : fiches travailleurs anonymisées enrichies */
+  fichesEntreprise: publicQuery.input(z.object(withToken)).query(async ({ input }) => {
+    requireAdmin(input.token);
+    const trav = await getDb().select().from(travailleurs).orderBy(desc(travailleurs.id));
+    return trav.map((t) => ({
+      id: Number(t.id),
+      reference: `TR-${String(t.id).padStart(4, "0")}`,
+      prenom: t.prenom, nom: t.nom,
+      age: t.age, sexe: t.sexe,
+      situationFamiliale: t.situationFamiliale,
+      qualification: t.qualification,
+      profession: t.profession, metier: t.metier,
+      competences: t.competences,
+      experienceAnnees: t.experienceAnnees,
+      niveauItalien: t.niveauItalien, autresLangues: t.autresLangues,
+      statut: t.statut,
+    }));
+  }),
+
+  /** Mise à jour de la nature du candidat (payant / boursier) */
+  updateNatureCandidat: publicQuery
+    .input(z.object({ ...withToken, id: z.number(), nature: z.string() }))
+    .mutation(async ({ input }) => {
+      requireAdmin(input.token);
+      await getDb().update(inscriptions).set({ natureCandidat: input.nature }).where(eq(inscriptions.id, input.id));
+      return { ok: true };
+    }),
 });

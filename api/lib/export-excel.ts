@@ -11,6 +11,8 @@ import {
   salles,
   tuteurs,
   matchings,
+  paiements,
+  centres,
 } from "../../db/schema";
 
 const JWT_SECRET = process.env.JWT_SECRET ?? "unimpresa-dev-secret";
@@ -99,6 +101,24 @@ async function buildDataset(name: string): Promise<Dataset | null> {
         rows: rows.map((r) => [N(r.id), N(r.travailleurId), S(r.offreId), S(r.filiereId), r.type, N(r.score), r.statut, r.notes]),
       };
     }
+    case "paiements": {
+      const rows = await db.select().from(paiements).orderBy(desc(paiements.id));
+      const insc = await db.select().from(inscriptions);
+      const nom = (id: any) => { const i = insc.find((x) => Number(x.id) === Number(id)); return i ? `${i.prenom} ${i.nom}` : `#${id}`; };
+      return {
+        sheet: "Paiements",
+        headers: ["ID", "Candidat", "Date", "Nature", "Montant (chiffres)", "Montant (lettres)", "Mode", "Référence", "Notes"],
+        rows: rows.map((r) => [N(r.id), nom(r.inscriptionId), r.date, r.nature, S(r.montantChiffres), r.montantLettres, r.modePaiement, r.reference, r.notes]),
+      };
+    }
+    case "centres": {
+      const rows = await db.select().from(centres).orderBy(asc(centres.nom));
+      return {
+        sheet: "Centres",
+        headers: ["ID", "Nom", "Partenaire", "Type", "Ville", "Adresse", "Capacité", "Contact", "Statut"],
+        rows: rows.map((r) => [N(r.id), r.nom, r.partenaire, r.typePartenaire, r.ville, r.adresse, N(r.capacite), r.contact, r.statut]),
+      };
+    }
     default:
       return null;
   }
@@ -119,4 +139,4 @@ export async function buildExcel(name: string): Promise<{ buffer: Buffer; filena
   return { buffer, filename: `${name}-${date}.xlsx` };
 }
 
-export const EXPORTABLE = ["travailleurs", "comptabilite", "placements", "inscriptions", "offres", "salles", "tuteurs", "matchings"];
+export const EXPORTABLE = ["travailleurs", "comptabilite", "placements", "inscriptions", "offres", "salles", "tuteurs", "matchings", "paiements", "centres"];

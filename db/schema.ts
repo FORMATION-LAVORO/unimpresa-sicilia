@@ -103,6 +103,8 @@ export const inscriptions = pgTable("inscriptions", {
   profession: varchar("profession", { length: 150 }).notNull().default(""),
   employeur: varchar("employeur", { length: 150 }).notNull().default(""),
   metierChoisi: varchar("metier_choisi", { length: 150 }).notNull().default(""),
+  natureCandidat: varchar("nature_candidat", { length: 30 }).notNull().default("payant"),
+  centreId: bigint("centre_id", { mode: "number" }),
   createdAt: timestamp("created_at").notNull().defaultNow(),
 });
 
@@ -162,6 +164,8 @@ export const travailleurs = pgTable("travailleurs", {
   dateNaissance: varchar("date_naissance", { length: 30 }).notNull().default(""),
   age: integer("age").notNull().default(0),
   sexe: varchar("sexe", { length: 20 }).notNull().default(""),
+  situationFamiliale: varchar("situation_familiale", { length: 30 }).notNull().default(""),
+  qualification: varchar("qualification", { length: 100 }).notNull().default(""),
   telephone: varchar("telephone", { length: 50 }).notNull().default(""),
   email: varchar("email", { length: 255 }).notNull().default(""),
   profession: varchar("profession", { length: 150 }).notNull().default(""),
@@ -273,3 +277,38 @@ export type Transaction = typeof transactions.$inferSelect;
 export type Salle = typeof salles.$inferSelect;
 export type Placement = typeof placements.$inferSelect;
 export type Tuteur = typeof tuteurs.$inferSelect;
+
+// ═══════════════════════════════════════════════════════════════════════════
+// BACK-OFFICE V2 — paiements, centres, rôles, pipeline
+// ═══════════════════════════════════════════════════════════════════════════
+
+// ─── Paiements des candidats (inscription / reliquat) ──────────────────────
+export const paiements = pgTable("paiements", {
+  id: serial("id").primaryKey(),
+  inscriptionId: bigint("inscription_id", { mode: "number" }).notNull(),
+  date: varchar("date", { length: 30 }).notNull(),
+  nature: varchar("nature", { length: 30 }).notNull().default("inscription"),
+  montantChiffres: varchar("montant_chiffres", { length: 100 }).notNull(),
+  montantLettres: varchar("montant_lettres", { length: 255 }).notNull().default(""),
+  modePaiement: varchar("mode_paiement", { length: 50 }).notNull().default("espèces"),
+  reference: varchar("reference", { length: 100 }).notNull().default(""),
+  notes: text("notes").notNull().default(""),
+  createdAt: timestamp("created_at").notNull().defaultNow(),
+});
+
+// ─── Centres de formation ───────────────────────────────────────────────────
+export const centres = pgTable("centres", {
+  id: serial("id").primaryKey(),
+  nom: varchar("nom", { length: 255 }).notNull(),
+  partenaire: varchar("partenaire", { length: 255 }).notNull().default(""),
+  typePartenaire: varchar("type_partenaire", { length: 100 }).notNull().default("privé"),
+  adresse: varchar("adresse", { length: 255 }).notNull().default(""),
+  ville: varchar("ville", { length: 100 }).notNull().default("Dakar"),
+  capacite: integer("capacite").notNull().default(0),
+  contact: varchar("contact", { length: 255 }).notNull().default(""),
+  statut: varchar("statut", { length: 50 }).notNull().default("actif"),
+  createdAt: timestamp("created_at").notNull().defaultNow(),
+});
+
+export type Paiement = typeof paiements.$inferSelect;
+export type Centre = typeof centres.$inferSelect;

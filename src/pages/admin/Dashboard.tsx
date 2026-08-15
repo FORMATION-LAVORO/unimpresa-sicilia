@@ -17,6 +17,10 @@ import ComptabiliteSection from "./sections/ComptabiliteSection";
 import SallesSection from "./sections/SallesSection";
 import PlacementsSection from "./sections/PlacementsSection";
 import TuteursSection from "./sections/TuteursSection";
+import PaiementsSection from "./sections/PaiementsSection";
+import CentresSection from "./sections/CentresSection";
+import UtilisateursSection from "./sections/UtilisateursSection";
+import RapportsSection from "./sections/RapportsSection";
 
 const NAV = [
   { path: "/admin/dashboard", label: "📊 Tableau de bord", key: "dashboard" },
@@ -27,38 +31,75 @@ const NAV = [
   { path: "/admin/partenaires", label: "🤝 Partenaires", key: "partenaires" },
   { path: "/admin/avantages", label: "⭐ Avantages", key: "avantages" },
   { path: "/admin/inscriptions", label: "📝 Inscriptions", key: "inscriptions" },
+  { path: "/admin/paiements", label: "💳 Paiements", key: "paiements" },
   { path: "/admin/rendezvous", label: "📅 Rendez-vous", key: "rendezvous" },
   { path: "/admin/travailleurs", label: "👷 Travailleurs", key: "travailleurs" },
   { path: "/admin/matching", label: "🔗 Matching & offres", key: "matching" },
   { path: "/admin/comptabilite", label: "🧾 Comptabilité", key: "comptabilite" },
+  { path: "/admin/centres", label: "🏢 Centres", key: "centres" },
   { path: "/admin/salles", label: "🏫 Salles & amphis", key: "salles" },
   { path: "/admin/placements", label: "🎯 Réussites & contrats", key: "placements" },
   { path: "/admin/tuteurs", label: "👨‍🏫 Tuteurs & enseignants", key: "tuteurs" },
+  { path: "/admin/rapports", label: "📑 Rapports officiels", key: "rapports" },
+  { path: "/admin/utilisateurs", label: "🔐 Utilisateurs", key: "utilisateurs" },
   { path: "/admin/parametres", label: "⚙️ Paramètres", key: "parametres" },
 ];
 
 function StatsHome() {
   const token = getAdminToken();
   const { data } = trpc.admin.stats.useQuery({ token });
+  const { data: pipe } = trpc.admin.pipelineStats.useQuery({ token });
   const cards = [
     { label: "Cycles", value: data?.cycles, icon: "🗓️", to: "/admin/cycles" },
     { label: "Filières", value: data?.filieres, icon: "📚", to: "/admin/filieres" },
-    { label: "Lignes de tarifs", value: data?.tarifs, icon: "💰", to: "/admin/tarifs" },
-    { label: "Étapes", value: data?.etapes, icon: "🪜", to: "/admin/etapes" },
     { label: "Inscriptions", value: data?.inscriptions, icon: "📝", to: "/admin/inscriptions" },
+    { label: "Paiements", value: data?.paiements, icon: "💳", to: "/admin/paiements" },
     { label: "Travailleurs", value: data?.travailleurs, icon: "👷", to: "/admin/travailleurs" },
     { label: "Matchings", value: data?.matchings, icon: "🔗", to: "/admin/matching" },
     { label: "Placements", value: data?.placements, icon: "🎯", to: "/admin/placements" },
+    { label: "Centres", value: data?.centres, icon: "🏢", to: "/admin/centres" },
     { label: "Salles", value: data?.salles, icon: "🏫", to: "/admin/salles" },
     { label: "Tuteurs", value: data?.tuteurs, icon: "👨‍🏫", to: "/admin/tuteurs" },
-    { label: "Paramètres", value: data?.parametres, icon: "⚙️", to: "/admin/parametres" },
   ];
+  const etapes = pipe
+    ? [
+        { label: "Inscrits", value: pipe.inscrits, color: "bg-blue-500" },
+        { label: "Admis à la formation", value: pipe.admis, color: "bg-indigo-500" },
+        { label: "Travailleurs suivis", value: pipe.travailleurs, color: "bg-cyan-500" },
+        { label: "Matchings", value: pipe.matchings, color: "bg-amber-500" },
+        { label: "Contrats conclus", value: pipe.contrats, color: "bg-green-500" },
+      ]
+    : [];
+  const maxPipe = Math.max(1, ...etapes.map((e) => e.value));
   return (
     <section>
       <h2 className="text-xl font-extrabold text-[#1a2a4a] mb-2">Bienvenue, {getAdminUser()} 👋</h2>
       <p className="text-sm text-slate-500 mb-6">
         Gérez tout le contenu du site public sans toucher au code. Chaque modification est visible immédiatement sur le site.
       </p>
+
+      {/* Pipeline candidats */}
+      {pipe && (
+        <div className="bg-white rounded-xl shadow-sm border border-slate-200 p-5 mb-6">
+          <h3 className="font-bold text-[#1a2a4a] mb-3">📈 Pipeline : inscription → contrat de travail</h3>
+          <div className="flex flex-wrap items-end gap-4">
+            {etapes.map((e, i) => (
+              <div key={e.label} className="flex-1 min-w-28 text-center">
+                <div className="text-2xl font-extrabold text-[#1a2a4a]">{e.value}</div>
+                <div className="mx-auto w-full max-w-24 h-2.5 bg-slate-100 rounded-full overflow-hidden my-1.5">
+                  <div className={`h-full rounded-full ${e.color}`} style={{ width: `${(e.value / maxPipe) * 100}%` }} />
+                </div>
+                <div className="text-xs text-slate-500 font-semibold">{e.label}</div>
+                {i < etapes.length - 1 && <div className="hidden md:block text-slate-300" />}
+              </div>
+            ))}
+          </div>
+          <div className="mt-3 text-xs text-slate-500">
+            💰 {pipe.payants} payants · 🎓 {pipe.boursiers} boursiers · ✅ {pipe.matchingsAboutis} matchings aboutis · 🎓 {pipe.reussites} réussites
+          </div>
+        </div>
+      )}
+
       <div className="grid grid-cols-2 lg:grid-cols-3 gap-4">
         {cards.map((c) => (
           <Link key={c.label} to={c.to} className="bg-white rounded-xl shadow-sm border border-slate-200 p-5 hover:shadow-md hover:-translate-y-0.5 transition">
@@ -138,13 +179,17 @@ export default function AdminDashboard() {
         {key === "partenaires" && <PartenairesSection />}
         {key === "avantages" && <AvantagesSection />}
         {key === "inscriptions" && <InscriptionsSection />}
+        {key === "paiements" && <PaiementsSection />}
         {key === "rendezvous" && <RendezVousSection />}
         {key === "travailleurs" && <TravailleursSection />}
         {key === "matching" && <MatchingSection />}
         {key === "comptabilite" && <ComptabiliteSection />}
+        {key === "centres" && <CentresSection />}
         {key === "salles" && <SallesSection />}
         {key === "placements" && <PlacementsSection />}
         {key === "tuteurs" && <TuteursSection />}
+        {key === "rapports" && <RapportsSection />}
+        {key === "utilisateurs" && <UtilisateursSection />}
         {key === "parametres" && <ParametresSection />}
       </main>
     </div>

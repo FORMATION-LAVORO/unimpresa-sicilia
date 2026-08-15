@@ -1,11 +1,12 @@
 import { trpc } from "@/providers/trpc";
 import { useAdmin, Btn, Table } from "../ui";
 
-const STATUTS = ["nouveau", "contacté", "confirmé", "payé", "refusé"];
+const STATUTS = ["nouveau", "contacté", "confirmé", "admis", "payé", "refusé"];
 const STATUT_STYLE: Record<string, string> = {
   nouveau: "bg-blue-100 text-blue-700",
   contacté: "bg-amber-100 text-amber-700",
   confirmé: "bg-green-100 text-green-700",
+  admis: "bg-indigo-100 text-indigo-700",
   payé: "bg-emerald-100 text-emerald-800",
   refusé: "bg-red-100 text-red-700",
 };
@@ -14,6 +15,7 @@ export default function InscriptionsSection() {
   const { token, refresh } = useAdmin();
   const { data } = trpc.admin.listInscriptions.useQuery({ token });
   const update = trpc.admin.updateInscription.useMutation({ onSuccess: refresh });
+  const updateNature = trpc.admin.updateNatureCandidat.useMutation({ onSuccess: refresh });
   const importMut = trpc.admin.importInscription.useMutation({ onSuccess: refresh });
   const del = trpc.admin.deleteInscription.useMutation({ onSuccess: refresh });
 
@@ -22,7 +24,7 @@ export default function InscriptionsSection() {
       <h2 className="text-xl font-extrabold text-[#1a2a4a] mb-4">
         Inscriptions candidats ({data?.length ?? 0})
       </h2>
-      <Table head={["Dossier", "Date", "Candidat", "Contact", "Filière / Métier", "Détails", "Statut", "Actions"]}>
+      <Table head={["Dossier", "Date", "Candidat", "Contact", "Filière / Métier", "Détails", "Nature", "Statut", "Actions"]}>
         {(data ?? []).map((i) => (
           <tr key={i.id} className="border-t border-slate-100">
             <td className="px-4 py-3 font-mono font-bold text-[#8a6d1a] whitespace-nowrap">{i.numeroDossier || "—"}</td>
@@ -49,6 +51,16 @@ export default function InscriptionsSection() {
             </td>
             <td className="px-4 py-3">
               <select
+                className={`text-xs font-bold px-2.5 py-1.5 rounded-full border-0 cursor-pointer ${i.natureCandidat === "boursier" ? "bg-purple-100 text-purple-800" : "bg-slate-100 text-slate-700"}`}
+                value={i.natureCandidat}
+                onChange={(e) => updateNature.mutate({ token, id: Number(i.id), nature: e.target.value })}
+              >
+                <option value="payant">💰 payant</option>
+                <option value="boursier">🎓 boursier</option>
+              </select>
+            </td>
+            <td className="px-4 py-3">
+              <select
                 className={`text-xs font-bold px-2.5 py-1.5 rounded-full border-0 cursor-pointer ${STATUT_STYLE[i.statut] ?? "bg-slate-100"}`}
                 value={i.statut}
                 onChange={(e) => update.mutate({ token, id: Number(i.id), statut: e.target.value })}
@@ -67,7 +79,7 @@ export default function InscriptionsSection() {
           </tr>
         ))}
         {(data ?? []).length === 0 && (
-          <tr><td colSpan={8} className="px-4 py-10 text-center text-slate-400">Aucune inscription pour le moment.</td></tr>
+          <tr><td colSpan={9} className="px-4 py-10 text-center text-slate-400">Aucune inscription pour le moment.</td></tr>
         )}
       </Table>
     </section>

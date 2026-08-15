@@ -11,6 +11,54 @@ type Form = typeof empty;
 
 const fmt = (n: number) => n.toLocaleString("fr-FR").replace(/,/g, " ");
 
+const PERIODES = [
+  { key: "jour", label: "Journalier" },
+  { key: "semaine", label: "Hebdomadaire" },
+  { key: "mois", label: "Mensuel" },
+  { key: "trimestre", label: "Trimestriel" },
+  { key: "annee", label: "Annuel" },
+];
+
+/** Bilans périodiques avec diagramme en barres */
+function ComptaPeriode({ token }: { token: string }) {
+  const [periode, setPeriode] = useState("mois");
+  const { data } = trpc.admin.comptaPeriode.useQuery({ token, periode });
+  const rows = (data ?? []).slice(0, 12).reverse();
+  const max = Math.max(1, ...rows.map((r) => Math.max(r.recettes, r.depenses)));
+
+  return (
+    <div className="bg-white rounded-xl shadow-sm border border-slate-200 p-5 mb-5">
+      <div className="flex flex-wrap items-center justify-between gap-2 mb-4">
+        <h3 className="font-bold text-[#1a2a4a]">📈 Bilans périodiques</h3>
+        <div className="flex gap-1.5 flex-wrap">
+          {PERIODES.map((p) => (
+            <button key={p.key} onClick={() => setPeriode(p.key)}
+              className={`px-3 py-1.5 rounded-lg text-xs font-bold transition ${periode === p.key ? "bg-[#c9a227] text-[#0f1f2e]" : "bg-slate-100 text-slate-600 hover:bg-slate-200"}`}>
+              {p.label}
+            </button>
+          ))}
+        </div>
+      </div>
+      {rows.length === 0 && <p className="text-sm text-slate-400">Aucune donnée pour cette période.</p>}
+      <div className="space-y-2.5">
+        {rows.map((r) => (
+          <div key={r.periode}>
+            <div className="flex justify-between text-xs font-bold text-slate-600 mb-1">
+              <span>{r.periode}</span>
+              <span>solde {fmt(r.solde)} FCFA</span>
+            </div>
+            <div className="flex gap-1 items-center">
+              <div className="h-3.5 bg-green-500 rounded" style={{ width: `${(r.recettes / max) * 48}%` }} title={`Recettes ${fmt(r.recettes)}`} />
+              <div className="h-3.5 bg-red-400 rounded" style={{ width: `${(r.depenses / max) * 48}%` }} title={`Dépenses ${fmt(r.depenses)}`} />
+            </div>
+            <div className="text-[11px] text-slate-400 mt-0.5">🟩 recettes {fmt(r.recettes)} · 🟥 dépenses {fmt(r.depenses)} · {r.count} opération(s)</div>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+}
+
 export default function ComptabiliteSection() {
   const { token, refresh } = useAdmin();
   const { data: transactions } = trpc.admin.listTransactions.useQuery({ token });
@@ -45,6 +93,8 @@ export default function ComptabiliteSection() {
           </Btn>
         </div>
       </div>
+
+      <ComptaPeriode token={token} />
 
       {/* Bilan */}
       <div className="grid grid-cols-3 gap-3 mb-5">

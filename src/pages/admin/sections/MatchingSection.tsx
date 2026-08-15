@@ -25,7 +25,7 @@ export default function MatchingSection() {
   const updateMatching = trpc.admin.updateMatching.useMutation({ onSuccess: refresh });
   const delMatching = trpc.admin.deleteMatching.useMutation({ onSuccess: refresh });
 
-  const [tab, setTab] = useState<"matchings" | "offres">("matchings");
+  const [tab, setTab] = useState<"matchings" | "offres" | "entreprises">("matchings");
   const [offreForm, setOffreForm] = useState(emptyOffre);
   const [matchForm, setMatchForm] = useState(emptyMatching);
   const [editOffreId, setEditOffreId] = useState<number | null>(null);
@@ -69,10 +69,13 @@ export default function MatchingSection() {
         </div>
       </div>
 
-      <div className="flex gap-2 mb-4">
+      <div className="flex gap-2 mb-4 flex-wrap">
         <Btn variant={tab === "matchings" ? "gold" : "ghost"} onClick={() => setTab("matchings")}>🔗 Matchings</Btn>
         <Btn variant={tab === "offres" ? "gold" : "ghost"} onClick={() => setTab("offres")}>💼 Offres d'emploi en Italie</Btn>
+        <Btn variant={tab === "entreprises" ? "gold" : "ghost"} onClick={() => setTab("entreprises")}>🏭 Fiches pour entreprises</Btn>
       </div>
+
+      {tab === "entreprises" && <FichesEntreprises token={token} />}
 
       {tab === "offres" && (
         <>
@@ -229,5 +232,51 @@ export default function MatchingSection() {
         </>
       )}
     </section>
+  );
+}
+
+/** Fiches détaillées des travailleurs, pensées pour les entreprises italiennes */
+function FichesEntreprises({ token }: { token: string }) {
+  const { data: fiches } = trpc.admin.fichesEntreprise.useQuery({ token });
+  const [search, setSearch] = useState("");
+
+  const list = (fiches ?? []).filter((f) => {
+    if (!search.trim()) return true;
+    const s = search.toLowerCase();
+    return [f.nom, f.prenom, f.metier, f.profession, f.qualification, f.autresLangues].some((v) => (v ?? "").toLowerCase().includes(s));
+  });
+
+  return (
+    <>
+      <p className="text-sm text-slate-500 mb-3">
+        Vue destinée aux entreprises partenaires : chaque fiche résume les informations utiles au recrutement
+        (âge, qualification, expérience, situation familiale, langues).
+      </p>
+      <input className={`${inputCls} mb-4 max-w-sm`} placeholder="🔍 Rechercher (métier, qualification, langue…)" value={search} onChange={(e) => setSearch(e.target.value)} />
+      <div className="grid sm:grid-cols-2 gap-4">
+        {list.map((f) => (
+          <div key={f.id} className="bg-white rounded-xl shadow-sm border border-slate-200 p-5">
+            <div className="flex items-start justify-between">
+              <div>
+                <div className="font-extrabold text-[#1a2a4a]">{f.prenom} {f.nom}</div>
+                <div className="text-xs text-slate-400 font-mono">{f.reference}</div>
+              </div>
+              <span className={`px-2 py-0.5 rounded-full text-xs font-bold ${f.statut === "placé" ? "bg-green-100 text-green-800" : "bg-blue-100 text-blue-800"}`}>{f.statut}</span>
+            </div>
+            <div className="mt-3 grid grid-cols-2 gap-x-4 gap-y-1.5 text-sm">
+              <div><span className="text-slate-400 text-xs">Âge</span><div className="font-semibold">{f.age || "—"} ans</div></div>
+              <div><span className="text-slate-400 text-xs">Situation</span><div className="font-semibold">{f.situationFamiliale || "—"}</div></div>
+              <div><span className="text-slate-400 text-xs">Qualification</span><div className="font-semibold">{f.qualification || "—"}</div></div>
+              <div><span className="text-slate-400 text-xs">Expérience</span><div className="font-semibold">{f.experienceAnnees} an(s)</div></div>
+              <div><span className="text-slate-400 text-xs">Métier visé</span><div className="font-semibold">{f.metier || "—"}</div></div>
+              <div><span className="text-slate-400 text-xs">Italien</span><div className="font-semibold">{f.niveauItalien}</div></div>
+              <div className="col-span-2"><span className="text-slate-400 text-xs">Autres langues</span><div className="font-semibold">{f.autresLangues || "—"}</div></div>
+              {f.competences && <div className="col-span-2"><span className="text-slate-400 text-xs">Compétences</span><div className="text-slate-600 text-xs">{f.competences}</div></div>}
+            </div>
+          </div>
+        ))}
+        {list.length === 0 && <div className="sm:col-span-2 bg-white rounded-xl border border-slate-200 p-8 text-center text-slate-400">Aucune fiche travailleur.</div>}
+      </div>
+    </>
   );
 }
