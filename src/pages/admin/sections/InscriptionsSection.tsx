@@ -111,8 +111,11 @@ export default function InscriptionsSection() {
                     <div className="text-sm font-bold">{fmt(paye)} FCFA</div>
                     {totalTheorique > 0 && (
                       <div className={`text-xs font-semibold ${solde ? "text-green-700" : "text-amber-700"}`}>
-                        {solde ? "✅ soldé" : `reste ${fmt(totalTheorique - paye)}`}
+                        {solde ? "✅ soldé" : paye === 0 ? `⚠️ rien payé — reste ${fmt(totalTheorique)}` : `reste ${fmt(totalTheorique - paye)}`}
                       </div>
+                    )}
+                    {i.statut === "payé" && !solde && (
+                      <div className="text-[10px] font-bold text-red-600 mt-0.5">⚠️ statut « payé » mais non soldé</div>
                     )}
                   </>
                 )}

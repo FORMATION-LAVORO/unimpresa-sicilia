@@ -21,7 +21,7 @@ export default function PaiementsSection() {
   const { data: paiements } = trpc.admin.listPaiements.useQuery({ token });
   const { data: inscriptions } = trpc.admin.listInscriptions.useQuery({ token });
   const { data: alertes } = trpc.admin.alertesNonPayants.useQuery({ token });
-  const create = trpc.admin.createPaiement.useMutation({ onSuccess: refresh });
+  const create = trpc.admin.encaisser.useMutation({ onSuccess: refresh });
   const del = trpc.admin.deletePaiement.useMutation({ onSuccess: refresh });
   const setDispo = trpc.admin.setDispositionPaiement.useMutation({ onSuccess: refresh });
 

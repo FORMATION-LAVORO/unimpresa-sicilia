@@ -406,6 +406,53 @@ export const adminRouter = createRouter({
     requireAdmin(input.token);
     return getDb().select().from(inscriptions).orderBy(desc(inscriptions.id));
   }),
+
+  /** Enregistre un paiement — synchronise automatiquement le statut du candidat */
+  encaisser: publicQuery.input(z.object({ ...withToken, data: paiementInput })).mutation(async ({ input }) => {
+    requireAdmin(input.token);
+    const db = getDb();
+    const data = { ...input.data };
+    if (!data.montantLettres || data.montantLettres.trim() === "") {
+      const num = parseNumber(data.montantChiffres);
+      data.montantLettres = num > 0 ? numberToLetters(num) : "";
+    }
+    const [r] = await db.insert(paiements).values(data).returning({ id: paiements.id });
+    const [ins] = await db.select().from(inscriptions).where(eq(inscriptions.id, data.inscriptionId)).limit(1);
+    const nomComplet = ins ? `${ins.prenom} ${ins.nom}` : `Inscription #${data.inscriptionId}`;
+    const libelles: Record<string, string> = {
+      inscription: "Frais d'inscription",
+      "mensualité": "Mensualité",
+      reliquat: "Reliquat formation",
+      reliquat_nulla_osta: "Reliquat au Nulla Osta",
+      autre: "Paiement",
+    };
+    // Recette automatique en comptabilité
+    await db.insert(transactions).values({
+      date: data.date,
+      type: "recette",
+      categorie: libelles[data.nature] ?? "Paiement candidat",
+      libelle: `${libelles[data.nature] ?? "Paiement"} — ${nomComplet}`,
+      montantChiffres: data.montantChiffres,
+      montantLettres: data.montantLettres,
+      modePaiement: data.modePaiement,
+      inscriptionId: data.inscriptionId,
+      notes: data.reference ? `Réf: ${data.reference}` : "",
+    });
+    // Synchronisation automatique du statut : soldé → « payé »
+    if (ins) {
+      const pais = (await db.select().from(paiements)).filter((p) => Number(p.inscriptionId) === Number(ins.id));
+      const paye = pais.reduce((s, p) => s + parseNumber(p.montantChiffres), 0);
+      const tarifsRows = await db.select().from(tarifs);
+      const total = tarifsRows.filter((t) => t.estTotal).reduce((s, t) => s + parseNumber(t.montantChiffres), 0)
+        || tarifsRows.reduce((s, t) => s + parseNumber(t.montantChiffres), 0);
+      if (total > 0 && paye >= total && ins.statut !== "payé") {
+        await db.update(inscriptions).set({ statut: "payé" }).where(eq(inscriptions.id, ins.id));
+      } else if (total > 0 && paye < total && ins.statut === "payé") {
+        await db.update(inscriptions).set({ statut: "confirmé" }).where(eq(inscriptions.id, ins.id));
+      }
+    }
+    return { id: Number(r.id) };
+  }),
   updateInscription: publicQuery
     .input(z.object({ ...withToken, id: z.number(), statut: z.string().min(1).max(50) }))
     .mutation(async ({ input }) => {
