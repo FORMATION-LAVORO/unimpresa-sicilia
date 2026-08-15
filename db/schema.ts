@@ -105,6 +105,8 @@ export const inscriptions = pgTable("inscriptions", {
   metierChoisi: varchar("metier_choisi", { length: 150 }).notNull().default(""),
   natureCandidat: varchar("nature_candidat", { length: 30 }).notNull().default("payant"),
   centreId: bigint("centre_id", { mode: "number" }),
+  salleId: bigint("salle_id", { mode: "number" }),
+  resultatTest: varchar("resultat_test", { length: 30 }).notNull().default(""),
   createdAt: timestamp("created_at").notNull().defaultNow(),
 });
 

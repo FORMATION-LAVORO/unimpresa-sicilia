@@ -371,7 +371,83 @@ export const adminRouter = createRouter({
     .input(z.object({ ...withToken, id: z.number(), statut: z.string().min(1).max(50) }))
     .mutation(async ({ input }) => {
       requireAdmin(input.token);
-      await getDb().update(inscriptions).set({ statut: input.statut }).where(eq(inscriptions.id, input.id));
+      const db = getDb();
+      const [avant] = await db.select().from(inscriptions).where(eq(inscriptions.id, input.id)).limit(1);
+      await db.update(inscriptions).set({ statut: input.statut }).where(eq(inscriptions.id, input.id));
+      // Chaînage automatique : passage en « admis » → crée la fiche travailleur si absente
+      if (avant && avant.statut !== "admis" && input.statut === "admis") {
+        const [existe] = await db.select().from(travailleurs).where(eq(travailleurs.inscriptionId, avant.id)).limit(1);
+        if (!existe) {
+          let age = 0;
+          const m = avant.dateNaissance.match(/(\d{1,2})[\/\-.](\d{1,2})[\/\-.](\d{4})/) ?? avant.dateNaissance.match(/(\d{4})[\/\-.](\d{1,2})[\/\-.](\d{1,2})/);
+          if (m) {
+            const year = avant.dateNaissance.startsWith(m[1]) && m[1].length === 4 ? Number(m[1]) : Number(m[3]);
+            age = Math.max(0, new Date().getFullYear() - year);
+          }
+          await db.insert(travailleurs).values({
+            inscriptionId: avant.id, nom: avant.nom, prenom: avant.prenom,
+            dateNaissance: avant.dateNaissance, age, sexe: avant.sexe,
+            situationFamiliale: avant.situationFamiliale,
+            telephone: avant.telephone, email: avant.email,
+            profession: avant.profession, filiereId: avant.filiereId, metier: avant.metierChoisi,
+          });
+        }
+      }
+      return { ok: true };
+    }),
+
+  /** Affecte un candidat à un centre et/ou une salle — met à jour les compteurs d'occupation */
+  affecterCandidat: publicQuery
+    .input(z.object({ ...withToken, id: z.number(), centreId: z.number().nullable(), salleId: z.number().nullable() }))
+    .mutation(async ({ input }) => {
+      requireAdmin(input.token);
+      const db = getDb();
+      const [avant] = await db.select().from(inscriptions).where(eq(inscriptions.id, input.id)).limit(1);
+      if (!avant) throw new TRPCError({ code: "NOT_FOUND", message: "Inscription introuvable." });
+      // Contrôle de capacité de la nouvelle salle
+      if (input.salleId && Number(avant.salleId) !== input.salleId) {
+        const [salle] = await db.select().from(salles).where(eq(salles.id, input.salleId)).limit(1);
+        if (salle && salle.capacite > 0 && salle.occupation >= salle.capacite) {
+          throw new TRPCError({ code: "BAD_REQUEST", message: `La salle « ${salle.nom} » est pleine (${salle.capacite} places).` });
+        }
+      }
+      // Décrémente les anciens compteurs
+      if (avant.salleId && Number(avant.salleId) !== input.salleId) {
+        const [old] = await db.select().from(salles).where(eq(salles.id, avant.salleId)).limit(1);
+        if (old) await db.update(salles).set({ occupation: Math.max(0, old.occupation - 1) }).where(eq(salles.id, old.id));
+      }
+      // Incrémente la nouvelle salle
+      if (input.salleId && Number(avant.salleId) !== input.salleId) {
+        const [s] = await db.select().from(salles).where(eq(salles.id, input.salleId)).limit(1);
+        if (s) await db.update(salles).set({ occupation: s.occupation + 1 }).where(eq(salles.id, s.id));
+      }
+      await db.update(inscriptions).set({ centreId: input.centreId, salleId: input.salleId }).where(eq(inscriptions.id, input.id));
+      return { ok: true };
+    }),
+
+  /** Enregistre le résultat du test — « réussi » crée automatiquement une réussite */
+  setResultatTest: publicQuery
+    .input(z.object({ ...withToken, id: z.number(), resultat: z.string() }))
+    .mutation(async ({ input }) => {
+      requireAdmin(input.token);
+      const db = getDb();
+      const [ins] = await db.select().from(inscriptions).where(eq(inscriptions.id, input.id)).limit(1);
+      if (!ins) throw new TRPCError({ code: "NOT_FOUND", message: "Inscription introuvable." });
+      await db.update(inscriptions).set({ resultatTest: input.resultat }).where(eq(inscriptions.id, input.id));
+      if (input.resultat === "réussi") {
+        const [existe] = await db.select().from(placements).where(eq(placements.inscriptionId, ins.id)).limit(1);
+        if (!existe) {
+          await db.insert(placements).values({
+            inscriptionId: ins.id,
+            nomComplet: `${ins.prenom} ${ins.nom}`,
+            type: "reussite",
+            poste: ins.metierChoisi,
+            dateEvenement: new Date().toISOString().slice(0, 10),
+            statut: "confirmé",
+            notes: "Réussite au test de formation",
+          });
+        }
+      }
       return { ok: true };
     }),
   deleteInscription: publicQuery.input(z.object({ ...withToken, id: z.number() })).mutation(async ({ input }) => {
@@ -447,6 +523,26 @@ export const adminRouter = createRouter({
     await getDb().delete(rendezVous).where(eq(rendezVous.id, input.id));
     return { ok: true };
   }),
+
+  /** Vue unifiée d'un candidat : inscription + paiements + affectation + test + travailleur */
+  dossierCandidat: publicQuery
+    .input(z.object({ ...withToken, id: z.number() }))
+    .query(async ({ input }) => {
+      requireAdmin(input.token);
+      const db = getDb();
+      const [ins] = await db.select().from(inscriptions).where(eq(inscriptions.id, input.id)).limit(1);
+      if (!ins) throw new TRPCError({ code: "NOT_FOUND", message: "Inscription introuvable." });
+      const pais = (await db.select().from(paiements)).filter((p) => Number(p.inscriptionId) === input.id);
+      const paye = pais.reduce((s, p) => s + parseNumber(p.montantChiffres), 0);
+      const tarifsRows = await db.select().from(tarifs);
+      const total = tarifsRows.filter((t) => t.estTotal).reduce((s, t) => s + parseNumber(t.montantChiffres), 0)
+        || tarifsRows.reduce((s, t) => s + parseNumber(t.montantChiffres), 0);
+      const [trav] = await db.select().from(travailleurs).where(eq(travailleurs.inscriptionId, ins.id)).limit(1);
+      const centre = ins.centreId ? (await db.select().from(centres).where(eq(centres.id, ins.centreId)).limit(1))[0] : null;
+      const salle = ins.salleId ? (await db.select().from(salles).where(eq(salles.id, ins.salleId)).limit(1))[0] : null;
+      const plac = (await db.select().from(placements)).filter((p) => Number(p.inscriptionId) === input.id);
+      return { inscription: ins, paiements: pais, paye, total, reste: Math.max(0, total - paye), travailleur: trav ?? null, centre, salle, placements: plac };
+    }),
 
   /** Changer le mot de passe admin */
   changePassword: publicQuery
