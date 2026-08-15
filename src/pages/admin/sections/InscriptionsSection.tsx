@@ -2,11 +2,14 @@ import { useState } from "react";
 import { trpc } from "@/providers/trpc";
 import { useAdmin, Btn, Table, inputCls } from "../ui";
 
-const STATUTS = ["nouveau", "contacté", "confirmé", "admis", "payé", "refusé"];
+const STATUTS = ["nouveau", "contacté", "confirmé", "1ère tranche", "2ème tranche", "3ème tranche", "admis", "payé", "refusé"];
 const STATUT_STYLE: Record<string, string> = {
   nouveau: "bg-blue-100 text-blue-700",
   contacté: "bg-amber-100 text-amber-700",
   confirmé: "bg-green-100 text-green-700",
+  "1ère tranche": "bg-cyan-100 text-cyan-800",
+  "2ème tranche": "bg-cyan-100 text-cyan-800",
+  "3ème tranche": "bg-cyan-100 text-cyan-800",
   admis: "bg-indigo-100 text-indigo-700",
   payé: "bg-emerald-100 text-emerald-800",
   refusé: "bg-red-100 text-red-700",
@@ -105,12 +108,14 @@ export default function InscriptionsSection() {
               <td className="px-4 py-3 whitespace-nowrap">
                 {i.natureCandidat === "boursier" ? (
                   <span className="px-2 py-0.5 rounded-full bg-purple-100 text-purple-800 text-xs font-bold">exonéré</span>
-                ) : totalTheorique > 0 && paye >= totalTheorique ? (
+                ) : i.statut === "payé" ? (
                   <span className="px-2 py-0.5 rounded-full bg-green-100 text-green-800 text-xs font-bold">✅ soldé</span>
-                ) : paye > 0 ? (
+                ) : ["1ère tranche", "2ème tranche", "3ème tranche"].includes(i.statut) || paye > 0 ? (
                   <>
-                    <div className="text-sm font-bold">{fmt(paye)} FCFA payés</div>
-                    <div className="text-xs font-semibold text-amber-700">reliquat : {fmt(totalTheorique - paye)} FCFA</div>
+                    <div className="text-sm font-bold">{fmt(paye)} FCFA versés</div>
+                    <div className={`text-xs font-semibold ${totalTheorique - paye > 0 ? "text-amber-700" : "text-green-700"}`}>
+                      {totalTheorique - paye > 0 ? `reliquat : ${fmt(totalTheorique - paye)} FCFA` : "✅ soldé"}
+                    </div>
                   </>
                 ) : (
                   <span className="px-2 py-0.5 rounded-full bg-red-50 text-red-700 text-xs font-bold">non payé</span>

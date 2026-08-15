@@ -438,19 +438,27 @@ export const adminRouter = createRouter({
       inscriptionId: data.inscriptionId,
       notes: data.reference ? `Réf: ${data.reference}` : "",
     });
-    // Synchronisation du statut : soldé ⇔ « payé »
+    // Synchronisation du statut selon les versements
     if (ins) {
       const pais = (await db.select().from(paiements)).filter((p) => Number(p.inscriptionId) === Number(ins.id));
       const paye = pais.reduce((s, p) => s + parseNumber(p.montantChiffres), 0);
+      const nbVersements = pais.length;
       const tarifsRows = await db.select().from(tarifs);
       const total = tarifsRows.filter((t) => t.estTotal).reduce((s, t) => s + parseNumber(t.montantChiffres), 0)
         || tarifsRows.reduce((s, t) => s + parseNumber(t.montantChiffres), 0);
-      if (total > 0 && paye >= total && ins.statut !== "payé") {
-        await db.update(inscriptions).set({ statut: "payé" }).where(eq(inscriptions.id, ins.id));
+      const statutsTranches = ["nouveau", "contacté", "confirmé", "1ère tranche", "2ème tranche", "3ème tranche"];
+      if (total > 0 && paye >= total) {
+        // Tout est payé → soldé
+        if (ins.statut !== "payé") await db.update(inscriptions).set({ statut: "payé" }).where(eq(inscriptions.id, ins.id));
+      } else if (paye > 0 && statutsTranches.includes(ins.statut)) {
+        // Versement partiel → avance dans les tranches (1ère, 2ème, 3ème)
+        const tranche = nbVersements >= 3 ? "3ème tranche" : nbVersements === 2 ? "2ème tranche" : "1ère tranche";
+        if (ins.statut !== tranche) await db.update(inscriptions).set({ statut: tranche }).where(eq(inscriptions.id, ins.id));
       }
-      // Si le statut « payé » a été mis à la main alors que rien n'est soldé, on le corrige
-      if (total > 0 && paye < total && ins.statut === "payé") {
-        await db.update(inscriptions).set({ statut: "confirmé" }).where(eq(inscriptions.id, ins.id));
+      // « payé » mis à la main sans être soldé → revient à la tranche réelle
+      if (ins.statut === "payé" && total > 0 && paye < total) {
+        const tranche = paye === 0 ? "confirmé" : nbVersements >= 3 ? "3ème tranche" : nbVersements === 2 ? "2ème tranche" : "1ère tranche";
+        await db.update(inscriptions).set({ statut: tranche }).where(eq(inscriptions.id, ins.id));
       }
     }
     return { id: Number(r.id) };
