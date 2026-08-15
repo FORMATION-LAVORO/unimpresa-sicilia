@@ -438,7 +438,7 @@ export const adminRouter = createRouter({
       inscriptionId: data.inscriptionId,
       notes: data.reference ? `Réf: ${data.reference}` : "",
     });
-    // Synchronisation automatique du statut : soldé → « payé »
+    // Synchronisation du statut : soldé ⇔ « payé »
     if (ins) {
       const pais = (await db.select().from(paiements)).filter((p) => Number(p.inscriptionId) === Number(ins.id));
       const paye = pais.reduce((s, p) => s + parseNumber(p.montantChiffres), 0);
@@ -447,7 +447,9 @@ export const adminRouter = createRouter({
         || tarifsRows.reduce((s, t) => s + parseNumber(t.montantChiffres), 0);
       if (total > 0 && paye >= total && ins.statut !== "payé") {
         await db.update(inscriptions).set({ statut: "payé" }).where(eq(inscriptions.id, ins.id));
-      } else if (total > 0 && paye < total && ins.statut === "payé") {
+      }
+      // Si le statut « payé » a été mis à la main alors que rien n'est soldé, on le corrige
+      if (total > 0 && paye < total && ins.statut === "payé") {
         await db.update(inscriptions).set({ statut: "confirmé" }).where(eq(inscriptions.id, ins.id));
       }
     }

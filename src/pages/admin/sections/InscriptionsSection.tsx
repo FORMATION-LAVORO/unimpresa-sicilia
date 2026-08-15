@@ -54,7 +54,6 @@ export default function InscriptionsSection() {
           const paye = payePar(id);
           const centre = centres?.find((c) => Number(c.id) === Number(i.centreId));
           const salle = salles?.find((s) => Number(s.id) === Number(i.salleId));
-          const solde = i.natureCandidat === "boursier" || (totalTheorique > 0 && paye >= totalTheorique);
           return (
             <tr key={i.id} className="border-t border-slate-100 align-top">
               <td className="px-4 py-3">
@@ -106,18 +105,15 @@ export default function InscriptionsSection() {
               <td className="px-4 py-3 whitespace-nowrap">
                 {i.natureCandidat === "boursier" ? (
                   <span className="px-2 py-0.5 rounded-full bg-purple-100 text-purple-800 text-xs font-bold">exonéré</span>
-                ) : (
+                ) : totalTheorique > 0 && paye >= totalTheorique ? (
+                  <span className="px-2 py-0.5 rounded-full bg-green-100 text-green-800 text-xs font-bold">✅ soldé</span>
+                ) : paye > 0 ? (
                   <>
-                    <div className="text-sm font-bold">{fmt(paye)} FCFA</div>
-                    {totalTheorique > 0 && (
-                      <div className={`text-xs font-semibold ${solde ? "text-green-700" : "text-amber-700"}`}>
-                        {solde ? "✅ soldé" : `reliquat : ${fmt(totalTheorique - paye)} FCFA`}
-                      </div>
-                    )}
-                    {i.statut === "payé" && !solde && (
-                      <div className="text-[10px] font-bold text-red-600 mt-0.5">⚠️ statut « payé » mais non soldé</div>
-                    )}
+                    <div className="text-sm font-bold">{fmt(paye)} FCFA payés</div>
+                    <div className="text-xs font-semibold text-amber-700">reliquat : {fmt(totalTheorique - paye)} FCFA</div>
                   </>
+                ) : (
+                  <span className="px-2 py-0.5 rounded-full bg-red-50 text-red-700 text-xs font-bold">non payé</span>
                 )}
               </td>
               <td className="px-4 py-3">
