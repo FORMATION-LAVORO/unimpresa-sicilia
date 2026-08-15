@@ -111,7 +111,7 @@ export default function InscriptionsSection() {
                     <div className="text-sm font-bold">{fmt(paye)} FCFA</div>
                     {totalTheorique > 0 && (
                       <div className={`text-xs font-semibold ${solde ? "text-green-700" : "text-amber-700"}`}>
-                        {solde ? "✅ soldé" : paye === 0 ? `⚠️ rien payé — reste ${fmt(totalTheorique)}` : `reste ${fmt(totalTheorique - paye)}`}
+                        {solde ? "✅ soldé" : `reliquat : ${fmt(totalTheorique - paye)} FCFA`}
                       </div>
                     )}
                     {i.statut === "payé" && !solde && (
@@ -208,8 +208,8 @@ function DossierCandidat({ id, onClose }: { id: number; onClose: () => void }) {
             {d.total > 0 && <div className="flex justify-between"><span>Coût total formation</span><b>{fmt(d.total)} FCFA</b></div>}
             {d.total > 0 && (
               <div className="flex justify-between mt-1 pt-1 border-t border-slate-200">
-                <span>Reste à payer</span>
-                <b className={d.reste > 0 ? "text-amber-700" : "text-green-700"}>{d.reste > 0 ? `${fmt(d.reste)} FCFA` : "soldé ✅"}</b>
+                <span>Situation</span>
+                <b className={d.reste > 0 ? "text-amber-700" : "text-green-700"}>{d.reste > 0 ? `reliquat : ${fmt(d.reste)} FCFA` : "soldé ✅"}</b>
               </div>
             )}
           </div>

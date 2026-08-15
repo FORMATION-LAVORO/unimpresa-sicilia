@@ -109,7 +109,7 @@ export default function PaiementsSection() {
           {situation && form.inscriptionId > 0 && (
             <div className="bg-blue-50 border border-blue-200 rounded-lg p-3 text-sm">
               <b>Situation du candidat :</b> payé {fmt(situation.paye)} FCFA
-              {situation.total > 0 && <> sur {fmt(situation.total)} FCFA — <b className="text-blue-800">reste {fmt(situation.reste)} FCFA</b></>}
+              {situation.total > 0 && <> sur {fmt(situation.total)} FCFA — {situation.reste > 0 ? <b className="text-blue-800">reliquat : {fmt(situation.reste)} FCFA</b> : null}</>}
               {situation.reste === 0 && situation.total > 0 && <span className="ml-1 px-2 py-0.5 rounded-full bg-green-100 text-green-800 text-xs font-bold">soldé ✅</span>}
             </div>
           )}
