@@ -107,6 +107,7 @@ export const inscriptions = pgTable("inscriptions", {
   centreId: bigint("centre_id", { mode: "number" }),
   salleId: bigint("salle_id", { mode: "number" }),
   resultatTest: varchar("resultat_test", { length: 30 }).notNull().default(""),
+  dispositionPaiement: varchar("disposition_paiement", { length: 60 }).notNull().default("mensualités"),
   createdAt: timestamp("created_at").notNull().defaultNow(),
 });
 
@@ -314,3 +315,53 @@ export const centres = pgTable("centres", {
 
 export type Paiement = typeof paiements.$inferSelect;
 export type Centre = typeof centres.$inferSelect;
+
+// ═══════════════════════════════════════════════════════════════════════════
+// V3 — modules de formation (heures), étapes visa (Nulla Osta)
+// ═══════════════════════════════════════════════════════════════════════════
+
+// ─── Modules de formation (découpage du cycle en modules horaires) ─────────
+export const modules = pgTable("modules", {
+  id: serial("id").primaryKey(),
+  cycleId: bigint("cycle_id", { mode: "number" }),
+  filiereId: bigint("filiere_id", { mode: "number" }),
+  titre: varchar("titre", { length: 255 }).notNull(),
+  dureeHeures: integer("duree_heures").notNull().default(0),
+  ordre: integer("ordre").notNull().default(0),
+  actif: boolean("actif").notNull().default(true),
+});
+
+// ─── Progression d'un candidat dans les modules (heures validées) ──────────
+export const progressions = pgTable("progressions", {
+  id: serial("id").primaryKey(),
+  inscriptionId: bigint("inscription_id", { mode: "number" }).notNull(),
+  moduleId: bigint("module_id", { mode: "number" }).notNull(),
+  heuresFaites: integer("heures_faites").notNull().default(0),
+  statut: varchar("statut", { length: 30 }).notNull().default("en_cours"),
+  dateValidation: varchar("date_validation", { length: 30 }).notNull().default(""),
+  createdAt: timestamp("created_at").notNull().defaultNow(),
+});
+
+// ─── Étapes visa & insertion (précontrat → Nulla Osta → visa → contrat) ────
+export const etapesVisa = pgTable("etapes_visa", {
+  id: serial("id").primaryKey(),
+  inscriptionId: bigint("inscription_id", { mode: "number" }).notNull(),
+  travailleurId: bigint("travailleur_id", { mode: "number" }),
+  entreprise: varchar("entreprise", { length: 255 }).notNull().default(""),
+  poste: varchar("poste", { length: 255 }).notNull().default(""),
+  localite: varchar("localite", { length: 255 }).notNull().default(""),
+  salaire: varchar("salaire", { length: 100 }).notNull().default(""),
+  typeContrat: varchar("type_contrat", { length: 100 }).notNull().default(""),
+  datePrecontrat: varchar("date_precontrat", { length: 30 }).notNull().default(""),
+  dateNullaOsta: varchar("date_nulla_osta", { length: 30 }).notNull().default(""),
+  dateDepotVisa: varchar("date_depot_visa", { length: 30 }).notNull().default(""),
+  resultatVisa: varchar("resultat_visa", { length: 30 }).notNull().default(""),
+  dateContrat: varchar("date_contrat", { length: 30 }).notNull().default(""),
+  statut: varchar("statut", { length: 50 }).notNull().default("precontrat"),
+  notes: text("notes").notNull().default(""),
+  createdAt: timestamp("created_at").notNull().defaultNow(),
+});
+
+export type Module = typeof modules.$inferSelect;
+export type Progression = typeof progressions.$inferSelect;
+export type EtapeVisa = typeof etapesVisa.$inferSelect;

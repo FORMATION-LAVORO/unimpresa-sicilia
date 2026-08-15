@@ -20,8 +20,10 @@ export default function PaiementsSection() {
   const { token, refresh } = useAdmin();
   const { data: paiements } = trpc.admin.listPaiements.useQuery({ token });
   const { data: inscriptions } = trpc.admin.listInscriptions.useQuery({ token });
+  const { data: alertes } = trpc.admin.alertesNonPayants.useQuery({ token });
   const create = trpc.admin.createPaiement.useMutation({ onSuccess: refresh });
   const del = trpc.admin.deletePaiement.useMutation({ onSuccess: refresh });
+  const setDispo = trpc.admin.setDispositionPaiement.useMutation({ onSuccess: refresh });
 
   const [form, setForm] = useState<Form>(empty);
   const [showForm, setShowForm] = useState(false);
@@ -48,8 +50,8 @@ export default function PaiementsSection() {
   const parCandidat = (inscriptions ?? []).map((i) => {
     const rows = (paiements ?? []).filter((p) => Number(p.inscriptionId) === Number(i.id));
     const paye = rows.reduce((s, p) => s + Number((p.montantChiffres || "0").replace(/\s/g, "")), 0);
-    return { id: Number(i.id), nom: `${i.prenom} ${i.nom}`, nature: i.natureCandidat, statut: i.statut, paye, nb: rows.length };
-  }).filter((c) => c.nb > 0 || c.statut === "accepté");
+    return { id: Number(i.id), nom: `${i.prenom} ${i.nom}`, nature: i.natureCandidat, statut: i.statut, disposition: i.dispositionPaiement, paye, nb: rows.length };
+  }).filter((c) => c.nb > 0 || c.statut === "accepté" || c.statut === "admis" || c.statut === "payé");
 
   return (
     <section>
@@ -66,6 +68,31 @@ export default function PaiementsSection() {
         Chaque paiement enregistré ici alimente <b>automatiquement la comptabilité</b> (recette).
         Nature : <b>inscription</b> (1er versement) ou <b>reliquat</b> (solde). Les candidats boursiers n'ont rien à payer.
       </p>
+
+      {/* Alertes non-payants */}
+      {(alertes ?? []).length > 0 && (
+        <div className="bg-red-50 border border-red-200 rounded-xl p-4 mb-4">
+          <div className="font-bold text-red-800 mb-2">🚨 Candidats en attente de paiement ({alertes!.length})</div>
+          <div className="space-y-1.5">
+            {alertes!.map((a) => (
+              <div key={a.id} className="flex flex-wrap items-center justify-between gap-2 text-sm">
+                <div>
+                  <b>{a.nom}</b>
+                  <span className="text-red-700"> — {a.niveau === "jamais_payé" ? "n'a encore rien payé" : `reliquat dû : ${fmt(a.reste)} FCFA`}</span>
+                  <span className="text-xs text-slate-500"> ({a.disposition})</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <span className="text-xs text-slate-500">{a.telephone}</span>
+                  <button
+                    className="px-2.5 py-1 rounded-lg bg-green-600 text-white text-xs font-bold hover:bg-green-700"
+                    onClick={() => { setForm({ ...empty, inscriptionId: a.id, nature: a.niveau === "jamais_payé" ? "inscription" : "reliquat" }); setShowForm(true); window.scrollTo({ top: 0, behavior: "smooth" }); }}
+                  >💳 Encaisser</button>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      )}
 
       {showForm && (
         <form onSubmit={submit} className="bg-white rounded-xl shadow-sm border border-slate-200 p-5 mb-6 grid sm:grid-cols-2 gap-4">
@@ -90,14 +117,16 @@ export default function PaiementsSection() {
           <Field label="Nature">
             <select className={inputCls} value={form.nature} onChange={(e) => set("nature", e.target.value)}>
               <option value="inscription">Frais d'inscription</option>
+              <option value="mensualité">Mensualité</option>
               <option value="reliquat">Reliquat / solde</option>
+              <option value="reliquat_nulla_osta">Reliquat au Nulla Osta</option>
               <option value="autre">Autre</option>
             </select>
           </Field>
           <Field label="Montant (chiffres)"><input required className={inputCls} value={form.montantChiffres} onChange={(e) => set("montantChiffres", e.target.value)} placeholder="220 000" /></Field>
           <Field label="Mode de paiement">
             <select className={inputCls} value={form.modePaiement} onChange={(e) => set("modePaiement", e.target.value)}>
-              {["espèces", "virement", "mobile money", "chèque", "autre"].map((m) => <option key={m} value={m}>{m}</option>)}
+              {["Wave", "Orange Money", "espèces", "virement", "Free Money", "chèque", "autre"].map((m) => <option key={m} value={m}>{m}</option>)}
             </select>
           </Field>
           <Field label="Référence / reçu n°"><input className={inputCls} value={form.reference} onChange={(e) => set("reference", e.target.value)} /></Field>
@@ -116,6 +145,7 @@ export default function PaiementsSection() {
           <thead><tr className="bg-slate-50 text-xs uppercase tracking-wide text-slate-500">
             <th className="px-4 py-3 font-bold">Candidat</th>
             <th className="px-4 py-3 font-bold">Nature</th>
+            <th className="px-4 py-3 font-bold">Disposition</th>
             <th className="px-4 py-3 font-bold">Paiements</th>
             <th className="px-4 py-3 font-bold">Total payé</th>
           </tr></thead>
@@ -128,11 +158,21 @@ export default function PaiementsSection() {
                     {c.nature === "boursier" ? "🎓 boursier" : "💰 payant"}
                   </span>
                 </td>
+                <td className="px-4 py-2.5">
+                  {c.nature !== "boursier" && (
+                    <select className="text-xs font-semibold rounded-lg border border-slate-300 px-2 py-1" value={c.disposition}
+                      onChange={(e) => setDispo.mutate({ token, id: c.id, disposition: e.target.value })}>
+                      <option value="mensualités">Mensualités</option>
+                      <option value="reliquat_unique">Reliquat d'un seul coup</option>
+                      <option value="reliquat_nulla_osta">Reliquat au Nulla Osta</option>
+                    </select>
+                  )}
+                </td>
                 <td className="px-4 py-2.5">{c.nb}</td>
                 <td className="px-4 py-2.5 font-bold">{fmt(c.paye)} FCFA</td>
               </tr>
             ))}
-            {parCandidat.length === 0 && <tr><td colSpan={4} className="px-4 py-6 text-center text-slate-400">Aucun paiement enregistré.</td></tr>}
+            {parCandidat.length === 0 && <tr><td colSpan={5} className="px-4 py-6 text-center text-slate-400">Aucun paiement enregistré.</td></tr>}
           </tbody>
         </table>
       </div>

@@ -24,7 +24,9 @@ export default function App() {
       <Route path="/admin/rendezvous" element={<AdminDashboard />} />
       <Route path="/admin/paiements" element={<AdminDashboard />} />
       <Route path="/admin/travailleurs" element={<AdminDashboard />} />
+      <Route path="/admin/formation" element={<AdminDashboard />} />
       <Route path="/admin/matching" element={<AdminDashboard />} />
+      <Route path="/admin/visa" element={<AdminDashboard />} />
       <Route path="/admin/comptabilite" element={<AdminDashboard />} />
       <Route path="/admin/centres" element={<AdminDashboard />} />
       <Route path="/admin/salles" element={<AdminDashboard />} />

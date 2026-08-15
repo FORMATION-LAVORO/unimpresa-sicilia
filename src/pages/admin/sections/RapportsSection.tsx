@@ -7,6 +7,7 @@ const fmt = (n: number) => n.toLocaleString("fr-FR").replace(/,/g, " ");
 export default function RapportsSection() {
   const { token } = useAdmin();
   const { data: r } = trpc.admin.rapportSynthese.useQuery({ token });
+  const { data: vs } = trpc.admin.statsVisa.useQuery({ token });
   const [destinataire, setDestinataire] = useState("Ambassade d'Italie à Dakar");
 
   if (!r) return <p className="text-slate-400">Chargement du rapport…</p>;
@@ -17,7 +18,11 @@ export default function RapportsSection() {
     ["— dont boursiers", String(r.boursiers)],
     ["Travailleurs en formation", String(r.travailleursFormes)],
     ["Réussites / certifications", String(r.reussites)],
+    ["Précontrats de travail (matching)", String(vs?.precontrats ?? 0)],
+    ["Nulla Osta obtenus (MLPS Italie)", String(vs?.nullaOsta ?? 0)],
+    ["Visas accordés (Ambassade d'Italie)", String(vs?.visasObtenus ?? 0)],
     ["Contrats de travail conclus en Italie", String(r.contratsConclus)],
+    ["Taux contrats / Nulla Osta", `${vs?.tauxContratVsNullaOsta ?? 0} %`],
     ["Taux de placement", `${r.tauxPlacement} %`],
     ["Recettes totales", `${fmt(r.recettes)} FCFA (${r.recettesLettres})`],
     ["Dépenses totales", `${fmt(r.depenses)} FCFA`],

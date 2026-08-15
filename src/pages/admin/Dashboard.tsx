@@ -21,6 +21,8 @@ import PaiementsSection from "./sections/PaiementsSection";
 import CentresSection from "./sections/CentresSection";
 import UtilisateursSection from "./sections/UtilisateursSection";
 import RapportsSection from "./sections/RapportsSection";
+import FormationSection from "./sections/FormationSection";
+import VisaSection from "./sections/VisaSection";
 
 const NAV = [
   { path: "/admin/dashboard", label: "📊 Tableau de bord", key: "dashboard" },
@@ -34,7 +36,9 @@ const NAV = [
   { path: "/admin/paiements", label: "💳 Paiements", key: "paiements" },
   { path: "/admin/rendezvous", label: "📅 Rendez-vous", key: "rendezvous" },
   { path: "/admin/travailleurs", label: "👷 Travailleurs", key: "travailleurs" },
+  { path: "/admin/formation", label: "📖 Suivi formation", key: "formation" },
   { path: "/admin/matching", label: "🔗 Matching & offres", key: "matching" },
+  { path: "/admin/visa", label: "🛂 Visa & contrats", key: "visa" },
   { path: "/admin/comptabilite", label: "🧾 Comptabilité", key: "comptabilite" },
   { path: "/admin/centres", label: "🏢 Centres", key: "centres" },
   { path: "/admin/salles", label: "🏫 Salles & amphis", key: "salles" },
@@ -182,7 +186,9 @@ export default function AdminDashboard() {
         {key === "paiements" && <PaiementsSection />}
         {key === "rendezvous" && <RendezVousSection />}
         {key === "travailleurs" && <TravailleursSection />}
+        {key === "formation" && <FormationSection />}
         {key === "matching" && <MatchingSection />}
+        {key === "visa" && <VisaSection />}
         {key === "comptabilite" && <ComptabiliteSection />}
         {key === "centres" && <CentresSection />}
         {key === "salles" && <SallesSection />}

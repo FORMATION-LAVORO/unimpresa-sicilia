@@ -26,6 +26,9 @@ import {
   tuteurs,
   paiements,
   centres,
+  modules,
+  progressions,
+  etapesVisa,
 } from "../db/schema";
 
 const JWT_SECRET = process.env.JWT_SECRET ?? "unimpresa-dev-secret";
@@ -204,6 +207,40 @@ const centreInput = z.object({
   statut: z.string().default("actif"),
 });
 
+const moduleInput = z.object({
+  cycleId: z.number().nullable().default(null),
+  filiereId: z.number().nullable().default(null),
+  titre: z.string().min(1),
+  dureeHeures: z.number().int().min(0).default(0),
+  ordre: z.number().int().default(0),
+  actif: z.boolean().default(true),
+});
+
+const progressionInput = z.object({
+  inscriptionId: z.number(),
+  moduleId: z.number(),
+  heuresFaites: z.number().int().min(0).default(0),
+  statut: z.string().default("en_cours"),
+  dateValidation: z.string().default(""),
+});
+
+const etapeVisaInput = z.object({
+  inscriptionId: z.number(),
+  travailleurId: z.number().nullable().default(null),
+  entreprise: z.string().default(""),
+  poste: z.string().default(""),
+  localite: z.string().default(""),
+  salaire: z.string().default(""),
+  typeContrat: z.string().default(""),
+  datePrecontrat: z.string().default(""),
+  dateNullaOsta: z.string().default(""),
+  dateDepotVisa: z.string().default(""),
+  resultatVisa: z.string().default(""),
+  dateContrat: z.string().default(""),
+  statut: z.string().default("precontrat"),
+  notes: z.string().default(""),
+});
+
 export const adminRouter = createRouter({
   /** Connexion Super Admin (bcrypt + JWT) */
   login: publicQuery
@@ -239,6 +276,8 @@ export const adminRouter = createRouter({
       tuteurs: await count(tuteurs),
       paiements: await count(paiements),
       centres: await count(centres),
+      modules: await count(modules),
+      visas: await count(etapesVisa),
     };
   }),
 
@@ -1023,4 +1062,148 @@ export const adminRouter = createRouter({
       await getDb().update(inscriptions).set({ natureCandidat: input.nature }).where(eq(inscriptions.id, input.id));
       return { ok: true };
     }),
+
+  /** Disposition de paiement (mensualités / reliquat unique / reliquat au Nulla Osta) */
+  setDispositionPaiement: publicQuery
+    .input(z.object({ ...withToken, id: z.number(), disposition: z.string() }))
+    .mutation(async ({ input }) => {
+      requireAdmin(input.token);
+      await getDb().update(inscriptions).set({ dispositionPaiement: input.disposition }).where(eq(inscriptions.id, input.id));
+      return { ok: true };
+    }),
+
+  /** Alerte : candidats payants qui n'ont pas soldé (inscription ou reliquat) */
+  alertesNonPayants: publicQuery.input(z.object(withToken)).query(async ({ input }) => {
+    requireAdmin(input.token);
+    const db = getDb();
+    const insc = await db.select().from(inscriptions);
+    const pais = await db.select().from(paiements);
+    const tarifsRows = await db.select().from(tarifs);
+    const total = tarifsRows.filter((t) => t.estTotal).reduce((s, t) => s + parseNumber(t.montantChiffres), 0)
+      || tarifsRows.reduce((s, t) => s + parseNumber(t.montantChiffres), 0);
+    const fraisInscription = tarifsRows.filter((t) => !t.estTotal).reduce((s, t) => s + parseNumber(t.montantChiffres), 0) || total;
+    return insc
+      .filter((i) => i.natureCandidat !== "boursier" && i.statut !== "refusé")
+      .map((i) => {
+        const paye = pais.filter((p) => Number(p.inscriptionId) === Number(i.id)).reduce((s, p) => s + parseNumber(p.montantChiffres), 0);
+        const reste = Math.max(0, (total || 0) - paye);
+        const niveau = paye === 0 ? "jamais_payé" : reste > 0 ? "reliquat_dû" : "soldé";
+        return {
+          id: Number(i.id),
+          nom: `${i.prenom} ${i.nom}`,
+          telephone: i.telephone,
+          statut: i.statut,
+          disposition: i.dispositionPaiement,
+          paye, reste, niveau,
+          attendu: total || fraisInscription,
+        };
+      })
+      .filter((i) => i.niveau !== "soldé");
+  }),
+
+  // ─── MODULES DE FORMATION (heures, module après module) ────────────────
+  listModules: publicQuery.input(z.object(withToken)).query(async ({ input }) => {
+    requireAdmin(input.token);
+    return getDb().select().from(modules).orderBy(asc(modules.ordre), asc(modules.id));
+  }),
+  createModule: publicQuery.input(z.object({ ...withToken, data: moduleInput })).mutation(async ({ input }) => {
+    requireAdmin(input.token);
+    const [r] = await getDb().insert(modules).values(input.data).returning({ id: modules.id });
+    return { id: Number(r.id) };
+  }),
+  updateModule: publicQuery.input(z.object({ ...withToken, id: z.number(), data: moduleInput.partial() })).mutation(async ({ input }) => {
+    requireAdmin(input.token);
+    await getDb().update(modules).set(input.data).where(eq(modules.id, input.id));
+    return { ok: true };
+  }),
+  deleteModule: publicQuery.input(z.object({ ...withToken, id: z.number() })).mutation(async ({ input }) => {
+    requireAdmin(input.token);
+    await getDb().delete(modules).where(eq(modules.id, input.id));
+    return { ok: true };
+  }),
+
+  // ─── PROGRESSION DES CANDIDATS DANS LES MODULES ────────────────────────
+  listProgressions: publicQuery.input(z.object(withToken)).query(async ({ input }) => {
+    requireAdmin(input.token);
+    return getDb().select().from(progressions).orderBy(desc(progressions.id));
+  }),
+  setProgression: publicQuery
+    .input(z.object({ ...withToken, data: progressionInput }))
+    .mutation(async ({ input }) => {
+      requireAdmin(input.token);
+      const db = getDb();
+      const d = input.data;
+      const exist = (await db.select().from(progressions)).find(
+        (p) => Number(p.inscriptionId) === d.inscriptionId && Number(p.moduleId) === d.moduleId,
+      );
+      const data = { ...d };
+      if (data.statut === "validé" && !data.dateValidation) data.dateValidation = new Date().toISOString().slice(0, 10);
+      if (exist) {
+        await db.update(progressions).set(data).where(eq(progressions.id, exist.id));
+        return { id: Number(exist.id) };
+      }
+      const [r] = await db.insert(progressions).values(data).returning({ id: progressions.id });
+      return { id: Number(r.id) };
+    }),
+  /** Tableau de progression : modules × candidats admis */
+  tableauProgression: publicQuery.input(z.object(withToken)).query(async ({ input }) => {
+    requireAdmin(input.token);
+    const db = getDb();
+    const mods = await db.select().from(modules).orderBy(asc(modules.ordre));
+    const insc = (await db.select().from(inscriptions)).filter((i) => ["admis", "payé", "confirmé"].includes(i.statut));
+    const progs = await db.select().from(progressions);
+    return {
+      modules: mods,
+      candidats: insc.map((i) => {
+        const rows = progs.filter((p) => Number(p.inscriptionId) === Number(i.id));
+        const heuresFaites = rows.reduce((s, p) => s + p.heuresFaites, 0);
+        const valides = rows.filter((p) => p.statut === "validé").length;
+        return {
+          id: Number(i.id),
+          nom: `${i.prenom} ${i.nom}`,
+          filiere: i.filiereLabel,
+          heuresFaites,
+          modulesValides: valides,
+          totalModules: mods.length,
+          parModule: rows,
+        };
+      }),
+    };
+  }),
+
+  // ─── ÉTAPES VISA (précontrat → Nulla Osta → visa → contrat) ────────────
+  listEtapesVisa: publicQuery.input(z.object(withToken)).query(async ({ input }) => {
+    requireAdmin(input.token);
+    return getDb().select().from(etapesVisa).orderBy(desc(etapesVisa.id));
+  }),
+  createEtapeVisa: publicQuery.input(z.object({ ...withToken, data: etapeVisaInput })).mutation(async ({ input }) => {
+    requireAdmin(input.token);
+    const [r] = await getDb().insert(etapesVisa).values(input.data).returning({ id: etapesVisa.id });
+    return { id: Number(r.id) };
+  }),
+  updateEtapeVisa: publicQuery.input(z.object({ ...withToken, id: z.number(), data: etapeVisaInput.partial() })).mutation(async ({ input }) => {
+    requireAdmin(input.token);
+    await getDb().update(etapesVisa).set(input.data).where(eq(etapesVisa.id, input.id));
+    return { ok: true };
+  }),
+  deleteEtapeVisa: publicQuery.input(z.object({ ...withToken, id: z.number() })).mutation(async ({ input }) => {
+    requireAdmin(input.token);
+    await getDb().delete(etapesVisa).where(eq(etapesVisa.id, input.id));
+    return { ok: true };
+  }),
+  /** Taux de réussite : Nulla Osta → visas → contrats */
+  statsVisa: publicQuery.input(z.object(withToken)).query(async ({ input }) => {
+    requireAdmin(input.token);
+    const rows = await getDb().select().from(etapesVisa);
+    const precontrats = rows.length;
+    const nullaOsta = rows.filter((r) => r.dateNullaOsta).length;
+    const visasObtenus = rows.filter((r) => r.resultatVisa === "accordé").length;
+    const contrats = rows.filter((r) => r.dateContrat || r.statut === "contrat_signé").length;
+    return {
+      precontrats, nullaOsta, visasObtenus, contrats,
+      tauxNullaOsta: precontrats > 0 ? Math.round((nullaOsta / precontrats) * 100) : 0,
+      tauxVisa: nullaOsta > 0 ? Math.round((visasObtenus / nullaOsta) * 100) : 0,
+      tauxContratVsNullaOsta: nullaOsta > 0 ? Math.round((contrats / nullaOsta) * 100) : 0,
+    };
+  }),
 });
